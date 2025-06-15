@@ -703,3 +703,306 @@ Require stack:
 <w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
 <w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
 <w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat '/home/ubuntu/em-interview-prep/.next/server/app/page.js'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat '/home/ubuntu/em-interview-prep/.next/server/app/page.js'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/page' in /home/ubuntu/em-interview-prep/node_modules/next/dist/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/app/page.js', but to 'Error: Can't resolve '../../../../.next/server/app/page' in '/home/ubuntu/em-interview-prep/node_modules/next/dist/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/page (expected /home/ubuntu/em-interview-prep/.next/server/app/page.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/_not-found/page' in /home/ubuntu/em-interview-prep/node_modules/next/dist/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js', but to 'Error: Can't resolve '../../../../.next/server/app/_not-found/page' in '/home/ubuntu/em-interview-prep/node_modules/next/dist/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/_not-found/page (expected /home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/page' in /home/ubuntu/em-interview-prep/node_modules/next/dist/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/app/page.js', but to 'Error: Can't resolve '../../../../.next/server/app/page' in '/home/ubuntu/em-interview-prep/node_modules/next/dist/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/page (expected /home/ubuntu/em-interview-prep/.next/server/app/page.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/_not-found/page' in /home/ubuntu/em-interview-prep/node_modules/next/dist/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js', but to 'Error: Can't resolve '../../../../.next/server/app/_not-found/page' in '/home/ubuntu/em-interview-prep/node_modules/next/dist/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/_not-found/page (expected /home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/api/companies/with-questions/route' in /home/ubuntu/em-interview-prep/node_modules/next/dist/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/app/api/companies/with-questions/route.js', but to 'Error: Can't resolve '../../../../.next/server/app/api/companies/with-questions/route' in '/home/ubuntu/em-interview-prep/node_modules/next/dist/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/api/companies/with-questions/route (expected /home/ubuntu/em-interview-prep/.next/server/app/api/companies/with-questions/route.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/api/companies/with-questions/route' in /home/ubuntu/em-interview-prep/node_modules/next/dist/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/app/api/companies/with-questions/route.js', but to 'Error: Can't resolve '../../../../.next/server/app/api/companies/with-questions/route' in '/home/ubuntu/em-interview-prep/node_modules/next/dist/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/api/companies/with-questions/route (expected /home/ubuntu/em-interview-prep/.next/server/app/api/companies/with-questions/route.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat '/home/ubuntu/em-interview-prep/.next/server/app/page.js'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat '/home/ubuntu/em-interview-prep/.next/server/app/page.js'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/page' in /home/ubuntu/em-interview-prep/node_modules/next/dist/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/app/page.js', but to 'Error: Can't resolve '../../../../.next/server/app/page' in '/home/ubuntu/em-interview-prep/node_modules/next/dist/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/page (expected /home/ubuntu/em-interview-prep/.next/server/app/page.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/page' in /home/ubuntu/em-interview-prep/node_modules/next/dist/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/app/page.js', but to 'Error: Can't resolve '../../../../.next/server/app/page' in '/home/ubuntu/em-interview-prep/node_modules/next/dist/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/page (expected /home/ubuntu/em-interview-prep/.next/server/app/page.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-app-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-app-loader.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/webpack/bundle5.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/webpack/bundle5.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/webpack/webpack.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/webpack/webpack.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/plugins/define-env-plugin.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/plugins/define-env-plugin.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/swc/index.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/swc/index.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/_not-found/page' in /home/ubuntu/em-interview-prep/node_modules/next/dist/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js', but to 'Error: Can't resolve '../../../../.next/server/app/_not-found/page' in '/home/ubuntu/em-interview-prep/node_modules/next/dist/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/_not-found/page (expected /home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-app-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-app-loader.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/webpack/bundle5.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/webpack/bundle5.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/webpack/webpack.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/webpack/webpack.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/plugins/define-env-plugin.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/plugins/define-env-plugin.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/swc/index.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/swc/index.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/_not-found/page' in /home/ubuntu/em-interview-prep/node_modules/next/dist/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js', but to 'Error: Can't resolve '../../../../.next/server/app/_not-found/page' in '/home/ubuntu/em-interview-prep/node_modules/next/dist/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/_not-found/page (expected /home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/api/companies/with-questions/route' in /home/ubuntu/em-interview-prep/node_modules/next/dist/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/app/api/companies/with-questions/route.js', but to 'Error: Can't resolve '../../../../.next/server/app/api/companies/with-questions/route' in '/home/ubuntu/em-interview-prep/node_modules/next/dist/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/api/companies/with-questions/route (expected /home/ubuntu/em-interview-prep/.next/server/app/api/companies/with-questions/route.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-app-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-app-loader.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/webpack/bundle5.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/webpack/bundle5.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/webpack/webpack.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/webpack/webpack.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/plugins/define-env-plugin.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/plugins/define-env-plugin.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/swc/index.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/swc/index.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/api/dashboard/stats/route' in /home/ubuntu/em-interview-prep/node_modules/next/dist/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/stats/route.js', but to 'Error: Can't resolve '../../../../.next/server/app/api/dashboard/stats/route' in '/home/ubuntu/em-interview-prep/node_modules/next/dist/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/api/dashboard/stats/route (expected /home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/stats/route.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-app-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-app-loader.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/webpack/bundle5.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/webpack/bundle5.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/webpack/webpack.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/webpack/webpack.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/plugins/define-env-plugin.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/plugins/define-env-plugin.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/swc/index.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/swc/index.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat '/home/ubuntu/em-interview-prep/.next/server/app/page.js'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat '/home/ubuntu/em-interview-prep/.next/server/app/page.js'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat '/home/ubuntu/em-interview-prep/.next/server/app/page.js'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/page' in /home/ubuntu/em-interview-prep/node_modules/next/dist/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/app/page.js', but to 'Error: Can't resolve '../../../../.next/server/app/page' in '/home/ubuntu/em-interview-prep/node_modules/next/dist/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/page (expected /home/ubuntu/em-interview-prep/.next/server/app/page.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/_not-found/page' in /home/ubuntu/em-interview-prep/node_modules/next/dist/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js', but to 'Error: Can't resolve '../../../../.next/server/app/_not-found/page' in '/home/ubuntu/em-interview-prep/node_modules/next/dist/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/_not-found/page (expected /home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/page' in /home/ubuntu/em-interview-prep/node_modules/next/dist/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/app/page.js', but to 'Error: Can't resolve '../../../../.next/server/app/page' in '/home/ubuntu/em-interview-prep/node_modules/next/dist/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/page (expected /home/ubuntu/em-interview-prep/.next/server/app/page.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/api/companies/with-questions/route' in /home/ubuntu/em-interview-prep/node_modules/next/dist/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/app/api/companies/with-questions/route.js', but to 'Error: Can't resolve '../../../../.next/server/app/api/companies/with-questions/route' in '/home/ubuntu/em-interview-prep/node_modules/next/dist/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/api/companies/with-questions/route (expected /home/ubuntu/em-interview-prep/.next/server/app/api/companies/with-questions/route.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/_not-found/page' in /home/ubuntu/em-interview-prep/node_modules/next/dist/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js', but to 'Error: Can't resolve '../../../../.next/server/app/_not-found/page' in '/home/ubuntu/em-interview-prep/node_modules/next/dist/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/_not-found/page (expected /home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/_not-found/page' in /home/ubuntu/em-interview-prep/node_modules/next/dist/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js', but to 'Error: Can't resolve '../../../../.next/server/app/_not-found/page' in '/home/ubuntu/em-interview-prep/node_modules/next/dist/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/_not-found/page (expected /home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/page' in /home/ubuntu/em-interview-prep/node_modules/next/dist/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/app/page.js', but to 'Error: Can't resolve '../../../../.next/server/app/page' in '/home/ubuntu/em-interview-prep/node_modules/next/dist/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/page (expected /home/ubuntu/em-interview-prep/.next/server/app/page.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/api/companies/with-questions/route' in /home/ubuntu/em-interview-prep/node_modules/next/dist/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/app/api/companies/with-questions/route.js', but to 'Error: Can't resolve '../../../../.next/server/app/api/companies/with-questions/route' in '/home/ubuntu/em-interview-prep/node_modules/next/dist/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/api/companies/with-questions/route (expected /home/ubuntu/em-interview-prep/.next/server/app/api/companies/with-questions/route.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js

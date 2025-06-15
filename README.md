@@ -1,400 +1,300 @@
-# EM Interview Prep - Complete Application
+# EM Interview Prep - Complete Setup
 
-A comprehensive Engineering Manager interview preparation platform with behavioral questions, STAR method stories, and company-specific interview guides.
+A comprehensive interview preparation platform for Engineering Managers, featuring behavioral questions, system design scenarios, and STAR method story tracking.
 
 ## 🚀 Quick Start
 
-### Prerequisites
+### Option 1: Complete Automated Setup (Ubuntu/Debian)
+```bash
+git clone https://github.com/mayssamj/em-interview-prep-complete.git
+cd em-interview-prep-complete
+chmod +x scripts/complete_setup.sh
+./scripts/complete_setup.sh
+```
 
-- Node.js 18+ 
-- PostgreSQL database
-- npm or yarn package manager
+### Option 2: Manual Setup
 
-### Installation
+#### Prerequisites
+- Ubuntu 20.04+ or Debian 10+
+- sudo access
+- Internet connection
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/mayssamj/em-interview-prep-complete.git
-   cd em-interview-prep-complete
-   ```
+#### Step 1: Install PostgreSQL
+```bash
+chmod +x scripts/install_postgresql.sh
+./scripts/install_postgresql.sh
+```
 
-2. **Run the setup script**
-   ```bash
-   chmod +x scripts/setup.sh
-   ./scripts/setup.sh
-   ```
+#### Step 2: Install Node.js
+```bash
+chmod +x scripts/install_nodejs.sh
+./scripts/install_nodejs.sh
+```
 
-3. **Configure environment variables**
-   ```bash
-   cp .env.example .env
-   # Edit .env with your database and authentication details
-   ```
+#### Step 3: Setup Environment
+```bash
+cp .env.example .env
+# Edit .env with your database credentials
+nano .env
+```
 
-4. **Seed the database**
-   ```bash
-   chmod +x scripts/seed.sh
-   ./scripts/seed.sh
-   ```
+#### Step 4: Setup Database
+```bash
+chmod +x scripts/setup_database.sh
+./scripts/setup_database.sh
+```
 
-5. **Start the development server**
-   ```bash
-   npm run dev
-   # or use the helper script
-   ./scripts/dev.sh
-   ```
+#### Step 5: Start Application
+```bash
+chmod +x scripts/start_app.sh
+./scripts/start_app.sh
+```
 
-Visit [http://localhost:3000](http://localhost:3000) to access the application.
+## 📊 Database Content
+
+The application comes pre-loaded with:
+- **15 Companies**: Meta, Google, Amazon, Microsoft, Apple, Netflix, Uber, Airbnb, Stripe, Spotify, LinkedIn, Twitter, Dropbox, Slack, Zoom
+- **334+ Questions**: Comprehensive behavioral and system design questions
+- **Sample Stories**: 21 pre-written STAR method examples
+- **User Accounts**: Demo accounts for testing
+
+## 🛠 Manual Database Setup
+
+If you prefer to set up the database manually:
+
+### PostgreSQL Setup
+```bash
+# Install PostgreSQL
+sudo apt update
+sudo apt install postgresql postgresql-contrib
+
+# Create database and user
+sudo -u postgres psql
+CREATE USER em_user WITH PASSWORD 'your_secure_password';
+CREATE DATABASE em_interview_prep OWNER em_user;
+GRANT ALL PRIVILEGES ON DATABASE em_interview_prep TO em_user;
+\q
+```
+
+### Environment Configuration
+Create `.env` file:
+```env
+DATABASE_URL="postgresql://em_user:your_secure_password@localhost:5432/em_interview_prep"
+NEXTAUTH_SECRET="your-secret-key-here"
+NEXTAUTH_URL="http://localhost:3000"
+```
+
+### Application Setup
+```bash
+# Install dependencies
+yarn install
+
+# Generate Prisma client
+npx prisma generate
+
+# Setup database schema
+npx prisma db push
+
+# Seed with data
+node seed-simple.js
+
+# Build and start
+yarn build
+yarn start
+```
+
+## 🔧 Development
+
+### Running in Development Mode
+```bash
+yarn dev
+```
+
+### Database Management
+```bash
+# View database
+npx prisma studio
+
+# Reset database
+npx prisma db push --force-reset
+node seed-simple.js
+```
+
+### Building for Production
+```bash
+yarn build
+yarn start
+```
 
 ## 📁 Project Structure
 
 ```
-em-interview-prep-complete/
-├── app/                    # Next.js 13+ app directory
-│   ├── api/               # API routes
-│   ├── auth/              # Authentication pages
-│   ├── companies/         # Company-specific pages
-│   ├── questions/         # Question management
-│   └── stories/           # STAR stories management
-├── components/            # Reusable React components
-│   ├── ui/               # UI components
-│   ├── forms/            # Form components
-│   └── layout/           # Layout components
-├── lib/                  # Utility libraries
-├── prisma/               # Database schema and migrations
-├── public/               # Static assets
-├── backup/               # Database exports and backups
-├── scripts/              # Setup and utility scripts
-├── docs/                 # Documentation
-└── styles/               # Global styles
+├── app/                    # Next.js app directory
+├── components/             # React components
+├── lib/                   # Utility libraries
+├── prisma/                # Database schema
+├── scripts/               # Setup scripts
+├── dump/                  # Database exports
+├── docs/                  # Documentation
+├── seed-simple.js         # Database seeding
+└── package.json           # Dependencies
 ```
 
-## 🗄️ Database
-
-### Schema Overview
-
-The application uses PostgreSQL with Prisma ORM. Key entities:
-
-- **Companies**: Tech companies with interview information
-- **Questions**: Behavioral and technical interview questions
-- **Stories**: STAR method stories for behavioral questions
-- **Users**: User accounts and profiles
-- **Interviews**: Interview sessions and feedback
-- **Notes**: Interview preparation notes
-
-### Database Management
-
-**Setup database:**
-```bash
-./scripts/setup.sh
-```
-
-**Seed with data:**
-```bash
-./scripts/seed.sh
-```
-
-**Reset database:**
-```bash
-./scripts/reset.sh
-```
-
-**Manual Prisma commands:**
-```bash
-npx prisma generate    # Generate Prisma client
-npx prisma db push     # Push schema changes
-npx prisma studio      # Open database browser
-```
-
-## 🔧 Environment Variables
-
-Copy `.env.example` to `.env` and configure:
-
-```env
-# Database
-DATABASE_URL="postgresql://username:password@localhost:5432/em_interview_prep"
-
-# Authentication
-NEXTAUTH_URL="http://localhost:3000"
-NEXTAUTH_SECRET="your-secret-key-here"
-
-# OAuth (optional)
-GOOGLE_CLIENT_ID="your-google-client-id"
-GOOGLE_CLIENT_SECRET="your-google-client-secret"
-
-# Application
-NODE_ENV="development"
-```
-
-## 🐳 Docker Deployment
+## 🐳 Docker Setup
 
 ### Using Docker Compose
-
-1. **Start services:**
-   ```bash
-   docker-compose up -d
-   ```
-
-2. **Setup database:**
-   ```bash
-   docker-compose exec app ./scripts/setup.sh
-   ```
-
-3. **Seed database:**
-   ```bash
-   docker-compose exec app ./scripts/seed.sh
-   ```
+```bash
+docker-compose up -d
+```
 
 ### Manual Docker Build
-
 ```bash
 docker build -t em-interview-prep .
 docker run -p 3000:3000 em-interview-prep
 ```
 
-## 📚 Features
-
-### Core Features
-
-- **Company Profiles**: Detailed information about tech companies
-- **Question Bank**: Curated behavioral and technical questions
-- **STAR Stories**: Structured storytelling for behavioral interviews
-- **Interview Tracking**: Track interview progress and feedback
-- **Notes System**: Comprehensive note-taking capabilities
-
-### User Management
-
-- Authentication with NextAuth.js
-- User profiles and preferences
-- Progress tracking
-- Personal story library
-
-### Interview Preparation
-
-- Company-specific question sets
-- STAR method story builder
-- Practice interview sessions
-- Performance analytics
-
-## 🔌 API Documentation
+## 🔍 API Documentation
 
 ### Authentication Endpoints
-
 - `POST /api/auth/signin` - User sign in
-- `POST /api/auth/signout` - User sign out
+- `POST /api/auth/signup` - User registration
 - `GET /api/auth/session` - Get current session
 
-### Companies API
-
-- `GET /api/companies` - List all companies
-- `GET /api/companies/[id]` - Get company details
-- `POST /api/companies` - Create new company
-- `PUT /api/companies/[id]` - Update company
-- `DELETE /api/companies/[id]` - Delete company
-
 ### Questions API
-
-- `GET /api/questions` - List questions with filters
-- `GET /api/questions/[id]` - Get question details
+- `GET /api/questions` - Get all questions
+- `GET /api/questions/[id]` - Get specific question
 - `POST /api/questions` - Create new question
 - `PUT /api/questions/[id]` - Update question
 - `DELETE /api/questions/[id]` - Delete question
 
 ### Stories API
-
-- `GET /api/stories` - List user stories
-- `GET /api/stories/[id]` - Get story details
+- `GET /api/stories` - Get user stories
 - `POST /api/stories` - Create new story
 - `PUT /api/stories/[id]` - Update story
 - `DELETE /api/stories/[id]` - Delete story
 
-### Interviews API
+### Companies API
+- `GET /api/companies` - Get all companies
+- `POST /api/companies` - Create new company
 
-- `GET /api/interviews` - List interviews
-- `GET /api/interviews/[id]` - Get interview details
-- `POST /api/interviews` - Create interview session
-- `PUT /api/interviews/[id]` - Update interview
-- `DELETE /api/interviews/[id]` - Delete interview
-
-## 🚀 Deployment
-
-### Vercel Deployment
-
-1. **Connect to Vercel:**
-   ```bash
-   npm install -g vercel
-   vercel login
-   vercel
-   ```
-
-2. **Configure environment variables in Vercel dashboard**
-
-3. **Deploy:**
-   ```bash
-   vercel --prod
-   ```
-
-### Railway Deployment
-
-1. **Install Railway CLI:**
-   ```bash
-   npm install -g @railway/cli
-   ```
-
-2. **Deploy:**
-   ```bash
-   railway login
-   railway init
-   railway up
-   ```
-
-### Manual Server Deployment
-
-1. **Build application:**
-   ```bash
-   npm run build
-   ```
-
-2. **Start production server:**
-   ```bash
-   npm start
-   ```
-
-## 🛠️ Development
-
-### Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
-- `npm run type-check` - Run TypeScript checks
-
-### Development Workflow
-
-1. **Create feature branch:**
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-
-2. **Make changes and test:**
-   ```bash
-   npm run dev
-   ```
-
-3. **Run tests and linting:**
-   ```bash
-   npm run lint
-   npm run type-check
-   ```
-
-4. **Commit and push:**
-   ```bash
-   git add .
-   git commit -m "Add your feature"
-   git push origin feature/your-feature-name
-   ```
-
-## 🔍 Troubleshooting
+## 🚨 Troubleshooting
 
 ### Common Issues
 
-**Database Connection Issues:**
-- Verify DATABASE_URL in .env file
-- Ensure PostgreSQL is running
-- Check database credentials and permissions
-
-**Build Errors:**
-- Clear node_modules: `rm -rf node_modules && npm install`
-- Clear Next.js cache: `rm -rf .next`
-- Regenerate Prisma client: `npx prisma generate`
-
-**Authentication Issues:**
-- Verify NEXTAUTH_SECRET is set
-- Check OAuth provider configuration
-- Ensure NEXTAUTH_URL matches your domain
-
-**Port Already in Use:**
+#### Database Connection Error
 ```bash
-# Kill process on port 3000
-lsof -ti:3000 | xargs kill -9
+# Check PostgreSQL status
+sudo systemctl status postgresql
+
+# Restart PostgreSQL
+sudo systemctl restart postgresql
+
+# Check database exists
+sudo -u postgres psql -l
+```
+
+#### Port Already in Use
+```bash
+# Find process using port 3000
+lsof -i :3000
+
+# Kill process
+kill -9 <PID>
+```
+
+#### Permission Errors
+```bash
+# Fix file permissions
+chmod +x scripts/*.sh
+
+# Fix ownership
+sudo chown -R $USER:$USER .
+```
+
+#### Node.js Version Issues
+```bash
+# Install specific Node.js version
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt-get install -y nodejs
 ```
 
 ### Database Issues
 
-**Reset database completely:**
+#### Reset Database
 ```bash
-./scripts/reset.sh
+npx prisma db push --force-reset
+node seed-simple.js
 ```
 
-**Manual database reset:**
+#### Import Data Manually
 ```bash
-npx prisma db push --force-reset --accept-data-loss
-npx prisma db push
-./scripts/seed.sh
+chmod +x scripts/import_data.sh
+./scripts/import_data.sh
 ```
 
-### Performance Issues
+#### Check Database Content
+```bash
+npx prisma studio
+# Opens web interface at http://localhost:5555
+```
 
-**Optimize database queries:**
-- Use Prisma query optimization
-- Add database indexes
-- Implement pagination
+## 🔐 Security Notes
 
-**Frontend optimization:**
-- Use Next.js Image component
-- Implement code splitting
-- Add loading states
+- Change default passwords in production
+- Use environment variables for sensitive data
+- Enable SSL for database connections in production
+- Regularly update dependencies
 
-## 📊 Backup and Restore
+## 📝 Environment Variables
 
-### Creating Backups
-
-The `backup/` directory contains:
-- `database-export.json` - Complete database export
-- `database-inserts.sql` - SQL insert statements
-
-### Restoring from Backup
-
-1. **Reset database:**
-   ```bash
-   ./scripts/reset.sh
-   ```
-
-2. **Restore from backup:**
-   ```bash
-   ./scripts/seed.sh
-   ```
+Required environment variables:
+```env
+DATABASE_URL=postgresql://username:password@host:port/database
+NEXTAUTH_SECRET=your-secret-key
+NEXTAUTH_URL=http://localhost:3000
+```
 
 ## 🤝 Contributing
 
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
-4. Add tests if applicable
+4. Test thoroughly
 5. Submit a pull request
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License.
 
 ## 🆘 Support
 
-For support and questions:
-- Create an issue on GitHub
-- Check the troubleshooting section
-- Review the documentation
+If you encounter issues:
+1. Check the troubleshooting section
+2. Review the logs: `tail -f .logs/app.log`
+3. Open an issue on GitHub
+4. Contact support
 
-## 🔄 Version History
+## 🎯 Features
 
-- **v1.0.0** - Initial complete backup release
-- Includes full application code
-- Database export and import scripts
-- Comprehensive documentation
-- Docker support
-- Deployment guides
+- **Behavioral Questions**: 200+ curated behavioral interview questions
+- **System Design**: 134+ system design scenarios and frameworks
+- **STAR Method**: Built-in story tracking using Situation, Task, Action, Result
+- **Company Profiles**: Detailed information for top tech companies
+- **Progress Tracking**: Monitor your preparation progress
+- **Notes System**: Take and organize interview notes
+- **Responsive Design**: Works on desktop and mobile devices
+
+## 🔄 Updates
+
+To update the application:
+```bash
+git pull origin main
+yarn install
+npx prisma generate
+npx prisma db push
+yarn build
+```
 
 ---
 
-**Repository**: https://github.com/mayssamj/em-interview-prep-complete
-**Author**: mayssamj
-**Created**: $(date +%Y-%m-%d)
+**Happy Interview Prep! 🚀**
