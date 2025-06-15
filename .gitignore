@@ -1,0 +1,10 @@
+node_modules/
+.next/
+.build/
+.deploy/
+.logs/
+.env
+.abacus.donotdelete
+.yarn/
+yarn.lock
+package-lock.json

@@ -1,0 +1,226 @@
+
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider = "prisma-client-js"
+    binaryTargets = ["native", "linux-musl-arm64-openssl-3.0.x"]
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String   @id @default(cuid())
+  username      String   @unique
+  passwordHash  String   @map("password_hash")
+  isAdmin       Boolean  @default(false) @map("is_admin")
+  preferences   Json?    // Store theme, view mode, etc.
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @updatedAt @map("updated_at")
+
+  // Relations
+  stories       Story[]
+  answers       Answer[]
+  progress      Progress[]
+  interviewNotes InterviewNote[]
+  questionViews QuestionView[]
+  systemDesignAnswers SystemDesignAnswer[]
+
+  @@map("users")
+}
+
+model Company {
+  id                String   @id @default(cuid())
+  name              String   @unique
+  values            String[] // Array of company values
+  evaluationCriteria String[] @map("evaluation_criteria") // Array of evaluation criteria
+  interviewFormat   String   @map("interview_format") // Description of interview process
+  successTips       String[] @map("success_tips") // Array of success tips
+  redFlags          String[] @map("red_flags") // Array of red flags
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+
+  // Relations
+  questions         Question[]
+
+  @@map("companies")
+}
+
+model Story {
+  id          String   @id @default(cuid())
+  userId      String   @map("user_id")
+  title       String
+  situation   String
+  task        String
+  action      String
+  result      String
+  reflection  String?
+  tags        String[] // Array of tags
+  categories  String[] // Array of categories (leadership, conflict_resolution, etc.)
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  // Relations
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  answers     Answer[] @relation("StoryReferences")
+
+  @@map("stories")
+}
+
+model Question {
+  id          String   @id @default(cuid())
+  companyId   String?  @map("company_id") // Nullable for general questions
+  category    String   // leadership, conflict_resolution, team_building, etc.
+  questionText String  @map("question_text")
+  difficulty  String   // Easy, Medium, Hard
+  questionType String  @default("behavioral") @map("question_type") // behavioral, system_design
+  isGenerated Boolean  @default(true) @map("is_generated") // True for pre-populated, false for user-added
+  tags        String[] // Array of tags
+  isCritical  Boolean  @default(false) @map("is_critical") // Mark critical questions
+  usageCount  Int      @default(0) @map("usage_count") // Track how often question is accessed
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  // Relations
+  company     Company? @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  answers     Answer[]
+  progress    Progress[]
+  questionViews QuestionView[]
+  systemDesignDetails SystemDesignQuestion?
+  systemDesignAnswers SystemDesignAnswer[]
+
+  @@map("questions")
+}
+
+model Answer {
+  id              String   @id @default(cuid())
+  userId          String   @map("user_id")
+  questionId      String   @map("question_id")
+  answerText      String   @map("answer_text")
+  storyReferences String[] @map("story_references") // Array of story IDs
+  notes           String?
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+
+  // Relations
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  question        Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  stories         Story[]  @relation("StoryReferences")
+
+  @@unique([userId, questionId])
+  @@map("answers")
+}
+
+model Progress {
+  id           String   @id @default(cuid())
+  userId       String   @map("user_id")
+  questionId   String   @map("question_id")
+  status       String   // not_started, in_progress, completed, reviewed
+  lastReviewed DateTime? @map("last_reviewed")
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  // Relations
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  question     Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, questionId])
+  @@map("progress")
+}
+
+model InterviewNote {
+  id                String   @id @default(cuid())
+  userId            String   @map("user_id")
+  company           String
+  interviewerName   String?  @map("interviewer_name")
+  interviewerRole   String?  @map("interviewer_role")
+  questionsAsked    String[] @map("questions_asked") // Array of questions
+  takeaways         String?
+  followUpThoughts  String?  @map("follow_up_thoughts")
+  interviewDate     DateTime @map("interview_date")
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+
+  // Relations
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("interview_notes")
+}
+
+model QuestionView {
+  id         String   @id @default(cuid())
+  userId     String   @map("user_id")
+  questionId String   @map("question_id")
+  viewedAt   DateTime @default(now()) @map("viewed_at")
+
+  // Relations
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@map("question_views")
+}
+
+model SystemDesignQuestion {
+  id                    String   @id @default(cuid())
+  questionId            String   @unique @map("question_id")
+  architectureFocus     String[] @map("architecture_focus") // e.g., ["distributed_systems", "microservices", "caching"]
+  complexityLevel       String   @map("complexity_level") // junior, mid, senior, staff
+  leadershipAspects     String[] @map("leadership_aspects") // e.g., ["technical_decision_making", "stakeholder_management"]
+  frameworks            String[] // e.g., ["CAP_theorem", "ACID", "BASE", "event_sourcing"]
+  evaluationCriteria    String[] @map("evaluation_criteria") // e.g., ["scalability", "reliability", "cost_efficiency"]
+  resources             String[] // Links to study materials, documentation
+  estimatedTimeMinutes  Int?     @map("estimated_time_minutes") // Expected time to solve
+  followUpQuestions     String[] @map("follow_up_questions") // Common follow-up questions
+  commonMistakes        String[] @map("common_mistakes") // Things to avoid
+  keyTradeoffs          String[] @map("key_tradeoffs") // Important tradeoffs to discuss
+  createdAt             DateTime @default(now()) @map("created_at")
+  updatedAt             DateTime @updatedAt @map("updated_at")
+
+  // Relations
+  question              Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@map("system_design_questions")
+}
+
+model SystemDesignFramework {
+  id                String   @id @default(cuid())
+  name              String   @unique
+  description       String
+  category          String   // e.g., "architecture_patterns", "data_consistency", "scalability"
+  keyPrinciples     String[] @map("key_principles")
+  useCases          String[] @map("use_cases")
+  tradeoffs         String[] 
+  examples          String[] // Real-world examples
+  resources         String[] // Study links
+  difficulty        String   // Easy, Medium, Hard
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+
+  @@map("system_design_frameworks")
+}
+
+model SystemDesignAnswer {
+  id                    String   @id @default(cuid())
+  userId                String   @map("user_id")
+  questionId            String   @map("question_id")
+  highLevelDesign       String   @map("high_level_design") // Overall architecture description
+  detailedComponents    Json?    @map("detailed_components") // Detailed component breakdown
+  scalabilityApproach   String?  @map("scalability_approach")
+  dataStorageStrategy   String?  @map("data_storage_strategy")
+  tradeoffsDiscussed    String[] @map("tradeoffs_discussed")
+  frameworksUsed        String[] @map("frameworks_used")
+  estimatedScale        String?  @map("estimated_scale") // e.g., "1M users", "100K QPS"
+  notes                 String?
+  createdAt             DateTime @default(now()) @map("created_at")
+  updatedAt             DateTime @updatedAt @map("updated_at")
+
+  // Relations
+  user                  User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  question              Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, questionId])
+  @@map("system_design_answers")
+}
