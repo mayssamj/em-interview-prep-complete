@@ -1,0 +1,191 @@
+sending incremental file list
+components.json
+next-env.d.ts
+next.config.js
+package.json
+postcss.config.js
+tailwind.config.ts
+tsconfig.json
+app/
+app/globals.css
+app/layout.tsx
+app/page.tsx
+app/admin/
+app/admin/page.tsx
+app/api/
+app/api/admin/
+app/api/admin/stats/
+app/api/admin/stats/route.ts
+app/api/answers/
+app/api/answers/route.ts
+app/api/auth/
+app/api/auth/login/
+app/api/auth/login/route.ts
+app/api/auth/logout/
+app/api/auth/logout/route.ts
+app/api/auth/me/
+app/api/auth/me/route.ts
+app/api/auth/register/
+app/api/auth/register/route.ts
+app/api/dashboard/
+app/api/dashboard/activity/
+app/api/dashboard/activity/route.ts
+app/api/dashboard/stats/
+app/api/dashboard/stats/route.ts
+app/api/seed/
+app/api/seed/route.ts
+app/api/stories/
+app/api/stories/route.ts
+app/api/stories/[id]/
+app/api/stories/[id]/route.ts
+app/company/
+app/company/[company]/
+app/company/[company]/page.tsx
+app/dashboard/
+app/dashboard/page.tsx
+app/interview-notes/
+app/interview-notes/page.tsx
+app/login/
+app/login/page.tsx
+app/stories/
+app/stories/page.tsx
+app/stories/new/
+app/stories/new/page.tsx
+components/
+components/theme-provider.tsx
+components/auth/
+components/auth/login-form.tsx
+components/company/
+components/company/company-answers.tsx
+components/company/company-overview.tsx
+components/company/company-stories.tsx
+components/company/company-tabs.tsx
+components/company/interview-strategy.tsx
+components/company/question-bank.tsx
+components/dashboard/
+components/dashboard/company-selector.tsx
+components/dashboard/progress-overview.tsx
+components/dashboard/quick-actions.tsx
+components/dashboard/recent-activity.tsx
+components/layout/
+components/layout/header.tsx
+components/stories/
+components/stories/stories-manager.tsx
+components/stories/story-form.tsx
+components/ui/
+components/ui/accordion.tsx
+components/ui/alert-dialog.tsx
+components/ui/alert.tsx
+components/ui/aspect-ratio.tsx
+components/ui/avatar.tsx
+components/ui/badge.tsx
+components/ui/breadcrumb.tsx
+components/ui/button.tsx
+components/ui/calendar.tsx
+components/ui/card.tsx
+components/ui/carousel.tsx
+components/ui/checkbox.tsx
+components/ui/collapsible.tsx
+components/ui/command.tsx
+components/ui/context-menu.tsx
+components/ui/date-range-picker.tsx
+components/ui/dialog.tsx
+components/ui/drawer.tsx
+components/ui/dropdown-menu.tsx
+components/ui/form.tsx
+components/ui/hover-card.tsx
+components/ui/input-otp.tsx
+components/ui/input.tsx
+components/ui/label.tsx
+components/ui/menubar.tsx
+components/ui/navigation-menu.tsx
+components/ui/pagination.tsx
+components/ui/popover.tsx
+components/ui/progress.tsx
+components/ui/radio-group.tsx
+components/ui/resizable.tsx
+components/ui/scroll-area.tsx
+components/ui/select.tsx
+components/ui/separator.tsx
+components/ui/sheet.tsx
+components/ui/skeleton.tsx
+components/ui/slider.tsx
+components/ui/sonner.tsx
+components/ui/switch.tsx
+components/ui/table.tsx
+components/ui/tabs.tsx
+components/ui/task-card.tsx
+components/ui/textarea.tsx
+components/ui/toast.tsx
+components/ui/toaster.tsx
+components/ui/toggle-group.tsx
+components/ui/toggle.tsx
+components/ui/tooltip.tsx
+components/ui/use-toast.ts
+hooks/
+hooks/use-toast.ts
+lib/
+lib/auth.ts
+lib/db.ts
+lib/seed.ts
+lib/types.ts
+lib/utils.ts
+lib/db/
+prisma/
+prisma/schema.prisma
+prisma/seed.ts
+
+sent 328,810 bytes  received 2,096 bytes  661,812.00 bytes/sec
+total size is 320,804  speedup is 0.97
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+  ▲ Next.js 14.2.28
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Skipping linting
+   Checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/10) ...
+   Generating static pages (2/10) 
+   Generating static pages (4/10) 
+   Generating static pages (7/10) 
+ ✓ Generating static pages (10/10)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ƒ /                                    138 B          87.3 kB
+├ ○ /_not-found                          873 B            88 kB
+├ ○ /admin                               2.6 kB          127 kB
+├ ƒ /api/admin/stats                     0 B                0 B
+├ ƒ /api/answers                         0 B                0 B
+├ ƒ /api/auth/login                      0 B                0 B
+├ ƒ /api/auth/logout                     0 B                0 B
+├ ƒ /api/auth/me                         0 B                0 B
+├ ƒ /api/auth/register                   0 B                0 B
+├ ƒ /api/dashboard/activity              0 B                0 B
+├ ƒ /api/dashboard/stats                 0 B                0 B
+├ ƒ /api/seed                            0 B                0 B
+├ ƒ /api/stories                         0 B                0 B
+├ ƒ /api/stories/[id]                    0 B                0 B
+├ ƒ /company/[company]                   10.8 kB         136 kB
+├ ƒ /dashboard                           5.72 kB         131 kB
+├ ƒ /interview-notes                     180 B           125 kB
+├ ƒ /login                               2.9 kB         98.1 kB
+├ ƒ /stories                             3.62 kB         128 kB
+└ ƒ /stories/new                         3.58 kB         128 kB
++ First Load JS shared by all            87.1 kB
+  ├ chunks/117-826c616a6a7da447.js       31.6 kB
+  ├ chunks/fd9d1056-b6bd4111191f2b98.js  53.6 kB
+  └ other shared chunks (total)          1.9 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

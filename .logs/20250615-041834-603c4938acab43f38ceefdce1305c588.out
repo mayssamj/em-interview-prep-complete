@@ -1,0 +1,84 @@
+  ▲ Next.js 14.2.28
+  - Local:        http://localhost:3000
+  - Environments: .env
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+ ✓ Starting...
+ ✓ Ready in 1726ms
+ ○ Compiling / ...
+ ✓ Compiled / in 2.7s (547 modules)
+ GET / 307 in 3170ms
+ ✓ Compiled /login in 903ms (549 modules)
+ GET /login 200 in 794ms
+ GET / 307 in 38ms
+ GET /login 200 in 23ms
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 910ms (732 modules)
+ GET /dashboard 307 in 1000ms
+ ✓ Compiled /stories in 351ms (751 modules)
+ GET /stories 307 in 418ms
+ ○ Compiling /company/[company] ...
+ ✓ Compiled /company/[company] in 512ms (802 modules)
+ GET /company/meta 307 in 899ms
+ ✓ Compiled /api/auth/login in 223ms (446 modules)
+ GET /api/auth/login 405 in 313ms
+ POST /api/auth/login 200 in 495ms
+ GET / 307 in 73ms
+ GET /login 200 in 45ms
+ POST /api/auth/login 200 in 373ms
+ GET /dashboard 200 in 64ms
+ ✓ Compiled in 1107ms (842 modules)
+ ○ Compiling /interview-notes ...
+ ✓ Compiled /interview-notes in 591ms (852 modules)
+ GET /interview-notes 500 in 706ms
+ ✓ Compiled /admin in 370ms (860 modules)
+ GET /admin 500 in 484ms
+ GET /admin 500 in 49ms
+ ✓ Compiled in 647ms (807 modules)
+ ✓ Compiled in 453ms (782 modules)
+ ✓ Compiled in 709ms (782 modules)
+ ✓ Compiled in 379ms (760 modules)
+ GET /admin 200 in 84ms
+ ✓ Compiled /interview-notes in 172ms (380 modules)
+ GET /interview-notes 200 in 262ms
+ ✓ Compiled /stories in 159ms (392 modules)
+ GET /stories 200 in 255ms
+ ✓ Compiled /stories/new in 458ms (797 modules)
+ GET /stories/new 200 in 545ms
+ ✓ Compiled /company/[company] in 184ms (430 modules)
+ GET /company/meta 200 in 341ms
+ GET /company/amazon 200 in 57ms
+ GET /company/google 200 in 57ms
+ ✓ Compiled /api/auth/me in 230ms (458 modules)
+ GET /api/auth/me 200 in 326ms
+ ✓ Compiled /api/admin/stats in 225ms (460 modules)
+ GET /api/admin/stats 200 in 292ms
+ ✓ Compiled /api/stories in 188ms (462 modules)
+ GET /api/stories 200 in 235ms
+ ✓ Compiled / in 184ms (465 modules)
+ GET / 307 in 274ms
+ GET /login 200 in 38ms
+ ✓ Compiled /dashboard in 241ms (484 modules)
+ GET /dashboard 200 in 346ms
+ GET /company/meta 200 in 70ms
+ GET /login 200 in 29ms
+ GET /dashboard 200 in 33ms
+ GET /stories 200 in 46ms
+ GET /stories/new 200 in 39ms
+ GET /company/meta 200 in 56ms
+ GET /company/amazon 200 in 44ms
+ GET /company/google 200 in 40ms
+ GET /admin 200 in 33ms
+ GET /interview-notes 200 in 50ms
+ GET /api/auth/me 200 in 21ms
+ GET /api/stories 200 in 20ms
+ GET /api/admin/stats 200 in 25ms
+ ✓ Compiled /api/dashboard/stats in 239ms (486 modules)
+ GET /api/dashboard/stats 200 in 295ms
+ ✓ Compiled /api/dashboard/activity in 210ms (488 modules)
+ GET /api/dashboard/activity 200 in 276ms
+ GET /company/invalid 404 in 76ms
+ ✓ Compiled /_not-found in 359ms (884 modules)
+ GET /nonexistent 404 in 409ms
+[?25h

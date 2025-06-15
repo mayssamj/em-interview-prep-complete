@@ -14,7 +14,7 @@ export async function GET() {
             { usageCount: 'desc' },
             { createdAt: 'desc' }
           ],
-          take: 5 // Get top 5 questions per company
+          take: 10 // Get top 10 questions per company (mix of behavioral and system design)
         }
       },
       orderBy: { name: 'asc' }

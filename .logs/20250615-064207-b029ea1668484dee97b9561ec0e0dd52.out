@@ -1,0 +1,11 @@
+Internal Error: app@workspace:.: This package doesn't seem to be present in your lockfile; run "yarn install" to update the lockfile
+    at jR.getCandidates (/home/ubuntu/.cache/node/corepack/v1/yarn/4.9.2/yarn.js:204:8149)
+    at em.getCandidates (/home/ubuntu/.cache/node/corepack/v1/yarn/4.9.2/yarn.js:141:1311)
+    at /home/ubuntu/.cache/node/corepack/v1/yarn/4.9.2/yarn.js:209:8420
+    at qE (/home/ubuntu/.cache/node/corepack/v1/yarn/4.9.2/yarn.js:140:54028)
+    at dt (/home/ubuntu/.cache/node/corepack/v1/yarn/4.9.2/yarn.js:209:8400)
+    at async Promise.allSettled (index 0)
+    at async Uu (/home/ubuntu/.cache/node/corepack/v1/yarn/4.9.2/yarn.js:140:53356)
+    at async /home/ubuntu/.cache/node/corepack/v1/yarn/4.9.2/yarn.js:209:9166
+    at async Yi.startProgressPromise (/home/ubuntu/.cache/node/corepack/v1/yarn/4.9.2/yarn.js:140:140548)
+    at async t.resolveEverything (/home/ubuntu/.cache/node/corepack/v1/yarn/4.9.2/yarn.js:209:7138)

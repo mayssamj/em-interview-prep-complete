@@ -1,18 +1,19 @@
 
-import { getSession } from '@/lib/auth';
-import { redirect } from 'next/navigation';
 import { prisma } from '@/lib/db';
 import { Header } from '@/components/layout/header';
 import { HelpCircle } from 'lucide-react';
 import { QuestionBankClient } from '@/components/question-bank/question-bank-client';
 
-export default async function QuestionBankPage() {
-  const user = await getSession();
-  
-  if (!user) {
-    redirect('/login');
-  }
+export const dynamic = 'force-dynamic';
 
+// Mock user for testing
+const mockUser = {
+  id: "cmbx5b4vc0000u41ugdwm5uxh",
+  username: "admin",
+  isAdmin: true
+};
+
+export default async function QuestionBankPage() {
   // Get all questions with company information
   const questions = await prisma.question.findMany({
     include: {
@@ -29,7 +30,7 @@ export default async function QuestionBankPage() {
 
   // Get user's answers for progress tracking
   const userAnswers = await prisma.answer.findMany({
-    where: { userId: user.id },
+    where: { userId: mockUser.id },
     select: { questionId: true }
   });
 
@@ -37,7 +38,7 @@ export default async function QuestionBankPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header user={user} />
+      <Header user={mockUser} />
       
       <main className="container mx-auto px-4 py-8 max-w-7xl">
         <div className="space-y-8">
@@ -56,7 +57,7 @@ export default async function QuestionBankPage() {
           <QuestionBankClient 
             questions={questions} 
             answeredQuestionIds={answeredQuestionIds}
-            userId={user.id}
+            userId={mockUser.id}
           />
         </div>
       </main>

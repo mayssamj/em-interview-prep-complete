@@ -1,0 +1,51 @@
+sending incremental file list
+globals.css
+layout.tsx
+page.tsx
+admin/
+admin/page.tsx
+api/
+api/admin/
+api/admin/stats/
+api/admin/stats/route.ts
+api/answers/
+api/answers/route.ts
+api/auth/
+api/auth/login/
+api/auth/login/route.ts
+api/auth/logout/
+api/auth/logout/route.ts
+api/auth/me/
+api/auth/me/route.ts
+api/auth/register/
+api/auth/register/route.ts
+api/dashboard/
+api/dashboard/activity/
+api/dashboard/activity/route.ts
+api/dashboard/stats/
+api/dashboard/stats/route.ts
+api/seed/
+api/seed/route.ts
+api/stories/
+api/stories/route.ts
+api/stories/[id]/
+api/stories/[id]/route.ts
+company/
+company/[company]/
+company/[company]/page.tsx
+dashboard/
+dashboard/page.tsx
+interview-notes/
+interview-notes/page.tsx
+login/
+login/page.tsx
+stories/
+stories/page.tsx
+stories/new/
+stories/new/page.tsx
+
+sent 41,092 bytes  received 519 bytes  83,222.00 bytes/sec
+total size is 38,770  speedup is 0.93
+Usage Error: Couldn't find the node_modules state file - running an install might help (findPackageLocation)
+
+$ yarn run [--inspect] [--inspect-brk] [-T,--top-level] [-B,--binaries-only] [--require #0] <scriptName> ...

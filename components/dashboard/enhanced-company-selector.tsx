@@ -105,8 +105,56 @@ const companyMappings = [
     slug: 'airbnb',
   },
   {
+    id: 'linkedin',
+    name: 'LinkedIn',
+    description: 'Professional networking, career growth, and member value',
+    color: 'bg-blue-600',
+    highlights: ['Professional Growth', 'Member Value', 'Career Impact'],
+    slug: 'linkedin',
+  },
+  {
+    id: 'tiktok',
+    name: 'TikTok',
+    description: 'Creative expression, global scale, and algorithm excellence',
+    color: 'bg-black',
+    highlights: ['Creative Tech', 'Global Scale', 'Algorithm Innovation'],
+    slug: 'tiktok',
+  },
+  {
+    id: 'reddit',
+    name: 'Reddit',
+    description: 'Community building, content moderation, and user engagement',
+    color: 'bg-orange-600',
+    highlights: ['Community First', 'User Engagement', 'Content Quality'],
+    slug: 'reddit',
+  },
+  {
+    id: 'snowflake',
+    name: 'Snowflake',
+    description: 'Data cloud platform, enterprise scale, and performance',
+    color: 'bg-blue-400',
+    highlights: ['Data Excellence', 'Enterprise Scale', 'Cloud Innovation'],
+    slug: 'snowflake',
+  },
+  {
+    id: 'anthropic',
+    name: 'Anthropic',
+    description: 'AI safety research, responsible AI development, and ethics',
+    color: 'bg-indigo-500',
+    highlights: ['AI Safety', 'Research Excellence', 'Responsible AI'],
+    slug: 'anthropic',
+  },
+  {
+    id: 'scale-ai',
+    name: 'Scale AI',
+    description: 'AI infrastructure, data quality, and machine learning operations',
+    color: 'bg-violet-500',
+    highlights: ['AI Infrastructure', 'Data Quality', 'ML Operations'],
+    slug: 'scale-ai',
+  },
+  {
     id: 'startups',
-    name: 'Startups',
+    name: 'Startups & Scale-ups',
     description: '0-1 building, rapid scaling, and resourceful leadership',
     color: 'bg-emerald-500',
     highlights: ['0-1 Building', 'Rapid Scaling', 'Resourcefulness'],
@@ -139,7 +187,14 @@ export function EnhancedCompanySelector() {
         
         // Map the data to include UI properties
         const enhancedCompanies = companyMappings.map(mapping => {
-          const dbCompany = data.find((c: any) => c.name === mapping.name);
+          const dbCompany = data.find((c: any) => {
+            // Handle different name formats
+            const dbName = c.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+            const mappingName = mapping.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+            return dbName === mappingName || 
+                   c.name === mapping.name ||
+                   (mapping.name === 'Startups & Scale-ups' && c.name === 'Startups & Scale-ups');
+          });
           return {
             ...mapping,
             questionCount: dbCompany?.questions?.length || 0,

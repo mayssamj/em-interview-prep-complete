@@ -1,0 +1,259 @@
+Stories fetch error: Error: Authentication required
+    at requireAuth (/home/ubuntu/em-interview-prep/.next/server/app/api/stories/route.js:303:15)
+    at async GET (/home/ubuntu/em-interview-prep/.next/server/app/api/stories/route.js:190:22)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1588:28)
+Stats error: Error: Authentication required
+    at requireAuth (/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/stats/route.js:295:15)
+    at async GET (/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/stats/route.js:155:22)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1588:28)
+ ⨯ Error: Cannot find module '../webpack-runtime.js'
+Require stack:
+- /home/ubuntu/em-interview-prep/.next/server/pages/_document.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/require.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/build/utils.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/hot-middleware.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/start-server.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at /opt/hostedapp/node/root/app/node_modules/next/dist/server/require-hook.js:55:36
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1311:12)
+    at mod.require (/opt/hostedapp/node/root/app/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:136:16)
+    at /home/ubuntu/em-interview-prep/.next/server/pages/_document.js:52:27
+    at Object.<anonymous> (/home/ubuntu/em-interview-prep/.next/server/pages/_document.js:58:3)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Object..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1311:12)
+    at mod.require (/opt/hostedapp/node/root/app/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:136:16)
+    at requirePage (/opt/hostedapp/node/root/app/node_modules/next/dist/server/require.js:109:84)
+    at /opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js:72:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js:71:33)
+    at async DevServer.findPageComponentsImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/next-server.js:714:36) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/ubuntu/em-interview-prep/.next/server/pages/_document.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/require.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/build/utils.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+ ⨯ Error: Cannot find module '../webpack-runtime.js'
+Require stack:
+- /home/ubuntu/em-interview-prep/.next/server/pages/_document.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/require.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/build/utils.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/hot-middleware.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/start-server.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at /opt/hostedapp/node/root/app/node_modules/next/dist/server/require-hook.js:55:36
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1311:12)
+    at mod.require (/opt/hostedapp/node/root/app/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:136:16)
+    at /home/ubuntu/em-interview-prep/.next/server/pages/_document.js:52:27
+    at Object.<anonymous> (/home/ubuntu/em-interview-prep/.next/server/pages/_document.js:58:3)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Object..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1311:12)
+    at mod.require (/opt/hostedapp/node/root/app/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:136:16)
+    at requirePage (/opt/hostedapp/node/root/app/node_modules/next/dist/server/require.js:109:84)
+    at /opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js:72:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js:71:33)
+    at async DevServer.findPageComponentsImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/next-server.js:714:36) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/ubuntu/em-interview-prep/.next/server/pages/_document.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/require.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/build/utils.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+ ⨯ Error: Cannot find module '../webpack-runtime.js'
+Require stack:
+- /home/ubuntu/em-interview-prep/.next/server/pages/_document.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/require.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/build/utils.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/hot-middleware.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/start-server.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at /opt/hostedapp/node/root/app/node_modules/next/dist/server/require-hook.js:55:36
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1311:12)
+    at mod.require (/opt/hostedapp/node/root/app/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:136:16)
+    at /home/ubuntu/em-interview-prep/.next/server/pages/_document.js:52:27
+    at Object.<anonymous> (/home/ubuntu/em-interview-prep/.next/server/pages/_document.js:58:3)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Object..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1311:12)
+    at mod.require (/opt/hostedapp/node/root/app/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:136:16)
+    at requirePage (/opt/hostedapp/node/root/app/node_modules/next/dist/server/require.js:109:84)
+    at /opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js:72:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js:71:33)
+    at async DevServer.findPageComponentsImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/next-server.js:714:36) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/ubuntu/em-interview-prep/.next/server/pages/_document.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/require.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/build/utils.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⨯ Error: Cannot find module '../webpack-runtime.js'
+Require stack:
+- /home/ubuntu/em-interview-prep/.next/server/pages/_document.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/require.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/build/utils.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/hot-middleware.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/start-server.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at /opt/hostedapp/node/root/app/node_modules/next/dist/server/require-hook.js:55:36
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1311:12)
+    at mod.require (/opt/hostedapp/node/root/app/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:136:16)
+    at /home/ubuntu/em-interview-prep/.next/server/pages/_document.js:52:27
+    at Object.<anonymous> (/home/ubuntu/em-interview-prep/.next/server/pages/_document.js:58:3)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Object..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1311:12)
+    at mod.require (/opt/hostedapp/node/root/app/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:136:16)
+    at requirePage (/opt/hostedapp/node/root/app/node_modules/next/dist/server/require.js:109:84)
+    at /opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js:72:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js:71:33)
+    at async DevServer.findPageComponentsImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/next-server.js:714:36) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/ubuntu/em-interview-prep/.next/server/pages/_document.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/require.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/build/utils.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+ ⨯ Error: Cannot find module '../webpack-runtime.js'
+Require stack:
+- /home/ubuntu/em-interview-prep/.next/server/pages/_document.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/require.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/build/utils.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/hot-middleware.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js
+- /opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/start-server.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at /opt/hostedapp/node/root/app/node_modules/next/dist/server/require-hook.js:55:36
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1311:12)
+    at mod.require (/opt/hostedapp/node/root/app/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:136:16)
+    at /home/ubuntu/em-interview-prep/.next/server/pages/_document.js:52:27
+    at Object.<anonymous> (/home/ubuntu/em-interview-prep/.next/server/pages/_document.js:58:3)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Object..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1311:12)
+    at mod.require (/opt/hostedapp/node/root/app/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:136:16)
+    at requirePage (/opt/hostedapp/node/root/app/node_modules/next/dist/server/require.js:109:84)
+    at /opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js:72:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js:71:33)
+    at async DevServer.findPageComponentsImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/next-server.js:714:36) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/ubuntu/em-interview-prep/.next/server/pages/_document.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/require.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/build/utils.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js',
+    '/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/home/ubuntu/em-interview-prep/.next/cache/webpack/client-development-fallback/0.pack.gz_' -> '/home/ubuntu/em-interview-prep/.next/cache/webpack/client-development-fallback/0.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/home/ubuntu/em-interview-prep/.next/cache/webpack/client-development-fallback/0.pack.gz_' -> '/home/ubuntu/em-interview-prep/.next/cache/webpack/client-development-fallback/0.pack.gz'

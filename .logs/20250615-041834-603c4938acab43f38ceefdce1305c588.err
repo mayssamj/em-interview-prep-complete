@@ -1,0 +1,54 @@
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <button className=... onClick={function onClick} children=...>
+                                ^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+digest: "1338476587"
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <button className=... onClick={function onClick} children=...>
+                                ^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+digest: "1338476587"
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <button className=... onClick={function onClick} children=...>
+                                ^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+digest: "4163497415"
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <button className=... onClick={function onClick} children=...>
+                                ^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+digest: "4163497415"
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <button className=... onClick={function onClick} children=...>
+                                ^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+digest: "4163497415"
+ ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <button className=... onClick={function onClick} children=...>
+                                ^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+digest: "4163497415"

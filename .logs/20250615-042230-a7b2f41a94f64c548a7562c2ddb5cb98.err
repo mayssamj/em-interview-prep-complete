@@ -1,0 +1,168 @@
+Session error: n [Error]: Dynamic server usage: Route /stories/new couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at l (/opt/hostedapp/node/root/app/.build/server/chunks/276.js:1:37206)
+    at d (/opt/hostedapp/node/root/app/.build/server/chunks/28.js:1:22714)
+    at c (/opt/hostedapp/node/root/app/.build/server/chunks/945.js:1:6138)
+    at l (/opt/hostedapp/node/root/app/.build/server/app/stories/new/page.js:1:11366)
+    at eh (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:134660)
+    at e (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:137545)
+    at ek (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:138019)
+    at Array.toJSON (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:135629)
+    at stringify (<anonymous>)
+    at eP (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:142093) {
+  description: "Route /stories/new couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Session error: n [Error]: Dynamic server usage: Route /stories/new couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at l (/opt/hostedapp/node/root/app/.build/server/chunks/276.js:1:37206)
+    at d (/opt/hostedapp/node/root/app/.build/server/chunks/28.js:1:22714)
+    at c (/opt/hostedapp/node/root/app/.build/server/chunks/945.js:1:6138)
+    at l (/opt/hostedapp/node/root/app/.build/server/app/stories/new/page.js:1:11366)
+    at eh (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:134660)
+    at e (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:137545)
+    at ek (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:138019)
+    at Array.toJSON (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:135629)
+    at stringify (<anonymous>)
+    at eP (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:142093) {
+  description: "Route /stories/new couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Session error: n [Error]: Dynamic server usage: Route /dashboard couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at l (/opt/hostedapp/node/root/app/.build/server/chunks/276.js:1:37206)
+    at d (/opt/hostedapp/node/root/app/.build/server/chunks/28.js:1:22714)
+    at c (/opt/hostedapp/node/root/app/.build/server/chunks/945.js:1:6138)
+    at m (/opt/hostedapp/node/root/app/.build/server/app/dashboard/page.js:6:16589)
+    at eh (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:134660)
+    at e (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:137545)
+    at ek (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:138019)
+    at Array.toJSON (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:135629)
+    at stringify (<anonymous>)
+    at eP (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:142093) {
+  description: "Route /dashboard couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Session error: n [Error]: Dynamic server usage: Route /dashboard couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at l (/opt/hostedapp/node/root/app/.build/server/chunks/276.js:1:37206)
+    at d (/opt/hostedapp/node/root/app/.build/server/chunks/28.js:1:22714)
+    at c (/opt/hostedapp/node/root/app/.build/server/chunks/945.js:1:6138)
+    at m (/opt/hostedapp/node/root/app/.build/server/app/dashboard/page.js:6:16589)
+    at eh (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:134660)
+    at e (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:137545)
+    at ek (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:138019)
+    at Array.toJSON (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:135629)
+    at stringify (<anonymous>)
+    at eP (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:142093) {
+  description: "Route /dashboard couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Session error: n [Error]: Dynamic server usage: Route /stories couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at l (/opt/hostedapp/node/root/app/.build/server/chunks/276.js:1:37206)
+    at d (/opt/hostedapp/node/root/app/.build/server/chunks/28.js:1:22714)
+    at c (/opt/hostedapp/node/root/app/.build/server/chunks/945.js:1:6138)
+    at d (/opt/hostedapp/node/root/app/.build/server/app/stories/page.js:1:12906)
+    at eh (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:134660)
+    at e (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:137545)
+    at ek (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:138019)
+    at Array.toJSON (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:135629)
+    at stringify (<anonymous>)
+    at eP (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:142093) {
+  description: "Route /stories couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Session error: n [Error]: Dynamic server usage: Route /stories couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at l (/opt/hostedapp/node/root/app/.build/server/chunks/276.js:1:37206)
+    at d (/opt/hostedapp/node/root/app/.build/server/chunks/28.js:1:22714)
+    at c (/opt/hostedapp/node/root/app/.build/server/chunks/945.js:1:6138)
+    at d (/opt/hostedapp/node/root/app/.build/server/app/stories/page.js:1:12906)
+    at eh (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:134660)
+    at e (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:137545)
+    at ek (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:138019)
+    at Array.toJSON (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:135629)
+    at stringify (<anonymous>)
+    at eP (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:142093) {
+  description: "Route /stories couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Session error: n [Error]: Dynamic server usage: Route /interview-notes couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at l (/opt/hostedapp/node/root/app/.build/server/chunks/276.js:1:37206)
+    at d (/opt/hostedapp/node/root/app/.build/server/chunks/28.js:1:22714)
+    at c (/opt/hostedapp/node/root/app/.build/server/chunks/945.js:1:6138)
+    at eC (/opt/hostedapp/node/root/app/.build/server/app/interview-notes/page.js:1:27894)
+    at eh (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:134660)
+    at e (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:137545)
+    at ek (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:138019)
+    at Array.toJSON (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:135629)
+    at stringify (<anonymous>)
+    at eP (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:142093) {
+  description: "Route /interview-notes couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Session error: n [Error]: Dynamic server usage: Route /interview-notes couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at l (/opt/hostedapp/node/root/app/.build/server/chunks/276.js:1:37206)
+    at d (/opt/hostedapp/node/root/app/.build/server/chunks/28.js:1:22714)
+    at c (/opt/hostedapp/node/root/app/.build/server/chunks/945.js:1:6138)
+    at eC (/opt/hostedapp/node/root/app/.build/server/app/interview-notes/page.js:1:27894)
+    at eh (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:134660)
+    at e (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:137545)
+    at ek (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:138019)
+    at Array.toJSON (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:135629)
+    at stringify (<anonymous>)
+    at eP (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:142093) {
+  description: "Route /interview-notes couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Session error: n [Error]: Dynamic server usage: Route /login couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at l (/opt/hostedapp/node/root/app/.build/server/chunks/276.js:1:37206)
+    at d (/opt/hostedapp/node/root/app/.build/server/chunks/28.js:1:22714)
+    at c (/opt/hostedapp/node/root/app/.build/server/chunks/945.js:1:6138)
+    at o (/opt/hostedapp/node/root/app/.build/server/app/login/page.js:1:7501)
+    at eh (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:134660)
+    at e (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:137545)
+    at ek (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:138019)
+    at Array.toJSON (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:135629)
+    at stringify (<anonymous>)
+    at eP (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:142093) {
+  description: "Route /login couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Session error: n [Error]: Dynamic server usage: Route /login couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at l (/opt/hostedapp/node/root/app/.build/server/chunks/276.js:1:37206)
+    at d (/opt/hostedapp/node/root/app/.build/server/chunks/28.js:1:22714)
+    at c (/opt/hostedapp/node/root/app/.build/server/chunks/945.js:1:6138)
+    at o (/opt/hostedapp/node/root/app/.build/server/app/login/page.js:1:7501)
+    at eh (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:134660)
+    at e (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:137545)
+    at ek (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:138019)
+    at Array.toJSON (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:135629)
+    at stringify (<anonymous>)
+    at eP (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:142093) {
+  description: "Route /login couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Session error: n [Error]: Dynamic server usage: Route / couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at l (/opt/hostedapp/node/root/app/.build/server/chunks/276.js:1:37206)
+    at d (/opt/hostedapp/node/root/app/.build/server/chunks/28.js:1:22714)
+    at c (/opt/hostedapp/node/root/app/.build/server/chunks/945.js:1:6138)
+    at a (/opt/hostedapp/node/root/app/.build/server/app/page.js:1:1676)
+    at eh (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:134660)
+    at e (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:137545)
+    at ek (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:138019)
+    at Array.toJSON (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:135629)
+    at stringify (<anonymous>)
+    at eP (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:142093) {
+  description: "Route / couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Session error: n [Error]: Dynamic server usage: Route / couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at l (/opt/hostedapp/node/root/app/.build/server/chunks/276.js:1:37206)
+    at d (/opt/hostedapp/node/root/app/.build/server/chunks/28.js:1:22714)
+    at c (/opt/hostedapp/node/root/app/.build/server/chunks/945.js:1:6138)
+    at a (/opt/hostedapp/node/root/app/.build/server/app/page.js:1:1676)
+    at eh (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:134660)
+    at e (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:137545)
+    at ek (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:138019)
+    at Array.toJSON (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:135629)
+    at stringify (<anonymous>)
+    at eP (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:142093) {
+  description: "Route / couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}

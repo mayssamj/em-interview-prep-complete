@@ -1,0 +1,88 @@
+  ▲ Next.js 14.2.28
+  - Local:        http://localhost:3000
+  - Environments: .env
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+ ✓ Starting...
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+ ✓ Ready in 1321ms
+ ○ Compiling / ...
+ ✓ Compiled / in 2.8s (547 modules)
+ GET / 307 in 3315ms
+ ✓ Compiled in 466ms (267 modules)
+ ○ Compiling /login ...
+ ✓ Compiled /login in 2.4s (549 modules)
+ GET /login 200 in 2564ms
+ GET / 307 in 53ms
+ GET / 307 in 42ms
+ GET /login 200 in 38ms
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 768ms (732 modules)
+ GET /dashboard 307 in 866ms
+ GET /login 200 in 49ms
+ ✓ Compiled /stories in 303ms (751 modules)
+ GET /stories 307 in 369ms
+ GET /login 200 in 42ms
+ ✓ Compiled /stories/new in 272ms (768 modules)
+ GET /stories/new 307 in 343ms
+ GET /login 200 in 44ms
+ ✓ Compiled /admin in 294ms (780 modules)
+ GET /admin 200 in 369ms
+ ✓ Compiled /interview-notes in 480ms (802 modules)
+ GET /interview-notes 307 in 563ms
+ GET /login 200 in 56ms
+ GET /login 200 in 41ms
+ ○ Compiling /company/[company] ...
+ ✓ Compiled /company/[company] in 517ms (845 modules)
+ GET /company/meta 307 in 902ms
+ GET /login 200 in 53ms
+ GET /company/amazon 307 in 51ms
+ GET /login 200 in 36ms
+ GET /company/google 307 in 47ms
+ GET /login 200 in 37ms
+ ✓ Compiled /_not-found in 410ms (848 modules)
+ GET /api/auth/user 404 in 464ms
+ ✓ Compiled /api/stories in 216ms (481 modules)
+ GET /api/stories 500 in 317ms
+ ✓ Compiled /api/dashboard/stats in 258ms (483 modules)
+ GET /api/dashboard/stats 500 in 319ms
+ ✓ Compiled /api/admin/stats in 200ms (485 modules)
+ GET /api/admin/stats 401 in 262ms
+ GET / 307 in 118ms
+ GET /login 200 in 51ms
+ GET / 307 in 51ms
+ GET /login 200 in 38ms
+ GET /dashboard 307 in 50ms
+ GET /login 200 in 39ms
+ GET /stories 307 in 54ms
+ GET /login 200 in 43ms
+ GET /stories/new 307 in 56ms
+ GET /login 200 in 47ms
+ GET /admin 200 in 54ms
+ GET /interview-notes 307 in 47ms
+ GET /login 200 in 46ms
+ GET /login 200 in 39ms
+ GET /company/meta 307 in 61ms
+ GET /login 200 in 37ms
+ GET /company/amazon 307 in 46ms
+ GET /login 200 in 38ms
+ GET /company/google 307 in 46ms
+ GET /login 200 in 42ms
+ ✓ Compiled in 365ms (407 modules)
+ ✓ Compiled in 372ms (407 modules)
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 1788ms (1107 modules)
+ GET /_next/static/css/app/layout.css?v=1749961780668 500 in 3089ms
+ GET /_next/static/webpack/app/layout.8ac6a665ef9e99b8.hot-update.js 500 in 3075ms
+ GET /login 500 in 65ms
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+[?25h

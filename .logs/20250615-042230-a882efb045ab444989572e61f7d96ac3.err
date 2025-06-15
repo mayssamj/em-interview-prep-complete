@@ -1,0 +1,48 @@
+ ⨯ ./app/globals.css.webpack[javascript/auto]!=!../../../../opt/hostedapp/node/root/app/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!../../../../opt/hostedapp/node/root/app/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./app/globals.css
+Error: ENOENT: no such file or directory, open '/home/ubuntu/em-interview-prep/app/app/globals.css'
+
+Import trace for requested module:
+./app/globals.css.webpack[javascript/auto]!=!../../../../opt/hostedapp/node/root/app/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!../../../../opt/hostedapp/node/root/app/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./app/globals.css
+./app/globals.css
+Error: ENOENT: no such file or directory, scandir '/home/ubuntu/em-interview-prep/app/app'
+    at async Object.readdir (node:internal/fs/promises:954:18)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/lib/recursive-readdir.js:39:29
+    at async Promise.all (index 0)
+    at async recursiveReadDir (/opt/hostedapp/node/root/app/node_modules/next/dist/lib/recursive-readdir.js:32:25)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/server/future/route-matcher-providers/dev/helpers/file-reader/batched-file-reader.js:71:25
+    at async Promise.all (index 0)
+    at async BatchedFileReader.load (/opt/hostedapp/node/root/app/node_modules/next/dist/server/future/route-matcher-providers/dev/helpers/file-reader/batched-file-reader.js:67:25)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/server/future/route-matcher-providers/dev/helpers/file-reader/batched-file-reader.js:41:26 {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'scandir',
+  path: '/home/ubuntu/em-interview-prep/app/app'
+}
+ ⨯ unhandledRejection: Error: ENOENT: no such file or directory, scandir '/home/ubuntu/em-interview-prep/app/app'
+    at async Object.readdir (node:internal/fs/promises:954:18)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/lib/recursive-readdir.js:39:29
+    at async Promise.all (index 0)
+    at async recursiveReadDir (/opt/hostedapp/node/root/app/node_modules/next/dist/lib/recursive-readdir.js:32:25)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/server/future/route-matcher-providers/dev/helpers/file-reader/batched-file-reader.js:71:25
+    at async Promise.all (index 0)
+    at async BatchedFileReader.load (/opt/hostedapp/node/root/app/node_modules/next/dist/server/future/route-matcher-providers/dev/helpers/file-reader/batched-file-reader.js:67:25)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/server/future/route-matcher-providers/dev/helpers/file-reader/batched-file-reader.js:41:26 {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'scandir',
+  path: '/home/ubuntu/em-interview-prep/app/app'
+}
+ ⨯ unhandledRejection: Error: ENOENT: no such file or directory, scandir '/home/ubuntu/em-interview-prep/app/app'
+    at async Object.readdir (node:internal/fs/promises:954:18)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/lib/recursive-readdir.js:39:29
+    at async Promise.all (index 0)
+    at async recursiveReadDir (/opt/hostedapp/node/root/app/node_modules/next/dist/lib/recursive-readdir.js:32:25)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/server/future/route-matcher-providers/dev/helpers/file-reader/batched-file-reader.js:71:25
+    at async Promise.all (index 0)
+    at async BatchedFileReader.load (/opt/hostedapp/node/root/app/node_modules/next/dist/server/future/route-matcher-providers/dev/helpers/file-reader/batched-file-reader.js:67:25)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/server/future/route-matcher-providers/dev/helpers/file-reader/batched-file-reader.js:41:26 {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'scandir',
+  path: '/home/ubuntu/em-interview-prep/app/app'
+}

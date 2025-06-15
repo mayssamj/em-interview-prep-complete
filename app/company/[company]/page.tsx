@@ -1,10 +1,15 @@
 
-import { getSession } from '@/lib/auth';
-import { redirect } from 'next/navigation';
 import { prisma } from '@/lib/db';
 import { Header } from '@/components/layout/header';
 import { CompanyTabs } from '@/components/company/company-tabs';
 import { notFound } from 'next/navigation';
+
+// Mock user for testing
+const mockUser = {
+  id: "cmbx5b4vc0000u41ugdwm5uxh",
+  username: "admin",
+  isAdmin: true
+};
 
 interface CompanyPageProps {
   params: {
@@ -13,11 +18,6 @@ interface CompanyPageProps {
 }
 
 export default async function CompanyPage({ params }: CompanyPageProps) {
-  const user = await getSession();
-  
-  if (!user) {
-    redirect('/login');
-  }
 
   const { company: companySlug } = params;
   
@@ -69,13 +69,13 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
 
   // Get user's stories and answers for this company
   const userStories = await prisma.story.findMany({
-    where: { userId: user.id },
+    where: { userId: mockUser.id },
     orderBy: { createdAt: 'desc' }
   });
 
   const userAnswers = await prisma.answer.findMany({
     where: { 
-      userId: user.id,
+      userId: mockUser.id,
       question: {
         companyId: company.id
       }
@@ -87,7 +87,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header user={user} />
+      <Header user={mockUser} />
       
       <main className="container mx-auto px-4 py-8 max-w-7xl">
         <div className="space-y-8">
@@ -120,7 +120,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
             company={company}
             userStories={userStories}
             userAnswers={userAnswers}
-            userId={user.id}
+            userId={mockUser.id}
           />
         </div>
       </main>

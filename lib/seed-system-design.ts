@@ -259,10 +259,7 @@ export async function seedSystemDesignContent() {
               "Content freshness vs. relevance",
               "Global consistency vs. availability"
             ],
-            resources: [
-              "https://engineering.fb.com/2013/03/20/core-data/tao-the-power-of-the-graph/",
-              "https://engineering.fb.com/2016/03/25/core-data/realtime-data-infrastructure-at-facebook/"
-            ]
+            resources: []
           }
         },
         {
@@ -295,43 +292,6 @@ export async function seedSystemDesignContent() {
               "Real-time features vs. battery life",
               "End-to-end encryption vs. feature richness",
               "Consistency vs. availability in poor networks"
-            ],
-            resources: [
-              "https://engineering.fb.com/2011/12/12/core-data/the-underlying-technology-of-messages/",
-              "https://engineering.fb.com/2016/02/12/ios/building-facebook-messenger/"
-            ]
-          }
-        },
-        {
-          questionText: "Design a system to handle notifications for billions of users.",
-          category: "distributed_systems",
-          difficulty: "Hard",
-          isCritical: false,
-          tags: ["notifications", "push_notifications", "mobile", "personalization"],
-          systemDesignDetails: {
-            architectureFocus: ["push_notification_systems", "mobile_platforms", "personalization", "rate_limiting"],
-            complexityLevel: "senior",
-            leadershipAspects: ["cross_platform_coordination", "user_experience_optimization", "privacy_considerations"],
-            frameworks: ["message_queues", "rate_limiting", "personalization_engines"],
-            evaluationCriteria: ["delivery_reliability", "personalization_effectiveness", "user_engagement", "system_scalability"],
-            estimatedTimeMinutes: 40,
-            followUpQuestions: [
-              "How would you prevent notification spam?",
-              "How would you personalize notification timing?",
-              "How would you handle different mobile platforms?",
-              "How would you measure notification effectiveness?"
-            ],
-            commonMistakes: [
-              "Not considering user notification preferences",
-              "Ignoring platform-specific limitations",
-              "Not implementing proper rate limiting",
-              "Overlooking notification fatigue"
-            ],
-            keyTradeoffs: [
-              "Notification frequency vs. user engagement",
-              "Personalization vs. privacy",
-              "Real-time delivery vs. battery optimization",
-              "Feature richness vs. simplicity"
             ],
             resources: []
           }
@@ -406,40 +366,6 @@ export async function seedSystemDesignContent() {
               "Edge node density vs. cost",
               "Performance vs. security",
               "Automation vs. control"
-            ],
-            resources: []
-          }
-        },
-        {
-          questionText: "Design a recommendation system for Amazon.com.",
-          category: "machine_learning",
-          difficulty: "Hard",
-          isCritical: false,
-          tags: ["recommendations", "machine_learning", "personalization", "e_commerce"],
-          systemDesignDetails: {
-            architectureFocus: ["machine_learning_systems", "real_time_personalization", "data_processing", "a_b_testing"],
-            complexityLevel: "senior",
-            leadershipAspects: ["data_science_collaboration", "product_metrics_optimization", "experimentation_culture"],
-            frameworks: ["machine_learning_pipelines", "real_time_processing", "a_b_testing"],
-            evaluationCriteria: ["recommendation_relevance", "conversion_improvement", "system_scalability", "model_performance"],
-            estimatedTimeMinutes: 45,
-            followUpQuestions: [
-              "How would you handle the cold start problem for new users?",
-              "How would you incorporate real-time user behavior?",
-              "How would you measure recommendation quality?",
-              "How would you handle seasonal trends?"
-            ],
-            commonMistakes: [
-              "Not addressing cold start problem",
-              "Ignoring real-time behavior signals",
-              "Not considering business objectives",
-              "Overlooking recommendation diversity"
-            ],
-            keyTradeoffs: [
-              "Personalization vs. diversity",
-              "Real-time updates vs. computational cost",
-              "Accuracy vs. explainability",
-              "Exploration vs. exploitation"
             ],
             resources: []
           }
@@ -662,6 +588,474 @@ export async function seedSystemDesignContent() {
               "Model parallelism vs. data parallelism",
               "Resource utilization vs. cost",
               "Experiment flexibility vs. infrastructure complexity"
+            ],
+            resources: []
+          }
+        }
+      ]
+    },
+    // Anthropic questions
+    {
+      companyName: "Anthropic",
+      questions: [
+        {
+          questionText: "Design a system for safe AI model deployment with constitutional AI principles.",
+          category: "ai_systems",
+          difficulty: "Hard",
+          isCritical: true,
+          tags: ["ai_safety", "constitutional_ai", "model_deployment", "safety_monitoring"],
+          systemDesignDetails: {
+            architectureFocus: ["ai_safety_systems", "constitutional_ai", "safety_monitoring", "model_alignment"],
+            complexityLevel: "senior",
+            leadershipAspects: ["ai_safety_culture", "ethical_considerations", "safety_first_mindset"],
+            frameworks: ["constitutional_ai", "safety_monitoring", "model_alignment"],
+            evaluationCriteria: ["safety_compliance", "model_helpfulness", "harm_prevention", "alignment_quality"],
+            estimatedTimeMinutes: 45,
+            followUpQuestions: [
+              "How would you implement constitutional AI training?",
+              "How would you monitor for harmful outputs in real-time?",
+              "How would you handle edge cases in AI safety?",
+              "How would you ensure model alignment with human values?"
+            ],
+            commonMistakes: [
+              "Not prioritizing safety over performance",
+              "Ignoring constitutional AI principles",
+              "Not implementing comprehensive safety monitoring",
+              "Overlooking alignment verification"
+            ],
+            keyTradeoffs: [
+              "Safety vs. model capability",
+              "Constitutional constraints vs. helpfulness",
+              "Real-time monitoring vs. latency",
+              "Safety verification vs. deployment speed"
+            ],
+            resources: []
+          }
+        }
+      ]
+    },
+    // Netflix questions
+    {
+      companyName: "Netflix",
+      questions: [
+        {
+          questionText: "Design Netflix's content recommendation system.",
+          category: "machine_learning",
+          difficulty: "Hard",
+          isCritical: true,
+          tags: ["recommendations", "personalization", "content_discovery", "machine_learning"],
+          systemDesignDetails: {
+            architectureFocus: ["recommendation_systems", "personalization", "content_ranking", "a_b_testing"],
+            complexityLevel: "senior",
+            leadershipAspects: ["content_strategy", "user_engagement", "data_science_collaboration"],
+            frameworks: ["collaborative_filtering", "content_based_filtering", "deep_learning"],
+            evaluationCriteria: ["engagement_metrics", "content_discovery", "user_satisfaction", "business_impact"],
+            estimatedTimeMinutes: 45,
+            followUpQuestions: [
+              "How would you handle the cold start problem for new content?",
+              "How would you incorporate viewing context (time, device)?",
+              "How would you balance popular vs. niche content?",
+              "How would you measure recommendation quality?"
+            ],
+            commonMistakes: [
+              "Not considering content lifecycle",
+              "Ignoring viewing context factors",
+              "Not balancing exploration vs. exploitation",
+              "Overlooking business objectives"
+            ],
+            keyTradeoffs: [
+              "Personalization vs. content diversity",
+              "Popular content vs. long-tail discovery",
+              "Real-time updates vs. computational cost",
+              "User satisfaction vs. business metrics"
+            ],
+            resources: []
+          }
+        },
+        {
+          questionText: "Design a global video streaming platform with adaptive bitrate.",
+          category: "media_streaming",
+          difficulty: "Hard",
+          isCritical: true,
+          tags: ["video_streaming", "adaptive_bitrate", "global_cdn", "quality_optimization"],
+          systemDesignDetails: {
+            architectureFocus: ["adaptive_streaming", "global_cdn", "video_encoding", "quality_optimization"],
+            complexityLevel: "senior",
+            leadershipAspects: ["global_infrastructure", "user_experience", "cost_optimization"],
+            frameworks: ["adaptive_bitrate", "cdn_optimization", "video_encoding"],
+            evaluationCriteria: ["streaming_quality", "global_performance", "cost_efficiency", "user_experience"],
+            estimatedTimeMinutes: 45,
+            followUpQuestions: [
+              "How would you implement adaptive bitrate streaming?",
+              "How would you optimize for different network conditions?",
+              "How would you handle global content distribution?",
+              "How would you minimize buffering and startup time?"
+            ],
+            commonMistakes: [
+              "Not considering network variability",
+              "Ignoring device-specific optimizations",
+              "Not planning for global latency",
+              "Overlooking cost implications"
+            ],
+            keyTradeoffs: [
+              "Video quality vs. bandwidth usage",
+              "Startup time vs. quality",
+              "Global consistency vs. local optimization",
+              "Cost vs. performance"
+            ],
+            resources: []
+          }
+        }
+      ]
+    },
+    // Uber questions
+    {
+      companyName: "Uber",
+      questions: [
+        {
+          questionText: "Design Uber's real-time ride matching system.",
+          category: "real_time_systems",
+          difficulty: "Hard",
+          isCritical: true,
+          tags: ["ride_matching", "real_time", "geospatial", "optimization"],
+          systemDesignDetails: {
+            architectureFocus: ["real_time_matching", "geospatial_systems", "optimization_algorithms", "mobile_systems"],
+            complexityLevel: "senior",
+            leadershipAspects: ["marketplace_dynamics", "user_experience", "operational_efficiency"],
+            frameworks: ["geospatial_indexing", "real_time_processing", "optimization_algorithms"],
+            evaluationCriteria: ["matching_efficiency", "wait_times", "system_scalability", "user_satisfaction"],
+            estimatedTimeMinutes: 45,
+            followUpQuestions: [
+              "How would you handle surge pricing algorithms?",
+              "How would you optimize for driver utilization?",
+              "How would you handle real-time location updates?",
+              "How would you ensure fair matching algorithms?"
+            ],
+            commonMistakes: [
+              "Not considering real-time constraints",
+              "Ignoring geospatial complexity",
+              "Not optimizing for marketplace balance",
+              "Overlooking mobile network limitations"
+            ],
+            keyTradeoffs: [
+              "Matching speed vs. optimization quality",
+              "Driver utilization vs. passenger wait time",
+              "Real-time updates vs. battery life",
+              "Fairness vs. efficiency"
+            ],
+            resources: []
+          }
+        }
+      ]
+    },
+    // Airbnb questions
+    {
+      companyName: "Airbnb",
+      questions: [
+        {
+          questionText: "Design Airbnb's search and ranking system.",
+          category: "search_systems",
+          difficulty: "Hard",
+          isCritical: true,
+          tags: ["search", "ranking", "personalization", "marketplace"],
+          systemDesignDetails: {
+            architectureFocus: ["search_systems", "ranking_algorithms", "personalization", "marketplace_dynamics"],
+            complexityLevel: "senior",
+            leadershipAspects: ["marketplace_balance", "user_experience", "business_optimization"],
+            frameworks: ["search_engines", "ranking_algorithms", "personalization_systems"],
+            evaluationCriteria: ["search_relevance", "booking_conversion", "user_satisfaction", "host_fairness"],
+            estimatedTimeMinutes: 45,
+            followUpQuestions: [
+              "How would you personalize search results?",
+              "How would you handle location-based search?",
+              "How would you balance guest preferences with host availability?",
+              "How would you implement dynamic pricing suggestions?"
+            ],
+            commonMistakes: [
+              "Not considering marketplace dynamics",
+              "Ignoring location complexity",
+              "Not balancing multiple stakeholders",
+              "Overlooking seasonal patterns"
+            ],
+            keyTradeoffs: [
+              "Personalization vs. discovery",
+              "Guest satisfaction vs. host fairness",
+              "Search accuracy vs. response time",
+              "Business metrics vs. user experience"
+            ],
+            resources: []
+          }
+        }
+      ]
+    },
+    // TikTok questions
+    {
+      companyName: "TikTok",
+      questions: [
+        {
+          questionText: "Design TikTok's For You Page algorithm.",
+          category: "machine_learning",
+          difficulty: "Hard",
+          isCritical: true,
+          tags: ["recommendation_algorithm", "short_video", "engagement", "personalization"],
+          systemDesignDetails: {
+            architectureFocus: ["recommendation_systems", "real_time_personalization", "engagement_optimization", "content_understanding"],
+            complexityLevel: "senior",
+            leadershipAspects: ["content_creator_ecosystem", "user_engagement", "algorithmic_fairness"],
+            frameworks: ["deep_learning", "real_time_processing", "content_analysis"],
+            evaluationCriteria: ["user_engagement", "content_diversity", "creator_satisfaction", "platform_growth"],
+            estimatedTimeMinutes: 45,
+            followUpQuestions: [
+              "How would you handle new user cold start?",
+              "How would you ensure content diversity?",
+              "How would you incorporate real-time engagement signals?",
+              "How would you prevent filter bubbles?"
+            ],
+            commonMistakes: [
+              "Not considering content lifecycle",
+              "Ignoring creator fairness",
+              "Not handling engagement manipulation",
+              "Overlooking content safety"
+            ],
+            keyTradeoffs: [
+              "Engagement vs. content diversity",
+              "Personalization vs. discovery",
+              "Real-time updates vs. computational cost",
+              "Creator reach vs. user preferences"
+            ],
+            resources: []
+          }
+        }
+      ]
+    },
+    // LinkedIn questions
+    {
+      companyName: "LinkedIn",
+      questions: [
+        {
+          questionText: "Design LinkedIn's professional network feed algorithm.",
+          category: "social_networks",
+          difficulty: "Hard",
+          isCritical: true,
+          tags: ["professional_network", "feed_algorithm", "content_ranking", "networking"],
+          systemDesignDetails: {
+            architectureFocus: ["social_graph_analysis", "content_ranking", "professional_relevance", "network_effects"],
+            complexityLevel: "senior",
+            leadershipAspects: ["professional_community", "content_quality", "network_growth"],
+            frameworks: ["graph_algorithms", "content_ranking", "social_signals"],
+            evaluationCriteria: ["professional_relevance", "engagement_quality", "network_growth", "content_value"],
+            estimatedTimeMinutes: 45,
+            followUpQuestions: [
+              "How would you rank professional content vs. personal updates?",
+              "How would you leverage professional graph signals?",
+              "How would you handle content from different industries?",
+              "How would you promote meaningful professional interactions?"
+            ],
+            commonMistakes: [
+              "Not considering professional context",
+              "Ignoring network relationship strength",
+              "Not balancing content types",
+              "Overlooking professional relevance"
+            ],
+            keyTradeoffs: [
+              "Professional relevance vs. engagement",
+              "Network growth vs. content quality",
+              "Industry focus vs. diversity",
+              "Personal vs. professional content"
+            ],
+            resources: []
+          }
+        }
+      ]
+    },
+    // Snowflake questions
+    {
+      companyName: "Snowflake",
+      questions: [
+        {
+          questionText: "Design a cloud-native data warehouse with automatic scaling.",
+          category: "data_systems",
+          difficulty: "Hard",
+          isCritical: true,
+          tags: ["data_warehouse", "cloud_native", "auto_scaling", "analytics"],
+          systemDesignDetails: {
+            architectureFocus: ["cloud_architecture", "auto_scaling", "data_storage", "query_optimization"],
+            complexityLevel: "senior",
+            leadershipAspects: ["data_strategy", "cost_optimization", "performance_engineering"],
+            frameworks: ["cloud_architecture", "distributed_storage", "query_engines"],
+            evaluationCriteria: ["query_performance", "cost_efficiency", "scalability", "data_freshness"],
+            estimatedTimeMinutes: 45,
+            followUpQuestions: [
+              "How would you implement automatic scaling for compute resources?",
+              "How would you optimize for different query patterns?",
+              "How would you handle data partitioning and clustering?",
+              "How would you ensure data consistency across regions?"
+            ],
+            commonMistakes: [
+              "Not considering cost implications of scaling",
+              "Ignoring query optimization opportunities",
+              "Not planning for data governance",
+              "Overlooking multi-tenancy requirements"
+            ],
+            keyTradeoffs: [
+              "Performance vs. cost",
+              "Automatic scaling vs. predictability",
+              "Data freshness vs. consistency",
+              "Flexibility vs. optimization"
+            ],
+            resources: []
+          }
+        }
+      ]
+    },
+    // Scale AI questions
+    {
+      companyName: "Scale AI",
+      questions: [
+        {
+          questionText: "Design a system for large-scale data labeling and annotation.",
+          category: "data_systems",
+          difficulty: "Hard",
+          isCritical: true,
+          tags: ["data_labeling", "annotation", "quality_control", "machine_learning"],
+          systemDesignDetails: {
+            architectureFocus: ["data_pipeline", "quality_control", "human_in_the_loop", "workflow_management"],
+            complexityLevel: "senior",
+            leadershipAspects: ["data_quality", "human_workforce_management", "ml_pipeline_integration"],
+            frameworks: ["workflow_systems", "quality_control", "human_computer_interaction"],
+            evaluationCriteria: ["annotation_quality", "throughput", "cost_efficiency", "turnaround_time"],
+            estimatedTimeMinutes: 45,
+            followUpQuestions: [
+              "How would you ensure annotation quality and consistency?",
+              "How would you handle different types of data (text, image, video)?",
+              "How would you implement quality control mechanisms?",
+              "How would you scale human annotation workforce?"
+            ],
+            commonMistakes: [
+              "Not considering annotation quality variance",
+              "Ignoring human workflow optimization",
+              "Not planning for different data types",
+              "Overlooking quality control complexity"
+            ],
+            keyTradeoffs: [
+              "Quality vs. speed",
+              "Human annotation vs. automated labeling",
+              "Cost vs. accuracy",
+              "Scalability vs. quality control"
+            ],
+            resources: []
+          }
+        }
+      ]
+    },
+    // Reddit questions
+    {
+      companyName: "Reddit",
+      questions: [
+        {
+          questionText: "Design Reddit's content ranking and moderation system.",
+          category: "content_systems",
+          difficulty: "Hard",
+          isCritical: true,
+          tags: ["content_ranking", "moderation", "community", "voting_systems"],
+          systemDesignDetails: {
+            architectureFocus: ["voting_systems", "content_ranking", "community_moderation", "spam_detection"],
+            complexityLevel: "senior",
+            leadershipAspects: ["community_management", "content_policy", "platform_governance"],
+            frameworks: ["ranking_algorithms", "moderation_systems", "community_governance"],
+            evaluationCriteria: ["content_quality", "community_health", "engagement", "moderation_effectiveness"],
+            estimatedTimeMinutes: 45,
+            followUpQuestions: [
+              "How would you handle vote manipulation and spam?",
+              "How would you implement community-specific moderation?",
+              "How would you balance free speech with content policy?",
+              "How would you scale moderation across thousands of communities?"
+            ],
+            commonMistakes: [
+              "Not considering community dynamics",
+              "Ignoring vote manipulation",
+              "Not scaling moderation effectively",
+              "Overlooking content policy complexity"
+            ],
+            keyTradeoffs: [
+              "Free speech vs. content moderation",
+              "Community autonomy vs. platform standards",
+              "Automated vs. human moderation",
+              "Engagement vs. quality"
+            ],
+            resources: []
+          }
+        }
+      ]
+    },
+    // Startups & Scale-ups questions
+    {
+      companyName: "Startups & Scale-ups",
+      questions: [
+        {
+          questionText: "Design a scalable system architecture for a fast-growing startup.",
+          category: "startup_systems",
+          difficulty: "Medium",
+          isCritical: true,
+          tags: ["startup_architecture", "scalability", "cost_optimization", "rapid_growth"],
+          systemDesignDetails: {
+            architectureFocus: ["cost_effective_scaling", "rapid_iteration", "technical_debt_management", "team_productivity"],
+            complexityLevel: "mid",
+            leadershipAspects: ["resource_constraints", "rapid_scaling", "technical_decision_making"],
+            frameworks: ["lean_architecture", "cloud_first", "iterative_development"],
+            evaluationCriteria: ["cost_efficiency", "development_velocity", "scalability_potential", "technical_debt"],
+            estimatedTimeMinutes: 40,
+            followUpQuestions: [
+              "How would you balance technical debt vs. feature velocity?",
+              "How would you plan for uncertain scaling requirements?",
+              "How would you optimize for limited engineering resources?",
+              "How would you ensure system reliability with small team?"
+            ],
+            commonMistakes: [
+              "Over-engineering for uncertain scale",
+              "Not considering cost constraints",
+              "Ignoring technical debt accumulation",
+              "Not planning for team growth"
+            ],
+            keyTradeoffs: [
+              "Perfect architecture vs. time to market",
+              "Cost vs. scalability",
+              "Feature velocity vs. technical debt",
+              "Simplicity vs. future flexibility"
+            ],
+            resources: []
+          }
+        },
+        {
+          questionText: "Design a minimum viable product (MVP) architecture that can scale.",
+          category: "startup_systems",
+          difficulty: "Medium",
+          isCritical: false,
+          tags: ["mvp", "scalable_architecture", "lean_development", "product_market_fit"],
+          systemDesignDetails: {
+            architectureFocus: ["mvp_architecture", "scalability_planning", "lean_development", "iteration_speed"],
+            complexityLevel: "mid",
+            leadershipAspects: ["product_strategy", "engineering_efficiency", "market_validation"],
+            frameworks: ["lean_startup", "agile_development", "cloud_native"],
+            evaluationCriteria: ["time_to_market", "development_cost", "scalability_potential", "iteration_speed"],
+            estimatedTimeMinutes: 35,
+            followUpQuestions: [
+              "How would you validate technical assumptions quickly?",
+              "How would you plan for pivot scenarios?",
+              "How would you balance MVP simplicity with future needs?",
+              "How would you measure technical success metrics?"
+            ],
+            commonMistakes: [
+              "Building too much for MVP",
+              "Not considering future scaling",
+              "Ignoring user feedback loops",
+              "Over-optimizing prematurely"
+            ],
+            keyTradeoffs: [
+              "MVP simplicity vs. future scalability",
+              "Speed vs. quality",
+              "Feature completeness vs. time to market",
+              "Technical perfection vs. user validation"
             ],
             resources: []
           }

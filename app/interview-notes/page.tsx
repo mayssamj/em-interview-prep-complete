@@ -4,6 +4,8 @@ import { redirect } from 'next/navigation';
 import { Header } from '@/components/layout/header';
 import { InterviewNotesClient } from '@/components/interview-notes/interview-notes-client';
 
+export const dynamic = 'force-dynamic';
+
 export default async function InterviewNotesPage() {
   const user = await getSession();
   

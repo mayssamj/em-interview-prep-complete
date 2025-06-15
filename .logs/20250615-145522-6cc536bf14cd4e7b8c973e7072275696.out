@@ -1,0 +1,97 @@
+sending incremental file list
+globals.css
+layout.tsx
+page.tsx
+admin/
+admin/page.tsx
+api/
+api/admin/
+api/admin/stats/
+api/admin/stats/route.ts
+api/answers/
+api/answers/route.ts
+api/auth/
+api/auth/login/
+api/auth/login/route.ts
+api/auth/logout/
+api/auth/logout/route.ts
+api/auth/me/
+api/auth/me/route.ts
+api/auth/register/
+api/auth/register/route.ts
+api/companies/
+api/companies/system-design/
+api/companies/system-design/route.ts
+api/companies/with-questions/
+api/companies/with-questions/route.ts
+api/dashboard/
+api/dashboard/activity/
+api/dashboard/activity/route.ts
+api/dashboard/stats/
+api/dashboard/stats/route.ts
+api/interview-notes/
+api/interview-notes/route.ts
+api/interview-notes/[id]/
+api/interview-notes/[id]/route.ts
+api/questions/
+api/questions/recent/
+api/questions/recent/route.ts
+api/questions/track-view/
+api/questions/track-view/route.ts
+api/seed-system-design/
+api/seed-system-design/route.ts
+api/seed/
+api/seed/route.ts
+api/stories/
+api/stories/route.ts
+api/stories/[id]/
+api/stories/[id]/route.ts
+api/system-design-answers/
+api/system-design-answers/route.ts
+api/system-design-frameworks/
+api/system-design-frameworks/route.ts
+api/system-design-questions/
+api/system-design-questions/route.ts
+company-values/
+company-values/page.tsx
+company/
+company/[company]/
+company/[company]/page.tsx
+dashboard/
+dashboard/page.tsx
+faq/
+faq/page.tsx
+interview-notes/
+interview-notes/page.tsx
+interview-strategy/
+interview-strategy/page.tsx
+login/
+login/page.tsx
+progress-tracker/
+progress-tracker/page.tsx
+question-bank/
+question-bank/page.tsx
+stories/
+stories/page.tsx
+stories/new/
+stories/new/page.tsx
+story-templates/
+story-templates/page.tsx
+system-design-questions/
+system-design-questions/page.tsx
+system-design-strategy/
+system-design-strategy/page.tsx
+
+sent 72,878 bytes  received 945 bytes  147,646.00 bytes/sec
+total size is 68,410  speedup is 0.93
+Internal Error: app@workspace:.: This package doesn't seem to be present in your lockfile; run "yarn install" to update the lockfile
+    at jR.getCandidates (/home/ubuntu/.cache/node/corepack/v1/yarn/4.9.2/yarn.js:204:8149)
+    at em.getCandidates (/home/ubuntu/.cache/node/corepack/v1/yarn/4.9.2/yarn.js:141:1311)
+    at /home/ubuntu/.cache/node/corepack/v1/yarn/4.9.2/yarn.js:209:8420
+    at qE (/home/ubuntu/.cache/node/corepack/v1/yarn/4.9.2/yarn.js:140:54028)
+    at dt (/home/ubuntu/.cache/node/corepack/v1/yarn/4.9.2/yarn.js:209:8400)
+    at async Promise.allSettled (index 0)
+    at async Uu (/home/ubuntu/.cache/node/corepack/v1/yarn/4.9.2/yarn.js:140:53356)
+    at async /home/ubuntu/.cache/node/corepack/v1/yarn/4.9.2/yarn.js:209:9166
+    at async Yi.startProgressPromise (/home/ubuntu/.cache/node/corepack/v1/yarn/4.9.2/yarn.js:140:140548)
+    at async t.resolveEverything (/home/ubuntu/.cache/node/corepack/v1/yarn/4.9.2/yarn.js:209:7138)

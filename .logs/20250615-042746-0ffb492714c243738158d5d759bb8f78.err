@@ -1,0 +1,4 @@
+Error: > Couldn't find any `pages` or `app` directory. Please create one under the project root
+    at findPagesDir (/opt/hostedapp/node/root/app/node_modules/next/dist/lib/find-pages-dir.js:42:15)
+    at initialize (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:77:69)
+    at async Server.<anonymous> (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/start-server.js:249:36)

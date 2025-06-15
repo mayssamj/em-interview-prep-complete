@@ -1,0 +1,43 @@
+  ▲ Next.js 14.2.28
+  - Local:        http://localhost:3000
+  - Environments: .env
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+ ✓ Starting...
+ ✓ Ready in 2.1s
+ ○ Compiling / ...
+ ✓ Compiled / in 3.1s (527 modules)
+ GET / 307 in 3560ms
+ GET / 307 in 3595ms
+ ✓ Compiled in 437ms (267 modules)
+ ○ Compiling /login ...
+ ✓ Compiled /login in 1946ms (536 modules)
+ GET /login 200 in 2132ms
+ GET /login 200 in 2044ms
+ GET / 307 in 1364ms
+ GET / 307 in 1418ms
+ GET /login 200 in 32ms
+ GET /login 200 in 32ms
+ GET / 307 in 34ms
+ GET / 307 in 34ms
+ GET /login 200 in 32ms
+ GET / 307 in 36ms
+ GET /login 200 in 36ms
+ GET / 307 in 46ms
+ GET /login 200 in 35ms
+ GET / 307 in 36ms
+ GET /login 200 in 30ms
+ ✓ Compiled /api/auth/login in 325ms (305 modules)
+ POST /api/auth/login 200 in 871ms
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 984ms (770 modules)
+ ✓ Compiled /api/dashboard/activity in 135ms (411 modules)
+ ✓ Compiled (415 modules)
+ GET /api/dashboard/activity 500 in 320ms
+ GET /api/dashboard/stats 500 in 348ms
+ GET /api/companies/with-questions 200 in 344ms
+ GET /api/dashboard/stats 500 in 24ms
+ GET /api/companies/with-questions 200 in 35ms
+ GET /api/dashboard/activity 500 in 20ms
+[?25h

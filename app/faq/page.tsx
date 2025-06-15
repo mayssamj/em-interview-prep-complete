@@ -5,6 +5,8 @@ import { Header } from '@/components/layout/header';
 import { MessageCircle } from 'lucide-react';
 import { FAQClient } from '@/components/faq/faq-client';
 
+export const dynamic = 'force-dynamic';
+
 export default async function FAQPage() {
   const user = await getSession();
   

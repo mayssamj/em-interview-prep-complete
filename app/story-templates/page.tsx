@@ -6,6 +6,8 @@ import { Header } from '@/components/layout/header';
 import { BookOpen } from 'lucide-react';
 import { StoryTemplatesClient } from '@/components/story-templates/story-templates-client';
 
+export const dynamic = 'force-dynamic';
+
 export default async function StoryTemplatesPage() {
   const user = await getSession();
   

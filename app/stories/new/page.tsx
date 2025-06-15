@@ -4,6 +4,8 @@ import { redirect } from 'next/navigation';
 import { Header } from '@/components/layout/header';
 import { StoryForm } from '@/components/stories/story-form';
 
+export const dynamic = 'force-dynamic';
+
 export default async function NewStoryPage() {
   const user = await getSession();
   

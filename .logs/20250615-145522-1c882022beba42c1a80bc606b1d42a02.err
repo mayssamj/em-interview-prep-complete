@@ -1,0 +1,705 @@
+Activity fetch error: Error: Authentication required
+    at requireAuth (/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/activity/route.js:330:15)
+    at async GET (/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/activity/route.js:155:22)
+    at async /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:1588:28)
+Stats error: Error: Authentication required
+    at requireAuth (/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/activity/route.js:330:15)
+    at async GET (/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/stats/route.js:155:22)
+    at async /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:1588:28)
+Activity fetch error: Error: Authentication required
+    at requireAuth (/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/activity/route.js:330:15)
+    at async GET (/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/activity/route.js:155:22)
+    at async /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:1588:28)
+Stats error: Error: Authentication required
+    at requireAuth (/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/activity/route.js:330:15)
+    at async GET (/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/stats/route.js:155:22)
+    at async /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:1588:28)
+ ⨯ Error: Cannot find module './9276.js'
+Require stack:
+- /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+- /home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/activity/route.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-middleware.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/start-server.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require-hook.js:55:36
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1311:12)
+    at mod.require (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:136:16)
+    at __webpack_require__.f.require (/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:200:28)
+    at /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:108:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:107:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:159:22)
+    at /home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js:1:8319
+    at Object.<anonymous> (/home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js:1:8366)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Object..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1311:12)
+    at mod.require (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:136:16)
+    at requirePage (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js:109:84)
+    at /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js:103:84
+    at async loadComponentsImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js:103:26)
+    at async DevServer.findPageComponentsImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/next-server.js:714:36)
+    at async DevServer.findPageComponents (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/next-dev-server.js:577:20)
+    at async DevServer.renderErrorToResponseImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:2090:30)
+    at async pipe.req.req (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:2056:30)
+    at async DevServer.pipeImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:922:25)
+    at async /home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/home/ubuntu/em-interview-prep/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js:178:21)
+    at async handleRequest (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js:370:24)
+    at async requestHandlerImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js:379:13)
+    at async Server.requestListener (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js',
+    '/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/activity/route.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+ ⨯ Error: Cannot find module './9276.js'
+Require stack:
+- /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+- /home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/activity/route.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-middleware.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/start-server.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require-hook.js:55:36
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1311:12)
+    at mod.require (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:136:16)
+    at __webpack_require__.f.require (/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:200:28)
+    at /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:108:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:107:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:159:22)
+    at /home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js:1:8319
+    at Object.<anonymous> (/home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js:1:8366)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Object..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1311:12)
+    at mod.require (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:136:16)
+    at requirePage (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js:109:84)
+    at /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js:103:84
+    at async loadComponentsImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js:103:26)
+    at async DevServer.findPageComponentsImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/next-server.js:714:36)
+    at async DevServer.findPageComponents (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/next-dev-server.js:577:20)
+    at async DevServer.renderErrorToResponseImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:2090:30)
+    at async pipe.req.req (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:2056:30)
+    at async DevServer.pipeImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:922:25)
+    at async /home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/home/ubuntu/em-interview-prep/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js:178:21)
+    at async handleRequest (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js:370:24)
+    at async requestHandlerImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js:379:13)
+    at async Server.requestListener (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js',
+    '/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/activity/route.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+ ⨯ Error: Cannot find module './9276.js'
+Require stack:
+- /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+- /home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/activity/route.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-middleware.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/start-server.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require-hook.js:55:36
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1311:12)
+    at mod.require (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:136:16)
+    at __webpack_require__.f.require (/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:200:28)
+    at /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:108:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:107:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:159:22)
+    at /home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js:1:8319
+    at Object.<anonymous> (/home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js:1:8366)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Object..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1311:12)
+    at mod.require (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:136:16)
+    at requirePage (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js:109:84)
+    at /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js:103:84
+    at async loadComponentsImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js:103:26)
+    at async DevServer.findPageComponentsImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/next-server.js:714:36)
+    at async DevServer.findPageComponents (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/next-dev-server.js:577:20)
+    at async DevServer.renderErrorToResponseImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:2090:30)
+    at async pipe.req.req (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:2056:30)
+    at async DevServer.pipeImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:922:25)
+    at async /home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/home/ubuntu/em-interview-prep/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js:178:21)
+    at async handleRequest (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js:370:24)
+    at async requestHandlerImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js:379:13)
+    at async Server.requestListener (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js',
+    '/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/activity/route.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+ ⨯ Error: Cannot find module './9276.js'
+Require stack:
+- /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+- /home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/activity/route.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-middleware.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/start-server.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require-hook.js:55:36
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1311:12)
+    at mod.require (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:136:16)
+    at __webpack_require__.f.require (/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:200:28)
+    at /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:108:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:107:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:159:22)
+    at /home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js:1:8319
+    at Object.<anonymous> (/home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js:1:8366)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Object..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1311:12)
+    at mod.require (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:136:16)
+    at requirePage (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js:109:84)
+    at /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js:103:84
+    at async loadComponentsImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js:103:26)
+    at async DevServer.findPageComponentsImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/next-server.js:714:36)
+    at async DevServer.findPageComponents (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/next-dev-server.js:577:20)
+    at async DevServer.renderErrorToResponseImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:2090:30)
+    at async pipe.req.req (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:2056:30)
+    at async DevServer.pipeImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:922:25)
+    at async /home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/home/ubuntu/em-interview-prep/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js:178:21)
+    at async handleRequest (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js:370:24)
+    at async requestHandlerImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js:379:13)
+    at async Server.requestListener (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js',
+    '/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/activity/route.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+ ⨯ Error: Cannot find module './9276.js'
+Require stack:
+- /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+- /home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/activity/route.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-middleware.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/start-server.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require-hook.js:55:36
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1311:12)
+    at mod.require (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:136:16)
+    at __webpack_require__.f.require (/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:200:28)
+    at /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:108:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:107:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:159:22)
+    at /home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js:1:8319
+    at Object.<anonymous> (/home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js:1:8366)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Object..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1311:12)
+    at mod.require (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:136:16)
+    at requirePage (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js:109:84)
+    at /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js:103:84
+    at async loadComponentsImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js:103:26)
+    at async DevServer.findPageComponentsImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/next-server.js:714:36)
+    at async DevServer.findPageComponents (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/next-dev-server.js:577:20)
+    at async DevServer.renderErrorToResponseImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:2090:30)
+    at async pipe.req.req (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:2056:30)
+    at async DevServer.pipeImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:922:25)
+    at async /home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/home/ubuntu/em-interview-prep/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js:178:21)
+    at async handleRequest (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js:370:24)
+    at async requestHandlerImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js:379:13)
+    at async Server.requestListener (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js',
+    '/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/activity/route.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+ ⨯ Error: Cannot find module './9276.js'
+Require stack:
+- /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+- /home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/activity/route.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-middleware.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/start-server.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require-hook.js:55:36
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1311:12)
+    at mod.require (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:136:16)
+    at __webpack_require__.f.require (/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:200:28)
+    at /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:108:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:107:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:159:22)
+    at /home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js:1:8319
+    at Object.<anonymous> (/home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js:1:8366)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Object..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1311:12)
+    at mod.require (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:136:16)
+    at requirePage (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js:109:84)
+    at /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js:103:84
+    at async loadComponentsImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js:103:26)
+    at async DevServer.findPageComponentsImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/next-server.js:714:36)
+    at async DevServer.findPageComponents (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/next-dev-server.js:577:20)
+    at async DevServer.renderErrorToResponseImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:2090:30)
+    at async pipe.req.req (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:2056:30)
+    at async DevServer.pipeImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:922:25)
+    at async /home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/home/ubuntu/em-interview-prep/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js:178:21)
+    at async handleRequest (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js:370:24)
+    at async requestHandlerImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js:379:13)
+    at async Server.requestListener (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js',
+    '/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/activity/route.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat '/home/ubuntu/em-interview-prep/.next/server/vendor-chunks/clsx.js'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/clsx' in /home/ubuntu/em-interview-prep/.next/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/vendor-chunks/clsx.js', but to 'Error: Can't resolve './vendor-chunks/clsx' in '/home/ubuntu/em-interview-prep/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/clsx (expected /home/ubuntu/em-interview-prep/.next/server/vendor-chunks/clsx.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/app/login/page.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/app/login/page.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat '/home/ubuntu/em-interview-prep/.next/server/vendor-chunks/clsx.js'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat '/home/ubuntu/em-interview-prep/.next/server/vendor-chunks/clsx.js'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat '/home/ubuntu/em-interview-prep/.next/server/vendor-chunks/clsx.js'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat '/home/ubuntu/em-interview-prep/.next/server/vendor-chunks/clsx.js'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/clsx' in /home/ubuntu/em-interview-prep/.next/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/vendor-chunks/clsx.js', but to 'Error: Can't resolve './vendor-chunks/clsx' in '/home/ubuntu/em-interview-prep/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/clsx (expected /home/ubuntu/em-interview-prep/.next/server/vendor-chunks/clsx.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/app/login/page.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/app/login/page.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/clsx' in /home/ubuntu/em-interview-prep/.next/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/vendor-chunks/clsx.js', but to 'Error: Can't resolve './vendor-chunks/clsx' in '/home/ubuntu/em-interview-prep/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/clsx (expected /home/ubuntu/em-interview-prep/.next/server/vendor-chunks/clsx.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/app/page.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/app/page.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/class-variance-authority' in /home/ubuntu/em-interview-prep/.next/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/vendor-chunks/class-variance-authority.js', but to 'Error: Can't resolve './vendor-chunks/class-variance-authority' in '/home/ubuntu/em-interview-prep/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/class-variance-authority (expected /home/ubuntu/em-interview-prep/.next/server/vendor-chunks/class-variance-authority.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/app/login/page.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/app/login/page.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/class-variance-authority' in /home/ubuntu/em-interview-prep/.next/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/vendor-chunks/class-variance-authority.js', but to 'Error: Can't resolve './vendor-chunks/class-variance-authority' in '/home/ubuntu/em-interview-prep/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/class-variance-authority (expected /home/ubuntu/em-interview-prep/.next/server/vendor-chunks/class-variance-authority.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/app/page.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/app/page.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/next-themes' in /home/ubuntu/em-interview-prep/.next/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/vendor-chunks/next-themes.js', but to 'Error: Can't resolve './vendor-chunks/next-themes' in '/home/ubuntu/em-interview-prep/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/next-themes (expected /home/ubuntu/em-interview-prep/.next/server/vendor-chunks/next-themes.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/app/login/page.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/app/login/page.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/next-themes' in /home/ubuntu/em-interview-prep/.next/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/vendor-chunks/next-themes.js', but to 'Error: Can't resolve './vendor-chunks/next-themes' in '/home/ubuntu/em-interview-prep/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/next-themes (expected /home/ubuntu/em-interview-prep/.next/server/vendor-chunks/next-themes.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/app/page.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/app/page.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat '/home/ubuntu/em-interview-prep/.next/server/vendor-chunks/clsx.js'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/clsx' in /home/ubuntu/em-interview-prep/.next/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/vendor-chunks/clsx.js', but to 'Error: Can't resolve './vendor-chunks/clsx' in '/home/ubuntu/em-interview-prep/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/clsx (expected /home/ubuntu/em-interview-prep/.next/server/vendor-chunks/clsx.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/app/page.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/app/page.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/class-variance-authority' in /home/ubuntu/em-interview-prep/.next/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/vendor-chunks/class-variance-authority.js', but to 'Error: Can't resolve './vendor-chunks/class-variance-authority' in '/home/ubuntu/em-interview-prep/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/class-variance-authority (expected /home/ubuntu/em-interview-prep/.next/server/vendor-chunks/class-variance-authority.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/app/page.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/app/page.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/clsx' in /home/ubuntu/em-interview-prep/.next/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/vendor-chunks/clsx.js', but to 'Error: Can't resolve './vendor-chunks/clsx' in '/home/ubuntu/em-interview-prep/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/clsx (expected /home/ubuntu/em-interview-prep/.next/server/vendor-chunks/clsx.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/app/login/page.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/app/login/page.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/next-themes' in /home/ubuntu/em-interview-prep/.next/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/vendor-chunks/next-themes.js', but to 'Error: Can't resolve './vendor-chunks/next-themes' in '/home/ubuntu/em-interview-prep/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/next-themes (expected /home/ubuntu/em-interview-prep/.next/server/vendor-chunks/next-themes.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/app/page.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/app/page.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/clsx' in /home/ubuntu/em-interview-prep/.next/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/vendor-chunks/clsx.js', but to 'Error: Can't resolve './vendor-chunks/clsx' in '/home/ubuntu/em-interview-prep/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/clsx (expected /home/ubuntu/em-interview-prep/.next/server/vendor-chunks/clsx.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/next-themes' in /home/ubuntu/em-interview-prep/.next/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/vendor-chunks/next-themes.js', but to 'Error: Can't resolve './vendor-chunks/next-themes' in '/home/ubuntu/em-interview-prep/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/next-themes (expected /home/ubuntu/em-interview-prep/.next/server/vendor-chunks/next-themes.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/class-variance-authority' in /home/ubuntu/em-interview-prep/.next/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/vendor-chunks/class-variance-authority.js', but to 'Error: Can't resolve './vendor-chunks/class-variance-authority' in '/home/ubuntu/em-interview-prep/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/class-variance-authority (expected /home/ubuntu/em-interview-prep/.next/server/vendor-chunks/class-variance-authority.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/lucide-react' in /home/ubuntu/em-interview-prep/.next/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/vendor-chunks/lucide-react.js', but to 'Error: Can't resolve './vendor-chunks/lucide-react' in '/home/ubuntu/em-interview-prep/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/lucide-react (expected /home/ubuntu/em-interview-prep/.next/server/vendor-chunks/lucide-react.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/app/_not-found/page.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/handle-externals.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat '/home/ubuntu/em-interview-prep/.next/server/vendor-chunks/clsx.js'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/clsx' in /home/ubuntu/em-interview-prep/.next/server for build dependencies doesn't lead to expected result '/home/ubuntu/em-interview-prep/.next/server/vendor-chunks/clsx.js', but to 'Error: Can't resolve './vendor-chunks/clsx' in '/home/ubuntu/em-interview-prep/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/clsx (expected /home/ubuntu/em-interview-prep/.next/server/vendor-chunks/clsx.js)
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/.next/server/app/login/page.js
+<w>  at file /home/ubuntu/em-interview-prep/.next/server/app/login/page.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at resolve commonjs /home/ubuntu/em-interview-prep/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js

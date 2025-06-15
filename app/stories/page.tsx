@@ -5,6 +5,8 @@ import { prisma } from '@/lib/db';
 import { Header } from '@/components/layout/header';
 import { StoriesManager } from '@/components/stories/stories-manager';
 
+export const dynamic = 'force-dynamic';
+
 export default async function StoriesPage() {
   const user = await getSession();
   

@@ -1,0 +1,32 @@
+Activity fetch error: Error: Authentication required
+    at requireAuth (/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/activity/route.js:330:15)
+    at async GET (/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/activity/route.js:155:22)
+    at async /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:1588:28)
+Stats error: Error: Authentication required
+    at requireAuth (/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/activity/route.js:330:15)
+    at async GET (/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/stats/route.js:155:22)
+    at async /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:1588:28)
+Stats error: Error: Authentication required
+    at requireAuth (/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/activity/route.js:330:15)
+    at async GET (/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/stats/route.js:155:22)
+    at async /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:1588:28)
+Activity fetch error: Error: Authentication required
+    at requireAuth (/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/activity/route.js:330:15)
+    at async GET (/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/activity/route.js:155:22)
+    at async /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:1588:28)

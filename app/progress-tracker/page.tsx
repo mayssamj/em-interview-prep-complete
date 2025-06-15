@@ -6,6 +6,8 @@ import { Header } from '@/components/layout/header';
 import { TrendingUp } from 'lucide-react';
 import { ProgressTrackerClient } from '@/components/progress-tracker/progress-tracker-client';
 
+export const dynamic = 'force-dynamic';
+
 export default async function ProgressTrackerPage() {
   const user = await getSession();
   
