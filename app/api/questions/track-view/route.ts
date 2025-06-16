@@ -1,48 +1,48 @@
 
-export const dynamic = "force-dynamic";
+export const dynamic = 'force-dynamic';
 
-import { NextRequest, NextResponse } from 'next/server';
-import { getSession } from '@/lib/auth';
-import { prisma } from '@/lib/db';
+import { NextRequest, NextResponse } from 'next/server'
+import { prisma } from '@/lib/db'
+import { requireAuth } from '@/lib/auth'
+import { v4 as uuidv4 } from 'uuid'
 
 export async function POST(request: NextRequest) {
   try {
-    const user = await getSession();
-    
-    if (!user) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    }
-
-    const { questionId } = await request.json();
+    const user = await requireAuth(request)
+    const { questionId } = await request.json()
 
     if (!questionId) {
-      return NextResponse.json({ error: 'Question ID is required' }, { status: 400 });
+      return NextResponse.json(
+        { error: 'Question ID is required' },
+        { status: 400 }
+      )
     }
 
-    // Create a new question view record
+    // Track the view
     await prisma.questionView.create({
       data: {
-        userId: user.id,
-        questionId: questionId
+        id: uuidv4(),
+        user_id: user.id,
+        question_id: questionId
       }
-    });
+    })
 
-    // Update the question's usage count
+    // Update question usage count
     await prisma.question.update({
       where: { id: questionId },
       data: {
-        usageCount: {
+        usage_count: {
           increment: 1
         }
       }
-    });
+    })
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ message: 'View tracked successfully' })
   } catch (error) {
-    console.error('Failed to track question view:', error);
+    console.error('Error tracking question view:', error)
     return NextResponse.json(
-      { error: 'Failed to track question view' },
+      { error: 'Failed to track view' },
       { status: 500 }
-    );
+    )
   }
 }

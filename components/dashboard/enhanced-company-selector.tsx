@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+import { useToast } from '@/hooks/use-toast';
 import { 
   Building2, 
   ArrowRight,
@@ -22,10 +23,10 @@ import {
 
 interface Question {
   id: string;
-  questionText: string;
+  question_text: string; // Fixed: Use actual API field names
   category: string;
   difficulty: string;
-  isCritical: boolean;
+  is_critical: boolean;
 }
 
 interface CompanyData {
@@ -168,6 +169,7 @@ export function EnhancedCompanySelector() {
   const [companies, setCompanies] = useState<CompanyData[]>([]);
   const [expandedCompanies, setExpandedCompanies] = useState<Set<string>>(new Set());
   const [isLoading, setIsLoading] = useState(true);
+  const { toast } = useToast();
 
   useEffect(() => {
     fetchCompaniesWithQuestions();
@@ -187,7 +189,7 @@ export function EnhancedCompanySelector() {
         
         // Map the data to include UI properties
         const enhancedCompanies = companyMappings.map(mapping => {
-          const dbCompany = data.find((c: any) => {
+          const dbCompany = data.companies?.find((c: any) => {
             // Handle different name formats
             const dbName = c.name.toLowerCase().replace(/[^a-z0-9]/g, '');
             const mappingName = mapping.name.toLowerCase().replace(/[^a-z0-9]/g, '');
@@ -203,9 +205,16 @@ export function EnhancedCompanySelector() {
         }).filter(company => company.questionCount > 0);
         
         setCompanies(enhancedCompanies);
+      } else {
+        throw new Error('Failed to fetch companies');
       }
     } catch (error) {
       console.error('Error fetching companies:', error);
+      toast({
+        title: 'Error',
+        description: 'Failed to load companies. Please try again.',
+        variant: 'destructive'
+      });
     } finally {
       setIsLoading(false);
     }
@@ -371,9 +380,9 @@ export function EnhancedCompanySelector() {
                             >
                               <div className="flex items-start justify-between gap-2">
                                 <p className="text-xs text-muted-foreground line-clamp-2">
-                                  {question.questionText}
+                                  {question.question_text}
                                 </p>
-                                {question.isCritical && (
+                                {question.is_critical && (
                                   <Star className="h-3 w-3 text-yellow-500 flex-shrink-0" />
                                 )}
                               </div>
@@ -459,9 +468,9 @@ export function EnhancedCompanySelector() {
                             >
                               <div className="flex items-start justify-between gap-2">
                                 <p className="text-xs text-muted-foreground">
-                                  {question.questionText}
+                                  {question.question_text}
                                 </p>
-                                {question.isCritical && (
+                                {question.is_critical && (
                                   <Star className="h-3 w-3 text-yellow-500 flex-shrink-0" />
                                 )}
                               </div>
@@ -485,6 +494,18 @@ export function EnhancedCompanySelector() {
           );
         })}
       </div>
+
+      {companies.length === 0 && !isLoading && (
+        <Card>
+          <CardContent className="text-center py-12">
+            <Building2 className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
+            <h3 className="text-lg font-medium mb-2">No companies found</h3>
+            <p className="text-muted-foreground">
+              Companies data is being loaded. Please check back in a moment.
+            </p>
+          </CardContent>
+        </Card>
+      )}
 
       {/* All Companies Option */}
       <Card className="border-2 border-dashed border-muted-foreground/25 card-hover cursor-pointer group">

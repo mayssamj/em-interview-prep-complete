@@ -1,6 +1,10 @@
 
 import { prisma } from './db';
-import { hashPassword } from './auth';
+import bcrypt from 'bcryptjs';
+
+async function hashPassword(password: string): Promise<string> {
+  return await bcrypt.hash(password, 10);
+}
 
 const companyData = {
   microsoft: {
@@ -1296,13 +1300,16 @@ export async function seedDatabase() {
       where: { username: 'admin' },
       update: {},
       create: {
+        id: 'user_admin',
         username: 'admin',
-        passwordHash: adminPasswordHash,
-        isAdmin: true,
+        password_hash: adminPasswordHash,
+        is_admin: true,
         preferences: {
           theme: 'light',
           viewMode: 'normal'
-        }
+        },
+        created_at: new Date(),
+        updated_at: new Date()
       }
     });
 
@@ -1314,13 +1321,16 @@ export async function seedDatabase() {
       where: { username: 'mayssam' },
       update: {},
       create: {
+        id: 'user_mayssam',
         username: 'mayssam',
-        passwordHash: userPasswordHash,
-        isAdmin: false,
+        password_hash: userPasswordHash,
+        is_admin: false,
         preferences: {
           theme: 'light',
           viewMode: 'normal'
-        }
+        },
+        created_at: new Date(),
+        updated_at: new Date()
       }
     });
 
@@ -1328,10 +1338,22 @@ export async function seedDatabase() {
 
     // Create companies
     for (const [key, data] of Object.entries(companyData)) {
+      const transformedData = {
+        id: `company_${key}`,
+        name: data.name,
+        values: data.values,
+        evaluation_criteria: data.evaluationCriteria,
+        interview_format: data.interviewFormat,
+        success_tips: data.successTips,
+        red_flags: data.redFlags,
+        created_at: new Date(),
+        updated_at: new Date()
+      };
+      
       await prisma.company.upsert({
         where: { name: data.name },
-        update: data,
-        create: data
+        update: transformedData,
+        create: transformedData
       });
     }
 
@@ -1345,11 +1367,23 @@ export async function seedDatabase() {
 
       if (company) {
         for (const question of companyQuestions) {
+          const transformedQuestion = {
+            id: `question_${companyKey}_${Math.random().toString(36).substr(2, 9)}`,
+            company_id: company.id,
+            category: (question as any).category,
+            question_text: (question as any).questionText,
+            difficulty: (question as any).difficulty,
+            is_generated: (question as any).isGenerated || true,
+            tags: (question as any).tags || [],
+            created_at: new Date(),
+            updated_at: new Date(),
+            is_critical: (question as any).isCritical || false,
+            usage_count: (question as any).usageCount || 0,
+            question_type: (question as any).questionType || 'behavioral'
+          };
+          
           await prisma.question.create({
-            data: {
-              ...question,
-              companyId: company.id
-            }
+            data: transformedQuestion
           });
         }
       }
@@ -1359,11 +1393,23 @@ export async function seedDatabase() {
 
     // Create user stories
     for (const story of userStories) {
+      const transformedStory = {
+        id: `story_${Math.random().toString(36).substr(2, 9)}`,
+        user_id: regularUser.id,
+        title: story.title,
+        situation: story.situation,
+        task: story.task,
+        action: story.action,
+        result: story.result,
+        reflection: story.reflection,
+        tags: story.tags,
+        categories: story.categories,
+        created_at: new Date(),
+        updated_at: new Date()
+      };
+      
       await prisma.story.create({
-        data: {
-          ...story,
-          userId: regularUser.id
-        }
+        data: transformedStory
       });
     }
 

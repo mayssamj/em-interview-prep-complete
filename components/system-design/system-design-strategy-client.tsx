@@ -35,8 +35,8 @@ interface SystemDesignFramework {
   name: string;
   description: string;
   category: string;
-  keyPrinciples: string[];
-  useCases: string[];
+  key_principles: string[]; // Fixed: Use actual API field names
+  use_cases: string[];
   tradeoffs: string[];
   examples: string[];
   resources: string[];
@@ -63,7 +63,9 @@ export function SystemDesignStrategyClient() {
       const response = await fetch(`/api/system-design-frameworks?${params}`);
       if (response.ok) {
         const data = await response.json();
-        setFrameworks(data);
+        setFrameworks(data || []); // Fixed: Ensure frameworks is always an array
+      } else {
+        throw new Error('Failed to fetch frameworks');
       }
     } catch (error) {
       console.error('Error fetching frameworks:', error);
@@ -72,6 +74,7 @@ export function SystemDesignStrategyClient() {
         description: 'Failed to fetch system design frameworks',
         variant: 'destructive'
       });
+      setFrameworks([]); // Set empty array on error
     } finally {
       setLoading(false);
     }
@@ -98,7 +101,8 @@ export function SystemDesignStrategyClient() {
     }
   };
 
-  const categories = [...new Set(frameworks.map(f => f.category))];
+  // Safe access to frameworks array
+  const categories = frameworks && frameworks.length > 0 ? [...new Set(frameworks.map(f => f.category))] : [];
   const difficulties = ['Easy', 'Medium', 'Hard'];
 
   // Core system design principles and strategies
@@ -425,7 +429,7 @@ export function SystemDesignStrategyClient() {
 
           {/* Frameworks Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {frameworks.map((framework) => (
+            {frameworks && frameworks.length > 0 ? frameworks.map((framework) => (
               <Card key={framework.id} className="h-fit">
                 <CardHeader>
                   <div className="flex items-start justify-between">
@@ -453,7 +457,7 @@ export function SystemDesignStrategyClient() {
                       <AccordionTrigger>Key Principles</AccordionTrigger>
                       <AccordionContent>
                         <ul className="space-y-1">
-                          {framework.keyPrinciples.map((principle, index) => (
+                          {framework.key_principles && framework.key_principles.map((principle, index) => (
                             <li key={index} className="flex items-start gap-2 text-sm">
                               <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
                               {principle}
@@ -467,7 +471,7 @@ export function SystemDesignStrategyClient() {
                       <AccordionTrigger>Use Cases</AccordionTrigger>
                       <AccordionContent>
                         <ul className="space-y-1">
-                          {framework.useCases.map((useCase, index) => (
+                          {framework.use_cases && framework.use_cases.map((useCase, index) => (
                             <li key={index} className="flex items-start gap-2 text-sm">
                               <Target className="h-4 w-4 text-blue-500 mt-0.5 flex-shrink-0" />
                               {useCase}
@@ -481,7 +485,7 @@ export function SystemDesignStrategyClient() {
                       <AccordionTrigger>Tradeoffs</AccordionTrigger>
                       <AccordionContent>
                         <ul className="space-y-1">
-                          {framework.tradeoffs.map((tradeoff, index) => (
+                          {framework.tradeoffs && framework.tradeoffs.map((tradeoff, index) => (
                             <li key={index} className="flex items-start gap-2 text-sm">
                               <AlertTriangle className="h-4 w-4 text-yellow-500 mt-0.5 flex-shrink-0" />
                               {tradeoff}
@@ -491,7 +495,7 @@ export function SystemDesignStrategyClient() {
                       </AccordionContent>
                     </AccordionItem>
                     
-                    {framework.examples.length > 0 && (
+                    {framework.examples && framework.examples.length > 0 && (
                       <AccordionItem value="examples">
                         <AccordionTrigger>Examples</AccordionTrigger>
                         <AccordionContent>
@@ -508,7 +512,7 @@ export function SystemDesignStrategyClient() {
                     )}
                   </Accordion>
                   
-                  {framework.resources.length > 0 && (
+                  {framework.resources && framework.resources.length > 0 && (
                     <div className="mt-4 pt-4 border-t">
                       <h4 className="font-medium mb-2 flex items-center gap-2">
                         <ExternalLink className="h-4 w-4" />
@@ -531,20 +535,20 @@ export function SystemDesignStrategyClient() {
                   )}
                 </CardContent>
               </Card>
-            ))}
+            )) : (
+              <div className="col-span-full">
+                <Card>
+                  <CardContent className="text-center py-12">
+                    <BookOpen className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
+                    <h3 className="text-lg font-medium mb-2">No frameworks found</h3>
+                    <p className="text-muted-foreground">
+                      Try adjusting your filters or check back later for more content.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            )}
           </div>
-
-          {frameworks.length === 0 && (
-            <Card>
-              <CardContent className="text-center py-12">
-                <BookOpen className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                <h3 className="text-lg font-medium mb-2">No frameworks found</h3>
-                <p className="text-muted-foreground">
-                  Try adjusting your filters or check back later for more content.
-                </p>
-              </CardContent>
-            </Card>
-          )}
         </TabsContent>
 
         <TabsContent value="resources" className="space-y-6">

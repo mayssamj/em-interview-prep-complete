@@ -30,49 +30,58 @@ import {
 
 interface SystemDesignQuestion {
   id: string;
-  questionText: string;
+  question_text: string; // Fixed: Use the actual API field name
   difficulty: string;
   category: string;
-  isCritical: boolean;
+  categories: string[]; // New: Support multiple categories
+  is_critical: boolean; // Fixed: Use the actual API field name
   tags: string[];
-  usageCount: number;
-  company?: {
+  usage_count: number; // Fixed: Use the actual API field name
+  companies?: {
     id: string;
     name: string;
   };
-  systemDesignDetails?: {
-    architectureFocus: string[];
-    complexityLevel: string;
-    leadershipAspects: string[];
+  system_design_questions?: {
+    architecture_focus: string[];
+    complexity_level: string;
+    leadership_aspects: string[];
     frameworks: string[];
-    evaluationCriteria: string[];
+    evaluation_criteria: string[];
     resources: string[];
-    estimatedTimeMinutes?: number;
-    followUpQuestions: string[];
-    commonMistakes: string[];
-    keyTradeoffs: string[];
+    estimated_time_minutes?: number;
+    follow_up_questions: string[];
+    common_mistakes: string[];
+    key_tradeoffs: string[];
   };
   _count?: {
     answers: number;
-    systemDesignAnswers: number;
+    system_design_answers: number;
   };
+}
+
+interface SystemDesignCategory {
+  id: string;
+  name: string;
+  description: string;
+  count: number;
 }
 
 interface SystemDesignAnswer {
   id: string;
-  highLevelDesign: string;
-  detailedComponents?: any;
-  scalabilityApproach?: string;
-  dataStorageStrategy?: string;
-  tradeoffsDiscussed: string[];
-  frameworksUsed: string[];
-  estimatedScale?: string;
+  high_level_design: string;
+  detailed_components?: any;
+  scalability_approach?: string;
+  data_storage_strategy?: string;
+  tradeoffs_discussed: string[];
+  frameworks_used: string[];
+  estimated_scale?: string;
   notes?: string;
 }
 
 export function SystemDesignQuestionBankClient() {
   const [questions, setQuestions] = useState<SystemDesignQuestion[]>([]);
   const [filteredQuestions, setFilteredQuestions] = useState<SystemDesignQuestion[]>([]);
+  const [categories, setCategories] = useState<SystemDesignCategory[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCompany, setSelectedCompany] = useState('all');
@@ -82,18 +91,19 @@ export function SystemDesignQuestionBankClient() {
   const [selectedQuestion, setSelectedQuestion] = useState<SystemDesignQuestion | null>(null);
   const [userAnswer, setUserAnswer] = useState<SystemDesignAnswer | null>(null);
   const [answerForm, setAnswerForm] = useState({
-    highLevelDesign: '',
-    scalabilityApproach: '',
-    dataStorageStrategy: '',
-    tradeoffsDiscussed: [] as string[],
-    frameworksUsed: [] as string[],
-    estimatedScale: '',
+    high_level_design: '',
+    scalability_approach: '',
+    data_storage_strategy: '',
+    tradeoffs_discussed: [] as string[],
+    frameworks_used: [] as string[],
+    estimated_scale: '',
     notes: ''
   });
   const { toast } = useToast();
 
   useEffect(() => {
     fetchQuestions();
+    fetchCategories();
   }, []);
 
   useEffect(() => {
@@ -112,6 +122,8 @@ export function SystemDesignQuestionBankClient() {
       if (response.ok) {
         const data = await response.json();
         setQuestions(data);
+      } else {
+        throw new Error('Failed to fetch questions');
       }
     } catch (error) {
       console.error('Error fetching questions:', error);
@@ -125,14 +137,30 @@ export function SystemDesignQuestionBankClient() {
     }
   };
 
+  const fetchCategories = async () => {
+    try {
+      const response = await fetch('/api/system-design-categories');
+      if (response.ok) {
+        const data = await response.json();
+        setCategories(data);
+      } else {
+        throw new Error('Failed to fetch categories');
+      }
+    } catch (error) {
+      console.error('Error fetching categories:', error);
+      // Fallback to empty array if categories API fails
+      setCategories([]);
+    }
+  };
+
   const filterQuestions = () => {
     let filtered = questions;
 
     if (searchQuery) {
       filtered = filtered.filter(q => 
-        q.questionText.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        q.question_text.toLowerCase().includes(searchQuery.toLowerCase()) ||
         q.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())) ||
-        q.company?.name.toLowerCase().includes(searchQuery.toLowerCase())
+        q.companies?.name.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
 
@@ -151,12 +179,12 @@ export function SystemDesignQuestionBankClient() {
           const answer = answers[0];
           setUserAnswer(answer);
           setAnswerForm({
-            highLevelDesign: answer.highLevelDesign || '',
-            scalabilityApproach: answer.scalabilityApproach || '',
-            dataStorageStrategy: answer.dataStorageStrategy || '',
-            tradeoffsDiscussed: answer.tradeoffsDiscussed || [],
-            frameworksUsed: answer.frameworksUsed || [],
-            estimatedScale: answer.estimatedScale || '',
+            high_level_design: answer.high_level_design || '',
+            scalability_approach: answer.scalability_approach || '',
+            data_storage_strategy: answer.data_storage_strategy || '',
+            tradeoffs_discussed: answer.tradeoffs_discussed || [],
+            frameworks_used: answer.frameworks_used || [],
+            estimated_scale: answer.estimated_scale || '',
             notes: answer.notes || ''
           });
         }
@@ -217,8 +245,7 @@ export function SystemDesignQuestionBankClient() {
     }
   };
 
-  const companies = [...new Set(questions.map(q => q.company?.name).filter(Boolean))];
-  const categories = [...new Set(questions.map(q => q.category))];
+  const companies = [...new Set(questions.map(q => q.companies?.name).filter(Boolean))];
   const difficulties = ['Easy', 'Medium', 'Hard'];
 
   if (loading) {
@@ -300,8 +327,8 @@ export function SystemDesignQuestionBankClient() {
                 <SelectContent>
                   <SelectItem value="all">All Categories</SelectItem>
                   {categories.map(category => (
-                    <SelectItem key={category} value={category}>
-                      {category}
+                    <SelectItem key={category.id} value={category.name}>
+                      {category.name}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -335,61 +362,70 @@ export function SystemDesignQuestionBankClient() {
               <div className="flex items-start justify-between">
                 <div className="flex-1">
                   <CardTitle className="text-lg leading-tight mb-2">
-                    {question.questionText}
+                    {question.question_text}
                   </CardTitle>
                   <div className="flex items-center gap-2 mb-2">
                     <Badge className={getDifficultyColor(question.difficulty)}>
                       {question.difficulty}
                     </Badge>
-                    {question.isCritical && (
+                    {question.is_critical && (
                       <Badge variant="destructive" className="flex items-center gap-1">
                         <Star className="h-3 w-3" />
                         Critical
                       </Badge>
                     )}
-                    {question.company && (
+                    {question.companies && (
                       <Badge variant="outline">
-                        {question.company.name}
+                        {question.companies.name}
                       </Badge>
                     )}
                   </div>
+                  {question.categories && question.categories.length > 0 && (
+                    <div className="flex flex-wrap gap-1 mb-2">
+                      {question.categories.map((category, index) => (
+                        <Badge key={index} variant="secondary" className="text-xs">
+                          {category}
+                        </Badge>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             </CardHeader>
             
             <CardContent>
               <div className="space-y-3">
-                {question.systemDesignDetails && (
+                {question.system_design_questions && (
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div className="flex items-center gap-2">
-                      {getComplexityIcon(question.systemDesignDetails.complexityLevel)}
+                      {getComplexityIcon(question.system_design_questions.complexity_level)}
                       <span className="text-muted-foreground">
-                        {question.systemDesignDetails.complexityLevel} level
+                        {question.system_design_questions.complexity_level} level
                       </span>
                     </div>
-                    {question.systemDesignDetails.estimatedTimeMinutes && (
+                    {question.system_design_questions.estimated_time_minutes && (
                       <div className="flex items-center gap-2">
                         <Clock className="h-4 w-4" />
                         <span className="text-muted-foreground">
-                          {question.systemDesignDetails.estimatedTimeMinutes} min
+                          {question.system_design_questions.estimated_time_minutes} min
                         </span>
                       </div>
                     )}
                   </div>
                 )}
 
-                {question.systemDesignDetails?.architectureFocus && question.systemDesignDetails.architectureFocus.length > 0 && (
+                {question.system_design_questions?.architecture_focus && question.system_design_questions.architecture_focus.length > 0 && (
                   <div>
                     <p className="text-sm font-medium mb-1">Focus Areas:</p>
                     <div className="flex flex-wrap gap-1">
-                      {question.systemDesignDetails.architectureFocus.slice(0, 3).map((focus, index) => (
+                      {question.system_design_questions.architecture_focus.slice(0, 3).map((focus, index) => (
                         <Badge key={index} variant="secondary" className="text-xs">
                           {focus}
                         </Badge>
                       ))}
-                      {question.systemDesignDetails.architectureFocus.length > 3 && (
+                      {question.system_design_questions.architecture_focus.length > 3 && (
                         <Badge variant="secondary" className="text-xs">
-                          +{question.systemDesignDetails.architectureFocus.length - 3} more
+                          +{question.system_design_questions.architecture_focus.length - 3} more
                         </Badge>
                       )}
                     </div>
@@ -400,12 +436,12 @@ export function SystemDesignQuestionBankClient() {
                   <div className="flex items-center gap-4 text-sm text-muted-foreground">
                     <span className="flex items-center gap-1">
                       <TrendingUp className="h-4 w-4" />
-                      {question.usageCount} views
+                      {question.usage_count} views
                     </span>
                     {question._count && (
                       <span className="flex items-center gap-1">
                         <BookOpen className="h-4 w-4" />
-                        {question._count.systemDesignAnswers} answers
+                        {question._count.system_design_answers} answers
                       </span>
                     )}
                   </div>
@@ -423,9 +459,9 @@ export function SystemDesignQuestionBankClient() {
                     </DialogTrigger>
                     <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
                       <DialogHeader>
-                        <DialogTitle className="text-xl">{question.questionText}</DialogTitle>
+                        <DialogTitle className="text-xl">{question.question_text}</DialogTitle>
                         <DialogDescription>
-                          System Design Practice - {question.company?.name || 'General'}
+                          System Design Practice - {question.companies?.name || 'General'}
                         </DialogDescription>
                       </DialogHeader>
                       
@@ -437,13 +473,13 @@ export function SystemDesignQuestionBankClient() {
                         </TabsList>
                         
                         <TabsContent value="question" className="space-y-4">
-                          {question.systemDesignDetails && (
+                          {question.system_design_questions && (
                             <div className="space-y-4">
                               <div className="grid grid-cols-2 gap-4">
                                 <div>
                                   <h4 className="font-medium mb-2">Architecture Focus</h4>
                                   <div className="flex flex-wrap gap-1">
-                                    {question.systemDesignDetails.architectureFocus.map((focus, index) => (
+                                    {question.system_design_questions.architecture_focus.map((focus, index) => (
                                       <Badge key={index} variant="outline">{focus}</Badge>
                                     ))}
                                   </div>
@@ -451,7 +487,7 @@ export function SystemDesignQuestionBankClient() {
                                 <div>
                                   <h4 className="font-medium mb-2">Frameworks</h4>
                                   <div className="flex flex-wrap gap-1">
-                                    {question.systemDesignDetails.frameworks.map((framework, index) => (
+                                    {question.system_design_questions.frameworks.map((framework, index) => (
                                       <Badge key={index} variant="secondary">{framework}</Badge>
                                     ))}
                                   </div>
@@ -461,7 +497,7 @@ export function SystemDesignQuestionBankClient() {
                               <div>
                                 <h4 className="font-medium mb-2">Leadership Aspects</h4>
                                 <ul className="list-disc list-inside text-sm space-y-1">
-                                  {question.systemDesignDetails.leadershipAspects.map((aspect, index) => (
+                                  {question.system_design_questions.leadership_aspects.map((aspect, index) => (
                                     <li key={index}>{aspect}</li>
                                   ))}
                                 </ul>
@@ -470,7 +506,7 @@ export function SystemDesignQuestionBankClient() {
                               <div>
                                 <h4 className="font-medium mb-2">Key Tradeoffs to Discuss</h4>
                                 <ul className="list-disc list-inside text-sm space-y-1">
-                                  {question.systemDesignDetails.keyTradeoffs.map((tradeoff, index) => (
+                                  {question.system_design_questions.key_tradeoffs.map((tradeoff, index) => (
                                     <li key={index}>{tradeoff}</li>
                                   ))}
                                 </ul>
@@ -482,45 +518,45 @@ export function SystemDesignQuestionBankClient() {
                         <TabsContent value="answer" className="space-y-4">
                           <div className="space-y-4">
                             <div>
-                              <Label htmlFor="highLevelDesign">High-Level Design</Label>
+                              <Label htmlFor="high_level_design">High-Level Design</Label>
                               <Textarea
-                                id="highLevelDesign"
+                                id="high_level_design"
                                 placeholder="Describe your overall system architecture..."
-                                value={answerForm.highLevelDesign}
-                                onChange={(e) => setAnswerForm({...answerForm, highLevelDesign: e.target.value})}
+                                value={answerForm.high_level_design}
+                                onChange={(e) => setAnswerForm({...answerForm, high_level_design: e.target.value})}
                                 className="min-h-[100px]"
                               />
                             </div>
                             
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                               <div>
-                                <Label htmlFor="scalabilityApproach">Scalability Approach</Label>
+                                <Label htmlFor="scalability_approach">Scalability Approach</Label>
                                 <Textarea
-                                  id="scalabilityApproach"
+                                  id="scalability_approach"
                                   placeholder="How will you scale this system?"
-                                  value={answerForm.scalabilityApproach}
-                                  onChange={(e) => setAnswerForm({...answerForm, scalabilityApproach: e.target.value})}
+                                  value={answerForm.scalability_approach}
+                                  onChange={(e) => setAnswerForm({...answerForm, scalability_approach: e.target.value})}
                                 />
                               </div>
                               
                               <div>
-                                <Label htmlFor="dataStorageStrategy">Data Storage Strategy</Label>
+                                <Label htmlFor="data_storage_strategy">Data Storage Strategy</Label>
                                 <Textarea
-                                  id="dataStorageStrategy"
+                                  id="data_storage_strategy"
                                   placeholder="Describe your data storage approach..."
-                                  value={answerForm.dataStorageStrategy}
-                                  onChange={(e) => setAnswerForm({...answerForm, dataStorageStrategy: e.target.value})}
+                                  value={answerForm.data_storage_strategy}
+                                  onChange={(e) => setAnswerForm({...answerForm, data_storage_strategy: e.target.value})}
                                 />
                               </div>
                             </div>
                             
                             <div>
-                              <Label htmlFor="estimatedScale">Estimated Scale</Label>
+                              <Label htmlFor="estimated_scale">Estimated Scale</Label>
                               <Input
-                                id="estimatedScale"
+                                id="estimated_scale"
                                 placeholder="e.g., 1M users, 100K QPS"
-                                value={answerForm.estimatedScale}
-                                onChange={(e) => setAnswerForm({...answerForm, estimatedScale: e.target.value})}
+                                value={answerForm.estimated_scale}
+                                onChange={(e) => setAnswerForm({...answerForm, estimated_scale: e.target.value})}
                               />
                             </div>
                             
@@ -541,7 +577,7 @@ export function SystemDesignQuestionBankClient() {
                         </TabsContent>
                         
                         <TabsContent value="guidance" className="space-y-4">
-                          {question.systemDesignDetails && (
+                          {question.system_design_questions && (
                             <div className="space-y-4">
                               <div>
                                 <h4 className="font-medium mb-2 flex items-center gap-2">
@@ -549,7 +585,7 @@ export function SystemDesignQuestionBankClient() {
                                   Common Mistakes to Avoid
                                 </h4>
                                 <ul className="list-disc list-inside text-sm space-y-1">
-                                  {question.systemDesignDetails.commonMistakes.map((mistake, index) => (
+                                  {question.system_design_questions.common_mistakes.map((mistake, index) => (
                                     <li key={index}>{mistake}</li>
                                   ))}
                                 </ul>
@@ -558,20 +594,20 @@ export function SystemDesignQuestionBankClient() {
                               <div>
                                 <h4 className="font-medium mb-2">Follow-up Questions</h4>
                                 <ul className="list-disc list-inside text-sm space-y-1">
-                                  {question.systemDesignDetails.followUpQuestions.map((followUp, index) => (
+                                  {question.system_design_questions.follow_up_questions.map((followUp, index) => (
                                     <li key={index}>{followUp}</li>
                                   ))}
                                 </ul>
                               </div>
                               
-                              {question.systemDesignDetails.resources.length > 0 && (
+                              {question.system_design_questions.resources.length > 0 && (
                                 <div>
                                   <h4 className="font-medium mb-2 flex items-center gap-2">
                                     <ExternalLink className="h-4 w-4" />
                                     Study Resources
                                   </h4>
                                   <ul className="space-y-1">
-                                    {question.systemDesignDetails.resources.map((resource, index) => (
+                                    {question.system_design_questions.resources.map((resource, index) => (
                                       <li key={index}>
                                         <a 
                                           href={resource} 

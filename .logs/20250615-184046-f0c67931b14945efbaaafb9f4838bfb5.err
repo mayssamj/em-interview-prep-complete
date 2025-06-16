@@ -1,0 +1,120 @@
+Token verification error: TypeError: Cannot read properties of undefined (reading 'cookies')
+    at verifyToken (/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/stats/route.js:242:31)
+    at requireAuth (/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/stats/route.js:261:24)
+    at GET (/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/stats/route.js:155:82)
+    at /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57234
+    at /home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/trace/tracer.js:140:36
+    at NoopContextManager.with (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093)
+    at ProxyTracer.startActiveSpan (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18854)
+    at /home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/trace/tracer.js:122:103
+    at NoopContextManager.with (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NextTracerImpl.trace (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/trace/tracer.js:122:28)
+    at /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:48896
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at Object.wrap (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:40958)
+    at /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:47472
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at Object.wrap (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:38293)
+    at /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:47434
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at eT.execute (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46881)
+    at eT.handle (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58771)
+    at doRender (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:1366:60)
+    at cacheEntry.responseCache.get.routeKind (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:1588:34)
+    at ResponseCache.get (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/response-cache/index.js:49:26)
+    at DevServer.renderToResponseWithComponentsImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:1496:53)
+    at /home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:1014:121
+    at NextTracerImpl.trace (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/trace/tracer.js:105:20)
+    at DevServer.renderToResponseWithComponents (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:1014:41)
+    at DevServer.renderPageComponent (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:1924:35)
+    at async DevServer.renderToResponseImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:818:17)
+    at async /home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/home/ubuntu/em-interview-prep/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js:178:21)
+    at async handleRequest (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js:355:24)
+    at async requestHandlerImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js:379:13)
+    at async Server.requestListener (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/start-server.js:141:13)
+Stats error: Error: Authentication required
+    at requireAuth (/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/stats/route.js:263:15)
+    at async GET (/home/ubuntu/em-interview-prep/.next/server/app/api/dashboard/stats/route.js:155:22)
+    at async /home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/em-interview-prep/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:1588:28)
+ ⨯ Error: Cannot find module './9276.js'
+Require stack:
+- /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js
+- /home/ubuntu/em-interview-prep/.next/server/app/dashboard/page.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-middleware.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js
+- /home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/start-server.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1225:15)
+    at /home/ubuntu/em-interview-prep/node_modules/next/dist/server/require-hook.js:55:36
+    at Function._load (node:internal/modules/cjs/loader:1055:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1311:12)
+    at mod.require (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:136:16)
+    at __webpack_require__.f.require (/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:200:28)
+    at /home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:108:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:107:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js:159:22)
+    at /home/ubuntu/em-interview-prep/.next/server/app/page.js:1:11403
+    at Object.<anonymous> (/home/ubuntu/em-interview-prep/.next/server/app/page.js:1:11450)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Object..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1311:12)
+    at mod.require (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:136:16)
+    at requirePage (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js:109:84)
+    at /home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js:103:84
+    at async loadComponentsImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js:103:26)
+    at async DevServer.findPageComponentsImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/next-server.js:714:36)
+    at async DevServer.findPageComponents (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/next-dev-server.js:577:20)
+    at async DevServer.renderPageComponent (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:1910:24)
+    at async DevServer.renderToResponseImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/base-server.js:818:17)
+    at async /home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/home/ubuntu/em-interview-prep/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js:178:21)
+    at async handleRequest (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js:355:24)
+    at async requestHandlerImpl (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js:379:13)
+    at async Server.requestListener (/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/ubuntu/em-interview-prep/.next/server/webpack-runtime.js',
+    '/home/ubuntu/em-interview-prep/.next/server/app/dashboard/page.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/require.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/load-components.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/build/utils.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/router-server.js',
+    '/home/ubuntu/em-interview-prep/node_modules/next/dist/server/lib/start-server.js'
+  ],
+  page: '/'
+}

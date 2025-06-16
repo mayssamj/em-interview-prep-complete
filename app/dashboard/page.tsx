@@ -1,28 +1,31 @@
 
+export const dynamic = 'force-dynamic';
+
+import { redirect } from 'next/navigation';
+import { getServerSession } from '@/lib/auth';
 import { Header } from '@/components/layout/header';
 import { ProgressOverview } from '@/components/dashboard/progress-overview';
 import { EnhancedCompanySelector } from '@/components/dashboard/enhanced-company-selector';
 import { QuickActions } from '@/components/dashboard/quick-actions';
 import { RecentActivity } from '@/components/dashboard/recent-activity';
 
-// Mock user for testing
-const mockUser = {
-  id: "cmbx5b4vc0000u41ugdwm5uxh",
-  username: "admin",
-  isAdmin: true
-};
+export default async function DashboardPage() {
+  const user = await getServerSession();
+  
+  if (!user) {
+    redirect('/login');
+  }
 
-export default function DashboardPage() {
   return (
     <div className="min-h-screen bg-background">
-      <Header user={mockUser} />
+      <Header user={user} />
       
       <main className="container mx-auto px-4 py-8 max-w-7xl">
         <div className="space-y-8">
           {/* Welcome Section */}
           <div className="text-center space-y-4">
             <h1 className="text-4xl font-bold tracking-tight">
-              Welcome back, <span className="text-primary">{mockUser.username}</span>
+              Welcome back, <span className="text-primary">{user.username}</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Master your Engineering Manager interviews with structured preparation and proven frameworks
@@ -30,7 +33,7 @@ export default function DashboardPage() {
           </div>
 
           {/* Progress Overview */}
-          <ProgressOverview userId={mockUser.id} />
+          <ProgressOverview userId={user.id} />
 
           {/* Company Selection */}
           <EnhancedCompanySelector />
@@ -39,7 +42,7 @@ export default function DashboardPage() {
           <QuickActions />
 
           {/* Recent Activity */}
-          <RecentActivity userId={mockUser.id} />
+          <RecentActivity userId={user.id} />
         </div>
       </main>
     </div>

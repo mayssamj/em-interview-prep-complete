@@ -11,10 +11,10 @@ interface Company {
   id: string;
   name: string;
   values: string[];
-  evaluationCriteria: string[];
-  interviewFormat: string;
-  successTips: string[];
-  redFlags: string[];
+  evaluation_criteria: string[];
+  interview_format: string;
+  success_tips: string[];
+  red_flags: string[];
 }
 
 interface CompanyValuesClientProps {
@@ -93,7 +93,7 @@ export function CompanyValuesClient({ companies }: CompanyValuesClientProps) {
                   <h3 className="text-lg font-semibold">Evaluation Criteria</h3>
                 </div>
                 <div className="grid gap-2">
-                  {company.evaluationCriteria.map((criteria, index) => (
+                  {company.evaluation_criteria.map((criteria, index) => (
                     <div key={index} className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
                       <span className="text-sm">{criteria}</span>
@@ -106,7 +106,7 @@ export function CompanyValuesClient({ companies }: CompanyValuesClientProps) {
               <div>
                 <h3 className="text-lg font-semibold mb-2">Interview Format</h3>
                 <p className="text-sm text-muted-foreground bg-muted p-3 rounded-lg">
-                  {company.interviewFormat}
+                  {company.interview_format}
                 </p>
               </div>
 
@@ -118,7 +118,7 @@ export function CompanyValuesClient({ companies }: CompanyValuesClientProps) {
                     <h3 className="text-lg font-semibold">Success Tips</h3>
                   </div>
                   <div className="space-y-2">
-                    {company.successTips.map((tip, index) => (
+                    {company.success_tips.map((tip, index) => (
                       <div key={index} className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0" />
                         <span className="text-sm">{tip}</span>
@@ -134,7 +134,7 @@ export function CompanyValuesClient({ companies }: CompanyValuesClientProps) {
                     <h3 className="text-lg font-semibold">Red Flags to Avoid</h3>
                   </div>
                   <div className="space-y-2">
-                    {company.redFlags.map((flag, index) => (
+                    {company.red_flags.map((flag, index) => (
                       <div key={index} className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-2 flex-shrink-0" />
                         <span className="text-sm">{flag}</span>

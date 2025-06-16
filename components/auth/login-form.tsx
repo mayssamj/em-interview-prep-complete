@@ -2,7 +2,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -19,6 +19,7 @@ export function LoginForm({ onSuccess }: LoginFormProps) {
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
+  const searchParams = useSearchParams();
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -49,7 +50,51 @@ export function LoginForm({ onSuccess }: LoginFormProps) {
       if (onSuccess) {
         onSuccess();
       } else {
-        router.push('/dashboard');
+        const redirectUrl = searchParams.get('redirect') || '/dashboard';
+        router.push(redirectUrl);
+        router.refresh();
+      }
+    } catch (error) {
+      toast({
+        title: 'Error',
+        description: error instanceof Error ? error.message : 'Authentication failed',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleDemoLogin = async (demoUsername: string, demoPassword: string) => {
+    setUsername(demoUsername);
+    setPassword(demoPassword);
+    setIsLoading(true);
+
+    try {
+      const response = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username: demoUsername, password: demoPassword }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Authentication failed');
+      }
+
+      toast({
+        title: 'Welcome back!',
+        description: `Successfully logged in as ${data.user.username}`,
+      });
+
+      if (onSuccess) {
+        onSuccess();
+      } else {
+        const redirectUrl = searchParams.get('redirect') || '/dashboard';
+        router.push(redirectUrl);
         router.refresh();
       }
     } catch (error) {
@@ -119,10 +164,28 @@ export function LoginForm({ onSuccess }: LoginFormProps) {
         </div>
 
         {isLogin && (
-          <div className="mt-4 p-3 bg-muted rounded-md text-sm">
-            <p className="font-medium">Demo Accounts:</p>
-            <p>Admin: admin / adminadmin</p>
-            <p>User: mayssam / password123</p>
+          <div className="mt-4 space-y-2">
+            <p className="text-sm font-medium text-center">Try Demo Accounts:</p>
+            <div className="space-y-2">
+              <Button
+                variant="outline"
+                size="sm"
+                className="w-full"
+                onClick={() => handleDemoLogin('mayssam', 'password123')}
+                disabled={isLoading}
+              >
+                Demo User Login
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                className="w-full"
+                onClick={() => handleDemoLogin('admin', 'adminadmin')}
+                disabled={isLoading}
+              >
+                Admin Demo Login
+              </Button>
+            </div>
           </div>
         )}
       </CardContent>

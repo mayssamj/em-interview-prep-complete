@@ -1,52 +1,42 @@
 
-export const dynamic = "force-dynamic";
+export const dynamic = 'force-dynamic';
 
-import { NextRequest, NextResponse } from 'next/server';
-import { getSession } from '@/lib/auth';
-import { prisma } from '@/lib/db';
+import { NextRequest, NextResponse } from 'next/server'
+import { prisma } from '@/lib/db'
+import { requireAuth } from '@/lib/auth'
 
 export async function GET(request: NextRequest) {
   try {
-    const user = await getSession();
-    
-    if (!user) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    }
+    const user = await requireAuth(request)
 
-    // Get recent question views for the user
     const recentViews = await prisma.questionView.findMany({
       where: {
-        userId: user.id
+        user_id: user.id
       },
       include: {
-        question: {
-          include: {
-            company: true
-          }
-        }
+        questions: true
       },
       orderBy: {
-        viewedAt: 'desc'
+        viewed_at: 'desc'
       },
       take: 10
-    });
+    })
 
-    // Transform the data
     const recentQuestions = recentViews.map(view => ({
-      id: view.question.id,
-      questionText: view.question.questionText,
-      company: {
-        name: view.question.company?.name || 'General'
-      },
-      viewedAt: view.viewedAt.toISOString()
-    }));
+      id: view.questions.id,
+      questionText: view.questions.question_text,
+      category: view.questions.category,
+      difficulty: view.questions.difficulty,
+      companyId: view.questions.company_id,
+      viewedAt: view.viewed_at
+    }))
 
-    return NextResponse.json(recentQuestions);
+    return NextResponse.json(recentQuestions)
   } catch (error) {
-    console.error('Failed to fetch recent questions:', error);
+    console.error('Error fetching recent questions:', error)
     return NextResponse.json(
       { error: 'Failed to fetch recent questions' },
       { status: 500 }
-    );
+    )
   }
 }

@@ -1,5 +1,5 @@
 
-import { getSession } from '@/lib/auth';
+import { getServerSession } from '@/lib/auth';
 import { redirect } from 'next/navigation';
 import { Header } from '@/components/layout/header';
 import { MessageCircle } from 'lucide-react';
@@ -8,7 +8,7 @@ import { FAQClient } from '@/components/faq/faq-client';
 export const dynamic = 'force-dynamic';
 
 export default async function FAQPage() {
-  const user = await getSession();
+  const user = await getServerSession();
   
   if (!user) {
     redirect('/login');

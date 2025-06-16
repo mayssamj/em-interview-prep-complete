@@ -17,12 +17,11 @@ export default async function QuestionBankPage() {
   // Get all questions with company information
   const questions = await prisma.question.findMany({
     include: {
-      company: true
+      companies: true
     },
     orderBy: [
-      { isCritical: 'desc' }, // Critical questions first
-      { usageCount: 'desc' }, // Then by popularity
-      { company: { name: 'asc' } },
+      { is_critical: 'desc' }, // Critical questions first
+      { usage_count: 'desc' }, // Then by popularity
       { category: 'asc' },
       { difficulty: 'asc' }
     ]
@@ -30,11 +29,11 @@ export default async function QuestionBankPage() {
 
   // Get user's answers for progress tracking
   const userAnswers = await prisma.answer.findMany({
-    where: { userId: mockUser.id },
-    select: { questionId: true }
+    where: { user_id: mockUser.id },
+    select: { question_id: true }
   });
 
-  const answeredQuestionIds = new Set(userAnswers.map((answer: any) => answer.questionId)) as Set<string>;
+  const answeredQuestionIds = new Set(userAnswers.map((answer: any) => answer.question_id)) as Set<string>;
 
   return (
     <div className="min-h-screen bg-background">

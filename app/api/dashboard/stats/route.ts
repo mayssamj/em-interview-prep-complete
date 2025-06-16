@@ -1,30 +1,30 @@
 
 export const dynamic = "force-dynamic";
 
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { requireAuth } from '@/lib/auth';
 import { prisma } from '@/lib/db';
 
-export async function GET() {
+export async function GET(request: NextRequest) {
   try {
-    const user = await requireAuth();
+    const user = await requireAuth(request);
 
     // Get total questions count
     const totalQuestions = await prisma.question.count();
 
     // Get answered questions count for this user
     const answeredQuestions = await prisma.answer.count({
-      where: { userId: user.id }
+      where: { user_id: user.id }
     });
 
     // Get total stories count for this user
     const totalStories = await prisma.story.count({
-      where: { userId: user.id }
+      where: { user_id: user.id }
     });
 
     // Get interview notes count for this user
     const interviewNotes = await prisma.interviewNote.count({
-      where: { userId: user.id }
+      where: { user_id: user.id }
     });
 
     // Calculate completion rate
@@ -36,8 +36,8 @@ export async function GET() {
 
     const recentAnswers = await prisma.answer.count({
       where: {
-        userId: user.id,
-        createdAt: {
+        user_id: user.id,
+        created_at: {
           gte: sevenDaysAgo
         }
       }
@@ -45,8 +45,8 @@ export async function GET() {
 
     const recentStories = await prisma.story.count({
       where: {
-        userId: user.id,
-        createdAt: {
+        user_id: user.id,
+        created_at: {
           gte: sevenDaysAgo
         }
       }

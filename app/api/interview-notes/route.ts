@@ -2,45 +2,50 @@
 export const dynamic = 'force-dynamic';
 
 import { NextRequest, NextResponse } from 'next/server';
-import { getSession } from '@/lib/auth';
+import { requireAuth } from '@/lib/auth';
 import { prisma } from '@/lib/db';
+import { v4 as uuidv4 } from 'uuid';
 
-export async function GET() {
+export async function GET(request: NextRequest) {
   try {
-    const user = await getSession();
-    if (!user) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    }
+    const user = await requireAuth(request);
 
     const notes = await prisma.interviewNote.findMany({
-      where: { userId: user.id },
-      orderBy: { interviewDate: 'desc' }
+      where: { user_id: user.id },
+      orderBy: { created_at: 'desc' },
+      select: {
+        id: true,
+        company: true,
+        interviewer_name: true,
+        interviewer_role: true,
+        interview_date: true,
+        created_at: true,
+        takeaways: true
+      }
     });
 
-    return NextResponse.json(notes);
+    return NextResponse.json({ notes });
   } catch (error) {
-    console.error('Error fetching interview notes:', error);
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+    console.error('Interview notes fetch error:', error);
+    return NextResponse.json(
+      { error: 'Failed to fetch interview notes' },
+      { status: 500 }
+    );
   }
 }
 
 export async function POST(request: NextRequest) {
   try {
-    const user = await getSession();
-    if (!user) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    }
-
-    const body = await request.json();
-    const {
-      company,
-      interviewerName,
-      interviewerRole,
-      questionsAsked,
-      takeaways,
-      followUpThoughts,
-      interviewDate
-    } = body;
+    const user = await requireAuth(request);
+    const { 
+      company, 
+      interviewerName, 
+      interviewerRole, 
+      questionsAsked, 
+      takeaways, 
+      followUpThoughts, 
+      interviewDate 
+    } = await request.json();
 
     if (!company || !interviewDate) {
       return NextResponse.json(
@@ -51,20 +56,29 @@ export async function POST(request: NextRequest) {
 
     const note = await prisma.interviewNote.create({
       data: {
-        userId: user.id,
+        id: uuidv4(),
+        user_id: user.id,
         company,
-        interviewerName: interviewerName || null,
-        interviewerRole: interviewerRole || null,
-        questionsAsked: questionsAsked || [],
+        interviewer_name: interviewerName || null,
+        interviewer_role: interviewerRole || null,
+        questions_asked: questionsAsked || [],
         takeaways: takeaways || null,
-        followUpThoughts: followUpThoughts || null,
-        interviewDate: new Date(interviewDate)
+        follow_up_thoughts: followUpThoughts || null,
+        interview_date: new Date(interviewDate),
+        created_at: new Date(),
+        updated_at: new Date()
       }
     });
 
-    return NextResponse.json(note, { status: 201 });
+    return NextResponse.json({ 
+      message: 'Interview note created successfully',
+      note 
+    });
   } catch (error) {
-    console.error('Error creating interview note:', error);
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+    console.error('Interview note creation error:', error);
+    return NextResponse.json(
+      { error: 'Failed to create interview note' },
+      { status: 500 }
+    );
   }
 }

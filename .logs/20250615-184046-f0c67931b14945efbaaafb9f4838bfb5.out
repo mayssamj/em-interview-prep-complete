@@ -1,0 +1,86 @@
+  ▲ Next.js 14.2.28
+  - Local:        http://localhost:3000
+  - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 1952ms
+ ○ Compiling / ...
+ ✓ Compiled / in 4s (534 modules)
+ GET / 307 in 4486ms
+ ✓ Compiled in 445ms (267 modules)
+ ○ Compiling /login ...
+ ✓ Compiled /login in 2.4s (536 modules)
+ GET /login 200 in 2599ms
+ ✓ Compiled /api/companies/with-questions in 200ms (304 modules)
+ GET /api/companies/with-questions 200 in 650ms
+ GET / 307 in 69ms
+ ○ Compiling /api/auth/login ...
+ ✓ Compiled /api/auth/login in 550ms (387 modules)
+ POST /api/auth/login 401 in 956ms
+ POST /api/auth/login 200 in 339ms
+ ✓ Compiled /api/dashboard/stats in 158ms (390 modules)
+ GET /api/dashboard/stats 500 in 221ms
+ ✓ Compiled in 532ms (654 modules)
+ GET /api/dashboard/stats 200 in 84ms
+ ✓ Compiled /api/stories in 174ms (399 modules)
+ GET /api/stories 200 in 223ms
+ GET / 307 in 87ms
+ ✓ Compiled /login in 149ms (411 modules)
+ GET /login 200 in 272ms
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 1226ms (876 modules)
+ GET /dashboard 200 in 1352ms
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 1225ms (848 modules)
+ GET / 500 in 1581ms
+ GET / 307 in 131ms
+ GET / 307 in 124ms
+ ✓ Compiled /login in 240ms (313 modules)
+ GET /login 200 in 394ms
+ GET /login 200 in 400ms
+ GET / 307 in 161ms
+ ✓ Compiled /_not-found in 433ms (863 modules)
+ GET /_next/static/chunks/app-pages-internals.js 404 in 636ms
+ GET /_next/static/chunks/app/login/page.js 404 in 533ms
+ GET /_next/static/chunks/main-app.js?v=1750013137091 404 in 536ms
+ GET /_next/static/chunks/app/layout.js 404 in 532ms
+ GET /_next/static/css/app/layout.css?v=1750013137091 404 in 533ms
+ GET /login 200 in 293ms
+ GET /_next/static/chunks/main-app.js?v=1750013137875 404 in 28ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 26ms
+ GET /_next/static/chunks/app/layout.js 404 in 42ms
+ GET /_next/static/css/app/layout.css?v=1750013137875 404 in 39ms
+ GET /_next/static/chunks/app/login/page.js 404 in 29ms
+ GET / 307 in 51ms
+ GET / 307 in 48ms
+ GET /login 200 in 38ms
+ GET /login 200 in 36ms
+ GET /_next/static/chunks/main-app.js?v=1750013264273 404 in 72ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 68ms
+ GET /_next/static/css/app/layout.css?v=1750013264273 404 in 64ms
+ GET /_next/static/chunks/app/login/page.js 404 in 67ms
+ GET /_next/static/chunks/app/layout.js 404 in 60ms
+ GET / 307 in 64ms
+ GET /login 200 in 33ms
+ GET /_next/static/chunks/main-app.js?v=1750013264680 404 in 20ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 24ms
+ GET /_next/static/chunks/app/layout.js 404 in 36ms
+ GET /_next/static/css/app/layout.css?v=1750013264680 404 in 40ms
+ GET /_next/static/chunks/app/login/page.js 404 in 37ms
+ GET / 307 in 38ms
+ GET / 307 in 40ms
+ GET /login 200 in 35ms
+ GET /login 200 in 48ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 69ms
+ GET /_next/static/chunks/app/login/page.js 404 in 67ms
+ GET /_next/static/chunks/main-app.js?v=1750013277231 404 in 62ms
+ GET /_next/static/css/app/layout.css?v=1750013277231 404 in 64ms
+ GET /_next/static/chunks/app/layout.js 404 in 56ms
+ GET / 307 in 38ms
+ GET /login 200 in 31ms
+ GET /_next/static/chunks/main-app.js?v=1750013277587 404 in 58ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 55ms
+ GET /_next/static/chunks/app/login/page.js 404 in 53ms
+ GET /_next/static/chunks/app/layout.js 404 in 52ms
+ GET /_next/static/css/app/layout.css?v=1750013277587 404 in 52ms
+[?25h

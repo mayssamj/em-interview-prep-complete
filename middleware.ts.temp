@@ -1,0 +1,75 @@
+
+import { NextResponse } from 'next/server'
+import type { NextRequest } from 'next/server'
+
+// Define protected routes
+const protectedRoutes = [
+  '/dashboard',
+  '/interview-strategy',
+  '/progress-tracker',
+  '/question-bank',
+  '/stories',
+  '/interview-notes',
+  '/system-design-strategy',
+  '/system-design-questions',
+  '/company-values',
+  '/story-templates',
+  '/faq',
+  '/admin'
+]
+
+export function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl
+  
+  // Skip middleware for API routes, static files, and Next.js internals
+  if (
+    pathname.startsWith('/api/') ||
+    pathname.startsWith('/_next/') ||
+    pathname.startsWith('/favicon.ico') ||
+    pathname.includes('.')
+  ) {
+    return NextResponse.next()
+  }
+
+  // Get the token from cookies
+  const token = request.cookies.get('token')?.value
+  
+  // Handle protected routes
+  if (protectedRoutes.some(route => pathname.startsWith(route))) {
+    if (!token) {
+      const loginUrl = new URL('/login', request.url)
+      loginUrl.searchParams.set('redirect', pathname)
+      return NextResponse.redirect(loginUrl)
+    }
+  }
+  
+  // Handle public routes - redirect authenticated users to dashboard
+  if ((pathname === '/login' || pathname === '/') && token) {
+    const redirectParam = request.nextUrl.searchParams.get('redirect')
+    const redirectUrl = redirectParam && protectedRoutes.some(route => redirectParam.startsWith(route)) 
+      ? redirectParam 
+      : '/dashboard'
+    return NextResponse.redirect(new URL(redirectUrl, request.url))
+  }
+  
+  // Redirect root to appropriate page
+  if (pathname === '/') {
+    const redirectUrl = token ? '/dashboard' : '/login'
+    return NextResponse.redirect(new URL(redirectUrl, request.url))
+  }
+
+  return NextResponse.next()
+}
+
+export const config = {
+  matcher: [
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     */
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+  ],
+}

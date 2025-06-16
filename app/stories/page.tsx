@@ -16,8 +16,8 @@ export default async function StoriesPage() {
 
   // Get user's stories
   const stories = await prisma.story.findMany({
-    where: { userId: user.id },
-    orderBy: { createdAt: 'desc' }
+    where: { user_id: user.id },
+    orderBy: { created_at: 'desc' }
   });
 
   return (
@@ -25,7 +25,10 @@ export default async function StoriesPage() {
       <Header user={user} />
       
       <main className="container mx-auto px-4 py-8 max-w-7xl">
-        <StoriesManager stories={stories} userId={user.id} />
+        <StoriesManager stories={stories.map(s => ({
+          ...s,
+          createdAt: s.created_at
+        }))} userId={user.id} />
       </main>
     </div>
   );

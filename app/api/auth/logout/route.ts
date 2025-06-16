@@ -1,13 +1,23 @@
 
-export const dynamic = "force-dynamic";
+export const dynamic = 'force-dynamic';
 
 import { NextResponse } from 'next/server';
-import { destroySession } from '@/lib/auth';
 
 export async function POST() {
   try {
-    await destroySession();
-    return NextResponse.json({ success: true });
+    const response = NextResponse.json({
+      message: 'Logout successful'
+    });
+
+    // Clear the authentication cookie
+    response.cookies.set('token', '', {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'strict',
+      maxAge: 0
+    });
+
+    return response;
   } catch (error) {
     console.error('Logout error:', error);
     return NextResponse.json(

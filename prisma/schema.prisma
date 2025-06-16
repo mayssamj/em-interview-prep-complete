@@ -8,36 +8,39 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model answers {
-  id               String    @id
+model Answer {
+  id               String   @id
   user_id          String
   question_id      String
   answer_text      String
   story_references String[]
   notes            String?
-  created_at       DateTime  @default(now())
+  created_at       DateTime @default(now())
   updated_at       DateTime
-  questions        questions @relation(fields: [question_id], references: [id], onDelete: Cascade)
-  users            users     @relation(fields: [user_id], references: [id], onDelete: Cascade)
-  stories          stories[] @relation("StoryReferences")
+  questions        Question @relation(fields: [question_id], references: [id], onDelete: Cascade)
+  users            User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  stories          Story[]  @relation("StoryReferences")
 
   @@unique([user_id, question_id])
+  @@map("answers")
 }
 
-model companies {
-  id                  String      @id
-  name                String      @unique
+model Company {
+  id                  String     @id
+  name                String     @unique
   values              String[]
   evaluation_criteria String[]
   interview_format    String
   success_tips        String[]
   red_flags           String[]
-  created_at          DateTime    @default(now())
+  created_at          DateTime   @default(now())
   updated_at          DateTime
-  questions           questions[]
+  questions           Question[]
+
+  @@map("companies")
 }
 
-model interview_notes {
+model InterviewNote {
   id                 String   @id
   user_id            String
   company            String
@@ -49,10 +52,12 @@ model interview_notes {
   interview_date     DateTime
   created_at         DateTime @default(now())
   updated_at         DateTime
-  users              users    @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  users              User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@map("interview_notes")
 }
 
-model progress {
+model Progress {
   id            String    @id
   user_id       String
   question_id   String
@@ -60,44 +65,50 @@ model progress {
   last_reviewed DateTime?
   created_at    DateTime  @default(now())
   updated_at    DateTime
-  questions     questions @relation(fields: [question_id], references: [id], onDelete: Cascade)
-  users         users     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  questions     Question  @relation(fields: [question_id], references: [id], onDelete: Cascade)
+  users         User      @relation(fields: [user_id], references: [id], onDelete: Cascade)
 
   @@unique([user_id, question_id])
+  @@map("progress")
 }
 
-model question_views {
-  id          String    @id
+model QuestionView {
+  id          String   @id
   user_id     String
   question_id String
-  viewed_at   DateTime  @default(now())
-  questions   questions @relation(fields: [question_id], references: [id], onDelete: Cascade)
-  users       users     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  viewed_at   DateTime @default(now())
+  questions   Question @relation(fields: [question_id], references: [id], onDelete: Cascade)
+  users       User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@map("question_views")
 }
 
-model questions {
-  id                      String                   @id
+model Question {
+  id                      String                @id
   company_id              String?
   category                String
+  categories              String[]              @default([])
   question_text           String
   difficulty              String
-  is_generated            Boolean                  @default(true)
+  is_generated            Boolean               @default(true)
   tags                    String[]
-  created_at              DateTime                 @default(now())
+  created_at              DateTime              @default(now())
   updated_at              DateTime
-  is_critical             Boolean                  @default(false)
-  usage_count             Int                      @default(0)
-  question_type           String                   @default("behavioral")
-  answers                 answers[]
-  progress                progress[]
-  question_views          question_views[]
-  companies               companies?               @relation(fields: [company_id], references: [id], onDelete: Cascade)
-  system_design_answers   system_design_answers[]
-  system_design_questions system_design_questions?
+  is_critical             Boolean               @default(false)
+  usage_count             Int                   @default(0)
+  question_type           String                @default("behavioral")
+  answers                 Answer[]
+  progress                Progress[]
+  question_views          QuestionView[]
+  companies               Company?              @relation(fields: [company_id], references: [id], onDelete: Cascade)
+  system_design_answers   SystemDesignAnswer[]
+  system_design_questions SystemDesignQuestion?
+
+  @@map("questions")
 }
 
-model stories {
-  id         String    @id
+model Story {
+  id         String   @id
   user_id    String
   title      String
   situation  String
@@ -107,14 +118,16 @@ model stories {
   reflection String?
   tags       String[]
   categories String[]
-  created_at DateTime  @default(now())
+  created_at DateTime @default(now())
   updated_at DateTime
-  users      users     @relation(fields: [user_id], references: [id], onDelete: Cascade)
-  answers    answers[] @relation("StoryReferences")
+  users      User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  answers    Answer[] @relation("StoryReferences")
+
+  @@map("stories")
 }
 
-model system_design_answers {
-  id                    String    @id
+model SystemDesignAnswer {
+  id                    String   @id
   user_id               String
   question_id           String
   high_level_design     String
@@ -125,15 +138,16 @@ model system_design_answers {
   frameworks_used       String[]
   estimated_scale       String?
   notes                 String?
-  created_at            DateTime  @default(now())
+  created_at            DateTime @default(now())
   updated_at            DateTime
-  questions             questions @relation(fields: [question_id], references: [id], onDelete: Cascade)
-  users                 users     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  questions             Question @relation(fields: [question_id], references: [id], onDelete: Cascade)
+  users                 User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
 
   @@unique([user_id, question_id])
+  @@map("system_design_answers")
 }
 
-model system_design_frameworks {
+model SystemDesignFramework {
   id             String   @id
   name           String   @unique
   description    String
@@ -146,11 +160,13 @@ model system_design_frameworks {
   difficulty     String
   created_at     DateTime @default(now())
   updated_at     DateTime
+
+  @@map("system_design_frameworks")
 }
 
-model system_design_questions {
-  id                     String    @id
-  question_id            String    @unique
+model SystemDesignQuestion {
+  id                     String   @id
+  question_id            String   @unique
   architecture_focus     String[]
   complexity_level       String
   leadership_aspects     String[]
@@ -161,23 +177,27 @@ model system_design_questions {
   follow_up_questions    String[]
   common_mistakes        String[]
   key_tradeoffs          String[]
-  created_at             DateTime  @default(now())
+  created_at             DateTime @default(now())
   updated_at             DateTime
-  questions              questions @relation(fields: [question_id], references: [id], onDelete: Cascade)
+  questions              Question @relation(fields: [question_id], references: [id], onDelete: Cascade)
+
+  @@map("system_design_questions")
 }
 
-model users {
-  id                    String                  @id
-  username              String                  @unique
+model User {
+  id                    String               @id
+  username              String               @unique
   password_hash         String
-  is_admin              Boolean                 @default(false)
+  is_admin              Boolean              @default(false)
   preferences           Json?
-  created_at            DateTime                @default(now())
+  created_at            DateTime             @default(now())
   updated_at            DateTime
-  answers               answers[]
-  interview_notes       interview_notes[]
-  progress              progress[]
-  question_views        question_views[]
-  stories               stories[]
-  system_design_answers system_design_answers[]
+  answers               Answer[]
+  interview_notes       InterviewNote[]
+  progress              Progress[]
+  question_views        QuestionView[]
+  stories               Story[]
+  system_design_answers SystemDesignAnswer[]
+
+  @@map("users")
 }

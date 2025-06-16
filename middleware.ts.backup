@@ -1,0 +1,99 @@
+
+import { NextResponse } from 'next/server'
+import type { NextRequest } from 'next/server'
+import jwt from 'jsonwebtoken'
+
+// Define protected routes
+const protectedRoutes = [
+  '/dashboard',
+  '/interview-strategy',
+  '/progress-tracker',
+  '/question-bank',
+  '/stories',
+  '/interview-notes',
+  '/system-design-strategy',
+  '/system-design-questions',
+  '/company-values',
+  '/story-templates',
+  '/faq',
+  '/admin'
+]
+
+// Define public routes that should redirect to dashboard if authenticated
+const publicRoutes = ['/login', '/']
+
+export async function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl
+  
+  // Skip middleware for API routes, static files, and Next.js internals
+  if (
+    pathname.startsWith('/api/') ||
+    pathname.startsWith('/_next/') ||
+    pathname.startsWith('/favicon.ico') ||
+    pathname.includes('.')
+  ) {
+    return NextResponse.next()
+  }
+
+  let user = null
+  try {
+    const token = request.cookies.get('token')?.value
+    if (token) {
+      const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key'
+      const decoded = jwt.verify(token, JWT_SECRET) as any
+      if (decoded.userId) {
+        user = {
+          id: decoded.userId,
+          username: decoded.username,
+          isAdmin: decoded.isAdmin || false
+        }
+      }
+    }
+  } catch (error) {
+    console.error('Middleware auth error:', error)
+  }
+  
+  // Handle protected routes
+  if (protectedRoutes.some(route => pathname.startsWith(route))) {
+    if (!user) {
+      const loginUrl = new URL('/login', request.url)
+      loginUrl.searchParams.set('redirect', pathname)
+      return NextResponse.redirect(loginUrl)
+    }
+    
+    // Check admin routes
+    if (pathname.startsWith('/admin') && !user.isAdmin) {
+      return NextResponse.redirect(new URL('/dashboard', request.url))
+    }
+  }
+  
+  // Handle public routes - redirect authenticated users to dashboard
+  if (publicRoutes.includes(pathname) && user) {
+    const redirectParam = request.nextUrl.searchParams.get('redirect')
+    const redirectUrl = redirectParam && protectedRoutes.some(route => redirectParam.startsWith(route)) 
+      ? redirectParam 
+      : '/dashboard'
+    return NextResponse.redirect(new URL(redirectUrl, request.url))
+  }
+  
+  // Redirect root to appropriate page
+  if (pathname === '/') {
+    const redirectUrl = user ? '/dashboard' : '/login'
+    return NextResponse.redirect(new URL(redirectUrl, request.url))
+  }
+
+  return NextResponse.next()
+}
+
+export const config = {
+  matcher: [
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     */
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+  ],
+}

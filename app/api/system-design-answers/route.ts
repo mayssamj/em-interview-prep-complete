@@ -1,48 +1,41 @@
 
-export const dynamic = "force-dynamic";
+export const dynamic = 'force-dynamic';
 
 import { NextRequest, NextResponse } from 'next/server';
+import { requireAuth } from '@/lib/auth';
 import { prisma } from '@/lib/db';
-import { verifyAuth } from '@/lib/auth';
+import { v4 as uuidv4 } from 'uuid';
 
 export async function GET(request: NextRequest) {
   try {
-    const user = await verifyAuth(request);
-    if (!user) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    }
-
+    const user = await requireAuth(request);
     const { searchParams } = new URL(request.url);
     const questionId = searchParams.get('questionId');
 
-    const where: any = {
-      userId: user.id
-    };
-
-    if (questionId) {
-      where.questionId = questionId;
+    if (!questionId) {
+      return NextResponse.json(
+        { error: 'Question ID is required' },
+        { status: 400 }
+      );
     }
 
-    const answers = await prisma.systemDesignAnswer.findMany({
-      where,
-      include: {
-        question: {
-          include: {
-            company: true,
-            systemDesignDetails: true
-          }
+    const answer = await prisma.systemDesignAnswer.findUnique({
+      where: {
+        user_id_question_id: {
+          user_id: user.id,
+          question_id: questionId
         }
       },
-      orderBy: {
-        updatedAt: 'desc'
+      include: {
+        questions: true
       }
     });
 
-    return NextResponse.json(answers);
+    return NextResponse.json({ answer });
   } catch (error) {
-    console.error('Error fetching system design answers:', error);
+    console.error('System design answer fetch error:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch system design answers' },
+      { error: 'Failed to fetch system design answer' },
       { status: 500 }
     );
   }
@@ -50,66 +43,86 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
-    const user = await verifyAuth(request);
-    if (!user) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    }
-
-    const body = await request.json();
-    const {
-      questionId,
-      highLevelDesign,
-      detailedComponents,
+    const user = await requireAuth(request);
+    const { 
+      questionId, 
+      highLevelDesign, 
+      detailedComponents, 
       scalabilityApproach,
       dataStorageStrategy,
       tradeoffsDiscussed,
       frameworksUsed,
       estimatedScale,
-      notes
-    } = body;
+      notes 
+    } = await request.json();
+
+    if (!questionId || !highLevelDesign) {
+      return NextResponse.json(
+        { error: 'Question ID and high-level design are required' },
+        { status: 400 }
+      );
+    }
+
+    // Verify question exists and is system design type
+    const question = await prisma.question.findUnique({
+      where: { id: questionId }
+    });
+
+    if (!question) {
+      return NextResponse.json(
+        { error: 'Question not found' },
+        { status: 404 }
+      );
+    }
+
+    if (question.question_type !== 'system_design') {
+      return NextResponse.json(
+        { error: 'Question is not a system design question' },
+        { status: 400 }
+      );
+    }
 
     const answer = await prisma.systemDesignAnswer.upsert({
       where: {
-        userId_questionId: {
-          userId: user.id,
-          questionId
+        user_id_question_id: {
+          user_id: user.id,
+          question_id: questionId
         }
       },
       update: {
-        highLevelDesign,
-        detailedComponents,
-        scalabilityApproach,
-        dataStorageStrategy,
-        tradeoffsDiscussed: tradeoffsDiscussed || [],
-        frameworksUsed: frameworksUsed || [],
-        estimatedScale,
-        notes
+        high_level_design: highLevelDesign,
+        detailed_components: detailedComponents || null,
+        scalability_approach: scalabilityApproach || null,
+        data_storage_strategy: dataStorageStrategy || null,
+        tradeoffs_discussed: tradeoffsDiscussed || [],
+        frameworks_used: frameworksUsed || [],
+        estimated_scale: estimatedScale || null,
+        notes: notes || null,
+        updated_at: new Date()
       },
       create: {
-        userId: user.id,
-        questionId,
-        highLevelDesign,
-        detailedComponents,
-        scalabilityApproach,
-        dataStorageStrategy,
-        tradeoffsDiscussed: tradeoffsDiscussed || [],
-        frameworksUsed: frameworksUsed || [],
-        estimatedScale,
-        notes
-      },
-      include: {
-        question: {
-          include: {
-            company: true,
-            systemDesignDetails: true
-          }
-        }
+        id: uuidv4(),
+        user_id: user.id,
+        question_id: questionId,
+        high_level_design: highLevelDesign,
+        detailed_components: detailedComponents || null,
+        scalability_approach: scalabilityApproach || null,
+        data_storage_strategy: dataStorageStrategy || null,
+        tradeoffs_discussed: tradeoffsDiscussed || [],
+        frameworks_used: frameworksUsed || [],
+        estimated_scale: estimatedScale || null,
+        notes: notes || null,
+        created_at: new Date(),
+        updated_at: new Date()
       }
     });
 
-    return NextResponse.json(answer);
+    return NextResponse.json({ 
+      message: 'System design answer saved successfully',
+      answer 
+    });
   } catch (error) {
-    console.error('Error saving system design answer:', error);
+    console.error('System design answer save error:', error);
     return NextResponse.json(
       { error: 'Failed to save system design answer' },
       { status: 500 }

@@ -1,5 +1,5 @@
 
-import { getSession } from '@/lib/auth';
+import { getServerSession } from '@/lib/auth';
 import { redirect } from 'next/navigation';
 import { prisma } from '@/lib/db';
 import { Header } from '@/components/layout/header';
@@ -9,7 +9,7 @@ import { InterviewStrategyClient } from '@/components/interview-strategy/intervi
 export const dynamic = 'force-dynamic';
 
 export default async function InterviewStrategyPage() {
-  const user = await getSession();
+  const user = await getServerSession();
   
   if (!user) {
     redirect('/login');
@@ -38,7 +38,13 @@ export default async function InterviewStrategyPage() {
           </div>
 
           {/* Interview Strategy Content */}
-          <InterviewStrategyClient companies={companies} />
+          <InterviewStrategyClient companies={companies.map(c => ({
+            ...c,
+            evaluationCriteria: c.evaluation_criteria,
+            interviewFormat: c.interview_format,
+            successTips: c.success_tips,
+            redFlags: c.red_flags
+          }))} />
         </div>
       </main>
     </div>

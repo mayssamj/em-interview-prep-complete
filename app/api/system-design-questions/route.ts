@@ -13,11 +13,11 @@ export async function GET(request: NextRequest) {
     const critical = searchParams.get('critical');
 
     const where: any = {
-      questionType: 'system_design'
+      question_type: 'system_design'
     };
 
     if (company && company !== 'all') {
-      where.company = {
+      where.companies = {
         name: {
           contains: company,
           mode: 'insensitive'
@@ -30,29 +30,33 @@ export async function GET(request: NextRequest) {
     }
 
     if (category && category !== 'all') {
-      where.category = category;
+      // Support both old category field and new categories array
+      where.OR = [
+        { category: category },
+        { categories: { has: category } }
+      ];
     }
 
     if (critical === 'true') {
-      where.isCritical = true;
+      where.is_critical = true;
     }
 
     const questions = await prisma.question.findMany({
       where,
       include: {
-        company: true,
-        systemDesignDetails: true,
+        companies: true,
+        system_design_questions: true,
         _count: {
           select: {
             answers: true,
-            systemDesignAnswers: true
+            system_design_answers: true
           }
         }
       },
       orderBy: [
-        { isCritical: 'desc' },
-        { usageCount: 'desc' },
-        { createdAt: 'desc' }
+        { is_critical: 'desc' },
+        { usage_count: 'desc' },
+        { created_at: 'desc' }
       ]
     });
 
@@ -88,34 +92,43 @@ export async function POST(request: NextRequest) {
       keyTradeoffs
     } = body;
 
+    const questionId = questionText.toLowerCase().replace(/[^a-z0-9]+/g, '_').substring(0, 50) + '_' + Math.random().toString(36).substring(2, 8);
+    
     const question = await prisma.question.create({
       data: {
-        companyId,
+        id: questionId,
+        company_id: companyId,
         category,
-        questionText,
+        question_text: questionText,
         difficulty,
-        questionType: 'system_design',
+        question_type: 'system_design',
         tags: tags || [],
-        isCritical: isCritical || false,
-        isGenerated: false,
-        systemDesignDetails: {
-          create: {
-            architectureFocus: architectureFocus || [],
-            complexityLevel: complexityLevel || 'mid',
-            leadershipAspects: leadershipAspects || [],
-            frameworks: frameworks || [],
-            evaluationCriteria: evaluationCriteria || [],
-            resources: resources || [],
-            estimatedTimeMinutes,
-            followUpQuestions: followUpQuestions || [],
-            commonMistakes: commonMistakes || [],
-            keyTradeoffs: keyTradeoffs || []
-          }
-        }
+        is_critical: isCritical || false,
+        is_generated: false,
+        updated_at: new Date()
       },
       include: {
-        company: true,
-        systemDesignDetails: true
+        companies: true,
+        system_design_questions: true
+      }
+    });
+
+    // Create system design details separately
+    await prisma.systemDesignQuestion.create({
+      data: {
+        id: questionId + '_system_design',
+        question_id: questionId,
+        architecture_focus: architectureFocus || [],
+        complexity_level: complexityLevel || 'mid',
+        leadership_aspects: leadershipAspects || [],
+        frameworks: frameworks || [],
+        evaluation_criteria: evaluationCriteria || [],
+        resources: resources || [],
+        estimated_time_minutes: estimatedTimeMinutes,
+        follow_up_questions: followUpQuestions || [],
+        common_mistakes: commonMistakes || [],
+        key_tradeoffs: keyTradeoffs || [],
+        updated_at: new Date()
       }
     });
 

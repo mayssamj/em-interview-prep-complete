@@ -145,9 +145,9 @@ export function Header({ user, selectedCompany, onCompanyChange, onSearch }: Hea
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 max-w-7xl">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-16 items-center justify-between gap-4">
           {/* Logo */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 flex-shrink-0">
             <Button
               variant="ghost"
               size="icon"
@@ -159,7 +159,7 @@ export function Header({ user, selectedCompany, onCompanyChange, onSearch }: Hea
             
             <div className="flex items-center space-x-2">
               <h1 
-                className="text-xl font-bold cursor-pointer hover:text-primary transition-colors"
+                className="text-lg lg:text-xl font-bold cursor-pointer hover:text-primary transition-colors whitespace-nowrap"
                 onClick={() => router.push('/dashboard')}
               >
                 EM Interview Prep
@@ -168,39 +168,42 @@ export function Header({ user, selectedCompany, onCompanyChange, onSearch }: Hea
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1">
-            {navigationItems.map((item) => {
-              const Icon = item.icon;
-              const isActive = isActivePath(item.path);
+          <nav className="hidden lg:flex items-center space-x-1 overflow-x-auto scrollbar-hide">
+            <div className="flex items-center space-x-1 min-w-max">
+              {navigationItems.map((item) => {
+                const Icon = item.icon;
+                const isActive = isActivePath(item.path);
+                
+                return (
+                  <Button
+                    key={item.path}
+                    variant={isActive ? "default" : "ghost"}
+                    size="sm"
+                    onClick={() => router.push(item.path)}
+                    className="flex items-center gap-1 whitespace-nowrap"
+                  >
+                    <Icon className="h-4 w-4" />
+                    <span className="hidden xl:inline text-xs">{item.label}</span>
+                  </Button>
+                );
+              })}
               
-              return (
+              {user.isAdmin && (
                 <Button
-                  key={item.path}
-                  variant={isActive ? "default" : "ghost"}
+                  variant={pathname === '/admin' ? "default" : "ghost"}
                   size="sm"
-                  onClick={() => router.push(item.path)}
-                  className="flex items-center gap-2"
+                  onClick={() => router.push('/admin')}
+                  className="whitespace-nowrap"
                 >
-                  <Icon className="h-4 w-4" />
-                  <span className="hidden xl:inline">{item.label}</span>
+                  Admin
                 </Button>
-              );
-            })}
-            
-            {user.isAdmin && (
-              <Button
-                variant={pathname === '/admin' ? "default" : "ghost"}
-                size="sm"
-                onClick={() => router.push('/admin')}
-              >
-                Admin
-              </Button>
-            )}
+              )}
+            </div>
           </nav>
 
           {/* Search and Company Selection */}
-          <div className="hidden md:flex items-center space-x-3 flex-1 max-w-sm ml-4">
-            <form onSubmit={handleSearch} className="flex-1">
+          <div className="hidden md:flex items-center space-x-2 flex-1 max-w-xs">
+            <form onSubmit={handleSearch} className="flex-1 min-w-0">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <Input
@@ -208,14 +211,14 @@ export function Header({ user, selectedCompany, onCompanyChange, onSearch }: Hea
                   placeholder="Search..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10 h-9"
+                  className="pl-10 h-9 w-full"
                 />
               </div>
             </form>
             
             {onCompanyChange && (
               <Select value={selectedCompany || 'all'} onValueChange={onCompanyChange}>
-                <SelectTrigger className="w-32 h-9">
+                <SelectTrigger className="w-28 h-9 flex-shrink-0">
                   <SelectValue placeholder="Company" />
                 </SelectTrigger>
                 <SelectContent>
@@ -230,7 +233,7 @@ export function Header({ user, selectedCompany, onCompanyChange, onSearch }: Hea
           </div>
 
           {/* User Actions */}
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-1 flex-shrink-0">
             <Button
               variant="ghost"
               size="icon"
@@ -239,8 +242,8 @@ export function Header({ user, selectedCompany, onCompanyChange, onSearch }: Hea
               {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </Button>
 
-            <div className="hidden sm:flex items-center space-x-2">
-              <span className="text-sm text-muted-foreground">
+            <div className="hidden sm:flex items-center space-x-1">
+              <span className="text-xs text-muted-foreground whitespace-nowrap">
                 {user.username}
                 {user.isAdmin && <span className="ml-1 text-xs bg-primary text-primary-foreground px-1 rounded">Admin</span>}
               </span>

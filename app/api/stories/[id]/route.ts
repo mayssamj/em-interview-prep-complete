@@ -1,25 +1,22 @@
 
-export const dynamic = "force-dynamic";
+export const dynamic = 'force-dynamic';
 
 import { NextRequest, NextResponse } from 'next/server';
 import { requireAuth } from '@/lib/auth';
 import { prisma } from '@/lib/db';
 
 interface RouteParams {
-  params: {
-    id: string;
-  };
+  params: { id: string };
 }
 
 export async function GET(request: NextRequest, { params }: RouteParams) {
   try {
-    const user = await requireAuth();
-    const { id } = params;
+    const user = await requireAuth(request);
 
     const story = await prisma.story.findFirst({
       where: {
-        id,
-        userId: user.id,
+        id: params.id,
+        user_id: user.id
       },
     });
 
@@ -30,7 +27,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
       );
     }
 
-    return NextResponse.json(story);
+    return NextResponse.json({ story });
   } catch (error) {
     console.error('Story fetch error:', error);
     return NextResponse.json(
@@ -42,46 +39,37 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
 
 export async function PUT(request: NextRequest, { params }: RouteParams) {
   try {
-    const user = await requireAuth();
-    const { id } = params;
+    const user = await requireAuth(request);
     const { title, situation, task, action, result, reflection, tags, categories } = await request.json();
 
-    if (!title?.trim() || !situation?.trim() || !task?.trim() || !action?.trim() || !result?.trim()) {
-      return NextResponse.json(
-        { error: 'Title, situation, task, action, and result are required' },
-        { status: 400 }
-      );
-    }
-
-    const story = await prisma.story.findFirst({
+    const story = await prisma.story.updateMany({
       where: {
-        id,
-        userId: user.id,
+        id: params.id,
+        user_id: user.id
       },
+      data: {
+        title,
+        situation,
+        task,
+        action,
+        result,
+        reflection: reflection || null,
+        tags: tags || [],
+        categories: categories || [],
+        updated_at: new Date()
+      }
     });
 
-    if (!story) {
+    if (story.count === 0) {
       return NextResponse.json(
         { error: 'Story not found' },
         { status: 404 }
       );
     }
 
-    const updatedStory = await prisma.story.update({
-      where: { id },
-      data: {
-        title: title.trim(),
-        situation: situation.trim(),
-        task: task.trim(),
-        action: action.trim(),
-        result: result.trim(),
-        reflection: reflection?.trim() || null,
-        tags: tags || [],
-        categories: categories || [],
-      },
+    return NextResponse.json({ 
+      message: 'Story updated successfully' 
     });
-
-    return NextResponse.json(updatedStory);
   } catch (error) {
     console.error('Story update error:', error);
     return NextResponse.json(
@@ -93,28 +81,25 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
 
 export async function DELETE(request: NextRequest, { params }: RouteParams) {
   try {
-    const user = await requireAuth();
-    const { id } = params;
+    const user = await requireAuth(request);
 
-    const story = await prisma.story.findFirst({
+    const result = await prisma.story.deleteMany({
       where: {
-        id,
-        userId: user.id,
-      },
+        id: params.id,
+        user_id: user.id
+      }
     });
 
-    if (!story) {
+    if (result.count === 0) {
       return NextResponse.json(
         { error: 'Story not found' },
         { status: 404 }
       );
     }
 
-    await prisma.story.delete({
-      where: { id },
+    return NextResponse.json({ 
+      message: 'Story deleted successfully' 
     });
-
-    return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Story deletion error:', error);
     return NextResponse.json(

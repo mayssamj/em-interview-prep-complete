@@ -69,19 +69,19 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
 
   // Get user's stories and answers for this company
   const userStories = await prisma.story.findMany({
-    where: { userId: mockUser.id },
-    orderBy: { createdAt: 'desc' }
+    where: { user_id: mockUser.id },
+    orderBy: { created_at: 'desc' }
   });
 
   const userAnswers = await prisma.answer.findMany({
     where: { 
-      userId: mockUser.id,
-      question: {
-        companyId: company.id
+      user_id: mockUser.id,
+      questions: {
+        company_id: company.id
       }
     },
     include: {
-      question: true
+      questions: true
     }
   });
 
@@ -117,9 +117,37 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
 
           {/* Company Tabs */}
           <CompanyTabs 
-            company={company}
-            userStories={userStories}
-            userAnswers={userAnswers}
+            company={{
+              ...company,
+              evaluationCriteria: company.evaluation_criteria,
+              interviewFormat: company.interview_format,
+              successTips: company.success_tips,
+              redFlags: company.red_flags,
+              questions: company.questions.map(q => ({
+                id: q.id,
+                category: q.category,
+                questionText: q.question_text,
+                difficulty: q.difficulty,
+                tags: q.tags,
+                isCritical: q.is_critical
+              }))
+            }}
+            userStories={userStories.map(s => ({
+              ...s,
+              createdAt: s.created_at
+            }))}
+            userAnswers={userAnswers.map(a => ({
+              id: a.id,
+              answerText: a.answer_text,
+              notes: a.notes || '',
+              createdAt: a.created_at,
+              question: {
+                id: a.questions.id,
+                questionText: a.questions.question_text,
+                category: a.questions.category,
+                difficulty: a.questions.difficulty
+              }
+            }))}
             userId={mockUser.id}
           />
         </div>

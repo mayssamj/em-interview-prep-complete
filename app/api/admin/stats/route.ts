@@ -7,7 +7,7 @@ import { prisma } from '@/lib/db';
 
 export async function GET(request: NextRequest) {
   try {
-    const user = await getSession();
+    const user = await getSession(request);
 
     if (!user || !user.isAdmin) {
       return NextResponse.json(
@@ -26,12 +26,12 @@ export async function GET(request: NextRequest) {
 
     const recentUsers = await prisma.user.findMany({
       take: 5,
-      orderBy: { createdAt: 'desc' },
+      orderBy: { created_at: 'desc' },
       select: {
         id: true,
         username: true,
-        isAdmin: true,
-        createdAt: true,
+        is_admin: true,
+        created_at: true,
       }
     });
 

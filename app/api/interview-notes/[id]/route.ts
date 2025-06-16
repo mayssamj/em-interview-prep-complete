@@ -2,66 +2,89 @@
 export const dynamic = 'force-dynamic';
 
 import { NextRequest, NextResponse } from 'next/server';
-import { getSession } from '@/lib/auth';
+import { requireAuth } from '@/lib/auth';
 import { prisma } from '@/lib/db';
+
+export async function GET(
+  request: NextRequest,
+  { params }: { params: { id: string } }
+) {
+  try {
+    const user = await requireAuth(request);
+
+    const note = await prisma.interviewNote.findFirst({
+      where: {
+        id: params.id,
+        user_id: user.id
+      }
+    });
+
+    if (!note) {
+      return NextResponse.json(
+        { error: 'Interview note not found' },
+        { status: 404 }
+      );
+    }
+
+    return NextResponse.json({ note });
+  } catch (error) {
+    console.error('Interview note fetch error:', error);
+    return NextResponse.json(
+      { error: 'Failed to fetch interview note' },
+      { status: 500 }
+    );
+  }
+}
 
 export async function PUT(
   request: NextRequest,
   { params }: { params: { id: string } }
 ) {
   try {
-    const user = await getSession();
-    if (!user) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    }
+    const user = await requireAuth(request);
+    const { 
+      company, 
+      interviewerName, 
+      interviewerRole, 
+      questionsAsked, 
+      takeaways, 
+      followUpThoughts, 
+      interviewDate 
+    } = await request.json();
 
-    const body = await request.json();
-    const {
-      company,
-      interviewerName,
-      interviewerRole,
-      questionsAsked,
-      takeaways,
-      followUpThoughts,
-      interviewDate
-    } = body;
+    const note = await prisma.interviewNote.updateMany({
+      where: {
+        id: params.id,
+        user_id: user.id
+      },
+      data: {
+        company,
+        interviewer_name: interviewerName || null,
+        interviewer_role: interviewerRole || null,
+        questions_asked: questionsAsked || [],
+        takeaways: takeaways || null,
+        follow_up_thoughts: followUpThoughts || null,
+        interview_date: interviewDate ? new Date(interviewDate) : undefined,
+        updated_at: new Date()
+      }
+    });
 
-    if (!company || !interviewDate) {
+    if (note.count === 0) {
       return NextResponse.json(
-        { error: 'Company and interview date are required' },
-        { status: 400 }
+        { error: 'Interview note not found' },
+        { status: 404 }
       );
     }
 
-    // Check if the note belongs to the user
-    const existingNote = await prisma.interviewNote.findFirst({
-      where: {
-        id: params.id,
-        userId: user.id
-      }
+    return NextResponse.json({ 
+      message: 'Interview note updated successfully' 
     });
-
-    if (!existingNote) {
-      return NextResponse.json({ error: 'Note not found' }, { status: 404 });
-    }
-
-    const note = await prisma.interviewNote.update({
-      where: { id: params.id },
-      data: {
-        company,
-        interviewerName: interviewerName || null,
-        interviewerRole: interviewerRole || null,
-        questionsAsked: questionsAsked || [],
-        takeaways: takeaways || null,
-        followUpThoughts: followUpThoughts || null,
-        interviewDate: new Date(interviewDate)
-      }
-    });
-
-    return NextResponse.json(note);
   } catch (error) {
-    console.error('Error updating interview note:', error);
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+    console.error('Interview note update error:', error);
+    return NextResponse.json(
+      { error: 'Failed to update interview note' },
+      { status: 500 }
+    );
   }
 }
 
@@ -70,30 +93,30 @@ export async function DELETE(
   { params }: { params: { id: string } }
 ) {
   try {
-    const user = await getSession();
-    if (!user) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    }
+    const user = await requireAuth(request);
 
-    // Check if the note belongs to the user
-    const existingNote = await prisma.interviewNote.findFirst({
+    const result = await prisma.interviewNote.deleteMany({
       where: {
         id: params.id,
-        userId: user.id
+        user_id: user.id
       }
     });
 
-    if (!existingNote) {
-      return NextResponse.json({ error: 'Note not found' }, { status: 404 });
+    if (result.count === 0) {
+      return NextResponse.json(
+        { error: 'Interview note not found' },
+        { status: 404 }
+      );
     }
 
-    await prisma.interviewNote.delete({
-      where: { id: params.id }
+    return NextResponse.json({ 
+      message: 'Interview note deleted successfully' 
     });
-
-    return NextResponse.json({ success: true });
   } catch (error) {
-    console.error('Error deleting interview note:', error);
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+    console.error('Interview note deletion error:', error);
+    return NextResponse.json(
+      { error: 'Failed to delete interview note' },
+      { status: 500 }
+    );
   }
 }

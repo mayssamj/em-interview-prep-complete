@@ -15,25 +15,25 @@ import { Search, Filter, CheckCircle, Circle, MessageSquare, Tag, Clock, Star } 
 
 interface Question {
   id: string;
-  questionText: string;
+  question_text: string;
   category: string;
   difficulty: string;
   tags: string[];
-  isCritical: boolean;
-  usageCount: number;
-  company: {
+  is_critical: boolean;
+  usage_count: number;
+  companies: {
     id: string;
     name: string;
-  };
+  } | null;
 }
 
 interface RecentQuestion {
   id: string;
-  questionText: string;
-  company: {
+  question_text: string;
+  companies: {
     name: string;
   };
-  viewedAt: string;
+  viewed_at: string;
 }
 
 interface QuestionBankClientProps {
@@ -82,17 +82,17 @@ export function QuestionBankClient({ questions, answeredQuestionIds, userId }: Q
   }, []);
 
   // Get unique values for filters
-  const companies = [...new Set(questions.map(q => q.company.name))].sort();
+  const companies = [...new Set(questions.map(q => q.companies?.name).filter(Boolean))].sort();
   const categories = [...new Set(questions.map(q => q.category))].sort();
   const difficulties = [...new Set(questions.map(q => q.difficulty))].sort();
 
   // Filter questions
   const filteredQuestions = questions.filter(question => {
     const matchesSearch = searchQuery === '' || 
-      question.questionText.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      question.question_text.toLowerCase().includes(searchQuery.toLowerCase()) ||
       question.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     
-    const matchesCompany = selectedCompany === 'all' || question.company.name === selectedCompany;
+    const matchesCompany = selectedCompany === 'all' || question.companies?.name === selectedCompany;
     const matchesCategory = selectedCategory === 'all' || question.category === selectedCategory;
     const matchesDifficulty = selectedDifficulty === 'all' || question.difficulty === selectedDifficulty;
     
@@ -102,7 +102,7 @@ export function QuestionBankClient({ questions, answeredQuestionIds, userId }: Q
       (showAnswered === 'unanswered' && !isAnswered);
 
     const matchesCritical = showCritical === 'all' || 
-      (showCritical === 'critical' && question.isCritical);
+      (showCritical === 'critical' && question.is_critical);
 
     return matchesSearch && matchesCompany && matchesCategory && matchesDifficulty && matchesAnswered && matchesCritical;
   });
@@ -207,8 +207,8 @@ export function QuestionBankClient({ questions, answeredQuestionIds, userId }: Q
               {recentQuestions.slice(0, 5).map((question) => (
                 <div key={question.id} className="flex items-center justify-between p-3 bg-muted/50 rounded-lg">
                   <div className="flex-1">
-                    <p className="font-medium text-sm line-clamp-1">{question.questionText}</p>
-                    <p className="text-xs text-muted-foreground">{question.company.name}</p>
+                    <p className="font-medium text-sm line-clamp-1">{question.question_text}</p>
+                    <p className="text-xs text-muted-foreground">{question.companies.name}</p>
                   </div>
                   <Button 
                     variant="ghost" 
@@ -335,15 +335,15 @@ export function QuestionBankClient({ questions, answeredQuestionIds, userId }: Q
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2 flex-wrap">
-                      <div className={`w-3 h-3 rounded-full ${getCompanyColor(question.company.name)}`} />
-                      <span className="text-sm font-medium">{question.company.name}</span>
+                      <div className={`w-3 h-3 rounded-full ${getCompanyColor(question.companies?.name || '')}`} />
+                      <span className="text-sm font-medium">{question.companies?.name || 'Unknown'}</span>
                       <Badge variant="outline" className="text-xs">
                         {question.category}
                       </Badge>
                       <Badge className={`text-xs ${getDifficultyColor(question.difficulty)}`}>
                         {question.difficulty}
                       </Badge>
-                      {question.isCritical && (
+                      {question.is_critical && (
                         <Badge variant="default" className="text-xs bg-red-500">
                           <Star className="h-3 w-3 mr-1" />
                           Critical
@@ -357,7 +357,7 @@ export function QuestionBankClient({ questions, answeredQuestionIds, userId }: Q
                       )}
                     </div>
                     <CardTitle className="text-lg leading-relaxed">
-                      {question.questionText}
+                      {question.question_text}
                     </CardTitle>
                   </div>
                   
@@ -379,7 +379,7 @@ export function QuestionBankClient({ questions, answeredQuestionIds, userId }: Q
                       <DialogHeader>
                         <DialogTitle>Answer Question</DialogTitle>
                         <DialogDescription>
-                          {question.questionText}
+                          {question.question_text}
                         </DialogDescription>
                       </DialogHeader>
                       <div className="space-y-4">

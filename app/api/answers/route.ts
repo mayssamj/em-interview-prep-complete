@@ -1,127 +1,128 @@
 
-export const dynamic = "force-dynamic";
+export const dynamic = 'force-dynamic';
 
 import { NextRequest, NextResponse } from 'next/server';
 import { requireAuth } from '@/lib/auth';
 import { prisma } from '@/lib/db';
+import { v4 as uuidv4 } from 'uuid';
+
+export async function GET(request: NextRequest) {
+  try {
+    const user = await requireAuth(request);
+    const { searchParams } = new URL(request.url);
+    const questionId = searchParams.get('questionId');
+
+    if (!questionId) {
+      return NextResponse.json(
+        { error: 'Question ID is required' },
+        { status: 400 }
+      );
+    }
+
+    const answer = await prisma.answer.findUnique({
+      where: {
+        user_id_question_id: {
+          user_id: user.id,
+          question_id: questionId
+        }
+      },
+      include: {
+        questions: true,
+        stories: true
+      }
+    });
+
+    return NextResponse.json({ answer });
+  } catch (error) {
+    console.error('Answer fetch error:', error);
+    return NextResponse.json(
+      { error: 'Failed to fetch answer' },
+      { status: 500 }
+    );
+  }
+}
 
 export async function POST(request: NextRequest) {
   try {
-    const user = await requireAuth();
-    const { questionId, answerText, notes, storyReferences } = await request.json();
+    const user = await requireAuth(request);
+    const { questionId, answerText, storyReferences, notes } = await request.json();
 
-    if (!questionId || !answerText?.trim()) {
+    if (!questionId || !answerText) {
       return NextResponse.json(
         { error: 'Question ID and answer text are required' },
         { status: 400 }
       );
     }
 
-    // Check if answer already exists
-    const existingAnswer = await prisma.answer.findUnique({
-      where: {
-        userId_questionId: {
-          userId: user.id,
-          questionId,
-        },
-      },
+    // Verify question exists
+    const question = await prisma.question.findUnique({
+      where: { id: questionId }
     });
 
-    let answer;
-    if (existingAnswer) {
-      // Update existing answer
-      answer = await prisma.answer.update({
-        where: { id: existingAnswer.id },
-        data: {
-          answerText,
-          notes,
-          storyReferences: storyReferences || [],
-        },
-      });
-    } else {
-      // Create new answer
-      answer = await prisma.answer.create({
-        data: {
-          userId: user.id,
-          questionId,
-          answerText,
-          notes,
-          storyReferences: storyReferences || [],
-        },
-      });
-
-      // Update or create progress
-      await prisma.progress.upsert({
-        where: {
-          userId_questionId: {
-            userId: user.id,
-            questionId,
-          },
-        },
-        update: {
-          status: 'completed',
-          lastReviewed: new Date(),
-        },
-        create: {
-          userId: user.id,
-          questionId,
-          status: 'completed',
-          lastReviewed: new Date(),
-        },
-      });
+    if (!question) {
+      return NextResponse.json(
+        { error: 'Question not found' },
+        { status: 404 }
+      );
     }
 
-    return NextResponse.json(answer);
+    const answer = await prisma.answer.upsert({
+      where: {
+        user_id_question_id: {
+          user_id: user.id,
+          question_id: questionId
+        }
+      },
+      update: {
+        answer_text: answerText,
+        story_references: storyReferences || [],
+        notes: notes || null,
+        updated_at: new Date()
+      },
+      create: {
+        id: uuidv4(),
+        user_id: user.id,
+        question_id: questionId,
+        answer_text: answerText,
+        story_references: storyReferences || [],
+        notes: notes || null,
+        created_at: new Date(),
+        updated_at: new Date()
+      }
+    });
+
+    // Update or create progress tracking
+    await prisma.progress.upsert({
+      where: {
+        user_id_question_id: {
+          user_id: user.id,
+          question_id: questionId
+        }
+      },
+      update: {
+        status: 'answered',
+        last_reviewed: new Date(),
+        updated_at: new Date()
+      },
+      create: {
+        id: uuidv4(),
+        user_id: user.id,
+        question_id: questionId,
+        status: 'answered',
+        last_reviewed: new Date(),
+        created_at: new Date(),
+        updated_at: new Date()
+      }
+    });
+
+    return NextResponse.json({ 
+      message: 'Answer saved successfully',
+      answer 
+    });
   } catch (error) {
     console.error('Answer save error:', error);
     return NextResponse.json(
       { error: 'Failed to save answer' },
-      { status: 500 }
-    );
-  }
-}
-
-export async function GET(request: NextRequest) {
-  try {
-    const user = await requireAuth();
-    const { searchParams } = new URL(request.url);
-    const questionId = searchParams.get('questionId');
-
-    if (questionId) {
-      // Get specific answer
-      const answer = await prisma.answer.findUnique({
-        where: {
-          userId_questionId: {
-            userId: user.id,
-            questionId,
-          },
-        },
-        include: {
-          question: true,
-        },
-      });
-
-      return NextResponse.json(answer);
-    } else {
-      // Get all answers for user
-      const answers = await prisma.answer.findMany({
-        where: { userId: user.id },
-        include: {
-          question: {
-            include: {
-              company: true,
-            },
-          },
-        },
-        orderBy: { createdAt: 'desc' },
-      });
-
-      return NextResponse.json(answers);
-    }
-  } catch (error) {
-    console.error('Answer fetch error:', error);
-    return NextResponse.json(
-      { error: 'Failed to fetch answers' },
       { status: 500 }
     );
   }

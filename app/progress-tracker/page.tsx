@@ -1,5 +1,5 @@
 
-import { getSession } from '@/lib/auth';
+import { getServerSession } from '@/lib/auth';
 import { redirect } from 'next/navigation';
 import { prisma } from '@/lib/db';
 import { Header } from '@/components/layout/header';
@@ -9,7 +9,7 @@ import { ProgressTrackerClient } from '@/components/progress-tracker/progress-tr
 export const dynamic = 'force-dynamic';
 
 export default async function ProgressTrackerPage() {
-  const user = await getSession();
+  const user = await getServerSession();
   
   if (!user) {
     redirect('/login');
@@ -18,19 +18,19 @@ export default async function ProgressTrackerPage() {
   // Get comprehensive user progress data
   const [userStories, userAnswers, companies, questions] = await Promise.all([
     prisma.story.findMany({
-      where: { userId: user.id },
-      orderBy: { createdAt: 'desc' }
+      where: { user_id: user.id },
+      orderBy: { created_at: 'desc' }
     }),
     prisma.answer.findMany({
-      where: { userId: user.id },
+      where: { user_id: user.id },
       include: {
-        question: {
+        questions: {
           include: {
-            company: true
+            companies: true
           }
         }
       },
-      orderBy: { createdAt: 'desc' }
+      orderBy: { created_at: 'desc' }
     }),
     prisma.company.findMany({
       include: {
@@ -39,7 +39,7 @@ export default async function ProgressTrackerPage() {
     }),
     prisma.question.findMany({
       include: {
-        company: true
+        companies: true
       }
     })
   ]);
@@ -63,10 +63,29 @@ export default async function ProgressTrackerPage() {
 
           {/* Progress Tracker Content */}
           <ProgressTrackerClient 
-            userStories={userStories}
-            userAnswers={userAnswers}
+            userStories={userStories.map(s => ({
+              ...s,
+              createdAt: s.created_at
+            }))}
+            userAnswers={userAnswers.map(a => ({
+              ...a,
+              createdAt: a.created_at,
+              question: {
+                id: a.questions.id,
+                questionText: a.questions.question_text,
+                category: a.questions.category,
+                difficulty: a.questions.difficulty,
+                company: a.questions.companies ? {
+                  id: a.questions.companies.id,
+                  name: a.questions.companies.name
+                } : null
+              }
+            }))}
             companies={companies}
-            questions={questions}
+            questions={questions.map(q => ({
+              ...q,
+              company: q.companies
+            }))}
             userId={user.id}
           />
         </div>
