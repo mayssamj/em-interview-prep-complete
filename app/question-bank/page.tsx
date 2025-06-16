@@ -15,7 +15,7 @@ const mockUser = {
 
 export default async function QuestionBankPage() {
   // Get all questions with company information
-  const questions = await prisma.question.findMany({
+  const questions = await prisma.questions.findMany({
     include: {
       companies: true
     },
@@ -28,7 +28,7 @@ export default async function QuestionBankPage() {
   });
 
   // Get user's answers for progress tracking
-  const userAnswers = await prisma.answer.findMany({
+  const userAnswers = await prisma.answers.findMany({
     where: { user_id: mockUser.id },
     select: { question_id: true }
   });

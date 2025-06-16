@@ -1,0 +1,169 @@
+# Page snapshot
+
+```yaml
+- banner:
+  - heading "EM Interview Prep" [level=1]
+  - navigation:
+    - button "Dashboard":
+      - img
+      - text: Dashboard
+    - button "Company Values":
+      - img
+      - text: Company Values
+    - button "Behavioral Questions":
+      - img
+      - text: Behavioral Questions
+    - button "System Design":
+      - img
+      - text: System Design
+    - button "SD Strategy":
+      - img
+      - text: SD Strategy
+    - button "Story Templates":
+      - img
+      - text: Story Templates
+    - button "Interview Strategy":
+      - img
+      - text: Interview Strategy
+    - button "Progress Tracker":
+      - img
+      - text: Progress Tracker
+    - button "FAQ":
+      - img
+      - text: FAQ
+    - button "Admin"
+  - img
+  - textbox "Search..."
+  - button:
+    - img
+  - text: adminAdmin
+  - button:
+    - img
+- main:
+  - heading "Welcome back, admin" [level=1]
+  - paragraph: Master your Engineering Manager interviews with structured preparation and proven frameworks
+  - img
+  - text: "Filter by Company:"
+  - combobox:
+    - img
+    - text: Meta
+  - heading "Quick Actions" [level=2]:
+    - img
+    - text: Quick Actions
+  - paragraph: Jump into your interview preparation
+  - img
+  - heading "Create New Story" [level=3]
+  - paragraph: Add a new STAR format story to your collection
+  - img
+  - heading "Behavioral Questions" [level=3]
+  - paragraph: Practice leadership and behavioral questions
+  - img
+  - heading "System Design" [level=3]
+  - paragraph: Practice system design questions
+  - img
+  - heading "My Stories" [level=3]
+  - paragraph: Review and edit your existing stories
+  - img
+  - heading "Interview Notes" [level=3]
+  - paragraph: Log your interview experiences
+  - heading "Preparation Paths" [level=3]:
+    - img
+    - text: Preparation Paths
+  - paragraph: Choose your preparation approach based on available time
+  - img
+  - heading "Behavioral Prep" [level=3]
+  - paragraph: Leadership and behavioral questions with STAR framework
+  - text: 50+ questions
+  - img
+  - img
+  - heading "System Design" [level=3]
+  - paragraph: Architecture and scalability questions for EM roles
+  - text: 40+ questions
+  - img
+  - img
+  - heading "Critical Only" [level=3]
+  - paragraph: High-impact behavioral questions for quick prep
+  - text: 15+ critical
+  - img
+  - img
+  - heading "SD Strategy" [level=3]
+  - paragraph: Frameworks and strategies for system design
+  - text: Frameworks
+  - img
+  - heading "Sample Questions by Type:" [level=4]
+  - heading "Behavioral Questions" [level=5]
+  - paragraph: Tell me about a time you led a team through a challenging project
+  - paragraph: Leadership • High Frequency
+  - button "Practice"
+  - paragraph: Describe resolving a significant disagreement within your team
+  - paragraph: Conflict Resolution • High Impact
+  - button "Practice"
+  - heading "System Design Questions" [level=5]
+  - paragraph: Design a scalable chat system like Meta Messenger
+  - paragraph: Distributed Systems • Meta
+  - button "Practice"
+  - paragraph: Design a recommendation system for e-commerce
+  - paragraph: ML Systems • Amazon
+  - button "Practice"
+  - heading "Meta Interview Prep" [level=2]:
+    - img
+    - text: Meta Interview Prep
+  - paragraph: Focused preparation materials and questions for Meta
+  - heading "Meta" [level=3]
+  - img
+  - paragraph: Focus on people management, technical leadership, and cultural fit
+  - text: Move Fast Long-term Impact Build Awesome Things
+  - img
+  - text: 18 questions
+  - button "Start Prep"
+  - button "Sample Questions":
+    - img
+    - text: Sample Questions
+    - img
+  - img
+  - text: View All Questions
+  - paragraph: Browse questions across all companies for comprehensive preparation
+  - button "Browse All Questions"
+  - heading "Recent Activity" [level=3]:
+    - img
+    - text: Recent Activity
+  - paragraph: Your latest interview preparation activities
+  - img
+  - paragraph: Test Story Title
+  - text: story
+  - paragraph: STAR format story
+  - text: Just now
+  - img
+  - img
+  - paragraph: Test Story Title
+  - text: story
+  - paragraph: STAR format story
+  - text: Just now
+  - img
+  - heading "Questions Answered" [level=3]
+  - img
+  - text: 0/126
+  - paragraph: Interview questions completed
+  - heading "My Stories" [level=3]
+  - img
+  - text: "2"
+  - paragraph: STAR format stories created
+  - heading "Interview Notes" [level=3]
+  - img
+  - text: "0"
+  - paragraph: Interview experiences recorded
+  - heading "Completion Rate" [level=3]
+  - img
+  - text: 0%
+  - paragraph: Overall progress
+  - heading "Overall Progress" [level=3]:
+    - img
+    - text: Overall Progress
+  - paragraph: Your interview preparation journey
+  - text: Questions Answered 0/126
+  - progressbar
+  - text: 2 Stories Created 0 Interviews Logged
+- region "Notifications (F8)":
+  - list
+- alert
+```

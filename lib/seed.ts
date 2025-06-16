@@ -1296,7 +1296,7 @@ export async function seedDatabase() {
 
     // Create admin user
     const adminPasswordHash = await hashPassword('adminadmin');
-    const adminUser = await prisma.user.upsert({
+    const adminUser = await prisma.users.upsert({
       where: { username: 'admin' },
       update: {},
       create: {
@@ -1317,7 +1317,7 @@ export async function seedDatabase() {
 
     // Create a regular user (Mayssam)
     const userPasswordHash = await hashPassword('password123');
-    const regularUser = await prisma.user.upsert({
+    const regularUser = await prisma.users.upsert({
       where: { username: 'mayssam' },
       update: {},
       create: {
@@ -1350,7 +1350,7 @@ export async function seedDatabase() {
         updated_at: new Date()
       };
       
-      await prisma.company.upsert({
+      await prisma.companies.upsert({
         where: { name: data.name },
         update: transformedData,
         create: transformedData
@@ -1361,7 +1361,7 @@ export async function seedDatabase() {
 
     // Create questions for each company
     for (const [companyKey, companyQuestions] of Object.entries(questions)) {
-      const company = await prisma.company.findUnique({
+      const company = await prisma.companies.findUnique({
         where: { name: companyData[companyKey as keyof typeof companyData].name }
       });
 
@@ -1382,7 +1382,7 @@ export async function seedDatabase() {
             question_type: (question as any).questionType || 'behavioral'
           };
           
-          await prisma.question.create({
+          await prisma.questions.create({
             data: transformedQuestion
           });
         }
@@ -1408,7 +1408,7 @@ export async function seedDatabase() {
         updated_at: new Date()
       };
       
-      await prisma.story.create({
+      await prisma.stories.create({
         data: transformedStory
       });
     }

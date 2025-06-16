@@ -7,7 +7,7 @@ import { prisma } from '@/lib/db';
 export async function GET() {
   try {
     // Get actual counts from database
-    const categoryCounts = await prisma.question.groupBy({
+    const categoryCounts = await prisma.questions.groupBy({
       by: ['category'],
       where: { question_type: 'system_design' },
       _count: { category: true }

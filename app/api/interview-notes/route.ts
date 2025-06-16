@@ -10,7 +10,7 @@ export async function GET(request: NextRequest) {
   try {
     const user = await requireAuth(request);
 
-    const notes = await prisma.interviewNote.findMany({
+    const notes = await prisma.interview_notes.findMany({
       where: { user_id: user.id },
       orderBy: { created_at: 'desc' },
       select: {
@@ -54,7 +54,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const note = await prisma.interviewNote.create({
+    const note = await prisma.interview_notes.create({
       data: {
         id: uuidv4(),
         user_id: user.id,

@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Track the view
-    await prisma.questionView.create({
+    await prisma.question_views.create({
       data: {
         id: uuidv4(),
         user_id: user.id,
@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
     })
 
     // Update question usage count
-    await prisma.question.update({
+    await prisma.questions.update({
       where: { id: questionId },
       data: {
         usage_count: {

@@ -37,7 +37,7 @@ describe('/api/companies/with-questions', () => {
 
   beforeEach(() => {
     const { prisma } = require('@/lib/db')
-    prisma.company.findMany.mockResolvedValue(mockCompanies)
+    prisma.companies.findMany.mockResolvedValue(mockCompanies)
   })
 
   it('should return companies with question counts', async () => {

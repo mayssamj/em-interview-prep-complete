@@ -10,7 +10,7 @@ export async function GET(request: NextRequest) {
     const user = await requireAuth(request);
 
     // Get recent stories
-    const recentStories = await prisma.story.findMany({
+    const recentStories = await prisma.stories.findMany({
       where: { user_id: user.id },
       orderBy: { created_at: 'desc' },
       take: 3,
@@ -23,7 +23,7 @@ export async function GET(request: NextRequest) {
     });
 
     // Get recent answers
-    const recentAnswers = await prisma.answer.findMany({
+    const recentAnswers = await prisma.answers.findMany({
       where: { user_id: user.id },
       orderBy: { created_at: 'desc' },
       take: 3,
@@ -38,7 +38,7 @@ export async function GET(request: NextRequest) {
     });
 
     // Get recent interview notes
-    const recentNotes = await prisma.interviewNote.findMany({
+    const recentNotes = await prisma.interview_notes.findMany({
       where: { user_id: user.id },
       orderBy: { created_at: 'desc' },
       take: 2,

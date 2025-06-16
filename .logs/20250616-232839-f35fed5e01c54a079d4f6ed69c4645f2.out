@@ -1,0 +1,7 @@
+Usage Error: The nearest package directory (/home/ubuntu/em-interview-prep) doesn't seem to be part of the project declared in /.
+
+- If / isn't intended to be a project, remove any yarn.lock and/or package.json file there.
+- If / is intended to be a project, it might be that you forgot to list home/ubuntu/em-interview-prep in its workspace configuration.
+- Finally, if / is fine and you intend home/ubuntu/em-interview-prep to be treated as a completely separate project (not even a workspace), create an empty yarn.lock file in it.
+
+$ yarn run [--inspect] [--inspect-brk] [-T,--top-level] [-B,--binaries-only] [--require #0] <scriptName> ...

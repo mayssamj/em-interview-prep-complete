@@ -17,11 +17,11 @@ export default async function ProgressTrackerPage() {
 
   // Get comprehensive user progress data
   const [userStories, userAnswers, companies, questions] = await Promise.all([
-    prisma.story.findMany({
+    prisma.stories.findMany({
       where: { user_id: user.id },
       orderBy: { created_at: 'desc' }
     }),
-    prisma.answer.findMany({
+    prisma.answers.findMany({
       where: { user_id: user.id },
       include: {
         questions: {
@@ -32,12 +32,12 @@ export default async function ProgressTrackerPage() {
       },
       orderBy: { created_at: 'desc' }
     }),
-    prisma.company.findMany({
+    prisma.companies.findMany({
       include: {
         questions: true
       }
     }),
-    prisma.question.findMany({
+    prisma.questions.findMany({
       include: {
         companies: true
       }

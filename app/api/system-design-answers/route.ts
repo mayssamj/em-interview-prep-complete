@@ -19,7 +19,7 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    const answer = await prisma.systemDesignAnswer.findUnique({
+    const answer = await prisma.system_design_answers.findUnique({
       where: {
         user_id_question_id: {
           user_id: user.id,
@@ -64,7 +64,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Verify question exists and is system design type
-    const question = await prisma.question.findUnique({
+    const question = await prisma.questions.findUnique({
       where: { id: questionId }
     });
 
@@ -82,7 +82,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const answer = await prisma.systemDesignAnswer.upsert({
+    const answer = await prisma.system_design_answers.upsert({
       where: {
         user_id_question_id: {
           user_id: user.id,

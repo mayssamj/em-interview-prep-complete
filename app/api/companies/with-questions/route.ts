@@ -9,7 +9,7 @@ export async function GET(request: NextRequest) {
     const { searchParams } = new URL(request.url);
     const includeSystemDesign = searchParams.get('includeSystemDesign') === 'true';
 
-    const companies = await prisma.company.findMany({
+    const companies = await prisma.companies.findMany({
       include: {
         questions: {
           where: includeSystemDesign ? {} : {

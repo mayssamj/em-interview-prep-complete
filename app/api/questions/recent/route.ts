@@ -9,7 +9,7 @@ export async function GET(request: NextRequest) {
   try {
     const user = await requireAuth(request)
 
-    const recentViews = await prisma.questionView.findMany({
+    const recentViews = await prisma.question_views.findMany({
       where: {
         user_id: user.id
       },

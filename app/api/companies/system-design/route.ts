@@ -16,7 +16,7 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    const company = await prisma.company.findUnique({
+    const company = await prisma.companies.findUnique({
       where: { name: companyName },
       include: {
         questions: {

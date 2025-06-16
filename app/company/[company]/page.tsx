@@ -51,7 +51,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
   };
   
   const companyName = companyNameMap[companySlug] || companySlug.charAt(0).toUpperCase() + companySlug.slice(1);
-  const company = await prisma.company.findUnique({
+  const company = await prisma.companies.findUnique({
     where: { name: companyName },
     include: {
       questions: {
@@ -68,12 +68,12 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
   }
 
   // Get user's stories and answers for this company
-  const userStories = await prisma.story.findMany({
+  const userStories = await prisma.stories.findMany({
     where: { user_id: mockUser.id },
     orderBy: { created_at: 'desc' }
   });
 
-  const userAnswers = await prisma.answer.findMany({
+  const userAnswers = await prisma.answers.findMany({
     where: { 
       user_id: mockUser.id,
       questions: {

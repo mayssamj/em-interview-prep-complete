@@ -16,7 +16,7 @@ export default async function InterviewStrategyPage() {
   }
 
   // Get all companies with their strategy information
-  const companies = await prisma.company.findMany({
+  const companies = await prisma.companies.findMany({
     orderBy: { name: 'asc' }
   });
 

@@ -13,7 +13,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
   try {
     const user = await requireAuth(request);
 
-    const story = await prisma.story.findFirst({
+    const story = await prisma.stories.findFirst({
       where: {
         id: params.id,
         user_id: user.id
@@ -49,7 +49,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     
     const { title, situation, task, action, result, reflection, tags, categories } = await request.json();
 
-    const updateResult = await prisma.story.updateMany({
+    const updateResult = await prisma.stories.updateMany({
       where: {
         id: params.id,
         user_id: user.id
@@ -75,7 +75,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     }
 
     // Fetch and return the updated story
-    const updatedStory = await prisma.story.findFirst({
+    const updatedStory = await prisma.stories.findFirst({
       where: {
         id: params.id,
         user_id: user.id
@@ -102,7 +102,7 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
       user = { id: "cmbx5b4vc0000u41ugdwm5uxh" }; // Mock user for testing
     }
 
-    const result = await prisma.story.deleteMany({
+    const result = await prisma.stories.deleteMany({
       where: {
         id: params.id,
         user_id: user.id

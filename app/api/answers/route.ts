@@ -19,7 +19,7 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    const answer = await prisma.answer.findUnique({
+    const answer = await prisma.answers.findUnique({
       where: {
         user_id_question_id: {
           user_id: user.id,
@@ -55,7 +55,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Verify question exists
-    const question = await prisma.question.findUnique({
+    const question = await prisma.questions.findUnique({
       where: { id: questionId }
     });
 
@@ -66,7 +66,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const answer = await prisma.answer.upsert({
+    const answer = await prisma.answers.upsert({
       where: {
         user_id_question_id: {
           user_id: user.id,

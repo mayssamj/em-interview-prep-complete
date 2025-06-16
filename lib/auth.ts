@@ -65,7 +65,7 @@ export async function getUserFromToken(token: string): Promise<AuthUser | null> 
     }
 
     // Verify user still exists in database
-    const user = await prisma.user.findUnique({
+    const user = await prisma.users.findUnique({
       where: { id: decoded.userId },
       select: {
         id: true,
@@ -120,7 +120,7 @@ export async function getCurrentUser(request: NextRequest): Promise<{
     }
 
     // Get fresh user data from database
-    const user = await prisma.user.findUnique({
+    const user = await prisma.users.findUnique({
       where: { id: decoded.userId },
       select: {
         id: true,

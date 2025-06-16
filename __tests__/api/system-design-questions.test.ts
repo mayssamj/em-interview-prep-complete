@@ -41,7 +41,7 @@ describe('/api/system-design-questions', () => {
 
   beforeEach(() => {
     const { prisma } = require('@/lib/db')
-    prisma.question.findMany.mockResolvedValue(mockQuestions)
+    prisma.questions.findMany.mockResolvedValue(mockQuestions)
   })
 
   it('should return system design questions', async () => {
@@ -63,7 +63,7 @@ describe('/api/system-design-questions', () => {
     expect(response.status).toBe(200)
     
     const { prisma } = require('@/lib/db')
-    expect(prisma.question.findMany).toHaveBeenCalledWith(
+    expect(prisma.questions.findMany).toHaveBeenCalledWith(
       expect.objectContaining({
         where: expect.objectContaining({
           OR: [
@@ -82,7 +82,7 @@ describe('/api/system-design-questions', () => {
     expect(response.status).toBe(200)
     
     const { prisma } = require('@/lib/db')
-    expect(prisma.question.findMany).toHaveBeenCalledWith(
+    expect(prisma.questions.findMany).toHaveBeenCalledWith(
       expect.objectContaining({
         where: expect.objectContaining({
           difficulty: 'Hard'
@@ -98,7 +98,7 @@ describe('/api/system-design-questions', () => {
     expect(response.status).toBe(200)
     
     const { prisma } = require('@/lib/db')
-    expect(prisma.question.findMany).toHaveBeenCalledWith(
+    expect(prisma.questions.findMany).toHaveBeenCalledWith(
       expect.objectContaining({
         where: expect.objectContaining({
           is_critical: true

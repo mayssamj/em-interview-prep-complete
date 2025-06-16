@@ -213,7 +213,7 @@ export async function seedSystemDesignContent() {
 
   // Create frameworks
   for (const framework of frameworks) {
-    await prisma.systemDesignFramework.upsert({
+    await prisma.system_design_frameworks.upsert({
       where: { name: framework.name },
       update: framework,
       create: {
@@ -225,7 +225,7 @@ export async function seedSystemDesignContent() {
   }
 
   // Now let's create system design questions for each company
-  const companies = await prisma.company.findMany();
+  const companies = await prisma.companies.findMany();
   
   const systemDesignQuestions = [
     // Meta questions
@@ -1092,7 +1092,7 @@ export async function seedSystemDesignContent() {
       };
       
       // Check if question already exists
-      const existingQuestion = await prisma.question.findFirst({
+      const existingQuestion = await prisma.questions.findFirst({
         where: {
           question_text: questionData.question_text,
           company_id: company.id
@@ -1101,7 +1101,7 @@ export async function seedSystemDesignContent() {
 
       let question;
       if (existingQuestion) {
-        question = await prisma.question.update({
+        question = await prisma.questions.update({
           where: { id: existingQuestion.id },
           data: {
             ...transformedFields,
@@ -1109,7 +1109,7 @@ export async function seedSystemDesignContent() {
           }
         });
       } else {
-        question = await prisma.question.create({
+        question = await prisma.questions.create({
           data: {
             ...transformedFields,
             company_id: company.id
@@ -1134,7 +1134,7 @@ export async function seedSystemDesignContent() {
         updated_at: new Date()
       };
       
-      await prisma.systemDesignQuestion.upsert({
+      await prisma.system_design_questions.upsert({
         where: {
           question_id: question.id
         },

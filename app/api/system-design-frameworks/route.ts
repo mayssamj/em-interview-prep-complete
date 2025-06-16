@@ -12,7 +12,7 @@ export async function GET(request: NextRequest) {
 
     const where = category ? { category } : {};
 
-    const frameworks = await prisma.systemDesignFramework.findMany({
+    const frameworks = await prisma.system_design_frameworks.findMany({
       where,
       orderBy: [
         { difficulty: 'asc' },
@@ -51,7 +51,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const framework = await prisma.systemDesignFramework.create({
+    const framework = await prisma.system_design_frameworks.create({
       data: {
         id: uuidv4(),
         name,

@@ -18,13 +18,13 @@ export async function GET(request: NextRequest) {
 
     // Get admin statistics
     const [userCount, storyCount, questionCount, companyCount] = await Promise.all([
-      prisma.user.count(),
-      prisma.story.count(),
-      prisma.question.count(),
-      prisma.company.count(),
+      prisma.users.count(),
+      prisma.stories.count(),
+      prisma.questions.count(),
+      prisma.companies.count(),
     ]);
 
-    const recentUsers = await prisma.user.findMany({
+    const recentUsers = await prisma.users.findMany({
       take: 5,
       orderBy: { created_at: 'desc' },
       select: {

@@ -16,7 +16,7 @@ const mockUser = {
 
 export default async function CompanyValuesPage() {
   // Get all companies with their values and criteria
-  const companies = await prisma.company.findMany({
+  const companies = await prisma.companies.findMany({
     orderBy: { name: 'asc' }
   });
 

@@ -14,7 +14,7 @@ describe('Categories Migration', () => {
 
   it('should have categories field in questions table', async () => {
     // Test that the categories field exists and is properly typed
-    const question = await prisma.question.findFirst({
+    const question = await prisma.questions.findFirst({
       where: { question_type: 'system_design' },
       select: { id: true, category: true, categories: true }
     })
@@ -26,7 +26,7 @@ describe('Categories Migration', () => {
   })
 
   it('should have all questions categorized into 4 categories', async () => {
-    const questions = await prisma.question.findMany({
+    const questions = await prisma.questions.findMany({
       where: { question_type: 'system_design' },
       select: { categories: true }
     })
@@ -53,7 +53,7 @@ describe('Categories Migration', () => {
   })
 
   it('should have proper distribution across categories', async () => {
-    const questions = await prisma.question.findMany({
+    const questions = await prisma.questions.findMany({
       where: { question_type: 'system_design' },
       select: { categories: true }
     })

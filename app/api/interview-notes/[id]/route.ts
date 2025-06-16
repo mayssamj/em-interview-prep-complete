@@ -12,7 +12,7 @@ export async function GET(
   try {
     const user = await requireAuth(request);
 
-    const note = await prisma.interviewNote.findFirst({
+    const note = await prisma.interview_notes.findFirst({
       where: {
         id: params.id,
         user_id: user.id
@@ -52,7 +52,7 @@ export async function PUT(
       interviewDate 
     } = await request.json();
 
-    const note = await prisma.interviewNote.updateMany({
+    const note = await prisma.interview_notes.updateMany({
       where: {
         id: params.id,
         user_id: user.id
@@ -95,7 +95,7 @@ export async function DELETE(
   try {
     const user = await requireAuth(request);
 
-    const result = await prisma.interviewNote.deleteMany({
+    const result = await prisma.interview_notes.deleteMany({
       where: {
         id: params.id,
         user_id: user.id

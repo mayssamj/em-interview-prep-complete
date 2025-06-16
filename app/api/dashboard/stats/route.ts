@@ -10,20 +10,20 @@ export async function GET(request: NextRequest) {
     const user = await requireAuth(request);
 
     // Get total questions count
-    const totalQuestions = await prisma.question.count();
+    const totalQuestions = await prisma.questions.count();
 
     // Get answered questions count for this user
-    const answeredQuestions = await prisma.answer.count({
+    const answeredQuestions = await prisma.answers.count({
       where: { user_id: user.id }
     });
 
     // Get total stories count for this user
-    const totalStories = await prisma.story.count({
+    const totalStories = await prisma.stories.count({
       where: { user_id: user.id }
     });
 
     // Get interview notes count for this user
-    const interviewNotes = await prisma.interviewNote.count({
+    const interviewNotes = await prisma.interview_notes.count({
       where: { user_id: user.id }
     });
 
@@ -34,7 +34,7 @@ export async function GET(request: NextRequest) {
     const sevenDaysAgo = new Date();
     sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
 
-    const recentAnswers = await prisma.answer.count({
+    const recentAnswers = await prisma.answers.count({
       where: {
         user_id: user.id,
         created_at: {
@@ -43,7 +43,7 @@ export async function GET(request: NextRequest) {
       }
     });
 
-    const recentStories = await prisma.story.count({
+    const recentStories = await prisma.stories.count({
       where: {
         user_id: user.id,
         created_at: {

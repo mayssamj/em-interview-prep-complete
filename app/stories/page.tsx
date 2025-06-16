@@ -15,7 +15,7 @@ export default async function StoriesPage() {
   }
 
   // Get user's stories
-  const stories = await prisma.story.findMany({
+  const stories = await prisma.stories.findMany({
     where: { user_id: user.id },
     orderBy: { created_at: 'desc' }
   });

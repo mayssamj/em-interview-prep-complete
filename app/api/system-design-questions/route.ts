@@ -34,7 +34,7 @@ export async function GET(request: NextRequest) {
       where.is_critical = true;
     }
 
-    const questions = await prisma.question.findMany({
+    const questions = await prisma.questions.findMany({
       where,
       include: {
         companies: true,
@@ -95,7 +95,7 @@ export async function POST(request: NextRequest) {
 
     const questionId = questionText.toLowerCase().replace(/[^a-z0-9]+/g, '_').substring(0, 50) + '_' + Math.random().toString(36).substring(2, 8);
     
-    const question = await prisma.question.create({
+    const question = await prisma.questions.create({
       data: {
         id: questionId,
         company_id: companyId,
@@ -115,7 +115,7 @@ export async function POST(request: NextRequest) {
     });
 
     // Create system design details separately
-    await prisma.systemDesignQuestion.create({
+    await prisma.system_design_questions.create({
       data: {
         id: questionId + '_system_design',
         question_id: questionId,
