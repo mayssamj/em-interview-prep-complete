@@ -25,23 +25,38 @@ import {
   TrendingUp,
   BookOpen,
   ChevronRight,
-  ExternalLink
+  ExternalLink,
+  HelpCircle,
+  Target
 } from 'lucide-react';
 
 interface SystemDesignQuestion {
   id: string;
-  question_text: string; // Fixed: Use the actual API field name
+  question_text: string;
   difficulty: string;
   category: string;
-  categories: string[]; // New: Support multiple categories
-  is_critical: boolean; // Fixed: Use the actual API field name
+  categories: string[];
+  is_critical: boolean;
   tags: string[];
-  usage_count: number; // Fixed: Use the actual API field name
+  usage_count: number;
   companies?: {
     id: string;
     name: string;
   };
   system_design_questions?: {
+    question_title?: string;
+    problem_statement?: string;
+    clarifying_questions: string[];
+    functional_requirements: string[];
+    non_functional_requirements: string[];
+    core_solution?: any;
+    references: string[];
+    back_of_envelope_calculations?: any;
+    technology_stack?: any;
+    tradeoffs?: any;
+    scalability_considerations: string[];
+    alternative_solutions: string[];
+    key_technical_criteria: string[];
     architecture_focus: string[];
     complexity_level: string;
     leadership_aspects: string[];
@@ -472,45 +487,135 @@ export function SystemDesignQuestionBankClient() {
                           <TabsTrigger value="guidance">Guidance</TabsTrigger>
                         </TabsList>
                         
-                        <TabsContent value="question" className="space-y-4">
+                        <TabsContent value="question" className="space-y-6">
                           {question.system_design_questions && (
-                            <div className="space-y-4">
-                              <div className="grid grid-cols-2 gap-4">
+                            <div className="space-y-6">
+                              {/* Problem Statement */}
+                              {question.system_design_questions.problem_statement && (
+                                <div className="bg-muted/50 p-4 rounded-lg">
+                                  <h4 className="font-medium mb-2">Problem Statement</h4>
+                                  <p className="text-sm leading-relaxed">{question.system_design_questions.problem_statement}</p>
+                                </div>
+                              )}
+
+                              {/* Clarifying Questions */}
+                              {question.system_design_questions.clarifying_questions?.length > 0 && (
                                 <div>
-                                  <h4 className="font-medium mb-2">Architecture Focus</h4>
-                                  <div className="flex flex-wrap gap-1">
-                                    {question.system_design_questions.architecture_focus.map((focus, index) => (
-                                      <Badge key={index} variant="outline">{focus}</Badge>
+                                  <h4 className="font-medium mb-3 flex items-center gap-2">
+                                    <HelpCircle className="h-4 w-4" />
+                                    Clarifying Questions to Ask
+                                  </h4>
+                                  <ul className="list-disc list-inside text-sm space-y-1 pl-4">
+                                    {question.system_design_questions.clarifying_questions.map((q, index) => (
+                                      <li key={index}>{q}</li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
+
+                              {/* Requirements */}
+                              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                {question.system_design_questions.functional_requirements?.length > 0 && (
+                                  <div>
+                                    <h4 className="font-medium mb-3">Functional Requirements</h4>
+                                    <ul className="list-disc list-inside text-sm space-y-1">
+                                      {question.system_design_questions.functional_requirements.map((req, index) => (
+                                        <li key={index}>{req}</li>
+                                      ))}
+                                    </ul>
+                                  </div>
+                                )}
+
+                                {question.system_design_questions.non_functional_requirements?.length > 0 && (
+                                  <div>
+                                    <h4 className="font-medium mb-3">Non-Functional Requirements</h4>
+                                    <ul className="list-disc list-inside text-sm space-y-1">
+                                      {question.system_design_questions.non_functional_requirements.map((req, index) => (
+                                        <li key={index}>{req}</li>
+                                      ))}
+                                    </ul>
+                                  </div>
+                                )}
+                              </div>
+
+                              {/* Core Solution */}
+                              {question.system_design_questions.core_solution && (
+                                <div>
+                                  <h4 className="font-medium mb-3">Core Solution Approach</h4>
+                                  <div className="bg-muted/30 p-4 rounded-lg space-y-3">
+                                    {question.system_design_questions.core_solution.architecture && (
+                                      <div>
+                                        <span className="font-medium text-sm">Architecture: </span>
+                                        <span className="text-sm">{question.system_design_questions.core_solution.architecture}</span>
+                                      </div>
+                                    )}
+                                    {question.system_design_questions.core_solution.key_components && (
+                                      <div>
+                                        <span className="font-medium text-sm">Key Components: </span>
+                                        <ul className="list-disc list-inside text-sm mt-1">
+                                          {question.system_design_questions.core_solution.key_components.map((comp: string, index: number) => (
+                                            <li key={index}>{comp}</li>
+                                          ))}
+                                        </ul>
+                                      </div>
+                                    )}
+                                  </div>
+                                </div>
+                              )}
+
+                              {/* Back of Envelope Calculations */}
+                              {question.system_design_questions.back_of_envelope_calculations && (
+                                <div>
+                                  <h4 className="font-medium mb-3">Back-of-Envelope Calculations</h4>
+                                  <div className="bg-blue-50 dark:bg-blue-950/20 p-4 rounded-lg space-y-2">
+                                    {Object.entries(question.system_design_questions.back_of_envelope_calculations).map(([key, value]) => (
+                                      <div key={key}>
+                                        <span className="font-medium text-sm capitalize">{key.replace(/_/g, ' ')}: </span>
+                                        <span className="text-sm">{value as string}</span>
+                                      </div>
                                     ))}
                                   </div>
                                 </div>
+                              )}
+
+                              {/* Technology Stack */}
+                              {question.system_design_questions.technology_stack && (
                                 <div>
-                                  <h4 className="font-medium mb-2">Frameworks</h4>
-                                  <div className="flex flex-wrap gap-1">
-                                    {question.system_design_questions.frameworks.map((framework, index) => (
-                                      <Badge key={index} variant="secondary">{framework}</Badge>
+                                  <h4 className="font-medium mb-3">Technology Stack Options</h4>
+                                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    {Object.entries(question.system_design_questions.technology_stack).map(([category, technologies]) => (
+                                      <div key={category} className="bg-muted/30 p-3 rounded-lg">
+                                        <span className="font-medium text-sm capitalize block mb-2">{category.replace(/_/g, ' ')}</span>
+                                        <span className="text-sm">{technologies as string}</span>
+                                      </div>
                                     ))}
                                   </div>
                                 </div>
-                              </div>
-                              
-                              <div>
-                                <h4 className="font-medium mb-2">Leadership Aspects</h4>
-                                <ul className="list-disc list-inside text-sm space-y-1">
-                                  {question.system_design_questions.leadership_aspects.map((aspect, index) => (
-                                    <li key={index}>{aspect}</li>
-                                  ))}
-                                </ul>
-                              </div>
-                              
-                              <div>
-                                <h4 className="font-medium mb-2">Key Tradeoffs to Discuss</h4>
-                                <ul className="list-disc list-inside text-sm space-y-1">
-                                  {question.system_design_questions.key_tradeoffs.map((tradeoff, index) => (
-                                    <li key={index}>{tradeoff}</li>
-                                  ))}
-                                </ul>
-                              </div>
+                              )}
+
+                              {/* Scalability Considerations */}
+                              {question.system_design_questions.scalability_considerations?.length > 0 && (
+                                <div>
+                                  <h4 className="font-medium mb-3">Scalability Considerations</h4>
+                                  <ul className="list-disc list-inside text-sm space-y-1">
+                                    {question.system_design_questions.scalability_considerations.map((consideration, index) => (
+                                      <li key={index}>{consideration}</li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
+
+                              {/* Alternative Solutions */}
+                              {question.system_design_questions.alternative_solutions?.length > 0 && (
+                                <div>
+                                  <h4 className="font-medium mb-3">Alternative Solutions</h4>
+                                  <ul className="list-disc list-inside text-sm space-y-1">
+                                    {question.system_design_questions.alternative_solutions.map((solution, index) => (
+                                      <li key={index}>{solution}</li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
                             </div>
                           )}
                         </TabsContent>
@@ -576,45 +681,104 @@ export function SystemDesignQuestionBankClient() {
                           </div>
                         </TabsContent>
                         
-                        <TabsContent value="guidance" className="space-y-4">
+                        <TabsContent value="guidance" className="space-y-6">
                           {question.system_design_questions && (
-                            <div className="space-y-4">
-                              <div>
-                                <h4 className="font-medium mb-2 flex items-center gap-2">
-                                  <Shield className="h-4 w-4" />
-                                  Common Mistakes to Avoid
-                                </h4>
-                                <ul className="list-disc list-inside text-sm space-y-1">
-                                  {question.system_design_questions.common_mistakes.map((mistake, index) => (
-                                    <li key={index}>{mistake}</li>
-                                  ))}
-                                </ul>
-                              </div>
-                              
-                              <div>
-                                <h4 className="font-medium mb-2">Follow-up Questions</h4>
-                                <ul className="list-disc list-inside text-sm space-y-1">
-                                  {question.system_design_questions.follow_up_questions.map((followUp, index) => (
-                                    <li key={index}>{followUp}</li>
-                                  ))}
-                                </ul>
-                              </div>
-                              
-                              {question.system_design_questions.resources.length > 0 && (
+                            <div className="space-y-6">
+                              {/* Key Technical Criteria */}
+                              {question.system_design_questions.key_technical_criteria?.length > 0 && (
                                 <div>
-                                  <h4 className="font-medium mb-2 flex items-center gap-2">
+                                  <h4 className="font-medium mb-3 flex items-center gap-2">
+                                    <Target className="h-4 w-4" />
+                                    Key Technical Criteria
+                                  </h4>
+                                  <ul className="list-disc list-inside text-sm space-y-1 bg-green-50 dark:bg-green-950/20 p-4 rounded-lg">
+                                    {question.system_design_questions.key_technical_criteria.map((criteria, index) => (
+                                      <li key={index}>{criteria}</li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
+
+                              {/* Tradeoffs */}
+                              {question.system_design_questions.tradeoffs && Object.keys(question.system_design_questions.tradeoffs).length > 0 && (
+                                <div>
+                                  <h4 className="font-medium mb-3 flex items-center gap-2">
+                                    <TrendingUp className="h-4 w-4" />
+                                    Key Tradeoffs to Discuss
+                                  </h4>
+                                  <div className="space-y-3">
+                                    {Object.entries(question.system_design_questions.tradeoffs).map(([tradeoff, description]) => (
+                                      <div key={tradeoff} className="bg-yellow-50 dark:bg-yellow-950/20 p-3 rounded-lg">
+                                        <span className="font-medium text-sm block mb-1">{tradeoff.replace(/_/g, ' ').toUpperCase()}</span>
+                                        <span className="text-sm">{description as string}</span>
+                                      </div>
+                                    ))}
+                                  </div>
+                                </div>
+                              )}
+
+                              {/* Common Mistakes */}
+                              {question.system_design_questions.common_mistakes?.length > 0 && (
+                                <div>
+                                  <h4 className="font-medium mb-3 flex items-center gap-2">
+                                    <Shield className="h-4 w-4" />
+                                    Common Mistakes to Avoid
+                                  </h4>
+                                  <ul className="list-disc list-inside text-sm space-y-1 bg-red-50 dark:bg-red-950/20 p-4 rounded-lg">
+                                    {question.system_design_questions.common_mistakes.map((mistake, index) => (
+                                      <li key={index}>{mistake}</li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
+                              
+                              {/* Follow-up Questions */}
+                              {question.system_design_questions.follow_up_questions?.length > 0 && (
+                                <div>
+                                  <h4 className="font-medium mb-3 flex items-center gap-2">
+                                    <HelpCircle className="h-4 w-4" />
+                                    Follow-up Questions
+                                  </h4>
+                                  <ul className="list-disc list-inside text-sm space-y-1 bg-blue-50 dark:bg-blue-950/20 p-4 rounded-lg">
+                                    {question.system_design_questions.follow_up_questions.map((followUp, index) => (
+                                      <li key={index}>{followUp}</li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
+
+                              {/* Leadership Aspects */}
+                              {question.system_design_questions.leadership_aspects?.length > 0 && (
+                                <div>
+                                  <h4 className="font-medium mb-3 flex items-center gap-2">
+                                    <Users className="h-4 w-4" />
+                                    Leadership Aspects to Demonstrate
+                                  </h4>
+                                  <ul className="list-disc list-inside text-sm space-y-1 bg-purple-50 dark:bg-purple-950/20 p-4 rounded-lg">
+                                    {question.system_design_questions.leadership_aspects.map((aspect, index) => (
+                                      <li key={index}>{aspect}</li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
+                              
+                              {/* Study Resources */}
+                              {question.system_design_questions.references?.length > 0 && (
+                                <div>
+                                  <h4 className="font-medium mb-3 flex items-center gap-2">
                                     <ExternalLink className="h-4 w-4" />
                                     Study Resources
                                   </h4>
-                                  <ul className="space-y-1">
-                                    {question.system_design_questions.resources.map((resource, index) => (
+                                  <ul className="space-y-2">
+                                    {question.system_design_questions.references.map((resource, index) => (
                                       <li key={index}>
                                         <a 
                                           href={resource} 
                                           target="_blank" 
                                           rel="noopener noreferrer"
-                                          className="text-sm text-blue-600 hover:underline"
+                                          className="text-sm text-blue-600 hover:underline flex items-center gap-1"
                                         >
+                                          <ExternalLink className="h-3 w-3" />
                                           {resource}
                                         </a>
                                       </li>

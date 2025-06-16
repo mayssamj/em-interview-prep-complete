@@ -168,8 +168,8 @@ export function Header({ user, selectedCompany, onCompanyChange, onSearch }: Hea
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1 overflow-x-auto scrollbar-hide">
-            <div className="flex items-center space-x-1 min-w-max">
+          <nav className="hidden lg:flex items-center">
+            <div className="flex flex-wrap items-center gap-1 max-w-2xl">
               {navigationItems.map((item) => {
                 const Icon = item.icon;
                 const isActive = isActivePath(item.path);
@@ -180,10 +180,10 @@ export function Header({ user, selectedCompany, onCompanyChange, onSearch }: Hea
                     variant={isActive ? "default" : "ghost"}
                     size="sm"
                     onClick={() => router.push(item.path)}
-                    className="flex items-center gap-1 whitespace-nowrap"
+                    className="flex items-center gap-1 whitespace-nowrap text-xs"
                   >
-                    <Icon className="h-4 w-4" />
-                    <span className="hidden xl:inline text-xs">{item.label}</span>
+                    <Icon className="h-3 w-3" />
+                    <span className="hidden xl:inline">{item.label}</span>
                   </Button>
                 );
               })}
@@ -193,7 +193,7 @@ export function Header({ user, selectedCompany, onCompanyChange, onSearch }: Hea
                   variant={pathname === '/admin' ? "default" : "ghost"}
                   size="sm"
                   onClick={() => router.push('/admin')}
-                  className="whitespace-nowrap"
+                  className="whitespace-nowrap text-xs"
                 >
                   Admin
                 </Button>

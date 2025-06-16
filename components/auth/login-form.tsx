@@ -165,27 +165,16 @@ export function LoginForm({ onSuccess }: LoginFormProps) {
 
         {isLogin && (
           <div className="mt-4 space-y-2">
-            <p className="text-sm font-medium text-center">Try Demo Accounts:</p>
-            <div className="space-y-2">
-              <Button
-                variant="outline"
-                size="sm"
-                className="w-full"
-                onClick={() => handleDemoLogin('mayssam', 'password123')}
-                disabled={isLoading}
-              >
-                Demo User Login
-              </Button>
-              <Button
-                variant="outline"
-                size="sm"
-                className="w-full"
-                onClick={() => handleDemoLogin('admin', 'adminadmin')}
-                disabled={isLoading}
-              >
-                Admin Demo Login
-              </Button>
-            </div>
+            <p className="text-sm font-medium text-center">Try Demo Account:</p>
+            <Button
+              variant="outline"
+              size="sm"
+              className="w-full"
+              onClick={() => handleDemoLogin('mayssam', 'password123')}
+              disabled={isLoading}
+            >
+              Demo User Login
+            </Button>
           </div>
         )}
       </CardContent>
