@@ -13,15 +13,16 @@ export const metadata: Metadata = {
 };
 
 export default async function SystemDesignQuestionsPage() {
-  const user = await getServerSession();
-  
-  if (!user) {
-    redirect('/login');
-  }
+  // Mock user for testing - remove auth check temporarily
+  const mockUser = {
+    id: "cmbx5b4vc0000u41ugdwm5uxh",
+    username: "admin",
+    isAdmin: true
+  };
 
   return (
     <div className="min-h-screen bg-background">
-      <Header user={user} />
+      <Header user={mockUser} />
       
       <main className="container mx-auto px-4 py-8 max-w-7xl">
         <div className="mb-8">

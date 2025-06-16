@@ -15,29 +15,33 @@ export async function GET() {
 
     // Map database categories to display categories
     const categoryMap = {
-      'distributed_systems_infrastructure': {
+      'Distributed Systems & Infrastructure': {
+        id: 'distributed_systems_infrastructure',
         name: 'Distributed Systems & Infrastructure',
         description: 'Large-scale distributed systems, infrastructure design, CDNs, monitoring systems'
       },
-      'data_ai_ml_systems': {
+      'Data & AI/ML Systems': {
+        id: 'data_ai_ml_systems',
         name: 'Data & AI/ML Systems', 
         description: 'Data platforms, AI/ML systems, search engines, recommendation systems'
       },
-      'real_time_communication_systems': {
+      'Real-time & Communication Systems': {
+        id: 'real_time_communication_systems',
         name: 'Real-time & Communication Systems',
         description: 'Real-time systems, messaging, streaming, social networks, collaboration tools'
       },
-      'product_platform_systems': {
+      'Product & Platform Systems': {
+        id: 'product_platform_systems',
         name: 'Product & Platform Systems',
         description: 'E-commerce, startup systems, content platforms, geospatial systems'
       }
     };
 
     // Build categories with actual counts
-    const categories = Object.entries(categoryMap).map(([key, info]) => {
-      const countData = categoryCounts.find(c => c.category === key);
+    const categories = Object.entries(categoryMap).map(([dbCategory, info]) => {
+      const countData = categoryCounts.find(c => c.category === dbCategory);
       return {
-        id: key,
+        id: info.id,
         name: info.name,
         description: info.description,
         count: countData?._count.category || 0

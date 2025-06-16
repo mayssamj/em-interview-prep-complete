@@ -170,7 +170,7 @@ export function LoginForm({ onSuccess }: LoginFormProps) {
               variant="outline"
               size="sm"
               className="w-full"
-              onClick={() => handleDemoLogin('mayssam', 'password123')}
+              onClick={() => handleDemoLogin('demo', 'demodemo')}
               disabled={isLoading}
             >
               Demo User Login

@@ -11,7 +11,7 @@ export const dynamic = 'force-dynamic';
 export default async function StoryTemplatesPage() {
   // Mock user for testing - remove auth check temporarily
   const mockUser = {
-    id: "user_admin",
+    id: "cmbx5b4vc0000u41ugdwm5uxh",
     username: "admin",
     isAdmin: true
   };
@@ -41,7 +41,15 @@ export default async function StoryTemplatesPage() {
 
           {/* Story Templates Content */}
           <StoryTemplatesClient userStories={userStories.map(s => ({
-            ...s,
+            id: s.id,
+            title: s.title,
+            situation: s.situation,
+            task: s.task,
+            action: s.action,
+            result: s.result,
+            reflection: s.reflection,
+            tags: s.tags || [],
+            categories: s.categories || [],
             createdAt: s.created_at
           }))} userId={mockUser.id} />
         </div>

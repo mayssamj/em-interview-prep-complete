@@ -17,12 +17,8 @@ export async function GET(request: NextRequest) {
     };
 
     if (company && company !== 'all') {
-      where.companies = {
-        name: {
-          contains: company,
-          mode: 'insensitive'
-        }
-      };
+      // For now, filter by company name directly in the include
+      // This will be handled in the include clause below
     }
 
     if (difficulty && difficulty !== 'all') {
@@ -30,21 +26,8 @@ export async function GET(request: NextRequest) {
     }
 
     if (category && category !== 'all') {
-      // Map display names to database category keys
-      const categoryMap = {
-        'Distributed Systems & Infrastructure': 'distributed_systems_infrastructure',
-        'Data & AI/ML Systems': 'data_ai_ml_systems',
-        'Real-time & Communication Systems': 'real_time_communication_systems',
-        'Product & Platform Systems': 'product_platform_systems'
-      };
-      
-      const dbCategory = categoryMap[category] || category;
-      
-      // Support both category field and categories array
-      where.OR = [
-        { category: dbCategory },
-        { categories: { has: category } }
-      ];
+      // Use the actual category name as stored in database
+      where.category = category;
     }
 
     if (critical === 'true') {
@@ -70,7 +53,15 @@ export async function GET(request: NextRequest) {
       ]
     });
 
-    return NextResponse.json(questions);
+    // Filter by company name if specified
+    let filteredQuestions = questions;
+    if (company && company !== 'all') {
+      filteredQuestions = questions.filter(q => 
+        q.companies?.name === company
+      );
+    }
+
+    return NextResponse.json(filteredQuestions);
   } catch (error) {
     console.error('Error fetching system design questions:', error);
     return NextResponse.json(
