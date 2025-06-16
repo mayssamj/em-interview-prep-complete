@@ -1,0 +1,2067 @@
+{
+  "config": {
+    "configFile": "/home/ubuntu/em-interview-prep/playwright.config.ts",
+    "rootDir": "/home/ubuntu/em-interview-prep/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 4
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/home/ubuntu/em-interview-prep/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/ubuntu/em-interview-prep/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.53.0",
+    "workers": 4,
+    "webServer": {
+      "command": "npm run dev",
+      "port": 3000,
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "api.spec.ts",
+      "file": "api.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "API Endpoints",
+          "file": "api.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should return system design questions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 59,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:42:43.166Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-381df24969806dcc6aba",
+              "file": "api.spec.ts",
+              "line": 5,
+              "column": 7
+            },
+            {
+              "title": "should return system design frameworks",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 75,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:42:43.134Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-ee6c57a9cadc9c27a5d3",
+              "file": "api.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "should return companies",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 74,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:42:43.138Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-e9ce1938c1053082016a",
+              "file": "api.spec.ts",
+              "line": 22,
+              "column": 7
+            },
+            {
+              "title": "should return questions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 84,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:42:43.136Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-179a884903afa3170d61",
+              "file": "api.spec.ts",
+              "line": 32,
+              "column": 7
+            },
+            {
+              "title": "should handle login API",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 216,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:42:43.223Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-dce5d8feef0034c00323",
+              "file": "api.spec.ts",
+              "line": 41,
+              "column": 7
+            },
+            {
+              "title": "should handle invalid login",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 88,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:42:43.226Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-4758f1b383bf917b4656",
+              "file": "api.spec.ts",
+              "line": 56,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "auth.spec.ts",
+      "file": "auth.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Authentication Flow",
+          "file": "auth.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should login successfully with admin credentials",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 453,
+                      "error": {
+                        "message": "Error: expect.toBeVisible: Error: strict mode violation: locator('text=Sign In') resolved to 2 elements:\n    1) <h3 class=\"text-2xl font-semibold leading-none tracking-tight flex items-center justify-center gap-2\">…</h3> aka getByRole('heading', { name: 'Sign In' })\n    2) <button type=\"submit\" class=\"inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full\">Sign In</button> aka getByRole('button', { name: 'Sign In' })\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=Sign In')\u001b[22m\n",
+                        "stack": "Error: expect.toBeVisible: Error: strict mode violation: locator('text=Sign In') resolved to 2 elements:\n    1) <h3 class=\"text-2xl font-semibold leading-none tracking-tight flex items-center justify-center gap-2\">…</h3> aka getByRole('heading', { name: 'Sign In' })\n    2) <button type=\"submit\" class=\"inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full\">Sign In</button> aka getByRole('button', { name: 'Sign In' })\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=Sign In')\u001b[22m\n\n    at /home/ubuntu/em-interview-prep/tests/auth.spec.ts:10:48",
+                        "location": {
+                          "file": "/home/ubuntu/em-interview-prep/tests/auth.spec.ts",
+                          "column": 48,
+                          "line": 10
+                        },
+                        "snippet": "   8 |     // Check login page loads\n   9 |     await expect(page.locator('h1')).toContainText('EM Interview Prep');\n> 10 |     await expect(page.locator('text=Sign In')).toBeVisible();\n     |                                                ^\n  11 |     \n  12 |     // Fill login form\n  13 |     await page.fill('input[placeholder=\"Username\"]', 'admin');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ubuntu/em-interview-prep/tests/auth.spec.ts",
+                            "column": 48,
+                            "line": 10
+                          },
+                          "message": "Error: expect.toBeVisible: Error: strict mode violation: locator('text=Sign In') resolved to 2 elements:\n    1) <h3 class=\"text-2xl font-semibold leading-none tracking-tight flex items-center justify-center gap-2\">…</h3> aka getByRole('heading', { name: 'Sign In' })\n    2) <button type=\"submit\" class=\"inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full\">Sign In</button> aka getByRole('button', { name: 'Sign In' })\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=Sign In')\u001b[22m\n\n\n   8 |     // Check login page loads\n   9 |     await expect(page.locator('h1')).toContainText('EM Interview Prep');\n> 10 |     await expect(page.locator('text=Sign In')).toBeVisible();\n     |                                                ^\n  11 |     \n  12 |     // Fill login form\n  13 |     await page.fill('input[placeholder=\"Username\"]', 'admin');\n    at /home/ubuntu/em-interview-prep/tests/auth.spec.ts:10:48"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:42:43.236Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/auth-Authentication-Flow-s-f5d89-ully-with-admin-credentials-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/auth-Authentication-Flow-s-f5d89-ully-with-admin-credentials-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/auth-Authentication-Flow-s-f5d89-ully-with-admin-credentials-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ubuntu/em-interview-prep/tests/auth.spec.ts",
+                        "column": 48,
+                        "line": 10
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d748ac400d08b85935ef-77aa7cf8b459de64e5a7",
+              "file": "auth.spec.ts",
+              "line": 5,
+              "column": 7
+            },
+            {
+              "title": "should show error for invalid credentials",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 5747,
+                      "error": {
+                        "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('text=Invalid username or password')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=Invalid username or password')\u001b[22m\n",
+                        "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('text=Invalid username or password')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=Invalid username or password')\u001b[22m\n\n    at /home/ubuntu/em-interview-prep/tests/auth.spec.ts:35:69",
+                        "location": {
+                          "file": "/home/ubuntu/em-interview-prep/tests/auth.spec.ts",
+                          "column": 69,
+                          "line": 35
+                        },
+                        "snippet": "  33 |     \n  34 |     // Should show error message\n> 35 |     await expect(page.locator('text=Invalid username or password')).toBeVisible();\n     |                                                                     ^\n  36 |   });\n  37 |\n  38 |   test('should logout successfully', async ({ page }) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ubuntu/em-interview-prep/tests/auth.spec.ts",
+                            "column": 69,
+                            "line": 35
+                          },
+                          "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('text=Invalid username or password')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=Invalid username or password')\u001b[22m\n\n\n  33 |     \n  34 |     // Should show error message\n> 35 |     await expect(page.locator('text=Invalid username or password')).toBeVisible();\n     |                                                                     ^\n  36 |   });\n  37 |\n  38 |   test('should logout successfully', async ({ page }) => {\n    at /home/ubuntu/em-interview-prep/tests/auth.spec.ts:35:69"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:42:43.242Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/auth-Authentication-Flow-s-c1b41-ror-for-invalid-credentials-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/auth-Authentication-Flow-s-c1b41-ror-for-invalid-credentials-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/auth-Authentication-Flow-s-c1b41-ror-for-invalid-credentials-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ubuntu/em-interview-prep/tests/auth.spec.ts",
+                        "column": 69,
+                        "line": 35
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d748ac400d08b85935ef-05954164880eaca3a0f9",
+              "file": "auth.spec.ts",
+              "line": 24,
+              "column": 7
+            },
+            {
+              "title": "should logout successfully",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "timedOut",
+                      "duration": 31151,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/ubuntu/em-interview-prep/tests/auth.spec.ts",
+                            "column": 16,
+                            "line": 49
+                          },
+                          "message": "Error: page.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Logout\")')\u001b[22m\n\n\n  47 |     \n  48 |     // Logout\n> 49 |     await page.click('button:has-text(\"Logout\")');\n     |                ^\n  50 |     \n  51 |     // Should redirect to login\n  52 |     await expect(page).toHaveURL('/login');\n    at /home/ubuntu/em-interview-prep/tests/auth.spec.ts:49:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:42:43.322Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/auth-Authentication-Flow-should-logout-successfully-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/auth-Authentication-Flow-should-logout-successfully-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/auth-Authentication-Flow-should-logout-successfully-chromium/error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d748ac400d08b85935ef-c0ce6ccc7b7e02794edb",
+              "file": "auth.spec.ts",
+              "line": 38,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "company-values.spec.ts",
+      "file": "company-values.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Company Values",
+          "file": "company-values.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should load company values page successfully",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 882,
+                      "error": {
+                        "message": "Error: expect.toContainText: Error: strict mode violation: locator('h1') resolved to 2 elements:\n    1) <h1 class=\"text-lg lg:text-xl font-bold cursor-pointer hover:text-primary transition-colors whitespace-nowrap\">EM Interview Prep</h1> aka getByRole('heading', { name: 'EM Interview Prep' })\n    2) <h1 class=\"text-4xl font-bold tracking-tight\">Company Values</h1> aka getByRole('heading', { name: 'Company Values' })\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n",
+                        "stack": "Error: expect.toContainText: Error: strict mode violation: locator('h1') resolved to 2 elements:\n    1) <h1 class=\"text-lg lg:text-xl font-bold cursor-pointer hover:text-primary transition-colors whitespace-nowrap\">EM Interview Prep</h1> aka getByRole('heading', { name: 'EM Interview Prep' })\n    2) <h1 class=\"text-4xl font-bold tracking-tight\">Company Values</h1> aka getByRole('heading', { name: 'Company Values' })\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n\n    at /home/ubuntu/em-interview-prep/tests/company-values.spec.ts:18:38",
+                        "location": {
+                          "file": "/home/ubuntu/em-interview-prep/tests/company-values.spec.ts",
+                          "column": 38,
+                          "line": 18
+                        },
+                        "snippet": "  16 |     \n  17 |     // Check page loads\n> 18 |     await expect(page.locator('h1')).toContainText('Company Values');\n     |                                      ^\n  19 |     \n  20 |     // Check companies are loaded\n  21 |     await expect(page.locator('[data-testid=\"company-card\"]').first()).toBeVisible({ timeout: 10000 });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ubuntu/em-interview-prep/tests/company-values.spec.ts",
+                            "column": 38,
+                            "line": 18
+                          },
+                          "message": "Error: expect.toContainText: Error: strict mode violation: locator('h1') resolved to 2 elements:\n    1) <h1 class=\"text-lg lg:text-xl font-bold cursor-pointer hover:text-primary transition-colors whitespace-nowrap\">EM Interview Prep</h1> aka getByRole('heading', { name: 'EM Interview Prep' })\n    2) <h1 class=\"text-4xl font-bold tracking-tight\">Company Values</h1> aka getByRole('heading', { name: 'Company Values' })\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n\n\n  16 |     \n  17 |     // Check page loads\n> 18 |     await expect(page.locator('h1')).toContainText('Company Values');\n     |                                      ^\n  19 |     \n  20 |     // Check companies are loaded\n  21 |     await expect(page.locator('[data-testid=\"company-card\"]').first()).toBeVisible({ timeout: 10000 });\n    at /home/ubuntu/em-interview-prep/tests/company-values.spec.ts:18:38"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:42:43.451Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/company-values-Company-Val-17ea1-ny-values-page-successfully-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/company-values-Company-Val-17ea1-ny-values-page-successfully-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/company-values-Company-Val-17ea1-ny-values-page-successfully-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ubuntu/em-interview-prep/tests/company-values.spec.ts",
+                        "column": 38,
+                        "line": 18
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "fdcda7340fbac6227d3d-f07809fa8a7e1f941dc4",
+              "file": "company-values.spec.ts",
+              "line": 14,
+              "column": 7
+            },
+            {
+              "title": "should filter companies",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 10926,
+                      "error": {
+                        "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('[data-testid=\"company-card\"]').first()\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-testid=\"company-card\"]').first()\u001b[22m\n",
+                        "stack": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('[data-testid=\"company-card\"]').first()\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-testid=\"company-card\"]').first()\u001b[22m\n\n    at /home/ubuntu/em-interview-prep/tests/company-values.spec.ts:28:72",
+                        "location": {
+                          "file": "/home/ubuntu/em-interview-prep/tests/company-values.spec.ts",
+                          "column": 72,
+                          "line": 28
+                        },
+                        "snippet": "  26 |     \n  27 |     // Wait for companies to load\n> 28 |     await expect(page.locator('[data-testid=\"company-card\"]').first()).toBeVisible({ timeout: 10000 });\n     |                                                                        ^\n  29 |     \n  30 |     // Test search if available\n  31 |     const searchInput = page.locator('input[placeholder*=\"Search\"]');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ubuntu/em-interview-prep/tests/company-values.spec.ts",
+                            "column": 72,
+                            "line": 28
+                          },
+                          "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('[data-testid=\"company-card\"]').first()\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-testid=\"company-card\"]').first()\u001b[22m\n\n\n  26 |     \n  27 |     // Wait for companies to load\n> 28 |     await expect(page.locator('[data-testid=\"company-card\"]').first()).toBeVisible({ timeout: 10000 });\n     |                                                                        ^\n  29 |     \n  30 |     // Test search if available\n  31 |     const searchInput = page.locator('input[placeholder*=\"Search\"]');\n    at /home/ubuntu/em-interview-prep/tests/company-values.spec.ts:28:72"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:42:45.038Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/company-values-Company-Values-should-filter-companies-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/company-values-Company-Values-should-filter-companies-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/company-values-Company-Values-should-filter-companies-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ubuntu/em-interview-prep/tests/company-values.spec.ts",
+                        "column": 72,
+                        "line": 28
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "fdcda7340fbac6227d3d-c7a7b4c83786ff96c234",
+              "file": "company-values.spec.ts",
+              "line": 24,
+              "column": 7
+            },
+            {
+              "title": "should display company details",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 10954,
+                      "error": {
+                        "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('[data-testid=\"company-card\"]').first()\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-testid=\"company-card\"]').first()\u001b[22m\n",
+                        "stack": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('[data-testid=\"company-card\"]').first()\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-testid=\"company-card\"]').first()\u001b[22m\n\n    at /home/ubuntu/em-interview-prep/tests/company-values.spec.ts:45:72",
+                        "location": {
+                          "file": "/home/ubuntu/em-interview-prep/tests/company-values.spec.ts",
+                          "column": 72,
+                          "line": 45
+                        },
+                        "snippet": "  43 |     \n  44 |     // Wait for companies to load\n> 45 |     await expect(page.locator('[data-testid=\"company-card\"]').first()).toBeVisible({ timeout: 10000 });\n     |                                                                        ^\n  46 |     \n  47 |     // Check that company cards have expected content\n  48 |     const firstCard = page.locator('[data-testid=\"company-card\"]').first();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ubuntu/em-interview-prep/tests/company-values.spec.ts",
+                            "column": 72,
+                            "line": 45
+                          },
+                          "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('[data-testid=\"company-card\"]').first()\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-testid=\"company-card\"]').first()\u001b[22m\n\n\n  43 |     \n  44 |     // Wait for companies to load\n> 45 |     await expect(page.locator('[data-testid=\"company-card\"]').first()).toBeVisible({ timeout: 10000 });\n     |                                                                        ^\n  46 |     \n  47 |     // Check that company cards have expected content\n  48 |     const firstCard = page.locator('[data-testid=\"company-card\"]').first();\n    at /home/ubuntu/em-interview-prep/tests/company-values.spec.ts:45:72"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:42:45.647Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/company-values-Company-Values-should-display-company-details-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/company-values-Company-Values-should-display-company-details-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/company-values-Company-Values-should-display-company-details-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ubuntu/em-interview-prep/tests/company-values.spec.ts",
+                        "column": 72,
+                        "line": 45
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "fdcda7340fbac6227d3d-ea78bc68df86f9359526",
+              "file": "company-values.spec.ts",
+              "line": 41,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "comprehensive-e2e.spec.ts",
+      "file": "comprehensive-e2e.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "EM Interview Prep - Comprehensive E2E Tests",
+          "file": "comprehensive-e2e.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should load login page successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 247,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:42:50.253Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ceae8d42728a3fcdf4bb-a9330aa8c3a0f61fa161",
+              "file": "comprehensive-e2e.spec.ts",
+              "line": 6,
+              "column": 7
+            },
+            {
+              "title": "should login successfully with admin credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 504,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:42:50.674Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ceae8d42728a3fcdf4bb-d785ab405c5282456b71",
+              "file": "comprehensive-e2e.spec.ts",
+              "line": 15,
+              "column": 7
+            },
+            {
+              "title": "should navigate to all main pages without errors",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 8312,
+                      "error": {
+                        "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected string: \u001b[32m\"http://localhost:3000/\u001b[7mstories\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"http://localhost:3000/\u001b[7mlogin\u001b[27m\"\u001b[39m\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m    9 × locator resolved to <html lang=\"en\" class=\"light\">…</html>\u001b[22m\n\u001b[2m      - unexpected value \"http://localhost:3000/login\"\u001b[22m\n",
+                        "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected string: \u001b[32m\"http://localhost:3000/\u001b[7mstories\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"http://localhost:3000/\u001b[7mlogin\u001b[27m\"\u001b[39m\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m    9 × locator resolved to <html lang=\"en\" class=\"light\">…</html>\u001b[22m\n\u001b[2m      - unexpected value \"http://localhost:3000/login\"\u001b[22m\n\n    at /home/ubuntu/em-interview-prep/tests/comprehensive-e2e.spec.ts:54:26",
+                        "location": {
+                          "file": "/home/ubuntu/em-interview-prep/tests/comprehensive-e2e.spec.ts",
+                          "column": 26,
+                          "line": 54
+                        },
+                        "snippet": "  52 |     for (const url of pages) {\n  53 |       await page.goto(url);\n> 54 |       await expect(page).toHaveURL(url);\n     |                          ^\n  55 |       \n  56 |       // Wait for page to load\n  57 |       await page.waitForLoadState('networkidle');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ubuntu/em-interview-prep/tests/comprehensive-e2e.spec.ts",
+                            "column": 26,
+                            "line": 54
+                          },
+                          "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected string: \u001b[32m\"http://localhost:3000/\u001b[7mstories\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"http://localhost:3000/\u001b[7mlogin\u001b[27m\"\u001b[39m\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m    9 × locator resolved to <html lang=\"en\" class=\"light\">…</html>\u001b[22m\n\u001b[2m      - unexpected value \"http://localhost:3000/login\"\u001b[22m\n\n\n  52 |     for (const url of pages) {\n  53 |       await page.goto(url);\n> 54 |       await expect(page).toHaveURL(url);\n     |                          ^\n  55 |       \n  56 |       // Wait for page to load\n  57 |       await page.waitForLoadState('networkidle');\n    at /home/ubuntu/em-interview-prep/tests/comprehensive-e2e.spec.ts:54:26"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:42:51.184Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/comprehensive-e2e-EM-Inter-9202e-l-main-pages-without-errors-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/comprehensive-e2e-EM-Inter-9202e-l-main-pages-without-errors-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/comprehensive-e2e-EM-Inter-9202e-l-main-pages-without-errors-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ubuntu/em-interview-prep/tests/comprehensive-e2e.spec.ts",
+                        "column": 26,
+                        "line": 54
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ceae8d42728a3fcdf4bb-4a98ce650db9a93e5a69",
+              "file": "comprehensive-e2e.spec.ts",
+              "line": 32,
+              "column": 7
+            },
+            {
+              "title": "should test header navigation links",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 3,
+                      "status": "timedOut",
+                      "duration": 31030,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/ubuntu/em-interview-prep/tests/comprehensive-e2e.spec.ts",
+                            "column": 18,
+                            "line": 93
+                          },
+                          "message": "Error: page.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Question Bank')\u001b[22m\n\n\n  91 |     for (const link of navLinks) {\n  92 |       // Click the navigation link\n> 93 |       await page.click(`text=${link.text}`);\n     |                  ^\n  94 |       \n  95 |       // Wait for navigation\n  96 |       await page.waitForURL(link.url, { timeout: 5000 });\n    at /home/ubuntu/em-interview-prep/tests/comprehensive-e2e.spec.ts:93:18"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:42:57.278Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/comprehensive-e2e-EM-Inter-b144d-est-header-navigation-links-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/comprehensive-e2e-EM-Inter-b144d-est-header-navigation-links-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/comprehensive-e2e-EM-Inter-b144d-est-header-navigation-links-chromium/error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ceae8d42728a3fcdf4bb-2089e90efc7de045a1c0",
+              "file": "comprehensive-e2e.spec.ts",
+              "line": 74,
+              "column": 7
+            },
+            {
+              "title": "should test demo login buttons",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 593,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:42:57.918Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ceae8d42728a3fcdf4bb-a0618debb086c665bb04",
+              "file": "comprehensive-e2e.spec.ts",
+              "line": 106,
+              "column": 7
+            },
+            {
+              "title": "should handle invalid login credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 2393,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:42:58.670Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ceae8d42728a3fcdf4bb-de750332b2017f48778c",
+              "file": "comprehensive-e2e.spec.ts",
+              "line": 127,
+              "column": 7
+            },
+            {
+              "title": "should test API endpoints availability",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 71,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:43:00.603Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ceae8d42728a3fcdf4bb-4589198e986fc90a53d7",
+              "file": "comprehensive-e2e.spec.ts",
+              "line": 147,
+              "column": 7
+            },
+            {
+              "title": "should verify page titles and basic content",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 2782,
+                      "error": {
+                        "message": "Error: expect.toBeVisible: Error: strict mode violation: locator('text=System Design') resolved to 3 elements:\n    1) <span class=\"hidden xl:inline\">System Design</span> aka getByRole('button', { name: 'System Design' })\n    2) <h1 class=\"text-3xl font-bold mb-2\">System Design Questions</h1> aka getByRole('heading', { name: 'System Design Questions' })\n    3) <p class=\"text-muted-foreground\">Practice system design questions specifically cur…</p> aka getByText('Practice system design')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=System Design')\u001b[22m\n",
+                        "stack": "Error: expect.toBeVisible: Error: strict mode violation: locator('text=System Design') resolved to 3 elements:\n    1) <span class=\"hidden xl:inline\">System Design</span> aka getByRole('button', { name: 'System Design' })\n    2) <h1 class=\"text-3xl font-bold mb-2\">System Design Questions</h1> aka getByRole('heading', { name: 'System Design Questions' })\n    3) <p class=\"text-muted-foreground\">Practice system design questions specifically cur…</p> aka getByText('Practice system design')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=System Design')\u001b[22m\n\n    at /home/ubuntu/em-interview-prep/tests/comprehensive-e2e.spec.ts:186:63",
+                        "location": {
+                          "file": "/home/ubuntu/em-interview-prep/tests/comprehensive-e2e.spec.ts",
+                          "column": 63,
+                          "line": 186
+                        },
+                        "snippet": "  184 |       \n  185 |       // Check that page has expected content\n> 186 |       await expect(page.locator(`text=${test.expectedText}`)).toBeVisible();\n      |                                                               ^\n  187 |     }\n  188 |   });\n  189 | });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ubuntu/em-interview-prep/tests/comprehensive-e2e.spec.ts",
+                            "column": 63,
+                            "line": 186
+                          },
+                          "message": "Error: expect.toBeVisible: Error: strict mode violation: locator('text=System Design') resolved to 3 elements:\n    1) <span class=\"hidden xl:inline\">System Design</span> aka getByRole('button', { name: 'System Design' })\n    2) <h1 class=\"text-3xl font-bold mb-2\">System Design Questions</h1> aka getByRole('heading', { name: 'System Design Questions' })\n    3) <p class=\"text-muted-foreground\">Practice system design questions specifically cur…</p> aka getByText('Practice system design')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=System Design')\u001b[22m\n\n\n  184 |       \n  185 |       // Check that page has expected content\n> 186 |       await expect(page.locator(`text=${test.expectedText}`)).toBeVisible();\n      |                                                               ^\n  187 |     }\n  188 |   });\n  189 | });\n    at /home/ubuntu/em-interview-prep/tests/comprehensive-e2e.spec.ts:186:63"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:43:00.687Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/comprehensive-e2e-EM-Inter-ca9e1-ge-titles-and-basic-content-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/comprehensive-e2e-EM-Inter-ca9e1-ge-titles-and-basic-content-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/comprehensive-e2e-EM-Inter-ca9e1-ge-titles-and-basic-content-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ubuntu/em-interview-prep/tests/comprehensive-e2e.spec.ts",
+                        "column": 63,
+                        "line": 186
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ceae8d42728a3fcdf4bb-d342251aec79293969b9",
+              "file": "comprehensive-e2e.spec.ts",
+              "line": 164,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "navigation.spec.ts",
+      "file": "navigation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Navigation",
+          "file": "navigation.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should navigate to all main pages without errors",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 825,
+                      "error": {
+                        "message": "Error: expect.toContainText: Error: strict mode violation: locator('h1') resolved to 2 elements:\n    1) <h1 class=\"text-lg lg:text-xl font-bold cursor-pointer hover:text-primary transition-colors whitespace-nowrap\">EM Interview Prep</h1> aka getByRole('heading', { name: 'EM Interview Prep' })\n    2) <h1 class=\"text-4xl font-bold tracking-tight\">…</h1> aka getByRole('heading', { name: 'Welcome back, admin' })\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n",
+                        "stack": "Error: expect.toContainText: Error: strict mode violation: locator('h1') resolved to 2 elements:\n    1) <h1 class=\"text-lg lg:text-xl font-bold cursor-pointer hover:text-primary transition-colors whitespace-nowrap\">EM Interview Prep</h1> aka getByRole('heading', { name: 'EM Interview Prep' })\n    2) <h1 class=\"text-4xl font-bold tracking-tight\">…</h1> aka getByRole('heading', { name: 'Welcome back, admin' })\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n\n    at /home/ubuntu/em-interview-prep/tests/navigation.spec.ts:32:40",
+                        "location": {
+                          "file": "/home/ubuntu/em-interview-prep/tests/navigation.spec.ts",
+                          "column": 40,
+                          "line": 32
+                        },
+                        "snippet": "  30 |       \n  31 |       // Check page loads without errors\n> 32 |       await expect(page.locator('h1')).toContainText(pageInfo.title);\n     |                                        ^\n  33 |       \n  34 |       // Check no \"Cannot read properties of undefined\" errors\n  35 |       const errorMessages = await page.locator('text=Cannot read properties of undefined').count();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ubuntu/em-interview-prep/tests/navigation.spec.ts",
+                            "column": 40,
+                            "line": 32
+                          },
+                          "message": "Error: expect.toContainText: Error: strict mode violation: locator('h1') resolved to 2 elements:\n    1) <h1 class=\"text-lg lg:text-xl font-bold cursor-pointer hover:text-primary transition-colors whitespace-nowrap\">EM Interview Prep</h1> aka getByRole('heading', { name: 'EM Interview Prep' })\n    2) <h1 class=\"text-4xl font-bold tracking-tight\">…</h1> aka getByRole('heading', { name: 'Welcome back, admin' })\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n\n\n  30 |       \n  31 |       // Check page loads without errors\n> 32 |       await expect(page.locator('h1')).toContainText(pageInfo.title);\n     |                                        ^\n  33 |       \n  34 |       // Check no \"Cannot read properties of undefined\" errors\n  35 |       const errorMessages = await page.locator('text=Cannot read properties of undefined').count();\n    at /home/ubuntu/em-interview-prep/tests/navigation.spec.ts:32:40"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:43:01.072Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/navigation-Navigation-shou-77647-l-main-pages-without-errors-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/navigation-Navigation-shou-77647-l-main-pages-without-errors-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/navigation-Navigation-shou-77647-l-main-pages-without-errors-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ubuntu/em-interview-prep/tests/navigation.spec.ts",
+                        "column": 40,
+                        "line": 32
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5d2868f7d23420c27cca-b06a8ff113680be736c0",
+              "file": "navigation.spec.ts",
+              "line": 14,
+              "column": 7
+            },
+            {
+              "title": "should navigate using header links",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 1,
+                      "status": "timedOut",
+                      "duration": 30999,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/ubuntu/em-interview-prep/tests/navigation.spec.ts",
+                            "column": 16,
+                            "line": 46
+                          },
+                          "message": "Error: page.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Question Bank')\u001b[22m\n\n\n  44 |   test('should navigate using header links', async ({ page }) => {\n  45 |     // Test navigation via header\n> 46 |     await page.click('text=Question Bank');\n     |                ^\n  47 |     await expect(page).toHaveURL('/question-bank');\n  48 |     await expect(page.locator('h1')).toContainText('Question Bank');\n  49 |\n    at /home/ubuntu/em-interview-prep/tests/navigation.spec.ts:46:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:43:03.071Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/navigation-Navigation-should-navigate-using-header-links-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/navigation-Navigation-should-navigate-using-header-links-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/navigation-Navigation-should-navigate-using-header-links-chromium/error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5d2868f7d23420c27cca-78036dab855ff450daa2",
+              "file": "navigation.spec.ts",
+              "line": 44,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "question-bank.spec.ts",
+      "file": "question-bank.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Question Bank",
+          "file": "question-bank.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should load question bank page successfully",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1118,
+                      "error": {
+                        "message": "Error: expect.toContainText: Error: strict mode violation: locator('h1') resolved to 2 elements:\n    1) <h1 class=\"text-lg lg:text-xl font-bold cursor-pointer hover:text-primary transition-colors whitespace-nowrap\">EM Interview Prep</h1> aka getByRole('heading', { name: 'EM Interview Prep' })\n    2) <h1 class=\"text-4xl font-bold tracking-tight\">Question Bank</h1> aka getByRole('heading', { name: 'Question Bank' })\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n",
+                        "stack": "Error: expect.toContainText: Error: strict mode violation: locator('h1') resolved to 2 elements:\n    1) <h1 class=\"text-lg lg:text-xl font-bold cursor-pointer hover:text-primary transition-colors whitespace-nowrap\">EM Interview Prep</h1> aka getByRole('heading', { name: 'EM Interview Prep' })\n    2) <h1 class=\"text-4xl font-bold tracking-tight\">Question Bank</h1> aka getByRole('heading', { name: 'Question Bank' })\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n\n    at /home/ubuntu/em-interview-prep/tests/question-bank.spec.ts:18:38",
+                        "location": {
+                          "file": "/home/ubuntu/em-interview-prep/tests/question-bank.spec.ts",
+                          "column": 38,
+                          "line": 18
+                        },
+                        "snippet": "  16 |     \n  17 |     // Check page loads\n> 18 |     await expect(page.locator('h1')).toContainText('Question Bank');\n     |                                      ^\n  19 |     \n  20 |     // Check questions are loaded\n  21 |     await expect(page.locator('[data-testid=\"question-card\"]').first()).toBeVisible({ timeout: 10000 });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ubuntu/em-interview-prep/tests/question-bank.spec.ts",
+                            "column": 38,
+                            "line": 18
+                          },
+                          "message": "Error: expect.toContainText: Error: strict mode violation: locator('h1') resolved to 2 elements:\n    1) <h1 class=\"text-lg lg:text-xl font-bold cursor-pointer hover:text-primary transition-colors whitespace-nowrap\">EM Interview Prep</h1> aka getByRole('heading', { name: 'EM Interview Prep' })\n    2) <h1 class=\"text-4xl font-bold tracking-tight\">Question Bank</h1> aka getByRole('heading', { name: 'Question Bank' })\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n\n\n  16 |     \n  17 |     // Check page loads\n> 18 |     await expect(page.locator('h1')).toContainText('Question Bank');\n     |                                      ^\n  19 |     \n  20 |     // Check questions are loaded\n  21 |     await expect(page.locator('[data-testid=\"question-card\"]').first()).toBeVisible({ timeout: 10000 });\n    at /home/ubuntu/em-interview-prep/tests/question-bank.spec.ts:18:38"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:43:04.719Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/question-bank-Question-Ban-86538-tion-bank-page-successfully-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/question-bank-Question-Ban-86538-tion-bank-page-successfully-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/question-bank-Question-Ban-86538-tion-bank-page-successfully-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ubuntu/em-interview-prep/tests/question-bank.spec.ts",
+                        "column": 38,
+                        "line": 18
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "1a35cb09c015019edef2-f7dc7e467c0f8293c431",
+              "file": "question-bank.spec.ts",
+              "line": 14,
+              "column": 7
+            },
+            {
+              "title": "should filter questions by company",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 11198,
+                      "error": {
+                        "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('[data-testid=\"question-card\"]').first()\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-testid=\"question-card\"]').first()\u001b[22m\n",
+                        "stack": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('[data-testid=\"question-card\"]').first()\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-testid=\"question-card\"]').first()\u001b[22m\n\n    at /home/ubuntu/em-interview-prep/tests/question-bank.spec.ts:31:73",
+                        "location": {
+                          "file": "/home/ubuntu/em-interview-prep/tests/question-bank.spec.ts",
+                          "column": 73,
+                          "line": 31
+                        },
+                        "snippet": "  29 |     \n  30 |     // Wait for questions to load\n> 31 |     await expect(page.locator('[data-testid=\"question-card\"]').first()).toBeVisible({ timeout: 10000 });\n     |                                                                         ^\n  32 |     \n  33 |     // Get initial question count\n  34 |     const initialCount = await page.locator('[data-testid=\"question-card\"]').count();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ubuntu/em-interview-prep/tests/question-bank.spec.ts",
+                            "column": 73,
+                            "line": 31
+                          },
+                          "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('[data-testid=\"question-card\"]').first()\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-testid=\"question-card\"]').first()\u001b[22m\n\n\n  29 |     \n  30 |     // Wait for questions to load\n> 31 |     await expect(page.locator('[data-testid=\"question-card\"]').first()).toBeVisible({ timeout: 10000 });\n     |                                                                         ^\n  32 |     \n  33 |     // Get initial question count\n  34 |     const initialCount = await page.locator('[data-testid=\"question-card\"]').count();\n    at /home/ubuntu/em-interview-prep/tests/question-bank.spec.ts:31:73"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:43:07.054Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/question-bank-Question-Ban-78205-filter-questions-by-company-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/question-bank-Question-Ban-78205-filter-questions-by-company-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/question-bank-Question-Ban-78205-filter-questions-by-company-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ubuntu/em-interview-prep/tests/question-bank.spec.ts",
+                        "column": 73,
+                        "line": 31
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "1a35cb09c015019edef2-acf83185a4dd96685b55",
+              "file": "question-bank.spec.ts",
+              "line": 27,
+              "column": 7
+            },
+            {
+              "title": "should search questions",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 11124,
+                      "error": {
+                        "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('[data-testid=\"question-card\"]').first()\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-testid=\"question-card\"]').first()\u001b[22m\n",
+                        "stack": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('[data-testid=\"question-card\"]').first()\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-testid=\"question-card\"]').first()\u001b[22m\n\n    at /home/ubuntu/em-interview-prep/tests/question-bank.spec.ts:52:73",
+                        "location": {
+                          "file": "/home/ubuntu/em-interview-prep/tests/question-bank.spec.ts",
+                          "column": 73,
+                          "line": 52
+                        },
+                        "snippet": "  50 |     \n  51 |     // Wait for questions to load\n> 52 |     await expect(page.locator('[data-testid=\"question-card\"]').first()).toBeVisible({ timeout: 10000 });\n     |                                                                         ^\n  53 |     \n  54 |     // Search for a common term\n  55 |     const searchInput = page.locator('input[placeholder*=\"Search\"]');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ubuntu/em-interview-prep/tests/question-bank.spec.ts",
+                            "column": 73,
+                            "line": 52
+                          },
+                          "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('[data-testid=\"question-card\"]').first()\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-testid=\"question-card\"]').first()\u001b[22m\n\n\n  50 |     \n  51 |     // Wait for questions to load\n> 52 |     await expect(page.locator('[data-testid=\"question-card\"]').first()).toBeVisible({ timeout: 10000 });\n     |                                                                         ^\n  53 |     \n  54 |     // Search for a common term\n  55 |     const searchInput = page.locator('input[placeholder*=\"Search\"]');\n    at /home/ubuntu/em-interview-prep/tests/question-bank.spec.ts:52:73"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:43:15.715Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/question-bank-Question-Bank-should-search-questions-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/question-bank-Question-Bank-should-search-questions-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/question-bank-Question-Bank-should-search-questions-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ubuntu/em-interview-prep/tests/question-bank.spec.ts",
+                        "column": 73,
+                        "line": 52
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "1a35cb09c015019edef2-35296fd6ee5ab802832c",
+              "file": "question-bank.spec.ts",
+              "line": 48,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "story-templates.spec.ts",
+      "file": "story-templates.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Story Templates",
+          "file": "story-templates.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should load story templates page successfully",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 14,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 831,
+                      "error": {
+                        "message": "Error: expect.toContainText: Error: strict mode violation: locator('h1') resolved to 2 elements:\n    1) <h1 class=\"text-lg lg:text-xl font-bold cursor-pointer hover:text-primary transition-colors whitespace-nowrap\">EM Interview Prep</h1> aka getByRole('heading', { name: 'EM Interview Prep' })\n    2) <h1 class=\"text-4xl font-bold tracking-tight\">Story Templates</h1> aka locator('h1').filter({ hasText: 'Story Templates' })\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n",
+                        "stack": "Error: expect.toContainText: Error: strict mode violation: locator('h1') resolved to 2 elements:\n    1) <h1 class=\"text-lg lg:text-xl font-bold cursor-pointer hover:text-primary transition-colors whitespace-nowrap\">EM Interview Prep</h1> aka getByRole('heading', { name: 'EM Interview Prep' })\n    2) <h1 class=\"text-4xl font-bold tracking-tight\">Story Templates</h1> aka locator('h1').filter({ hasText: 'Story Templates' })\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n\n    at /home/ubuntu/em-interview-prep/tests/story-templates.spec.ts:18:38",
+                        "location": {
+                          "file": "/home/ubuntu/em-interview-prep/tests/story-templates.spec.ts",
+                          "column": 38,
+                          "line": 18
+                        },
+                        "snippet": "  16 |     \n  17 |     // Check page loads\n> 18 |     await expect(page.locator('h1')).toContainText('Story Templates');\n     |                                      ^\n  19 |     \n  20 |     // Check STAR method guide is visible\n  21 |     await expect(page.locator('text=STAR Method Guide')).toBeVisible();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ubuntu/em-interview-prep/tests/story-templates.spec.ts",
+                            "column": 38,
+                            "line": 18
+                          },
+                          "message": "Error: expect.toContainText: Error: strict mode violation: locator('h1') resolved to 2 elements:\n    1) <h1 class=\"text-lg lg:text-xl font-bold cursor-pointer hover:text-primary transition-colors whitespace-nowrap\">EM Interview Prep</h1> aka getByRole('heading', { name: 'EM Interview Prep' })\n    2) <h1 class=\"text-4xl font-bold tracking-tight\">Story Templates</h1> aka locator('h1').filter({ hasText: 'Story Templates' })\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n\n\n  16 |     \n  17 |     // Check page loads\n> 18 |     await expect(page.locator('h1')).toContainText('Story Templates');\n     |                                      ^\n  19 |     \n  20 |     // Check STAR method guide is visible\n  21 |     await expect(page.locator('text=STAR Method Guide')).toBeVisible();\n    at /home/ubuntu/em-interview-prep/tests/story-templates.spec.ts:18:38"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:43:19.475Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/story-templates-Story-Temp-0c35f-templates-page-successfully-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/story-templates-Story-Temp-0c35f-templates-page-successfully-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/story-templates-Story-Temp-0c35f-templates-page-successfully-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ubuntu/em-interview-prep/tests/story-templates.spec.ts",
+                        "column": 38,
+                        "line": 18
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "9c799c3d1799eea0a7b0-4095a30aa6baec686c23",
+              "file": "story-templates.spec.ts",
+              "line": 14,
+              "column": 7
+            },
+            {
+              "title": "should open new story dialog",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 15,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 945,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:43:21.535Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "9c799c3d1799eea0a7b0-de408179b768505f4499",
+              "file": "story-templates.spec.ts",
+              "line": 29,
+              "column": 7
+            },
+            {
+              "title": "should use a story template",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 15,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 739,
+                      "error": {
+                        "message": "TypeError: page.click(...).first is not a function",
+                        "stack": "TypeError: page.click(...).first is not a function\n    at /home/ubuntu/em-interview-prep/tests/story-templates.spec.ts:44:57",
+                        "location": {
+                          "file": "/home/ubuntu/em-interview-prep/tests/story-templates.spec.ts",
+                          "column": 57,
+                          "line": 44
+                        },
+                        "snippet": "  42 |     \n  43 |     // Click \"Use Template\" on first template\n> 44 |     await page.click('button:has-text(\"Use Template\")').first();\n     |                                                         ^\n  45 |     \n  46 |     // Check dialog opens with template data\n  47 |     await expect(page.locator('text=Create New Story')).toBeVisible();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ubuntu/em-interview-prep/tests/story-templates.spec.ts",
+                            "column": 57,
+                            "line": 44
+                          },
+                          "message": "TypeError: page.click(...).first is not a function\n\n  42 |     \n  43 |     // Click \"Use Template\" on first template\n> 44 |     await page.click('button:has-text(\"Use Template\")').first();\n     |                                                         ^\n  45 |     \n  46 |     // Check dialog opens with template data\n  47 |     await expect(page.locator('text=Create New Story')).toBeVisible();\n    at /home/ubuntu/em-interview-prep/tests/story-templates.spec.ts:44:57"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:43:22.644Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/story-templates-Story-Templates-should-use-a-story-template-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/story-templates-Story-Templates-should-use-a-story-template-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/story-templates-Story-Templates-should-use-a-story-template-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ubuntu/em-interview-prep/tests/story-templates.spec.ts",
+                        "column": 57,
+                        "line": 44
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "9c799c3d1799eea0a7b0-cf9677fe66764972b99b",
+              "file": "story-templates.spec.ts",
+              "line": 40,
+              "column": 7
+            },
+            {
+              "title": "should create a new story",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 16,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 11598,
+                      "error": {
+                        "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('text=Test Story Title')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=Test Story Title')\u001b[22m\n",
+                        "stack": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('text=Test Story Title')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=Test Story Title')\u001b[22m\n\n    at /home/ubuntu/em-interview-prep/tests/story-templates.spec.ts:68:57",
+                        "location": {
+                          "file": "/home/ubuntu/em-interview-prep/tests/story-templates.spec.ts",
+                          "column": 57,
+                          "line": 68
+                        },
+                        "snippet": "  66 |     \n  67 |     // Check success message or story appears\n> 68 |     await expect(page.locator('text=Test Story Title')).toBeVisible({ timeout: 10000 });\n     |                                                         ^\n  69 |   });\n  70 | });\n  71 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ubuntu/em-interview-prep/tests/story-templates.spec.ts",
+                            "column": 57,
+                            "line": 68
+                          },
+                          "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('text=Test Story Title')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=Test Story Title')\u001b[22m\n\n\n  66 |     \n  67 |     // Check success message or story appears\n> 68 |     await expect(page.locator('text=Test Story Title')).toBeVisible({ timeout: 10000 });\n     |                                                         ^\n  69 |   });\n  70 | });\n  71 |\n    at /home/ubuntu/em-interview-prep/tests/story-templates.spec.ts:68:57"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:43:24.471Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/story-templates-Story-Templates-should-create-a-new-story-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/story-templates-Story-Templates-should-create-a-new-story-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/story-templates-Story-Templates-should-create-a-new-story-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ubuntu/em-interview-prep/tests/story-templates.spec.ts",
+                        "column": 57,
+                        "line": 68
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "9c799c3d1799eea0a7b0-f3f5239d1d8044308ffb",
+              "file": "story-templates.spec.ts",
+              "line": 51,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "system-design.spec.ts",
+      "file": "system-design.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "System Design Questions",
+          "file": "system-design.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should load system design questions page successfully",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 17,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 911,
+                      "error": {
+                        "message": "Error: expect.toContainText: Error: strict mode violation: locator('h1') resolved to 2 elements:\n    1) <h1 class=\"text-lg lg:text-xl font-bold cursor-pointer hover:text-primary transition-colors whitespace-nowrap\">EM Interview Prep</h1> aka getByRole('heading', { name: 'EM Interview Prep' })\n    2) <h1 class=\"text-3xl font-bold mb-2\">System Design Questions</h1> aka getByRole('heading', { name: 'System Design Questions' })\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n",
+                        "stack": "Error: expect.toContainText: Error: strict mode violation: locator('h1') resolved to 2 elements:\n    1) <h1 class=\"text-lg lg:text-xl font-bold cursor-pointer hover:text-primary transition-colors whitespace-nowrap\">EM Interview Prep</h1> aka getByRole('heading', { name: 'EM Interview Prep' })\n    2) <h1 class=\"text-3xl font-bold mb-2\">System Design Questions</h1> aka getByRole('heading', { name: 'System Design Questions' })\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n\n    at /home/ubuntu/em-interview-prep/tests/system-design.spec.ts:18:38",
+                        "location": {
+                          "file": "/home/ubuntu/em-interview-prep/tests/system-design.spec.ts",
+                          "column": 38,
+                          "line": 18
+                        },
+                        "snippet": "  16 |     \n  17 |     // Check page loads\n> 18 |     await expect(page.locator('h1')).toContainText('System Design Questions');\n     |                                      ^\n  19 |     \n  20 |     // Check questions are loaded\n  21 |     await expect(page.locator('[data-testid=\"system-design-question\"]').first()).toBeVisible({ timeout: 10000 });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ubuntu/em-interview-prep/tests/system-design.spec.ts",
+                            "column": 38,
+                            "line": 18
+                          },
+                          "message": "Error: expect.toContainText: Error: strict mode violation: locator('h1') resolved to 2 elements:\n    1) <h1 class=\"text-lg lg:text-xl font-bold cursor-pointer hover:text-primary transition-colors whitespace-nowrap\">EM Interview Prep</h1> aka getByRole('heading', { name: 'EM Interview Prep' })\n    2) <h1 class=\"text-3xl font-bold mb-2\">System Design Questions</h1> aka getByRole('heading', { name: 'System Design Questions' })\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n\n\n  16 |     \n  17 |     // Check page loads\n> 18 |     await expect(page.locator('h1')).toContainText('System Design Questions');\n     |                                      ^\n  19 |     \n  20 |     // Check questions are loaded\n  21 |     await expect(page.locator('[data-testid=\"system-design-question\"]').first()).toBeVisible({ timeout: 10000 });\n    at /home/ubuntu/em-interview-prep/tests/system-design.spec.ts:18:38"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:43:28.131Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/system-design-System-Desig-f02b1-questions-page-successfully-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/system-design-System-Desig-f02b1-questions-page-successfully-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/system-design-System-Desig-f02b1-questions-page-successfully-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ubuntu/em-interview-prep/tests/system-design.spec.ts",
+                        "column": 38,
+                        "line": 18
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d8160f1742561d8929d6-40b120643931f692d269",
+              "file": "system-design.spec.ts",
+              "line": 14,
+              "column": 7
+            },
+            {
+              "title": "should load system design strategy page successfully",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 18,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 853,
+                      "error": {
+                        "message": "Error: expect.toContainText: Error: strict mode violation: locator('h1') resolved to 2 elements:\n    1) <h1 class=\"text-lg lg:text-xl font-bold cursor-pointer hover:text-primary transition-colors whitespace-nowrap\">EM Interview Prep</h1> aka getByRole('heading', { name: 'EM Interview Prep' })\n    2) <h1 class=\"text-3xl font-bold mb-2\">System Design Strategy & Frameworks</h1> aka getByRole('heading', { name: 'System Design Strategy &' })\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n",
+                        "stack": "Error: expect.toContainText: Error: strict mode violation: locator('h1') resolved to 2 elements:\n    1) <h1 class=\"text-lg lg:text-xl font-bold cursor-pointer hover:text-primary transition-colors whitespace-nowrap\">EM Interview Prep</h1> aka getByRole('heading', { name: 'EM Interview Prep' })\n    2) <h1 class=\"text-3xl font-bold mb-2\">System Design Strategy & Frameworks</h1> aka getByRole('heading', { name: 'System Design Strategy &' })\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n\n    at /home/ubuntu/em-interview-prep/tests/system-design.spec.ts:28:38",
+                        "location": {
+                          "file": "/home/ubuntu/em-interview-prep/tests/system-design.spec.ts",
+                          "column": 38,
+                          "line": 28
+                        },
+                        "snippet": "  26 |     \n  27 |     // Check page loads\n> 28 |     await expect(page.locator('h1')).toContainText('System Design Strategy');\n     |                                      ^\n  29 |     \n  30 |     // Check frameworks are loaded\n  31 |     await expect(page.locator('[data-testid=\"framework-card\"]').first()).toBeVisible({ timeout: 10000 });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ubuntu/em-interview-prep/tests/system-design.spec.ts",
+                            "column": 38,
+                            "line": 28
+                          },
+                          "message": "Error: expect.toContainText: Error: strict mode violation: locator('h1') resolved to 2 elements:\n    1) <h1 class=\"text-lg lg:text-xl font-bold cursor-pointer hover:text-primary transition-colors whitespace-nowrap\">EM Interview Prep</h1> aka getByRole('heading', { name: 'EM Interview Prep' })\n    2) <h1 class=\"text-3xl font-bold mb-2\">System Design Strategy & Frameworks</h1> aka getByRole('heading', { name: 'System Design Strategy &' })\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n\n\n  26 |     \n  27 |     // Check page loads\n> 28 |     await expect(page.locator('h1')).toContainText('System Design Strategy');\n     |                                      ^\n  29 |     \n  30 |     // Check frameworks are loaded\n  31 |     await expect(page.locator('[data-testid=\"framework-card\"]').first()).toBeVisible({ timeout: 10000 });\n    at /home/ubuntu/em-interview-prep/tests/system-design.spec.ts:28:38"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:43:29.581Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/system-design-System-Desig-8d1b0--strategy-page-successfully-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/system-design-System-Desig-8d1b0--strategy-page-successfully-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/system-design-System-Desig-8d1b0--strategy-page-successfully-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ubuntu/em-interview-prep/tests/system-design.spec.ts",
+                        "column": 38,
+                        "line": 28
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d8160f1742561d8929d6-8e4d6c801176ac282333",
+              "file": "system-design.spec.ts",
+              "line": 24,
+              "column": 7
+            },
+            {
+              "title": "should filter system design questions",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 19,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 10989,
+                      "error": {
+                        "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('[data-testid=\"system-design-question\"]').first()\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-testid=\"system-design-question\"]').first()\u001b[22m\n",
+                        "stack": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('[data-testid=\"system-design-question\"]').first()\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-testid=\"system-design-question\"]').first()\u001b[22m\n\n    at /home/ubuntu/em-interview-prep/tests/system-design.spec.ts:38:82",
+                        "location": {
+                          "file": "/home/ubuntu/em-interview-prep/tests/system-design.spec.ts",
+                          "column": 82,
+                          "line": 38
+                        },
+                        "snippet": "  36 |     \n  37 |     // Wait for questions to load\n> 38 |     await expect(page.locator('[data-testid=\"system-design-question\"]').first()).toBeVisible({ timeout: 10000 });\n     |                                                                                  ^\n  39 |     \n  40 |     // Test filtering if filters are available\n  41 |     const filterSelect = page.locator('select').first();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/ubuntu/em-interview-prep/tests/system-design.spec.ts",
+                            "column": 82,
+                            "line": 38
+                          },
+                          "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('[data-testid=\"system-design-question\"]').first()\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-testid=\"system-design-question\"]').first()\u001b[22m\n\n\n  36 |     \n  37 |     // Wait for questions to load\n> 38 |     await expect(page.locator('[data-testid=\"system-design-question\"]').first()).toBeVisible({ timeout: 10000 });\n     |                                                                                  ^\n  39 |     \n  40 |     // Test filtering if filters are available\n  41 |     const filterSelect = page.locator('select').first();\n    at /home/ubuntu/em-interview-prep/tests/system-design.spec.ts:38:82"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-16T23:43:30.320Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/system-design-System-Desig-d69f5-ter-system-design-questions-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/system-design-System-Desig-d69f5-ter-system-design-questions-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/ubuntu/em-interview-prep/test-results/system-design-System-Desig-d69f5-ter-system-design-questions-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/ubuntu/em-interview-prep/tests/system-design.spec.ts",
+                        "column": 82,
+                        "line": 38
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d8160f1742561d8929d6-45087de2357cc7cb65c8",
+              "file": "system-design.spec.ts",
+              "line": 34,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-06-16T23:42:41.914Z",
+    "duration": 59603.516,
+    "expected": 12,
+    "skipped": 0,
+    "unexpected": 20,
+    "flaky": 0
+  }
+}
