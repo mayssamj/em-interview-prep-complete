@@ -87,7 +87,6 @@ model Question {
   id                      String                @id
   company_id              String?
   category                String
-  categories              String[]              @default([])
   question_text           String
   difficulty              String
   is_generated            Boolean               @default(true)
@@ -97,6 +96,7 @@ model Question {
   is_critical             Boolean               @default(false)
   usage_count             Int                   @default(0)
   question_type           String                @default("behavioral")
+  categories              String[]              @default([])
   answers                 Answer[]
   progress                Progress[]
   question_views          QuestionView[]
@@ -165,34 +165,34 @@ model SystemDesignFramework {
 }
 
 model SystemDesignQuestion {
-  id                        String   @id
-  question_id               String   @unique
-  question_title            String?
-  problem_statement         String?
-  clarifying_questions      String[]
-  functional_requirements   String[]
-  non_functional_requirements String[]
-  core_solution             Json?
-  references                String[]
+  id                            String   @id
+  question_id                   String   @unique
+  architecture_focus            String[]
+  complexity_level              String
+  leadership_aspects            String[]
+  frameworks                    String[]
+  evaluation_criteria           String[]
+  resources                     String[]
+  estimated_time_minutes        Int?
+  follow_up_questions           String[]
+  common_mistakes               String[]
+  key_tradeoffs                 String[]
+  created_at                    DateTime @default(now())
+  updated_at                    DateTime
+  alternative_solutions         String[]
   back_of_envelope_calculations Json?
-  technology_stack          Json?
-  tradeoffs                 Json?
-  scalability_considerations String[]
-  alternative_solutions     String[]
-  key_technical_criteria    String[]
-  architecture_focus        String[]
-  complexity_level          String
-  leadership_aspects        String[]
-  frameworks                String[]
-  evaluation_criteria       String[]
-  resources                 String[]
-  estimated_time_minutes    Int?
-  follow_up_questions       String[]
-  common_mistakes           String[]
-  key_tradeoffs             String[]
-  created_at                DateTime @default(now())
-  updated_at                DateTime
-  questions                 Question @relation(fields: [question_id], references: [id], onDelete: Cascade)
+  clarifying_questions          String[]
+  core_solution                 Json?
+  functional_requirements       String[]
+  key_technical_criteria        String[]
+  non_functional_requirements   String[]
+  problem_statement             String?
+  question_title                String?
+  references                    String[]
+  scalability_considerations    String[]
+  technology_stack              Json?
+  tradeoffs                     Json?
+  questions                     Question @relation(fields: [question_id], references: [id], onDelete: Cascade)
 
   @@map("system_design_questions")
 }

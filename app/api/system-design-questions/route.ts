@@ -30,9 +30,19 @@ export async function GET(request: NextRequest) {
     }
 
     if (category && category !== 'all') {
-      // Support both old category field and new categories array
+      // Map display names to database category keys
+      const categoryMap = {
+        'Distributed Systems & Infrastructure': 'distributed_systems_infrastructure',
+        'Data & AI/ML Systems': 'data_ai_ml_systems',
+        'Real-time & Communication Systems': 'real_time_communication_systems',
+        'Product & Platform Systems': 'product_platform_systems'
+      };
+      
+      const dbCategory = categoryMap[category] || category;
+      
+      // Support both category field and categories array
       where.OR = [
-        { category: category },
+        { category: dbCategory },
         { categories: { has: category } }
       ];
     }

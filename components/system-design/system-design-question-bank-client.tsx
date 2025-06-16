@@ -117,13 +117,16 @@ export function SystemDesignQuestionBankClient() {
   const { toast } = useToast();
 
   useEffect(() => {
-    fetchQuestions();
     fetchCategories();
   }, []);
 
   useEffect(() => {
+    fetchQuestions();
+  }, [selectedCompany, selectedDifficulty, selectedCategory, showCriticalOnly]);
+
+  useEffect(() => {
     filterQuestions();
-  }, [questions, searchQuery, selectedCompany, selectedDifficulty, selectedCategory, showCriticalOnly]);
+  }, [questions, searchQuery]);
 
   const fetchQuestions = async () => {
     try {
@@ -171,6 +174,7 @@ export function SystemDesignQuestionBankClient() {
   const filterQuestions = () => {
     let filtered = questions;
 
+    // Only apply search filtering here, other filters are handled by API
     if (searchQuery) {
       filtered = filtered.filter(q => 
         q.question_text.toLowerCase().includes(searchQuery.toLowerCase()) ||

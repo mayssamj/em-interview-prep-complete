@@ -2,36 +2,47 @@
 export const dynamic = "force-dynamic";
 
 import { NextResponse } from 'next/server';
+import { prisma } from '@/lib/db';
 
 export async function GET() {
   try {
-    // Return the 4 new categories
-    const categories = [
-      {
-        id: 'distributed_systems_infrastructure',
+    // Get actual counts from database
+    const categoryCounts = await prisma.question.groupBy({
+      by: ['category'],
+      where: { question_type: 'system_design' },
+      _count: { category: true }
+    });
+
+    // Map database categories to display categories
+    const categoryMap = {
+      'distributed_systems_infrastructure': {
         name: 'Distributed Systems & Infrastructure',
-        description: 'Large-scale distributed systems, infrastructure design, CDNs, monitoring systems',
-        count: 3
+        description: 'Large-scale distributed systems, infrastructure design, CDNs, monitoring systems'
       },
-      {
-        id: 'data_ai_ml_systems',
-        name: 'Data & AI/ML Systems',
-        description: 'Data platforms, AI/ML systems, search engines, recommendation systems',
-        count: 8
+      'data_ai_ml_systems': {
+        name: 'Data & AI/ML Systems', 
+        description: 'Data platforms, AI/ML systems, search engines, recommendation systems'
       },
-      {
-        id: 'real_time_communication_systems',
+      'real_time_communication_systems': {
         name: 'Real-time & Communication Systems',
-        description: 'Real-time systems, messaging, streaming, social networks, collaboration tools',
-        count: 6
+        description: 'Real-time systems, messaging, streaming, social networks, collaboration tools'
       },
-      {
-        id: 'product_platform_systems',
+      'product_platform_systems': {
         name: 'Product & Platform Systems',
-        description: 'E-commerce, startup systems, content platforms, geospatial systems',
-        count: 5
+        description: 'E-commerce, startup systems, content platforms, geospatial systems'
       }
-    ];
+    };
+
+    // Build categories with actual counts
+    const categories = Object.entries(categoryMap).map(([key, info]) => {
+      const countData = categoryCounts.find(c => c.category === key);
+      return {
+        id: key,
+        name: info.name,
+        description: info.description,
+        count: countData?._count.category || 0
+      };
+    });
 
     return NextResponse.json(categories);
   } catch (error) {
