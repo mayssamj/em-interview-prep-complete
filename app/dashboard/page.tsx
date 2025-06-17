@@ -2,12 +2,28 @@
 export const dynamic = 'force-dynamic';
 
 import { redirect } from 'next/navigation';
-import { getServerSession } from '@/lib/auth';
+import { cookies } from 'next/headers';
+import { getSession } from '@/lib/auth';
+import { NextRequest } from 'next/server';
 import { Header } from '@/components/layout/header';
 import { DashboardClient } from '@/components/dashboard/dashboard-client';
 
 export default async function DashboardPage() {
-  const user = await getServerSession();
+  const cookieStore = cookies();
+  const token = cookieStore.get('token')?.value;
+  
+  if (!token) {
+    redirect('/login');
+  }
+
+  // Create a mock request to use with getSession
+  const mockRequest = {
+    cookies: {
+      get: (name: string) => ({ value: token })
+    }
+  } as NextRequest;
+
+  const user = await getSession(mockRequest);
   
   if (!user) {
     redirect('/login');

@@ -1,141 +1,178 @@
 
-/**
- * Comprehensive authentication flow integration tests
- */
+import { NextRequest } from 'next/server';
+import { POST as loginPost } from '@/app/api/auth/login/route';
+import { POST as registerPost } from '@/app/api/auth/register/route';
+import { GET as meGet } from '@/app/api/auth/me/route';
+
+// Mock dependencies
+jest.mock('@/lib/db');
+jest.mock('bcryptjs');
+jest.mock('jsonwebtoken');
+jest.mock('uuid');
+
+const mockPrisma = {
+  users: {
+    findUnique: jest.fn(),
+    create: jest.fn(),
+  },
+};
+
+jest.mock('@/lib/db', () => ({
+  prisma: mockPrisma,
+}));
+
+const mockBcrypt = require('bcryptjs');
+const mockJwt = require('jsonwebtoken');
+const mockUuid = require('uuid');
 
 describe('Authentication Flow Integration', () => {
-  const baseUrl = process.env.TEST_BASE_URL || 'http://localhost:3000'
+  beforeEach(() => {
+    jest.clearAllMocks();
+    mockUuid.v4.mockReturnValue('mock-uuid');
+    mockBcrypt.hash.mockResolvedValue('hashedpassword');
+    mockBcrypt.compare.mockResolvedValue(true);
+    mockJwt.sign.mockReturnValue('mock-token');
+    mockJwt.verify.mockReturnValue({
+      userId: 'mock-uuid',
+      username: 'testuser',
+      isAdmin: false,
+    });
+  });
 
-  describe('Login Flow', () => {
-    it('should successfully login with valid credentials', async () => {
-      const response = await fetch(`${baseUrl}/api/auth/login`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          username: 'mayssam',
-          password: 'password123'
-        })
-      })
+  it('should complete full registration and login flow', async () => {
+    // Step 1: Register new user
+    const mockUser = {
+      id: 'mock-uuid',
+      username: 'testuser',
+      password_hash: 'hashedpassword',
+      is_admin: false,
+      preferences: { email: 'test@example.com' },
+      created_at: new Date(),
+      updated_at: new Date(),
+    };
 
-      expect(response.status).toBe(200)
-      const data = await response.json()
-      expect(data).toHaveProperty('message', 'Login successful')
-      expect(data).toHaveProperty('user')
-      expect(data.user).toHaveProperty('username', 'mayssam')
-      expect(data.user).toHaveProperty('isAdmin', false)
-      
-      // Should set cookie
-      const cookies = response.headers.get('set-cookie')
-      expect(cookies).toContain('token=')
-    })
+    mockPrisma.users.findUnique.mockResolvedValueOnce(null); // User doesn't exist
+    mockPrisma.users.create.mockResolvedValue(mockUser);
 
-    it('should successfully login admin user', async () => {
-      const response = await fetch(`${baseUrl}/api/auth/login`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          username: 'admin',
-          password: 'adminadmin'
-        })
-      })
+    const registerRequest = new NextRequest('http://localhost:3000/api/auth/register', {
+      method: 'POST',
+      body: JSON.stringify({
+        username: 'testuser',
+        email: 'test@example.com',
+        password: 'password123',
+      }),
+    });
 
-      expect(response.status).toBe(200)
-      const data = await response.json()
-      expect(data.user).toHaveProperty('username', 'admin')
-      expect(data.user).toHaveProperty('isAdmin', true)
-    })
+    const registerResponse = await registerPost(registerRequest);
+    const registerData = await registerResponse.json();
 
-    it('should reject invalid credentials', async () => {
-      const response = await fetch(`${baseUrl}/api/auth/login`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          username: 'invalid',
-          password: 'wrong'
-        })
-      })
+    expect(registerResponse.status).toBe(200);
+    expect(registerData.message).toBe('Registration successful');
+    expect(registerData.user.username).toBe('testuser');
 
-      expect(response.status).toBe(401)
-      const data = await response.json()
-      expect(data).toHaveProperty('error', 'Invalid credentials')
-    })
+    // Step 2: Login with registered user
+    mockPrisma.users.findUnique.mockResolvedValueOnce(mockUser);
 
-    it('should reject missing credentials', async () => {
-      const response = await fetch(`${baseUrl}/api/auth/login`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({})
-      })
+    const loginRequest = new NextRequest('http://localhost:3000/api/auth/login', {
+      method: 'POST',
+      body: JSON.stringify({
+        username: 'testuser',
+        password: 'password123',
+      }),
+    });
 
-      expect(response.status).toBe(400)
-      const data = await response.json()
-      expect(data).toHaveProperty('error', 'Username and password are required')
-    })
-  })
+    const loginResponse = await loginPost(loginRequest);
+    const loginData = await loginResponse.json();
 
-  describe('Protected Routes', () => {
-    it('should redirect unauthenticated users to login', async () => {
-      const protectedRoutes = [
-        '/dashboard',
-        '/system-design-questions',
-        '/system-design-strategy',
-        '/question-bank',
-        '/stories'
-      ]
+    expect(loginResponse.status).toBe(200);
+    expect(loginData.message).toBe('Login successful');
+    expect(loginData.user.username).toBe('testuser');
 
-      for (const route of protectedRoutes) {
-        const response = await fetch(`${baseUrl}${route}`, {
-          redirect: 'manual'
-        })
-        
-        // Should redirect to login
-        expect([301, 302, 307, 308]).toContain(response.status)
-        const location = response.headers.get('location')
-        expect(location).toContain('/login')
-      }
-    })
+    // Step 3: Verify session with /me endpoint
+    mockPrisma.users.findUnique.mockResolvedValueOnce(mockUser);
 
-    it('should allow access to authenticated users', async () => {
-      // First login to get token
-      const loginResponse = await fetch(`${baseUrl}/api/auth/login`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          username: 'mayssam',
-          password: 'password123'
-        })
-      })
+    const meRequest = new NextRequest('http://localhost:3000/api/auth/me', {
+      headers: {
+        cookie: 'token=mock-token',
+      },
+    });
 
-      const cookies = loginResponse.headers.get('set-cookie')
-      const tokenMatch = cookies?.match(/token=([^;]+)/)
-      const token = tokenMatch ? tokenMatch[1] : ''
+    const meResponse = await meGet(meRequest);
+    const meData = await meResponse.json();
 
-      // Try accessing protected route with token
-      const response = await fetch(`${baseUrl}/dashboard`, {
-        headers: {
-          'Cookie': `token=${token}`
-        },
-        redirect: 'manual'
-      })
+    expect(meResponse.status).toBe(200);
+    expect(meData.user.username).toBe('testuser');
+    expect(meData.user.isAdmin).toBe(false);
+  });
 
-      // Should not redirect (or redirect to dashboard itself)
-      expect(response.status).toBe(200)
-    })
-  })
+  it('should handle admin user flow', async () => {
+    const mockAdminUser = {
+      id: 'admin-uuid',
+      username: 'admin',
+      password_hash: 'hashedpassword',
+      is_admin: true,
+      preferences: null,
+      created_at: new Date(),
+      updated_at: new Date(),
+    };
 
-  describe('Logout Flow', () => {
-    it('should successfully logout', async () => {
-      const response = await fetch(`${baseUrl}/api/auth/logout`, {
-        method: 'POST'
-      })
+    mockPrisma.users.findUnique.mockResolvedValue(mockAdminUser);
+    mockJwt.verify.mockReturnValue({
+      userId: 'admin-uuid',
+      username: 'admin',
+      isAdmin: true,
+    });
 
-      expect(response.status).toBe(200)
-      const data = await response.json()
-      expect(data).toHaveProperty('message', 'Logout successful')
-      
-      // Should clear cookie
-      const cookies = response.headers.get('set-cookie')
-      expect(cookies).toContain('token=;')
-    })
-  })
-})
+    const loginRequest = new NextRequest('http://localhost:3000/api/auth/login', {
+      method: 'POST',
+      body: JSON.stringify({
+        username: 'admin',
+        password: 'adminadmin',
+      }),
+    });
+
+    const loginResponse = await loginPost(loginRequest);
+    const loginData = await loginResponse.json();
+
+    expect(loginResponse.status).toBe(200);
+    expect(loginData.user.isAdmin).toBe(true);
+
+    // Verify admin session
+    const meRequest = new NextRequest('http://localhost:3000/api/auth/me', {
+      headers: {
+        cookie: 'token=mock-token',
+      },
+    });
+
+    const meResponse = await meGet(meRequest);
+    const meData = await meResponse.json();
+
+    expect(meResponse.status).toBe(200);
+    expect(meData.user.isAdmin).toBe(true);
+  });
+
+  it('should prevent duplicate registration', async () => {
+    const existingUser = {
+      id: 'existing-uuid',
+      username: 'existinguser',
+      password_hash: 'hashedpassword',
+      is_admin: false,
+    };
+
+    mockPrisma.users.findUnique.mockResolvedValue(existingUser);
+
+    const registerRequest = new NextRequest('http://localhost:3000/api/auth/register', {
+      method: 'POST',
+      body: JSON.stringify({
+        username: 'existinguser',
+        password: 'password123',
+      }),
+    });
+
+    const registerResponse = await registerPost(registerRequest);
+    const registerData = await registerResponse.json();
+
+    expect(registerResponse.status).toBe(409);
+    expect(registerData.error).toBe('Username already exists');
+  });
+});

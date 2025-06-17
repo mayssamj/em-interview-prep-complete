@@ -11,11 +11,18 @@ const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key'
 
 export async function POST(request: NextRequest) {
   try {
-    const { username, password } = await request.json()
+    const { username, email, password } = await request.json()
 
     if (!username || !password) {
       return NextResponse.json(
         { error: 'Username and password are required' },
+        { status: 400 }
+      )
+    }
+
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return NextResponse.json(
+        { error: 'Invalid email format' },
         { status: 400 }
       )
     }
@@ -46,6 +53,7 @@ export async function POST(request: NextRequest) {
         id: uuidv4(),
         username,
         password_hash: hashedPassword,
+        preferences: email ? { email } : null,
         created_at: new Date(),
         updated_at: new Date()
       }

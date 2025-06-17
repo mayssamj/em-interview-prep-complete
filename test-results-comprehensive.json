@@ -1,0 +1,86 @@
+{
+  "passed": 0,
+  "failed": 16,
+  "tests": [
+    {
+      "name": "Server Health Check",
+      "status": "FAILED",
+      "error": "fetch is not a function"
+    },
+    {
+      "name": "User Registration",
+      "status": "FAILED",
+      "error": "fetch is not a function"
+    },
+    {
+      "name": "Admin Login",
+      "status": "FAILED",
+      "error": "fetch is not a function"
+    },
+    {
+      "name": "Admin Stats API",
+      "status": "FAILED",
+      "error": "fetch is not a function"
+    },
+    {
+      "name": "Admin Users API",
+      "status": "FAILED",
+      "error": "fetch is not a function"
+    },
+    {
+      "name": "Companies API",
+      "status": "FAILED",
+      "error": "fetch is not a function"
+    },
+    {
+      "name": "Questions API",
+      "status": "FAILED",
+      "error": "fetch is not a function"
+    },
+    {
+      "name": "System Design Questions API",
+      "status": "FAILED",
+      "error": "fetch is not a function"
+    },
+    {
+      "name": "System Design Frameworks API",
+      "status": "FAILED",
+      "error": "fetch is not a function"
+    },
+    {
+      "name": "Stories API - Create",
+      "status": "FAILED",
+      "error": "fetch is not a function"
+    },
+    {
+      "name": "Page Load: /dashboard",
+      "status": "FAILED",
+      "error": "fetch is not a function"
+    },
+    {
+      "name": "Page Load: /question-bank",
+      "status": "FAILED",
+      "error": "fetch is not a function"
+    },
+    {
+      "name": "Page Load: /system-design-questions",
+      "status": "FAILED",
+      "error": "fetch is not a function"
+    },
+    {
+      "name": "Page Load: /story-templates",
+      "status": "FAILED",
+      "error": "fetch is not a function"
+    },
+    {
+      "name": "Page Load: /admin",
+      "status": "FAILED",
+      "error": "fetch is not a function"
+    },
+    {
+      "name": "Authentication Flow - Logout and Re-login",
+      "status": "FAILED",
+      "error": "fetch is not a function"
+    }
+  ]
+}

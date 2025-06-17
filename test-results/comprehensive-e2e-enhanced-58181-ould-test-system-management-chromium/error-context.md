@@ -1,0 +1,1541 @@
+# Page snapshot
+
+```yaml
+- banner:
+  - heading "EM Interview Prep" [level=1]
+  - navigation:
+    - button "Dashboard":
+      - img
+      - text: Dashboard
+    - button "Company Values":
+      - img
+      - text: Company Values
+    - button "Behavioral Questions":
+      - img
+      - text: Behavioral Questions
+    - button "System Design":
+      - img
+      - text: System Design
+    - button "SD Strategy":
+      - img
+      - text: SD Strategy
+    - button "Story Templates":
+      - img
+      - text: Story Templates
+    - button "Interview Strategy":
+      - img
+      - text: Interview Strategy
+    - button "Progress Tracker":
+      - img
+      - text: Progress Tracker
+    - button "FAQ":
+      - img
+      - text: FAQ
+    - button "Admin"
+  - img
+  - textbox "Search..."
+  - button:
+    - img
+  - text: adminAdmin
+  - button:
+    - img
+- main:
+  - heading "System Design Questions" [level=1]
+  - paragraph: Practice system design questions specifically curated for Engineering Manager roles. Focus on architectural thinking, scalability, and leadership aspects of system design.
+  - heading "Filters" [level=3]:
+    - img
+    - text: Filters
+  - text: Search
+  - img
+  - textbox "Search questions..."
+  - text: Company
+  - combobox: All Companies
+  - text: Difficulty
+  - combobox: All Difficulties
+  - text: Category
+  - combobox: All Categories
+  - button "Critical Questions Only":
+    - img
+    - text: Critical Questions Only
+  - text: Showing 101 of 101 questions
+  - heading "Design a system for safe AI model deployment with constitutional AI principles." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Anthropic
+  - img
+  - text: 1 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a booking system that handles reservations, availability, pricing, and payment processing." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Airbnb System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Booking Systems Inventory Management Payment Processing
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a search system that helps users find accommodations based on location, dates, preferences, and budget." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Airbnb System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Search Systems Recommendation Engine Geospatial Processing
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a surge pricing system that adjusts prices based on supply, demand, and market conditions." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Uber System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Pricing Algorithms Real-time Analytics Market Dynamics
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a real-time system that matches riders with drivers based on location, preferences, and availability." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Uber System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Real-time Matching Geospatial Systems Optimization
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a global CDN that delivers video content with optimal quality and minimal buffering worldwide." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Netflix System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Content Delivery Video Optimization Global Distribution
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a machine learning system that provides personalized content recommendations for 200+ million users." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Netflix System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Machine Learning Personalization Real-time Systems
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a mixed reality platform with spatial computing, gesture recognition, and holographic applications." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Microsoft System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Mixed Reality Spatial Computing Real-time Processing
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a comprehensive cloud computing platform with compute, storage, networking, and managed services." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Microsoft System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Cloud Infrastructure Service Management Multi-tenancy
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a cloud-based productivity suite with real-time collaboration, offline support, and cross-platform synchronization." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Microsoft System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Cloud Productivity Real-time Collaboration Cross-platform Systems
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a collaboration platform that supports chat, video calls, file sharing, and app integrations for enterprise teams." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Microsoft System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Collaboration Systems Real-time Communication Enterprise Integration
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a serverless computing platform that executes code in response to events without managing servers." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Amazon System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Serverless Computing Container Management Event Processing
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a highly durable, available, and scalable object storage service for the cloud." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Amazon System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Distributed Storage Data Durability API Design
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a voice assistant platform that processes voice commands, integrates with smart home devices, and provides skills ecosystem." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Amazon System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Voice Processing IoT Integration Skills Platform
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a video streaming service that competes with Netflix, supporting millions of concurrent streams and global content delivery." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Amazon System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Video Streaming Content Delivery DRM Systems
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design the core e-commerce platform for Amazon that handles product catalog, inventory, orders, and payments at global scale." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Amazon System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 60 min
+  - paragraph: "Focus Areas:"
+  - text: E-commerce Systems Inventory Management Payment Processing
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a translation service that supports 100+ languages with text, voice, and image translation capabilities." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Google System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Machine Learning Natural Language Processing Multi-modal Systems
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a voice assistant that can understand natural language, integrate with services, and provide personalized responses." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Google System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Natural Language Processing Voice Recognition Integration Platform
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design an advertising platform with real-time bidding, targeting, and performance analytics." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Google System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Real-time Bidding Machine Learning Analytics Systems
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a mapping service with real-time traffic, navigation, and location-based services for global users." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Google System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Geospatial Systems Real-time Processing Mobile Optimization
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design an email service that supports billions of users with features like search, spam detection, and real-time synchronization." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Google System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Email Systems Search Integration Spam Detection
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a video streaming platform that can handle billions of hours of video content and millions of concurrent viewers." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Google System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Video Processing CDN Streaming Systems
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a web search engine that can index billions of web pages and return relevant results in milliseconds." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Google System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 60 min
+  - paragraph: "Focus Areas:"
+  - text: Search Systems Distributed Computing Information Retrieval
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design an automated content moderation system that can detect and handle harmful content across text, images, and videos." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Meta System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Machine Learning Content Analysis Workflow Management
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a system for targeting advertisements based on user behavior, demographics, and interests while respecting privacy." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Meta System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Machine Learning Privacy Engineering Real-time Bidding
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a live video streaming platform that can handle millions of concurrent viewers and real-time interactions." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Meta System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Video Streaming Real-time Processing CDN
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a real-time messaging system that supports billions of users with features like group chats, media sharing, and message history." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Meta System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Real-time Communication Message Queuing Data Storage
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a system for ephemeral content (stories) that disappears after 24 hours and supports high upload/view rates." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Meta System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Content Management CDN Real-time Systems
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a scalable news feed system that can handle billions of users posting and consuming content in real-time." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Meta System Design Architecture
+  - img
+  - text: Hard level
+  - img
+  - text: 60 min
+  - paragraph: "Focus Areas:"
+  - text: Microservices Real-time Systems Content Delivery
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a scalable system architecture for a fast-growing startup." [level=3]
+  - text: Medium
+  - img
+  - text: Critical Startups & Scale-ups
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design Reddit's content ranking and moderation system." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Reddit
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a system for large-scale data labeling and annotation." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Scale AI
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a cloud-native data warehouse with automatic scaling." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Snowflake
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design LinkedIn's professional network feed algorithm." [level=3]
+  - text: Hard
+  - img
+  - text: Critical LinkedIn
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design TikTok's For You Page algorithm." [level=3]
+  - text: Hard
+  - img
+  - text: Critical TikTok
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design Airbnb's search and ranking system." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Airbnb
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design Uber's real-time ride matching system." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Uber
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a global video streaming platform with adaptive bitrate." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Netflix
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design Netflix's content recommendation system." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Netflix
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a system to serve a large language model (e.g., GPT-4) to millions of users with low latency." [level=3]
+  - text: Hard
+  - img
+  - text: Critical OpenAI
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a system for real-time document co-authoring (like Office 365)." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Microsoft
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design YouTube or a large-scale video streaming platform." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Google
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design Google Maps." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Google
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a Content Delivery Network (CDN)." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Amazon
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a scalable e-commerce product page with real-time inventory and recommendations." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Amazon
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design Meta Messenger or a similar large-scale chat system." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Meta
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design Meta's News Feed system." [level=3]
+  - text: Hard
+  - img
+  - text: Critical Meta
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design an analytics platform that provides insights for hosts, guests, and business operations." [level=3]
+  - text: Medium Airbnb System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Analytics Platform Data Visualization Business Intelligence
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a platform for booking local experiences and activities hosted by local experts." [level=3]
+  - text: Medium Airbnb System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Experience Management Booking Systems Local Discovery
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design mobile apps for guests and hosts with booking, messaging, and trip management features." [level=3]
+  - text: Medium Airbnb System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Mobile Architecture Offline Support Real-time Features
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a dynamic pricing system that helps hosts optimize their listing prices based on market conditions." [level=3]
+  - text: Medium Airbnb System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Pricing Systems Market Analysis Machine Learning
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a platform for hosts to manage listings, bookings, pricing, and guest communication." [level=3]
+  - text: Medium Airbnb System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Host Management Listing Systems Communication Platform
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a trust and safety system with user verification, review management, and fraud detection." [level=3]
+  - text: Medium Airbnb System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Trust Systems Identity Verification Fraud Detection
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a freight marketplace that connects shippers with truck drivers for cargo transportation." [level=3]
+  - text: Medium Uber System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Freight Systems Marketplace Platform Logistics Management
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design an analytics platform that provides insights on rides, drivers, and market trends." [level=3]
+  - text: Medium Uber System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Analytics Pipeline Data Processing Business Intelligence
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a comprehensive safety system with driver verification, trip monitoring, and emergency response." [level=3]
+  - text: Medium Uber System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Safety Systems Identity Verification Emergency Response
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a payment system that handles ride payments, driver payouts, and international transactions." [level=3]
+  - text: Medium Uber System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Payment Processing Financial Systems Global Payments
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a food delivery platform with restaurant integration, delivery optimization, and order tracking." [level=3]
+  - text: Medium Uber System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Delivery Systems Route Optimization Order Management
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a mobile app for drivers with navigation, earnings tracking, and trip management." [level=3]
+  - text: Medium Uber System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Mobile Architecture Navigation Systems Real-time Updates
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a video encoding system that optimizes content for different devices and network conditions." [level=3]
+  - text: Medium Netflix System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Video Encoding Quality Optimization Device Adaptation
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a real-time analytics platform that processes viewing data to drive content and business decisions." [level=3]
+  - text: Medium Netflix System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Analytics Pipeline Real-time Processing Data Visualization
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a mobile streaming app with offline downloads, adaptive streaming, and personalized interface." [level=3]
+  - text: Medium Netflix System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Mobile Architecture Offline Systems Adaptive Streaming
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a global billing system that handles subscriptions, payments, and pricing across different countries." [level=3]
+  - text: Medium Netflix System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Billing Systems Payment Processing Global Compliance
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a system for managing original content production from script to final delivery." [level=3]
+  - text: Medium Netflix System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Content Management Workflow Systems Asset Management
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design an experimentation platform that runs thousands of A/B tests simultaneously across different user segments." [level=3]
+  - text: Medium Netflix System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Experimentation Platform Statistical Analysis User Segmentation
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a code hosting platform with version control, collaboration tools, and CI/CD integration." [level=3]
+  - text: Medium Microsoft System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Version Control Collaboration Platform CI/CD Systems
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a customer relationship management system with sales automation, marketing, and customer service." [level=3]
+  - text: Medium Microsoft System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: CRM Systems Business Process Automation Analytics
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a low-code platform for building business applications, workflows, and data analytics." [level=3]
+  - text: Medium Microsoft System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Low-code Platform Workflow Engine Data Integration
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a cloud storage service with file synchronization, sharing, and collaboration features." [level=3]
+  - text: Medium Microsoft System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Cloud Storage File Synchronization Collaboration
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design an email client with calendar integration, contact management, and enterprise features." [level=3]
+  - text: Medium Microsoft System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Email Systems Calendar Integration Enterprise Features
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a gaming platform with multiplayer support, achievements, social features, and game streaming." [level=3]
+  - text: Medium Microsoft System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Gaming Infrastructure Real-time Systems Social Gaming
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a web console for managing AWS services with user management, billing, and service orchestration." [level=3]
+  - text: Medium Amazon System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Management Console Service Integration User Experience
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a return management system that handles return requests, refunds, and inventory restocking efficiently." [level=3]
+  - text: Medium Amazon System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Return Processing Inventory Management Refund Systems
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design an advertising platform for sellers and brands to promote products on Amazon with targeting and analytics." [level=3]
+  - text: Medium Amazon System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Advertising Systems Real-time Bidding Analytics
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a logistics system that enables one-day delivery for Prime members in major metropolitan areas." [level=3]
+  - text: Medium Amazon System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Logistics Systems Route Optimization Inventory Positioning
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a music streaming service with personalized playlists, offline playback, and social features." [level=3]
+  - text: Medium Amazon System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Audio Streaming Personalization Offline Systems
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design an e-book platform with reading apps, content delivery, and digital rights management." [level=3]
+  - text: Medium Amazon System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Content Delivery DRM Systems Reading Experience
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a grocery delivery service with inventory management, delivery optimization, and perishable goods handling." [level=3]
+  - text: Medium Amazon System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Delivery Systems Inventory Management Route Optimization
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a third-party seller platform that handles seller onboarding, product listings, and order management." [level=3]
+  - text: Medium Amazon System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Marketplace Systems Seller Management Trust & Safety
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a warehouse management and fulfillment system that optimizes picking, packing, and shipping operations." [level=3]
+  - text: Medium Amazon System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Warehouse Management Optimization Systems Robotics Integration
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a recommendation engine that suggests products based on user behavior, purchase history, and browsing patterns." [level=3]
+  - text: Medium Amazon System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Machine Learning Real-time Processing Personalization
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a video conferencing platform with high-quality video, screen sharing, and large meeting support." [level=3]
+  - text: Medium Google System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Video Conferencing Real-time Communication Scalability
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a web analytics platform that tracks user behavior, provides insights, and supports real-time reporting." [level=3]
+  - text: Medium Google System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Analytics Pipeline Real-time Processing Data Visualization
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a digital payment system with mobile payments, peer-to-peer transfers, and merchant integration." [level=3]
+  - text: Medium Google System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Payment Systems Security Mobile Integration
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a suite of productivity tools (Docs, Sheets, Slides) with real-time collaboration and cloud synchronization." [level=3]
+  - text: Medium Google System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Collaboration Systems Real-time Editing Document Management
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a cloud storage service that provides high durability, availability, and performance for enterprise customers." [level=3]
+  - text: Medium Google System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Distributed Storage Data Durability Performance Optimization
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a calendar service with scheduling, meeting coordination, and integration with other Google services." [level=3]
+  - text: Medium Google System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Calendar Systems Integration Platform Scheduling Algorithms
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a photo storage and sharing service with automatic backup, AI-powered organization, and face recognition." [level=3]
+  - text: Medium Google System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Image Processing Machine Learning Storage Systems
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a cloud storage and collaboration platform with file synchronization, sharing, and real-time editing." [level=3]
+  - text: Medium Google System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: File Systems Synchronization Collaboration Tools
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a system for crisis response that helps users mark themselves safe and find information during emergencies." [level=3]
+  - text: Medium Meta System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Emergency Systems Geolocation Information Distribution
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design an enterprise collaboration platform with team communication, file sharing, and integration capabilities." [level=3]
+  - text: Medium Meta System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Enterprise Systems Collaboration Tools Integration Platform
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a video calling system for smart displays with AI-powered camera tracking and family-friendly features." [level=3]
+  - text: Medium Meta System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Video Processing AI Integration IoT Systems
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a dating service integrated with Facebook that includes matching algorithms, privacy controls, and safety features." [level=3]
+  - text: Medium Meta System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Matching Algorithms Privacy Systems Safety Features
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a gaming platform that supports live streaming, tournaments, and social gaming features." [level=3]
+  - text: Medium Meta System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Gaming Infrastructure Live Streaming Social Features
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design an analytics system for Facebook Pages that provides real-time insights on reach, engagement, and audience demographics." [level=3]
+  - text: Medium Meta System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Analytics Pipeline Real-time Processing Data Visualization
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design an event management system that handles event creation, invitations, RSVPs, and real-time updates." [level=3]
+  - text: Medium Meta System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Event Management Notification Systems Calendar Integration
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a marketplace platform for buying and selling items locally with search, messaging, and payment integration." [level=3]
+  - text: Medium Meta System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Search Systems Geolocation Payment Processing
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a system for managing millions of groups with different privacy settings, member management, and content moderation." [level=3]
+  - text: Medium Meta System Design Architecture
+  - img
+  - text: Medium level
+  - img
+  - text: 45 min
+  - paragraph: "Focus Areas:"
+  - text: Access Control Content Management Moderation Systems
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a minimum viable product (MVP) architecture that can scale." [level=3]
+  - text: Medium Startups & Scale-ups
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a distributed training pipeline for large AI models." [level=3]
+  - text: Hard OpenAI
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+  - heading "Design a cloud monitoring service (like Azure Monitor)." [level=3]
+  - text: Medium Microsoft
+  - img
+  - text: 0 views
+  - img
+  - text: 0 answers
+  - button "Practice":
+    - text: Practice
+    - img
+- region "Notifications (F8)":
+  - list
+- alert: System Design Questions | EM Interview Prep
+```

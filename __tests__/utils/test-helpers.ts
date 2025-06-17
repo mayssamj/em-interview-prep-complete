@@ -1,101 +1,116 @@
 
-/**
- * Test helper utilities
- */
+import { NextRequest } from 'next/server';
 
-export const mockFetch = (responses: Record<string, any>) => {
-  global.fetch = jest.fn((url: string) => {
-    const urlString = typeof url === 'string' ? url : url.toString()
-    
-    for (const [pattern, response] of Object.entries(responses)) {
-      if (urlString.includes(pattern)) {
-        return Promise.resolve({
-          ok: true,
-          status: 200,
-          json: () => Promise.resolve(response),
-          headers: new Headers(),
-          ...response._meta
-        })
-      }
-    }
-    
-    return Promise.reject(new Error(`No mock response for ${urlString}`))
-  }) as jest.Mock
-}
+export const createMockRequest = (
+  url: string,
+  options: {
+    method?: string;
+    body?: any;
+    headers?: Record<string, string>;
+    cookies?: Record<string, string>;
+  } = {}
+): NextRequest => {
+  const { method = 'GET', body, headers = {}, cookies = {} } = options;
 
-export const mockAuthenticatedFetch = (token: string = 'mock-token') => {
-  return (url: string, options?: RequestInit) => {
-    const headers = new Headers(options?.headers)
-    headers.set('Cookie', `token=${token}`)
-    
-    return fetch(url, {
-      ...options,
-      headers
-    })
+  // Convert cookies to cookie header
+  if (Object.keys(cookies).length > 0) {
+    headers.cookie = Object.entries(cookies)
+      .map(([key, value]) => `${key}=${value}`)
+      .join('; ');
   }
-}
 
-export const createMockUser = (overrides: Partial<any> = {}) => ({
-  id: 'user-123',
+  const requestInit: RequestInit = {
+    method,
+    headers,
+  };
+
+  if (body) {
+    requestInit.body = typeof body === 'string' ? body : JSON.stringify(body);
+    headers['Content-Type'] = 'application/json';
+  }
+
+  return new NextRequest(url, requestInit);
+};
+
+export const createMockUser = (overrides: any = {}) => ({
+  id: 'mock-user-id',
   username: 'testuser',
-  isAdmin: false,
-  preferences: { theme: 'light', viewMode: 'normal' },
-  created_at: new Date().toISOString(),
-  updated_at: new Date().toISOString(),
-  ...overrides
-})
+  password_hash: 'hashedpassword',
+  is_admin: false,
+  preferences: null,
+  created_at: new Date(),
+  updated_at: new Date(),
+  ...overrides,
+});
 
-export const createMockQuestion = (overrides: Partial<any> = {}) => ({
-  id: 'question-123',
-  question_text: 'Test question',
-  difficulty: 'Medium',
-  category: 'data_ai_ml_systems',
-  categories: ['Data & AI/ML Systems'],
-  is_critical: false,
-  tags: ['test'],
-  usage_count: 1,
-  question_type: 'system_design',
-  companies: null,
-  system_design_questions: {
-    architecture_focus: ['scalability'],
-    complexity_level: 'medium',
-    leadership_aspects: ['team coordination'],
-    frameworks: ['microservices'],
-    evaluation_criteria: ['scalability'],
-    resources: [],
-    estimated_time_minutes: 45,
-    follow_up_questions: [],
-    common_mistakes: [],
-    key_tradeoffs: []
-  },
-  _count: { answers: 0, system_design_answers: 0 },
-  ...overrides
-})
+export const createMockAdminUser = (overrides: any = {}) => ({
+  id: 'mock-admin-id',
+  username: 'admin',
+  password_hash: 'hashedpassword',
+  is_admin: true,
+  preferences: null,
+  created_at: new Date(),
+  updated_at: new Date(),
+  ...overrides,
+});
 
-export const createMockCompany = (overrides: Partial<any> = {}) => ({
-  id: 'company-123',
+export const mockPrismaResponse = (data: any) => {
+  return Promise.resolve(data);
+};
+
+export const mockPrismaError = (error: string) => {
+  return Promise.reject(new Error(error));
+};
+
+export const expectJsonResponse = async (
+  response: Response,
+  expectedStatus: number,
+  expectedData?: any
+) => {
+  expect(response.status).toBe(expectedStatus);
+  
+  if (expectedData) {
+    const data = await response.json();
+    expect(data).toMatchObject(expectedData);
+    return data;
+  }
+  
+  return await response.json();
+};
+
+export const createMockStory = (overrides: any = {}) => ({
+  id: 'mock-story-id',
+  title: 'Test Story',
+  situation: 'Test situation',
+  task: 'Test task',
+  action: 'Test action',
+  result: 'Test result',
+  user_id: 'mock-user-id',
+  created_at: new Date(),
+  updated_at: new Date(),
+  ...overrides,
+});
+
+export const createMockQuestion = (overrides: any = {}) => ({
+  id: 'mock-question-id',
+  question: 'Test question?',
+  category: 'behavioral',
+  difficulty: 'medium',
+  company_id: 'mock-company-id',
+  created_at: new Date(),
+  updated_at: new Date(),
+  ...overrides,
+});
+
+export const createMockCompany = (overrides: any = {}) => ({
+  id: 'mock-company-id',
   name: 'Test Company',
+  industry: 'Technology',
+  size: 'Large',
+  description: 'Test company description',
   values: ['Innovation', 'Excellence'],
-  evaluation_criteria: ['Leadership', 'Technical Skills'],
-  interview_format: 'Panel interview',
-  success_tips: ['Be prepared', 'Ask questions'],
-  red_flags: ['Poor communication', 'Lack of preparation'],
-  _count: { questions: 5 },
-  ...overrides
-})
-
-export const waitForLoadingToFinish = async () => {
-  const { waitFor, screen } = await import('@testing-library/react')
-  await waitFor(() => {
-    expect(screen.queryByText(/loading/i)).not.toBeInTheDocument()
-  }, { timeout: 5000 })
-}
-
-export const expectToastMessage = (mockToast: jest.Mock, title: string, description?: string) => {
-  expect(mockToast).toHaveBeenCalledWith(
-    expect.objectContaining({
-      title,
-      ...(description && { description })
-    })
-  )
-}
+  interview_process: ['Phone Screen', 'Technical Interview'],
+  created_at: new Date(),
+  updated_at: new Date(),
+  ...overrides,
+});

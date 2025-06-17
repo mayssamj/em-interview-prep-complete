@@ -4,7 +4,7 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
 }
 
@@ -12,9 +12,9 @@ model answers {
   id               String    @id
   user_id          String
   question_id      String
-  answer_text      String
-  story_references String[]
-  notes            String?
+  answer_text      String    @db.Text
+  story_references Json      @default("[]")
+  notes            String?   @db.Text
   created_at       DateTime  @default(now())
   updated_at       DateTime
   questions        questions @relation(fields: [question_id], references: [id], onDelete: Cascade)
@@ -27,11 +27,11 @@ model answers {
 model companies {
   id                  String      @id
   name                String      @unique
-  values              String[]
-  evaluation_criteria String[]
-  interview_format    String
-  success_tips        String[]
-  red_flags           String[]
+  values              Json        @default("[]")
+  evaluation_criteria Json        @default("[]")
+  interview_format    String      @db.Text
+  success_tips        Json        @default("[]")
+  red_flags           Json        @default("[]")
   created_at          DateTime    @default(now())
   updated_at          DateTime
   questions           questions[]
@@ -43,7 +43,7 @@ model interview_notes {
   company            String
   interviewer_name   String?
   interviewer_role   String?
-  questions_asked    String[]
+  questions_asked    Json     @default("[]")
   takeaways          String?
   follow_up_thoughts String?
   interview_date     DateTime
@@ -79,16 +79,16 @@ model questions {
   id                      String                   @id
   company_id              String?
   category                String
-  question_text           String
+  question_text           String                   @db.Text
   difficulty              String
   is_generated            Boolean                  @default(true)
-  tags                    String[]
+  tags                    Json                     @default("[]")
   created_at              DateTime                 @default(now())
   updated_at              DateTime
   is_critical             Boolean                  @default(false)
   usage_count             Int                      @default(0)
   question_type           String                   @default("behavioral")
-  categories              String[]                 @default([])
+  categories              Json                     @default("[]")
   answers                 answers[]
   progress                progress[]
   question_views          question_views[]
@@ -101,13 +101,13 @@ model stories {
   id         String    @id
   user_id    String
   title      String
-  situation  String
-  task       String
-  action     String
-  result     String
-  reflection String?
-  tags       String[]
-  categories String[]
+  situation  String    @db.Text
+  task       String    @db.Text
+  action     String    @db.Text
+  result     String    @db.Text
+  reflection String?   @db.Text
+  tags       Json      @default("[]")
+  categories Json      @default("[]")
   created_at DateTime  @default(now())
   updated_at DateTime
   users      users     @relation(fields: [user_id], references: [id], onDelete: Cascade)
@@ -118,14 +118,14 @@ model system_design_answers {
   id                    String    @id
   user_id               String
   question_id           String
-  high_level_design     String
+  high_level_design     String    @db.Text
   detailed_components   Json?
-  scalability_approach  String?
-  data_storage_strategy String?
-  tradeoffs_discussed   String[]
-  frameworks_used       String[]
+  scalability_approach  String?   @db.Text
+  data_storage_strategy String?   @db.Text
+  tradeoffs_discussed   Json      @default("[]")
+  frameworks_used       Json      @default("[]")
   estimated_scale       String?
-  notes                 String?
+  notes                 String?   @db.Text
   created_at            DateTime  @default(now())
   updated_at            DateTime
   questions             questions @relation(fields: [question_id], references: [id], onDelete: Cascade)
@@ -137,13 +137,13 @@ model system_design_answers {
 model system_design_frameworks {
   id             String   @id
   name           String   @unique
-  description    String
+  description    String   @db.Text
   category       String
-  key_principles String[]
-  use_cases      String[]
-  tradeoffs      String[]
-  examples       String[]
-  resources      String[]
+  key_principles Json     @default("[]")
+  use_cases      Json     @default("[]")
+  tradeoffs      Json     @default("[]")
+  examples       Json     @default("[]")
+  resources      Json     @default("[]")
   difficulty     String
   created_at     DateTime @default(now())
   updated_at     DateTime
@@ -152,29 +152,29 @@ model system_design_frameworks {
 model system_design_questions {
   id                            String    @id
   question_id                   String    @unique
-  architecture_focus            String[]
+  architecture_focus            Json      @default("[]")
   complexity_level              String
-  leadership_aspects            String[]
-  frameworks                    String[]
-  evaluation_criteria           String[]
-  resources                     String[]
+  leadership_aspects            Json      @default("[]")
+  frameworks                    Json      @default("[]")
+  evaluation_criteria           Json      @default("[]")
+  resources                     Json      @default("[]")
   estimated_time_minutes        Int?
-  follow_up_questions           String[]
-  common_mistakes               String[]
-  key_tradeoffs                 String[]
+  follow_up_questions           Json      @default("[]")
+  common_mistakes               Json      @default("[]")
+  key_tradeoffs                 Json      @default("[]")
   created_at                    DateTime  @default(now())
   updated_at                    DateTime
-  alternative_solutions         String[]
+  alternative_solutions         Json      @default("[]")
   back_of_envelope_calculations Json?
-  clarifying_questions          String[]
+  clarifying_questions          Json      @default("[]")
   core_solution                 Json?
-  functional_requirements       String[]
-  key_technical_criteria        String[]
-  non_functional_requirements   String[]
+  functional_requirements       Json      @default("[]")
+  key_technical_criteria        Json      @default("[]")
+  non_functional_requirements   Json      @default("[]")
   problem_statement             String?
   question_title                String?
-  references                    String[]
-  scalability_considerations    String[]
+  references                    Json      @default("[]")
+  scalability_considerations    Json      @default("[]")
   technology_stack              Json?
   tradeoffs                     Json?
   questions                     questions @relation(fields: [question_id], references: [id], onDelete: Cascade)

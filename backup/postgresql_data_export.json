@@ -1,0 +1,4849 @@
+{
+  "users": [
+    {
+      "id": "252061c4-dd0b-4002-94f2-9d3b05bee660",
+      "username": "admin",
+      "password_hash": "$2a$10$rRFOt14JRLRxgrRJ/DWV7ePEPNoMBG/s5AK41dQVEQePHYH2HdT..",
+      "is_admin": true,
+      "preferences": null,
+      "created_at": "2025-06-16T23:09:20.990Z",
+      "updated_at": "2025-06-16T23:09:20.988Z"
+    },
+    {
+      "id": "a4ebead3-523c-4a84-ac15-8b0c489cacbc",
+      "username": "demo",
+      "password_hash": "$2a$10$fKgx49kcfQvmztZRSboaluNMj12QMTrPI9mkxWzy4VSaKhBj3H9Ne",
+      "is_admin": false,
+      "preferences": null,
+      "created_at": "2025-06-16T23:09:21.074Z",
+      "updated_at": "2025-06-16T23:09:21.073Z"
+    },
+    {
+      "id": "67d6b756-e04e-486b-8b03-1b08bc70fd2d",
+      "username": "testuser",
+      "password_hash": "$2a$10$oezb2Ffj/mRBVa87NEunV.SxijCSoMeTZe5kbM.KZZctodsqWSNc.",
+      "is_admin": false,
+      "preferences": null,
+      "created_at": "2025-06-16T23:09:38.630Z",
+      "updated_at": "2025-06-16T23:09:38.630Z"
+    },
+    {
+      "id": "user_mayssam",
+      "username": "mayssam",
+      "password_hash": "$2a$10$J3fdrTLL5HbC6pMdd37A8eJlGE2dEl/MUAa/pG6EHVb9xF7oKwNAm",
+      "is_admin": false,
+      "preferences": {
+        "theme": "light",
+        "viewMode": "normal"
+      },
+      "created_at": "2025-06-16T23:35:44.740Z",
+      "updated_at": "2025-06-16T23:35:44.740Z"
+    }
+  ],
+  "companies": [
+    {
+      "id": "company_microsoft",
+      "name": "Microsoft",
+      "values": [
+        "Respect: We are each responsible for creating an inclusive culture",
+        "Integrity: We are each responsible for creating a culture of integrity",
+        "Accountability: We are each responsible for our company, our customers, our partners, and ourselves"
+      ],
+      "evaluation_criteria": [
+        "Leadership and People Management (coaching, developing talent, building inclusive teams)",
+        "Technical Excellence and Innovation (system design, technical decision-making, staying current)",
+        "Customer Focus and Business Impact (understanding customer needs, driving results)",
+        "Collaboration and Communication (cross-functional partnership, influence without authority)",
+        "Growth Mindset and Learning Agility (continuous improvement, adapting to change)",
+        "Cultural Fit (alignment with Microsoft values, diversity and inclusion commitment)"
+      ],
+      "interview_format": "Multi-stage process: 1. Resume screening and recruiter phone screen (30 min: background, motivation, basic behavioral). 2. Technical phone screen (45-60 min: coding, system design basics). 3. Virtual or onsite loop (4-6 interviews, 45-60 min each): Behavioral/Leadership interviews (2-3 rounds), Technical interviews (coding, system design), Cross-functional collaboration scenarios, As Appropriate (AA) interview with senior leader. Focus on growth mindset, inclusive leadership, and technical depth.",
+      "success_tips": [
+        "Demonstrate growth mindset through examples of learning from failures and continuous improvement",
+        "Show commitment to diversity and inclusion with specific examples",
+        "Prepare technical examples showing innovation and customer impact",
+        "Use STAR method with emphasis on collaboration and inclusive leadership",
+        "Research Microsoft's recent initiatives and cultural transformation",
+        "Show passion for empowering others and creating inclusive environments"
+      ],
+      "red_flags": [
+        "Fixed mindset or inability to discuss failures constructively",
+        "Lack of awareness about diversity and inclusion importance",
+        "Poor technical depth for engineering management role",
+        "Inability to show customer focus or business impact",
+        "Negative attitude toward change or learning new technologies"
+      ],
+      "created_at": "2025-06-16T23:35:44.744Z",
+      "updated_at": "2025-06-16T23:35:44.744Z"
+    },
+    {
+      "id": "company_openai",
+      "name": "OpenAI",
+      "values": [
+        "AGI Safety: Ensuring artificial general intelligence benefits all of humanity",
+        "Broad Benefit: Distributing benefits of AI broadly and fairly",
+        "Long-term Safety: Prioritizing safety research and responsible deployment",
+        "Technical Leadership: Pushing the boundaries of AI capabilities",
+        "Transparency: Being open about our research and limitations"
+      ],
+      "evaluation_criteria": [
+        "AI/ML Technical Expertise (deep understanding of machine learning, neural networks, AI systems)",
+        "Safety-First Mindset (commitment to responsible AI development and deployment)",
+        "Research and Innovation Leadership (ability to drive cutting-edge research)",
+        "Cross-functional Collaboration (working with researchers, product, policy teams)",
+        "Ethical Decision-Making (navigating complex AI ethics and safety considerations)",
+        "Mission Alignment (genuine commitment to beneficial AGI development)"
+      ],
+      "interview_format": "Rigorous process: 1. Application review focusing on AI/ML background. 2. Technical screening (60 min: ML concepts, system design for AI systems). 3. Research discussion (45 min: discussing published work or research interests). 4. Onsite loop (5-6 interviews): Technical deep-dive (AI/ML systems), Research presentation, Safety and ethics discussion, Leadership and collaboration scenarios, Mission alignment conversation. Strong emphasis on both technical depth and safety consciousness.",
+      "success_tips": [
+        "Demonstrate deep technical knowledge of AI/ML systems and current research",
+        "Show genuine commitment to AI safety and responsible development",
+        "Prepare to discuss ethical implications of AI technology",
+        "Have examples of leading technical teams in ambiguous, cutting-edge domains",
+        "Stay current with latest AI research and OpenAI's publications",
+        "Show ability to balance innovation with safety considerations"
+      ],
+      "red_flags": [
+        "Lack of genuine interest in AI safety and responsible development",
+        "Insufficient technical depth in AI/ML for the role level",
+        "Inability to discuss ethical implications of AI technology",
+        "Overemphasis on speed without considering safety implications",
+        "Poor understanding of current AI research landscape"
+      ],
+      "created_at": "2025-06-16T23:35:44.747Z",
+      "updated_at": "2025-06-16T23:35:44.747Z"
+    },
+    {
+      "id": "company_snowflake",
+      "name": "Snowflake",
+      "values": [
+        "Put Customers First",
+        "Integrity Always",
+        "Think Big",
+        "Be Excellent",
+        "Get It Done",
+        "Own It",
+        "Embrace Each Other's Differences"
+      ],
+      "evaluation_criteria": [
+        "Data Platform Expertise (understanding of data warehousing, cloud platforms, analytics)",
+        "Customer-Centric Leadership (focus on customer success and value delivery)",
+        "Technical Excellence (system design, scalability, performance optimization)",
+        "Execution and Results (ability to deliver complex projects on time)",
+        "Team Building and Collaboration (building high-performing engineering teams)",
+        "Innovation and Strategic Thinking (driving product innovation and technical strategy)"
+      ],
+      "interview_format": "Comprehensive process: 1. Recruiter screening (30 min: background, motivation, culture fit). 2. Technical phone screen (45 min: system design, data platform concepts). 3. Virtual panel interviews (4-5 sessions, 45 min each): Technical leadership scenarios, Data platform architecture discussion, People management and team building, Customer focus and business impact, Cultural fit and values alignment. Strong focus on data platform experience and customer obsession.",
+      "success_tips": [
+        "Demonstrate deep understanding of data platforms, warehousing, and cloud technologies",
+        "Show customer obsession with specific examples of driving customer value",
+        "Prepare technical examples related to data processing, analytics, or cloud platforms",
+        "Emphasize execution excellence and ability to deliver results",
+        "Show experience building and scaling engineering teams",
+        "Research Snowflake's technology and competitive landscape"
+      ],
+      "red_flags": [
+        "Lack of data platform or cloud technology experience",
+        "Inability to demonstrate customer focus",
+        "Poor execution track record or inability to deliver results",
+        "Weak technical depth for data engineering leadership role",
+        "Lack of experience scaling engineering teams"
+      ],
+      "created_at": "2025-06-16T23:35:44.749Z",
+      "updated_at": "2025-06-16T23:35:44.749Z"
+    },
+    {
+      "id": "company_anthropic",
+      "name": "Anthropic",
+      "values": [
+        "AI Safety: Building AI systems that are safe, beneficial, and understandable",
+        "Research Excellence: Conducting rigorous, high-quality research",
+        "Responsible Development: Thoughtful and careful approach to AI development",
+        "Transparency: Being open about our research and its implications",
+        "Collaboration: Working together to solve complex challenges"
+      ],
+      "evaluation_criteria": [
+        "AI Safety Expertise (deep understanding of AI alignment, safety research, responsible AI)",
+        "Research Leadership (ability to drive and evaluate cutting-edge AI research)",
+        "Technical Excellence (strong ML/AI engineering and system design skills)",
+        "Ethical Reasoning (thoughtful approach to AI ethics and safety considerations)",
+        "Cross-functional Leadership (managing researchers, engineers, and safety teams)",
+        "Mission Alignment (genuine commitment to safe and beneficial AI)"
+      ],
+      "interview_format": "Research-focused process: 1. Application review emphasizing AI safety background. 2. Technical screening (60 min: AI safety concepts, ML systems design). 3. Research discussion (60 min: AI safety research, alignment problems). 4. Onsite interviews (5-6 sessions): Technical leadership in AI safety, Research methodology and evaluation, Safety-first engineering practices, Team leadership and collaboration, Mission and values alignment. Heavy emphasis on AI safety knowledge and research experience.",
+      "success_tips": [
+        "Demonstrate deep knowledge of AI safety research and alignment problems",
+        "Show experience with responsible AI development practices",
+        "Prepare to discuss technical approaches to AI safety and interpretability",
+        "Have examples of leading teams in research-oriented environments",
+        "Stay current with AI safety literature and Anthropic's research",
+        "Show ability to balance research goals with practical engineering constraints"
+      ],
+      "red_flags": [
+        "Lack of genuine interest or knowledge in AI safety",
+        "Insufficient research background or methodology understanding",
+        "Inability to discuss AI alignment and safety challenges",
+        "Overemphasis on capability advancement without safety considerations",
+        "Poor fit for research-oriented culture"
+      ],
+      "created_at": "2025-06-16T23:35:44.751Z",
+      "updated_at": "2025-06-16T23:35:44.751Z"
+    },
+    {
+      "id": "company_scaleai",
+      "name": "Scale AI",
+      "values": [
+        "Accelerate AI: Helping AI applications reach production faster",
+        "Data Excellence: Providing the highest quality training data",
+        "Customer Success: Enabling our customers to build better AI",
+        "Innovation: Pushing the boundaries of data and AI technology",
+        "Execution: Delivering results with speed and precision"
+      ],
+      "evaluation_criteria": [
+        "AI/ML Platform Experience (building systems for AI training and deployment)",
+        "Data Engineering Excellence (large-scale data processing, quality, and infrastructure)",
+        "Product and Customer Focus (understanding AI customer needs and use cases)",
+        "Scaling and Performance (building systems that handle massive scale)",
+        "Team Leadership (building and managing high-performing engineering teams)",
+        "Startup Agility (thriving in fast-paced, high-growth environment)"
+      ],
+      "interview_format": "Fast-paced process: 1. Recruiter screening (30 min: background, startup fit, motivation). 2. Technical phone screen (45 min: system design for AI/data platforms). 3. Onsite loop (4-5 interviews, 45 min each): Technical leadership and architecture, Data platform and ML systems design, People management and team scaling, Product thinking and customer focus, Culture fit and startup mentality. Emphasis on ability to move fast and scale systems.",
+      "success_tips": [
+        "Show experience building AI/ML platforms or data infrastructure at scale",
+        "Demonstrate ability to move fast and iterate quickly",
+        "Prepare examples of scaling engineering teams in high-growth environments",
+        "Show understanding of AI training data challenges and solutions",
+        "Emphasize customer focus and product thinking",
+        "Research Scale AI's platform and customer use cases"
+      ],
+      "red_flags": [
+        "Lack of AI/ML or data platform experience",
+        "Inability to work in fast-paced, ambiguous environments",
+        "Poor track record of scaling teams or systems",
+        "Lack of customer or product focus",
+        "Inability to demonstrate startup mentality and agility"
+      ],
+      "created_at": "2025-06-16T23:35:44.753Z",
+      "updated_at": "2025-06-16T23:35:44.753Z"
+    },
+    {
+      "id": "company_netflix",
+      "name": "Netflix",
+      "values": [
+        "Judgment: Making wise decisions despite ambiguity",
+        "Communication: Listening well and communicating clearly",
+        "Impact: Accomplishing amazing amounts of important work",
+        "Curiosity: Learning rapidly and eagerly",
+        "Innovation: Creating new ideas that prove useful",
+        "Courage: Saying what you think when it's in Netflix's best interest",
+        "Passion: Inspiring others with your thrill for excellence",
+        "Honesty: Being known for candor and directness",
+        "Selflessness: Seeking what's best for Netflix rather than yourself"
+      ],
+      "evaluation_criteria": [
+        "High Performance Culture Fit (thriving in freedom and responsibility environment)",
+        "Technical Excellence (streaming technology, distributed systems, data platforms)",
+        "Innovation and Experimentation (A/B testing, data-driven decision making)",
+        "Global Scale Experience (building systems for hundreds of millions of users)",
+        "Leadership and Talent Density (hiring and developing exceptional talent)",
+        "Business Impact (understanding entertainment industry and customer experience)"
+      ],
+      "interview_format": "Culture-focused process: 1. Recruiter screening (45 min: culture fit, high performance mindset). 2. Technical phone screen (60 min: distributed systems, streaming technology). 3. Onsite loop (5-6 interviews, 60 min each): Technical leadership and architecture, Data and experimentation platforms, People management and culture building, Innovation and product thinking, Values and culture deep-dive, Business impact and strategy. Strong emphasis on culture fit and high performance.",
+      "success_tips": [
+        "Demonstrate high performance mindset and results-oriented approach",
+        "Show experience with large-scale distributed systems and streaming technology",
+        "Prepare examples of data-driven decision making and experimentation",
+        "Emphasize innovation and ability to work with ambiguity",
+        "Show experience building high-performing, diverse teams",
+        "Research Netflix's technology stack and engineering culture"
+      ],
+      "red_flags": [
+        "Poor fit for high-performance, freedom and responsibility culture",
+        "Lack of experience with large-scale distributed systems",
+        "Inability to demonstrate innovation or experimentation mindset",
+        "Poor communication or feedback skills",
+        "Lack of business impact or customer focus"
+      ],
+      "created_at": "2025-06-16T23:35:44.755Z",
+      "updated_at": "2025-06-16T23:35:44.755Z"
+    },
+    {
+      "id": "company_linkedin",
+      "name": "LinkedIn",
+      "values": [
+        "Members First: Putting our members at the center of everything we do",
+        "Relationships Matter: Building authentic relationships and trust",
+        "Be Open, Honest and Constructive: Communicating with transparency",
+        "Demand Excellence: Setting high standards and delivering quality",
+        "Take Intelligent Risks: Being bold and innovative",
+        "Act Like an Owner: Taking responsibility and thinking long-term"
+      ],
+      "evaluation_criteria": [
+        "Professional Network Understanding (deep knowledge of professional networking and career development)",
+        "Data and AI Expertise (recommendation systems, search, professional insights)",
+        "Member-Centric Leadership (focus on member value and professional success)",
+        "Technical Excellence (large-scale systems, data platforms, machine learning)",
+        "Business Acumen (understanding of professional services and B2B markets)",
+        "Inclusive Leadership (building diverse teams and inclusive products)"
+      ],
+      "interview_format": "Professional-focused process: 1. Recruiter screening (30 min: background, LinkedIn passion, culture fit). 2. Technical phone screen (45 min: system design, data platforms). 3. Onsite loop (4-5 interviews, 45 min each): Technical leadership and architecture, Data and ML systems design, People management and team building, Product thinking and member focus, Culture and values alignment. Strong emphasis on member obsession and professional networking understanding.",
+      "success_tips": [
+        "Show genuine passion for professional networking and career development",
+        "Demonstrate experience with recommendation systems, search, or social platforms",
+        "Prepare examples of member/user-centric product development",
+        "Show experience building inclusive and diverse engineering teams",
+        "Emphasize data-driven approach to product and engineering decisions",
+        "Research LinkedIn's platform, member needs, and competitive landscape"
+      ],
+      "red_flags": [
+        "Lack of understanding or passion for professional networking",
+        "Insufficient experience with social platforms or recommendation systems",
+        "Poor member/user focus or customer empathy",
+        "Weak data and analytics background",
+        "Inability to demonstrate inclusive leadership"
+      ],
+      "created_at": "2025-06-16T23:35:44.758Z",
+      "updated_at": "2025-06-16T23:35:44.758Z"
+    },
+    {
+      "id": "company_uber",
+      "name": "Uber",
+      "values": [
+        "We Build Globally: Thinking globally and acting locally",
+        "We Are Customer Obsessed: Putting riders and drivers first",
+        "We Celebrate Differences: Embracing diversity and inclusion",
+        "We Do the Right Thing: Acting with integrity and transparency",
+        "We Act Like Owners: Taking responsibility and thinking long-term",
+        "We Persevere: Overcoming challenges with grit and determination"
+      ],
+      "evaluation_criteria": [
+        "Marketplace and Platform Experience (two-sided markets, supply-demand optimization)",
+        "Global Scale and Localization (building products for diverse global markets)",
+        "Real-time Systems Expertise (location services, routing, real-time matching)",
+        "Operational Excellence (reliability, safety, regulatory compliance)",
+        "Growth and Experimentation (scaling platforms, A/B testing, growth metrics)",
+        "Leadership in Complex Environments (managing through rapid change and challenges)"
+      ],
+      "interview_format": "Marketplace-focused process: 1. Recruiter screening (30 min: background, Uber mission alignment). 2. Technical phone screen (45 min: distributed systems, real-time platforms). 3. Onsite loop (4-5 interviews, 45 min each): Technical leadership and marketplace systems, Real-time platform architecture, People management and scaling teams, Product strategy and growth, Culture and values alignment. Strong focus on marketplace dynamics and global scale.",
+      "success_tips": [
+        "Demonstrate understanding of marketplace dynamics and two-sided platforms",
+        "Show experience with real-time systems, location services, or matching algorithms",
+        "Prepare examples of building products for global, diverse markets",
+        "Emphasize operational excellence and reliability in critical systems",
+        "Show experience scaling teams and systems through rapid growth",
+        "Research Uber's platform, marketplace challenges, and global expansion"
+      ],
+      "red_flags": [
+        "Lack of marketplace or platform experience",
+        "Insufficient understanding of real-time systems and scalability",
+        "Poor operational mindset or reliability focus",
+        "Inability to work in fast-paced, complex environments",
+        "Lack of global perspective or cultural sensitivity"
+      ],
+      "created_at": "2025-06-16T23:35:44.760Z",
+      "updated_at": "2025-06-16T23:35:44.760Z"
+    },
+    {
+      "id": "company_airbnb",
+      "name": "Airbnb",
+      "values": [
+        "Champion the Mission: Creating a world where anyone can belong anywhere",
+        "Be a Host: Treating others with respect and care",
+        "Embrace the Adventure: Being bold and taking smart risks",
+        "Be a Cereal Entrepreneur: Being resourceful and creative"
+      ],
+      "evaluation_criteria": [
+        "Marketplace and Trust & Safety Expertise (two-sided marketplace, user safety, fraud prevention)",
+        "Global Community Building (understanding diverse cultures and local markets)",
+        "Product and Design Thinking (user experience, host and guest journey optimization)",
+        "Data-Driven Decision Making (experimentation, analytics, growth metrics)",
+        "Inclusive Leadership (building diverse teams and inclusive products)",
+        "Mission Alignment (genuine belief in belonging and community building)"
+      ],
+      "interview_format": "Community-focused process: 1. Recruiter screening (30 min: background, mission alignment, culture fit). 2. Technical phone screen (45 min: system design, marketplace platforms). 3. Onsite loop (4-5 interviews, 45 min each): Technical leadership and marketplace systems, Trust & safety and platform integrity, People management and inclusive leadership, Product thinking and community building, Culture and mission alignment. Strong emphasis on belonging and community values.",
+      "success_tips": [
+        "Show genuine passion for community building and creating belonging",
+        "Demonstrate experience with marketplace platforms and trust & safety",
+        "Prepare examples of building inclusive products and teams",
+        "Show understanding of global markets and cultural sensitivity",
+        "Emphasize user experience and host/guest journey optimization",
+        "Research Airbnb's community, trust & safety challenges, and global expansion"
+      ],
+      "red_flags": [
+        "Lack of passion for community building or belonging mission",
+        "Insufficient marketplace or trust & safety experience",
+        "Poor cultural sensitivity or global perspective",
+        "Weak product thinking or user experience focus",
+        "Inability to demonstrate inclusive leadership"
+      ],
+      "created_at": "2025-06-16T23:35:44.762Z",
+      "updated_at": "2025-06-16T23:35:44.762Z"
+    },
+    {
+      "id": "company_tiktok",
+      "name": "TikTok",
+      "values": [
+        "Lead with Curiosity: Always learning and exploring new possibilities",
+        "Aim for the Extraordinary: Setting ambitious goals and exceeding expectations",
+        "Seek Truth and Be Transparent: Being honest and open in all interactions",
+        "Act with Integrity: Doing the right thing even when no one is watching",
+        "Be Humble and Open: Learning from others and embracing feedback"
+      ],
+      "evaluation_criteria": [
+        "Social Media and Content Platform Expertise (recommendation algorithms, content moderation, creator tools)",
+        "Global Scale and Performance (serving billions of users with low latency)",
+        "AI and Machine Learning Leadership (recommendation systems, content understanding, personalization)",
+        "Content Safety and Moderation (building safe, positive community experiences)",
+        "Creator Economy Understanding (monetization, creator tools, community building)",
+        "Cross-Cultural Leadership (managing global, diverse teams and products)"
+      ],
+      "interview_format": "Global-scale process: 1. Recruiter screening (30 min: background, global mindset, culture fit). 2. Technical phone screen (45 min: large-scale systems, ML/AI platforms). 3. Onsite loop (4-5 interviews, 45 min each): Technical leadership and recommendation systems, Content platform and safety architecture, People management and global team leadership, Product strategy and creator economy, Culture and values alignment. Strong focus on AI/ML and global scale.",
+      "success_tips": [
+        "Demonstrate experience with recommendation systems and content platforms",
+        "Show understanding of content moderation and safety challenges",
+        "Prepare examples of building AI/ML systems at massive scale",
+        "Emphasize global perspective and cross-cultural leadership",
+        "Show experience with creator economy or social media platforms",
+        "Research TikTok's algorithm, content policies, and global challenges"
+      ],
+      "red_flags": [
+        "Lack of social media or content platform experience",
+        "Insufficient AI/ML or recommendation system background",
+        "Poor understanding of content safety and moderation challenges",
+        "Weak global perspective or cultural sensitivity",
+        "Inability to work with ambiguous, rapidly evolving requirements"
+      ],
+      "created_at": "2025-06-16T23:35:44.764Z",
+      "updated_at": "2025-06-16T23:35:44.764Z"
+    },
+    {
+      "id": "company_reddit",
+      "name": "Reddit",
+      "values": [
+        "Remember the Human: Treating everyone with respect and empathy",
+        "Empower Communities: Supporting diverse communities and conversations",
+        "Make Reddit for Everyone: Building inclusive and accessible experiences",
+        "Privacy by Design: Protecting user privacy and data",
+        "Authentic Conversations: Fostering genuine, meaningful discussions"
+      ],
+      "evaluation_criteria": [
+        "Community Platform Expertise (forum systems, moderation tools, community management)",
+        "Content and Discussion Systems (threading, voting, recommendation algorithms)",
+        "Trust & Safety Leadership (content moderation, harassment prevention, community guidelines)",
+        "User Privacy and Data Protection (privacy-first engineering, data governance)",
+        "Inclusive Product Development (accessibility, diverse community needs)",
+        "Authentic Communication (transparent, honest leadership style)"
+      ],
+      "interview_format": "Community-focused process: 1. Recruiter screening (30 min: background, Reddit community understanding). 2. Technical phone screen (45 min: system design, community platforms). 3. Onsite loop (4-5 interviews, 45 min each): Technical leadership and community systems, Trust & safety and content moderation, People management and inclusive leadership, Product thinking and community building, Culture and authenticity assessment. Strong emphasis on community values and authentic communication.",
+      "success_tips": [
+        "Show deep understanding of online communities and forum dynamics",
+        "Demonstrate experience with content moderation and trust & safety",
+        "Prepare examples of building inclusive and accessible products",
+        "Emphasize authentic communication and transparent leadership",
+        "Show experience with discussion systems, voting, or recommendation algorithms",
+        "Research Reddit's communities, moderation challenges, and platform evolution"
+      ],
+      "red_flags": [
+        "Lack of community platform or forum experience",
+        "Insufficient understanding of content moderation challenges",
+        "Poor communication style or lack of authenticity",
+        "Weak privacy or data protection awareness",
+        "Inability to demonstrate inclusive leadership"
+      ],
+      "created_at": "2025-06-16T23:35:44.765Z",
+      "updated_at": "2025-06-16T23:35:44.765Z"
+    },
+    {
+      "id": "company_startups",
+      "name": "Startups & Scale-ups",
+      "values": [
+        "Move Fast and Break Things: Rapid iteration and learning from failures",
+        "Customer First: Deep customer obsession and rapid feedback loops",
+        "Ownership and Accountability: Taking full responsibility for outcomes",
+        "Resourcefulness: Doing more with less and creative problem-solving",
+        "Growth Mindset: Continuous learning and adaptation",
+        "Team First: Building strong, collaborative, high-trust teams"
+      ],
+      "evaluation_criteria": [
+        "Startup Experience and Mentality (thriving in ambiguous, resource-constrained environments)",
+        "Full-Stack Leadership (wearing multiple hats, end-to-end ownership)",
+        "Rapid Scaling Expertise (0-1 and 1-100 scaling experience)",
+        "Customer Development (direct customer interaction, product-market fit)",
+        "Technical Versatility (broad technical skills, pragmatic technology choices)",
+        "Cultural Building (establishing engineering culture and practices from scratch)"
+      ],
+      "interview_format": "Practical and fast process: 1. Founder/CTO screening (30-45 min: background, startup fit, technical overview). 2. Technical conversation (45 min: architecture decisions, technology choices, scaling challenges). 3. Team interviews (2-3 sessions, 30-45 min each): Technical leadership and hands-on skills, Team building and culture creation, Customer focus and product development, Problem-solving and resourcefulness. Emphasis on practical experience and cultural fit.",
+      "success_tips": [
+        "Show hands-on experience building products from 0-1 or scaling 1-100",
+        "Demonstrate ability to work with limited resources and tight timelines",
+        "Prepare examples of direct customer interaction and product iteration",
+        "Emphasize pragmatic technology choices and technical versatility",
+        "Show experience building engineering culture and practices",
+        "Research the specific startup's stage, challenges, and technology stack"
+      ],
+      "red_flags": [
+        "Lack of startup or early-stage company experience",
+        "Inability to work in ambiguous, fast-paced environments",
+        "Over-engineering or lack of pragmatic approach",
+        "Poor customer focus or product sense",
+        "Inability to wear multiple hats or take on diverse responsibilities"
+      ],
+      "created_at": "2025-06-16T23:35:44.767Z",
+      "updated_at": "2025-06-16T23:35:44.767Z"
+    },
+    {
+      "id": "company_meta",
+      "name": "Meta",
+      "values": [
+        "Move Fast",
+        "Focus on Long-term Impact",
+        "Build Awesome Things",
+        "Live in the Future",
+        "Be Direct and Respect Your Colleagues",
+        "Meta, Metamates, Me"
+      ],
+      "evaluation_criteria": [
+        "Leadership and People Management skills (developing teams, handling difficult conversations, influencing without authority).",
+        "Problem-solving and Decision-making abilities (analytical skills, trade-off analysis, handling ambiguity).",
+        "Cross-functional Collaboration effectiveness (working with product, design, and other stakeholders).",
+        "Strong Communication Skills (articulating complex ideas clearly, advocating for projects).",
+        "Adaptability and Resilience (managing change, learning from failures, maintaining performance under pressure).",
+        "Cultural Fit (alignment with Meta's values, transparency, growth mindset, empowering engineers).",
+        "Thoughtful, data-informed, and collaborative decision-making process."
+      ],
+      "interview_format": "Multi-stage process (4-8 weeks): 1. Resume Screening. 2. Recruiter Phone Screen (15-30 min: background, motivation). 3. Initial Video Interview (45 min: people management, technical design, career motivation). 4. Onsite Loop (5-6 interviews, 45 min each): Leadership & People Management (often 2 rounds), Technical System Design, Technical Coding/Code Review, Project Retrospective, Domain-specific/Product Design (if applicable), Machine Learning (if relevant). Behavioral questions (STAR method) integrated throughout.",
+      "success_tips": [
+        "Use the STAR method authentically for storytelling, but avoid sounding overly scripted.",
+        "Prepare specific examples demonstrating leadership, technical problem-solving, conflict resolution, and adaptability.",
+        "Align stories with Meta's core values (Move Fast, Impact, Transparency, Collaboration, etc.).",
+        "Quantify impact with metrics or tangible results whenever possible.",
+        "Be transparent; Meta values humility, learning from failures, and a growth mindset.",
+        "Understand Meta's culture, recent projects, and leadership principles to tailor responses.",
+        "Practice mock interviews and prepare insightful questions for the interviewers.",
+        "Demonstrate empowerment of engineers, reflecting Meta's bottom-up culture.",
+        "Show passion, enthusiasm, and be structured and concise in communication."
+      ],
+      "red_flags": [
+        "Poor self-presentation or unclear elevator pitch.",
+        "Overemphasizing management tasks without linking them to business impact.",
+        "Inadequate preparation for technical (coding, system design) questions.",
+        "Lack of authenticity; overly scripted or rehearsed responses.",
+        "Poor communication skills or an unstructured thought process.",
+        "Not asking insightful questions or showing disinterest in the role or Meta."
+      ],
+      "created_at": "2025-06-16T23:35:44.769Z",
+      "updated_at": "2025-06-16T23:35:44.769Z"
+    },
+    {
+      "id": "company_amazon",
+      "name": "Amazon",
+      "values": [
+        "Customer Obsession",
+        "Ownership",
+        "Invent and Simplify",
+        "Are Right, A Lot",
+        "Learn and Be Curious",
+        "Hire and Develop the Best",
+        "Insist on the Highest Standards",
+        "Think Big",
+        "Bias for Action",
+        "Frugality",
+        "Earn Trust",
+        "Dive Deep",
+        "Have Backbone; Disagree and Commit",
+        "Deliver Results",
+        "Strive to be Earth's Best Employer",
+        "Success and Scale Bring Broad Responsibility"
+      ],
+      "evaluation_criteria": [
+        "Alignment with Amazon's 16 Leadership Principles (primary evaluation lens).",
+        "Demonstrated behavioral competencies (e.g., Ownership, Customer Obsession, Bias for Action).",
+        "Technical proficiency for role (coding, system design, problem-solving) - approx. 50% for technical roles.",
+        "Ability to provide specific, metric-driven examples using the STAR method.",
+        "Cultural fit, assessed by a 'Bar Raiser' to maintain high hiring standards.",
+        "Data-driven decision-making and effective stakeholder management."
+      ],
+      "interview_format": "Multi-stage process: 1. Application and Resume Screening. 2. Initial Screening (30-45 min phone/video with recruiter/hiring manager: basic qualifications, behavioral questions based on LPs, role-specific scenarios, compensation). 3. Behavioral Interviews using STAR method focused on Leadership Principles. 4. Interview Loop (4-6 interviews, 45-60 min each): includes hiring manager, team members, cross-functional stakeholders, and a 'Bar Raiser'. Mix of technical assessments (coding, system design for tech roles) and deep behavioral evaluations against LPs. 5. Post-Interview Debrief and Decision (feedback typically within 5 business days after loop).",
+      "success_tips": [
+        "Prepare multiple, diverse STAR stories for each Leadership Principle, focusing on individual contributions ('I' statements).",
+        "Quantify achievements with specific data and metrics to demonstrate impact.",
+        "Be authentic; discuss challenges and failures, emphasizing lessons learned and growth.",
+        "Understand Amazon's culture and LPs deeply; tailor stories to exemplify these values.",
+        "Practice articulating stories clearly and concisely (2-3 minutes each).",
+        "Ask thoughtful questions to show engagement and genuine interest.",
+        "For technical rounds, be prepared for live coding and system design discussions.",
+        "Demonstrate a customer-first mindset and the ability to make data-informed decisions."
+      ],
+      "red_flags": [
+        "Arriving late or appearing unprepared (test tech beforehand).",
+        "Vague, generic, or irrelevant responses; not using STAR effectively.",
+        "Overusing 'we' instead of 'I' when describing contributions.",
+        "Failing to provide multiple, diverse examples for different LPs or questions.",
+        "Not asking insightful questions at the end of the interview.",
+        "Sharing confidential information or making discriminatory remarks.",
+        "Speaking negatively about past employers or colleagues.",
+        "Lack of self-awareness, accountability, or inability to discuss failures constructively.",
+        "Inability to quantify achievements or provide data-backed examples.",
+        "Responses that disregard or misalign with Amazon's Leadership Principles.",
+        "Becoming defensive or unable to handle challenging questions or disagreements respectfully."
+      ],
+      "created_at": "2025-06-16T23:35:44.771Z",
+      "updated_at": "2025-06-16T23:35:44.771Z"
+    },
+    {
+      "id": "company_google",
+      "name": "Google",
+      "values": [
+        "Googleyness: Comfort with ambiguity, Bias to action, Collaboration and humility, Passion for innovation, Valuing diversity and inclusion.",
+        "Emergent Leadership.",
+        "Focus on General Cognitive Ability (GCA) and Role-Related Knowledge (RRK)."
+      ],
+      "evaluation_criteria": [
+        "Demonstration of 'Googleyness' (cultural fit, including comfort with ambiguity, bias to action, collaboration).",
+        "Leadership capabilities (especially emergent leadership) and people management skills.",
+        "Strong problem-solving skills and General Cognitive Ability (GCA).",
+        "Role-Related Knowledge and Experience (RRK), including technical expertise for EM roles.",
+        "Ability to make decisions under ambiguity and drive change.",
+        "Commitment to diversity and inclusion.",
+        "Ability to deliver results and drive impact."
+      ],
+      "interview_format": "Process typically spans 1-3 months: 1. Resume screening. 2. Recruiter screening (phone/video: behavioral, experience fit, 'Why Google?'). 3. Technical screening (coding interview via Google Meets, using a shared Google Doc; focus on data structures, algorithms, problem-solving, clean code). 4. Onsite interviews (typically 5-6 sessions, 45 min each): Leadership interviews (x2, behavioral and hypothetical), System Design interviews (x1-2), Coding & Algorithm interviews (x1-2). Behavioral questions assessing Googleyness, leadership, and problem-solving are integrated. Lunch with an engineer (informal). Final stages include hiring committee review, senior leader review, compensation committee, and executive review for senior roles.",
+      "success_tips": [
+        "Use the STAR method for behavioral questions, providing specific examples with quantifiable outcomes and lessons learned.",
+        "Thoroughly prepare for technical rounds: practice coding in a shared document environment and system design with a focus on scalability and trade-offs.",
+        "Understand and be able to articulate Google's core values and 'Googleyness' attributes through your experiences.",
+        "Be authentic; share real experiences, including failures, and demonstrate a growth mindset.",
+        "Clearly articulate your thought process during problem-solving (both technical and behavioral).",
+        "Demonstrate leadership, strong decision-making, and collaborative skills.",
+        "Prepare for follow-up questions that probe deeper into your stories.",
+        "Research Google's culture, recent products, and initiatives to show genuine interest."
+      ],
+      "red_flags": [
+        "Underestimating the importance of behavioral questions or 'Googleyness'.",
+        "Focusing solely on technical skills without demonstrating cultural fit or leadership.",
+        "Neglecting thorough preparation for system design and leadership scenario questions.",
+        "Failing to clearly articulate the thought process during problem-solving exercises.",
+        "Lack of self-awareness or inability to discuss past mistakes constructively.",
+        "Appearing unenthusiastic or not well-researched about Google and the role."
+      ],
+      "created_at": "2025-06-16T23:35:44.774Z",
+      "updated_at": "2025-06-16T23:35:44.774Z"
+    }
+  ],
+  "questions": [
+    {
+      "id": "question_microsoft_cex95kgdp",
+      "company_id": "company_microsoft",
+      "category": "leadership",
+      "question_text": "Tell me about a time you had to lead a team through a significant change or transformation.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Change Management",
+        "Growth Mindset"
+      ],
+      "created_at": "2025-06-16T23:35:44.778Z",
+      "updated_at": "2025-06-16T23:35:44.778Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_microsoft_su5j9q9r3",
+      "company_id": "company_microsoft",
+      "category": "leadership",
+      "question_text": "Describe how you've built an inclusive and diverse engineering team. What specific actions did you take?",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Diversity & Inclusion",
+        "Team Building"
+      ],
+      "created_at": "2025-06-16T23:35:44.780Z",
+      "updated_at": "2025-06-16T23:35:44.780Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_microsoft_5ewjfppzp",
+      "company_id": "company_microsoft",
+      "category": "leadership",
+      "question_text": "Give an example of how you've coached and developed a team member who was struggling.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Coaching",
+        "People Management"
+      ],
+      "created_at": "2025-06-16T23:35:44.782Z",
+      "updated_at": "2025-06-16T23:35:44.782Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_microsoft_gc4c73639",
+      "company_id": "company_microsoft",
+      "category": "conflict_resolution",
+      "question_text": "Tell me about a time you had to address a conflict between team members with different perspectives.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Conflict Resolution",
+        "Inclusive Leadership"
+      ],
+      "created_at": "2025-06-16T23:35:44.784Z",
+      "updated_at": "2025-06-16T23:35:44.784Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_microsoft_dwv8dc2ge",
+      "company_id": "company_microsoft",
+      "category": "technical_decisions",
+      "question_text": "Describe a technical decision you made that had significant customer impact. How did you ensure it met customer needs?",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Customer Focus",
+        "Technical Leadership"
+      ],
+      "created_at": "2025-06-16T23:35:44.785Z",
+      "updated_at": "2025-06-16T23:35:44.785Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_microsoft_cf1fwumay",
+      "company_id": "company_microsoft",
+      "category": "ambiguity",
+      "question_text": "Tell me about a time you had to learn a new technology or domain quickly to solve a business problem.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Learning Agility",
+        "Growth Mindset"
+      ],
+      "created_at": "2025-06-16T23:35:44.787Z",
+      "updated_at": "2025-06-16T23:35:44.787Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_openai_cltmfybch",
+      "company_id": "company_openai",
+      "category": "leadership",
+      "question_text": "Describe how you've led a team working on cutting-edge AI research while ensuring safety considerations.",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "AI Safety",
+        "Research Leadership"
+      ],
+      "created_at": "2025-06-16T23:35:44.790Z",
+      "updated_at": "2025-06-16T23:35:44.790Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_openai_flh1ep13i",
+      "company_id": "company_openai",
+      "category": "leadership",
+      "question_text": "Tell me about a time you had to balance innovation speed with responsible AI development practices.",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "AI Safety",
+        "Ethical Decision-Making"
+      ],
+      "created_at": "2025-06-16T23:35:44.791Z",
+      "updated_at": "2025-06-16T23:35:44.791Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_openai_pt8zesphq",
+      "company_id": "company_openai",
+      "category": "technical_decisions",
+      "question_text": "Describe a complex AI/ML system you've architected. What safety and ethical considerations did you incorporate?",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "AI/ML Systems",
+        "Safety-First Design"
+      ],
+      "created_at": "2025-06-16T23:35:44.793Z",
+      "updated_at": "2025-06-16T23:35:44.793Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_openai_1a16g7hxj",
+      "company_id": "company_openai",
+      "category": "conflict_resolution",
+      "question_text": "Tell me about a time you had to navigate disagreement between researchers and engineers on AI safety approaches.",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Cross-functional Collaboration",
+        "AI Safety"
+      ],
+      "created_at": "2025-06-16T23:35:44.795Z",
+      "updated_at": "2025-06-16T23:35:44.795Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_openai_xneg7c1nz",
+      "company_id": "company_openai",
+      "category": "communication",
+      "question_text": "How would you explain the importance of AI safety to stakeholders who are primarily focused on capability advancement?",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "Hypothetical",
+        "AI Safety",
+        "Stakeholder Communication"
+      ],
+      "created_at": "2025-06-16T23:35:44.796Z",
+      "updated_at": "2025-06-16T23:35:44.796Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_snowflake_lerxkacnb",
+      "company_id": "company_snowflake",
+      "category": "leadership",
+      "question_text": "Tell me about a time you led a data platform migration or major infrastructure change.",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Data Platform",
+        "Technical Leadership"
+      ],
+      "created_at": "2025-06-16T23:35:44.799Z",
+      "updated_at": "2025-06-16T23:35:44.799Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_snowflake_k6r23vi8l",
+      "company_id": "company_snowflake",
+      "category": "leadership",
+      "question_text": "Describe how you've built a customer-obsessed engineering culture. What specific practices did you implement?",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Customer Focus",
+        "Culture Building"
+      ],
+      "created_at": "2025-06-16T23:35:44.800Z",
+      "updated_at": "2025-06-16T23:35:44.800Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_snowflake_wwlryw462",
+      "company_id": "company_snowflake",
+      "category": "technical_decisions",
+      "question_text": "Describe a time you had to optimize data processing performance for a critical customer use case.",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Performance Optimization",
+        "Customer Impact"
+      ],
+      "created_at": "2025-06-16T23:35:44.802Z",
+      "updated_at": "2025-06-16T23:35:44.802Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_snowflake_5p9q3zqob",
+      "company_id": "company_snowflake",
+      "category": "team_building",
+      "question_text": "Tell me about how you've scaled an engineering team to support rapid business growth.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Team Scaling",
+        "Execution Excellence"
+      ],
+      "created_at": "2025-06-16T23:35:44.804Z",
+      "updated_at": "2025-06-16T23:35:44.804Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_snowflake_fg4hu6kwl",
+      "company_id": "company_snowflake",
+      "category": "communication",
+      "question_text": "Describe a time you had to influence senior leadership to invest in data platform improvements.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Stakeholder Management",
+        "Strategic Thinking"
+      ],
+      "created_at": "2025-06-16T23:35:44.805Z",
+      "updated_at": "2025-06-16T23:35:44.805Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_anthropic_zxhqoir53",
+      "company_id": "company_anthropic",
+      "category": "leadership",
+      "question_text": "Tell me about a time you led a research team through a complex AI safety challenge.",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "AI Safety Research",
+        "Research Leadership"
+      ],
+      "created_at": "2025-06-16T23:35:44.808Z",
+      "updated_at": "2025-06-16T23:35:44.808Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_anthropic_wxho5r1do",
+      "company_id": "company_anthropic",
+      "category": "technical_decisions",
+      "question_text": "Describe how you've approached building interpretable and safe AI systems. What methodologies did you use?",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "AI Interpretability",
+        "Safety-First Engineering"
+      ],
+      "created_at": "2025-06-16T23:35:44.809Z",
+      "updated_at": "2025-06-16T23:35:44.809Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_anthropic_mfosq9l4s",
+      "company_id": "company_anthropic",
+      "category": "conflict_resolution",
+      "question_text": "Tell me about a time you had to balance research goals with practical engineering constraints.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Research vs Engineering",
+        "Trade-offs"
+      ],
+      "created_at": "2025-06-16T23:35:44.811Z",
+      "updated_at": "2025-06-16T23:35:44.811Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_anthropic_b9ljaxwef",
+      "company_id": "company_anthropic",
+      "category": "communication",
+      "question_text": "How would you communicate AI safety research findings to both technical and non-technical stakeholders?",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "Hypothetical",
+        "Research Communication",
+        "AI Safety"
+      ],
+      "created_at": "2025-06-16T23:35:44.813Z",
+      "updated_at": "2025-06-16T23:35:44.813Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_scaleai_6qdc1zdg6",
+      "company_id": "company_scaleai",
+      "category": "leadership",
+      "question_text": "Tell me about a time you built an AI/ML platform from scratch in a fast-paced startup environment.",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "AI/ML Platform",
+        "Startup Scaling"
+      ],
+      "created_at": "2025-06-16T23:35:44.815Z",
+      "updated_at": "2025-06-16T23:35:44.815Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_scaleai_7x9hu10nm",
+      "company_id": "company_scaleai",
+      "category": "leadership",
+      "question_text": "Describe how you've scaled an engineering team during rapid company growth.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Team Scaling",
+        "High-Growth Environment"
+      ],
+      "created_at": "2025-06-16T23:35:44.817Z",
+      "updated_at": "2025-06-16T23:35:44.817Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_scaleai_6h6fhllv4",
+      "company_id": "company_scaleai",
+      "category": "technical_decisions",
+      "question_text": "Tell me about a time you had to make critical architecture decisions with limited time and resources.",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Architecture Decisions",
+        "Resource Constraints"
+      ],
+      "created_at": "2025-06-16T23:35:44.819Z",
+      "updated_at": "2025-06-16T23:35:44.819Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_scaleai_raymsf7in",
+      "company_id": "company_scaleai",
+      "category": "team_building",
+      "question_text": "Describe how you've built a customer-focused engineering culture in a B2B AI company.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Customer Focus",
+        "B2B Product Development"
+      ],
+      "created_at": "2025-06-16T23:35:44.820Z",
+      "updated_at": "2025-06-16T23:35:44.820Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_netflix_bpwgussm5",
+      "company_id": "company_netflix",
+      "category": "leadership",
+      "question_text": "Tell me about a time you had to make a difficult decision that required courage and went against popular opinion.",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Courage",
+        "High Performance Culture"
+      ],
+      "created_at": "2025-06-16T23:35:44.823Z",
+      "updated_at": "2025-06-16T23:35:44.823Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_netflix_bmftzxvxx",
+      "company_id": "company_netflix",
+      "category": "leadership",
+      "question_text": "Describe how you've built and maintained a high-performance engineering team.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "High Performance",
+        "Talent Density"
+      ],
+      "created_at": "2025-06-16T23:35:44.825Z",
+      "updated_at": "2025-06-16T23:35:44.825Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_netflix_vmlz453pf",
+      "company_id": "company_netflix",
+      "category": "technical_decisions",
+      "question_text": "Tell me about a time you architected a system to handle massive global scale with high availability requirements.",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Global Scale",
+        "Distributed Systems"
+      ],
+      "created_at": "2025-06-16T23:35:44.826Z",
+      "updated_at": "2025-06-16T23:35:44.826Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_netflix_fb8qjh8hu",
+      "company_id": "company_netflix",
+      "category": "communication",
+      "question_text": "Describe a time you had to give direct, honest feedback that was difficult to hear.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Honesty",
+        "Direct Communication"
+      ],
+      "created_at": "2025-06-16T23:35:44.828Z",
+      "updated_at": "2025-06-16T23:35:44.828Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_netflix_y05xht0hq",
+      "company_id": "company_netflix",
+      "category": "ambiguity",
+      "question_text": "Tell me about a time you had to make a critical decision with incomplete information under time pressure.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Judgment",
+        "Decision Making"
+      ],
+      "created_at": "2025-06-16T23:35:44.830Z",
+      "updated_at": "2025-06-16T23:35:44.830Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_linkedin_t4t7xwofu",
+      "company_id": "company_linkedin",
+      "category": "leadership",
+      "question_text": "Tell me about how you've built products that help professionals advance their careers.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Member Focus",
+        "Professional Development"
+      ],
+      "created_at": "2025-06-16T23:35:44.832Z",
+      "updated_at": "2025-06-16T23:35:44.832Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_linkedin_olhx9pune",
+      "company_id": "company_linkedin",
+      "category": "technical_decisions",
+      "question_text": "Describe a recommendation system or search algorithm you've built for professional networking.",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Recommendation Systems",
+        "Professional Networks"
+      ],
+      "created_at": "2025-06-16T23:35:44.834Z",
+      "updated_at": "2025-06-16T23:35:44.834Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_linkedin_ivm7zw9bm",
+      "company_id": "company_linkedin",
+      "category": "team_building",
+      "question_text": "Tell me about how you've fostered authentic relationships and trust within your engineering team.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Relationship Building",
+        "Trust"
+      ],
+      "created_at": "2025-06-16T23:35:44.835Z",
+      "updated_at": "2025-06-16T23:35:44.835Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_linkedin_iopj1w65d",
+      "company_id": "company_linkedin",
+      "category": "communication",
+      "question_text": "Describe a time you took an intelligent risk that led to significant member value.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Intelligent Risks",
+        "Member Value"
+      ],
+      "created_at": "2025-06-16T23:35:44.837Z",
+      "updated_at": "2025-06-16T23:35:44.837Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_uber_o1f7jl1f3",
+      "company_id": "company_uber",
+      "category": "leadership",
+      "question_text": "Tell me about a time you built technology solutions for diverse global markets with different needs.",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Global Scale",
+        "Localization"
+      ],
+      "created_at": "2025-06-16T23:35:44.839Z",
+      "updated_at": "2025-06-16T23:35:44.839Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_uber_z8emfj6h6",
+      "company_id": "company_uber",
+      "category": "technical_decisions",
+      "question_text": "Describe a real-time matching or routing system you've built. How did you handle scale and latency requirements?",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Real-time Systems",
+        "Marketplace Technology"
+      ],
+      "created_at": "2025-06-16T23:35:44.841Z",
+      "updated_at": "2025-06-16T23:35:44.841Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_uber_1j83ler3j",
+      "company_id": "company_uber",
+      "category": "leadership",
+      "question_text": "Tell me about how you've balanced the needs of different sides of a marketplace (riders vs drivers).",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Marketplace Dynamics",
+        "Stakeholder Management"
+      ],
+      "created_at": "2025-06-16T23:35:44.843Z",
+      "updated_at": "2025-06-16T23:35:44.843Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_uber_cx7yk6x6x",
+      "company_id": "company_uber",
+      "category": "ambiguity",
+      "question_text": "Describe a time you had to persevere through significant challenges or setbacks.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Perseverance",
+        "Resilience"
+      ],
+      "created_at": "2025-06-16T23:35:44.845Z",
+      "updated_at": "2025-06-16T23:35:44.845Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_airbnb_n10crywsv",
+      "company_id": "company_airbnb",
+      "category": "leadership",
+      "question_text": "Tell me about how you've built products that create a sense of belonging for diverse global communities.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Belonging",
+        "Global Communities"
+      ],
+      "created_at": "2025-06-16T23:35:44.847Z",
+      "updated_at": "2025-06-16T23:35:44.847Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_airbnb_d9xdj293a",
+      "company_id": "company_airbnb",
+      "category": "technical_decisions",
+      "question_text": "Describe a trust and safety system you've built for a marketplace platform.",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Trust & Safety",
+        "Marketplace Platforms"
+      ],
+      "created_at": "2025-06-16T23:35:44.848Z",
+      "updated_at": "2025-06-16T23:35:44.848Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_airbnb_jejdkb2h4",
+      "company_id": "company_airbnb",
+      "category": "team_building",
+      "question_text": "Tell me about a time you had to be resourceful and creative to solve a problem with limited resources.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Resourcefulness",
+        "Creative Problem-Solving"
+      ],
+      "created_at": "2025-06-16T23:35:44.850Z",
+      "updated_at": "2025-06-16T23:35:44.850Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_airbnb_l73dhipxt",
+      "company_id": "company_airbnb",
+      "category": "communication",
+      "question_text": "Describe how you've optimized user experience for both hosts and guests in a marketplace.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "User Experience",
+        "Marketplace UX"
+      ],
+      "created_at": "2025-06-16T23:35:44.852Z",
+      "updated_at": "2025-06-16T23:35:44.852Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_tiktok_l2bwzcxq4",
+      "company_id": "company_tiktok",
+      "category": "leadership",
+      "question_text": "Tell me about how you've built recommendation systems that serve billions of users globally.",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Recommendation Systems",
+        "Global Scale"
+      ],
+      "created_at": "2025-06-16T23:35:44.854Z",
+      "updated_at": "2025-06-16T23:35:44.854Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_tiktok_h4mr1lhg8",
+      "company_id": "company_tiktok",
+      "category": "technical_decisions",
+      "question_text": "Describe a content moderation or safety system you've built for a social media platform.",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Content Safety",
+        "Social Media Platforms"
+      ],
+      "created_at": "2025-06-16T23:35:44.856Z",
+      "updated_at": "2025-06-16T23:35:44.856Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_tiktok_7bsgrbxrb",
+      "company_id": "company_tiktok",
+      "category": "leadership",
+      "question_text": "Tell me about how you've led engineering teams across different cultures and time zones.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Cross-Cultural Leadership",
+        "Global Teams"
+      ],
+      "created_at": "2025-06-16T23:35:44.857Z",
+      "updated_at": "2025-06-16T23:35:44.857Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_tiktok_v2x1v8auj",
+      "company_id": "company_tiktok",
+      "category": "ambiguity",
+      "question_text": "Describe a time you had to make decisions in a rapidly evolving regulatory environment.",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Regulatory Compliance",
+        "Ambiguous Requirements"
+      ],
+      "created_at": "2025-06-16T23:35:44.859Z",
+      "updated_at": "2025-06-16T23:35:44.859Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_reddit_ty732upzv",
+      "company_id": "company_reddit",
+      "category": "leadership",
+      "question_text": "Tell me about how you've built systems that empower diverse online communities.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Community Empowerment",
+        "Forum Systems"
+      ],
+      "created_at": "2025-06-16T23:35:44.861Z",
+      "updated_at": "2025-06-16T23:35:44.861Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_reddit_tot42uf21",
+      "company_id": "company_reddit",
+      "category": "technical_decisions",
+      "question_text": "Describe a content moderation system you've built that balances free speech with community safety.",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Content Moderation",
+        "Community Guidelines"
+      ],
+      "created_at": "2025-06-16T23:35:44.863Z",
+      "updated_at": "2025-06-16T23:35:44.863Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_reddit_ohnxabndv",
+      "company_id": "company_reddit",
+      "category": "communication",
+      "question_text": "Tell me about a time you had to communicate transparently about a difficult technical or policy decision.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Transparent Communication",
+        "Authentic Leadership"
+      ],
+      "created_at": "2025-06-16T23:35:44.865Z",
+      "updated_at": "2025-06-16T23:35:44.865Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_reddit_1wy7vhx8s",
+      "company_id": "company_reddit",
+      "category": "team_building",
+      "question_text": "Describe how you've built privacy-first engineering practices into your team's development process.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Privacy by Design",
+        "Engineering Practices"
+      ],
+      "created_at": "2025-06-16T23:35:44.866Z",
+      "updated_at": "2025-06-16T23:35:44.866Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_startups_5yd9gf44c",
+      "company_id": "company_startups",
+      "category": "leadership",
+      "question_text": "Tell me about a time you built a product or platform from 0 to 1 in a resource-constrained environment.",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "0-1 Building",
+        "Resource Constraints"
+      ],
+      "created_at": "2025-06-16T23:35:44.869Z",
+      "updated_at": "2025-06-16T23:35:44.869Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_startups_7lguy7krp",
+      "company_id": "company_startups",
+      "category": "leadership",
+      "question_text": "Describe how you've scaled an engineering team from 5 to 50+ people.",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Team Scaling",
+        "High Growth"
+      ],
+      "created_at": "2025-06-16T23:35:44.870Z",
+      "updated_at": "2025-06-16T23:35:44.870Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_startups_rsn3u4llt",
+      "company_id": "company_startups",
+      "category": "technical_decisions",
+      "question_text": "Tell me about a time you had to make pragmatic technology choices to ship quickly while maintaining quality.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Pragmatic Decisions",
+        "Speed vs Quality"
+      ],
+      "created_at": "2025-06-16T23:35:44.872Z",
+      "updated_at": "2025-06-16T23:35:44.872Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_startups_u4e344yjm",
+      "company_id": "company_startups",
+      "category": "team_building",
+      "question_text": "Describe how you've established engineering culture and practices from scratch.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Culture Building",
+        "Engineering Practices"
+      ],
+      "created_at": "2025-06-16T23:35:44.874Z",
+      "updated_at": "2025-06-16T23:35:44.874Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_startups_07fevf17y",
+      "company_id": "company_startups",
+      "category": "communication",
+      "question_text": "Tell me about a time you had direct customer interaction that significantly influenced your product decisions.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Customer Development",
+        "Product-Market Fit"
+      ],
+      "created_at": "2025-06-16T23:35:44.875Z",
+      "updated_at": "2025-06-16T23:35:44.875Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_meta_mtfo08iil",
+      "company_id": "company_meta",
+      "category": "leadership",
+      "question_text": "Describe a time when you led a team through a challenging project.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Project Management"
+      ],
+      "created_at": "2025-06-16T23:35:44.878Z",
+      "updated_at": "2025-06-16T23:35:44.878Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_meta_4o988vpvg",
+      "company_id": "company_meta",
+      "category": "leadership",
+      "question_text": "Tell me about a difficult employee situation (e.g., underperformance, conflict) and how you handled it.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "People Management"
+      ],
+      "created_at": "2025-06-16T23:35:44.879Z",
+      "updated_at": "2025-06-16T23:35:44.879Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_meta_vhosm82qq",
+      "company_id": "company_meta",
+      "category": "leadership",
+      "question_text": "How do you motivate and develop team members, especially high-potentials and those who are stagnating?",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "Hypothetical",
+        "People Management",
+        "Coaching"
+      ],
+      "created_at": "2025-06-16T23:35:44.881Z",
+      "updated_at": "2025-06-16T23:35:44.881Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_meta_gthhd27ln",
+      "company_id": "company_meta",
+      "category": "leadership",
+      "question_text": "Describe a situation where you had to make a tough decision that impacted your team. How did you manage the change and communicate it?",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Decision Making",
+        "Change Management"
+      ],
+      "created_at": "2025-06-16T23:35:44.883Z",
+      "updated_at": "2025-06-16T23:35:44.883Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_meta_qsdrokief",
+      "company_id": "company_meta",
+      "category": "conflict_resolution",
+      "question_text": "Give an example of resolving a significant disagreement within your team or with a peer manager.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused"
+      ],
+      "created_at": "2025-06-16T23:35:44.884Z",
+      "updated_at": "2025-06-16T23:35:44.884Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_meta_q572gletc",
+      "company_id": "company_meta",
+      "category": "conflict_resolution",
+      "question_text": "Describe a time you mediated a conflict between stakeholders with differing priorities.",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Stakeholder Management"
+      ],
+      "created_at": "2025-06-16T23:35:44.886Z",
+      "updated_at": "2025-06-16T23:35:44.886Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_meta_x4idb6ico",
+      "company_id": "company_meta",
+      "category": "conflict_resolution",
+      "question_text": "How do you foster an environment where healthy debate is encouraged but destructive conflict is minimized?",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "Hypothetical",
+        "Team Culture"
+      ],
+      "created_at": "2025-06-16T23:35:44.888Z",
+      "updated_at": "2025-06-16T23:35:44.888Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_meta_hbc5zdzsh",
+      "company_id": "company_meta",
+      "category": "team_building",
+      "question_text": "Give an example of how you've built or improved a high-performing engineering team.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Hiring",
+        "Team Culture"
+      ],
+      "created_at": "2025-06-16T23:35:44.889Z",
+      "updated_at": "2025-06-16T23:35:44.889Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_meta_2mhitcxqt",
+      "company_id": "company_meta",
+      "category": "team_building",
+      "question_text": "Describe a time you had to collaborate with a difficult cross-functional partner. How did you make it work?",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Cross-functional"
+      ],
+      "created_at": "2025-06-16T23:35:44.891Z",
+      "updated_at": "2025-06-16T23:35:44.891Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_meta_uatimqlwf",
+      "company_id": "company_meta",
+      "category": "team_building",
+      "question_text": "How do you ensure effective collaboration between your team and other teams (e.g., product, design, other engineering teams)?",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "Hypothetical",
+        "Process"
+      ],
+      "created_at": "2025-06-16T23:35:44.893Z",
+      "updated_at": "2025-06-16T23:35:44.893Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_meta_xv0bd22b0",
+      "company_id": "company_meta",
+      "category": "technical_decisions",
+      "question_text": "Tell me about a complex technical problem your team faced. What was your role in solving it, and what was the outcome?",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Technical Leadership"
+      ],
+      "created_at": "2025-06-16T23:35:44.894Z",
+      "updated_at": "2025-06-16T23:35:44.894Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_meta_6db61kit0",
+      "company_id": "company_meta",
+      "category": "technical_decisions",
+      "question_text": "Describe a critical technical decision you made with limited information or under pressure. What was your process and the trade-offs?",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Trade-offs"
+      ],
+      "created_at": "2025-06-16T23:35:44.896Z",
+      "updated_at": "2025-06-16T23:35:44.896Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_meta_zr1jxoc5a",
+      "company_id": "company_meta",
+      "category": "technical_decisions",
+      "question_text": "How do you balance the need to 'Move Fast' with maintaining high quality and technical excellence in your team's work?",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "Hypothetical",
+        "Meta Values",
+        "Trade-offs"
+      ],
+      "created_at": "2025-06-16T23:35:44.898Z",
+      "updated_at": "2025-06-16T23:35:44.898Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_meta_50rlf3vw2",
+      "company_id": "company_meta",
+      "category": "ambiguity",
+      "question_text": "Share an experience where project requirements were unclear or constantly changing. How did you lead your team through it?",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused"
+      ],
+      "created_at": "2025-06-16T23:35:44.899Z",
+      "updated_at": "2025-06-16T23:35:44.899Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_meta_7wh9m0fvx",
+      "company_id": "company_meta",
+      "category": "ambiguity",
+      "question_text": "Tell me about a time a project you were leading was failing or significantly off-track. What actions did you take?",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Problem Solving"
+      ],
+      "created_at": "2025-06-16T23:35:44.901Z",
+      "updated_at": "2025-06-16T23:35:44.901Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_meta_pypvmrsdr",
+      "company_id": "company_meta",
+      "category": "communication",
+      "question_text": "Describe a situation where you had to influence a senior leader or a group of stakeholders without direct authority.",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Stakeholder Management"
+      ],
+      "created_at": "2025-06-16T23:35:44.902Z",
+      "updated_at": "2025-06-16T23:35:44.902Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_meta_y82znt0ov",
+      "company_id": "company_meta",
+      "category": "communication",
+      "question_text": "How do you communicate complex technical information to non-technical audiences effectively?",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "Hypothetical",
+        "Communication Strategy"
+      ],
+      "created_at": "2025-06-16T23:35:44.904Z",
+      "updated_at": "2025-06-16T23:35:44.904Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_meta_xxmn19zmp",
+      "company_id": "company_meta",
+      "category": "communication",
+      "question_text": "Tell me about a time you had to deliver difficult feedback to a team member or a peer. How did you approach it?",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Feedback"
+      ],
+      "created_at": "2025-06-16T23:35:44.906Z",
+      "updated_at": "2025-06-16T23:35:44.906Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_amazon_bds31vedx",
+      "company_id": "company_amazon",
+      "category": "leadership",
+      "question_text": "Tell me about a time you took responsibility for a project or task that was outside your defined role. What was the outcome?",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "LP:Ownership",
+        "Initiative"
+      ],
+      "created_at": "2025-06-16T23:35:44.908Z",
+      "updated_at": "2025-06-16T23:35:44.908Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_amazon_bl34np6vl",
+      "company_id": "company_amazon",
+      "category": "leadership",
+      "question_text": "Describe your approach to hiring and developing talent. Give an example of how you've mentored someone to success or helped improve a team member's performance.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "LP:Hire and Develop the Best",
+        "People Management"
+      ],
+      "created_at": "2025-06-16T23:35:44.910Z",
+      "updated_at": "2025-06-16T23:35:44.910Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_amazon_ufjdr0tgl",
+      "company_id": "company_amazon",
+      "category": "leadership",
+      "question_text": "Share an example of a challenging goal you were responsible for achieving. How did you ensure you delivered results, especially when facing obstacles?",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "LP:Deliver Results",
+        "Execution"
+      ],
+      "created_at": "2025-06-16T23:35:44.911Z",
+      "updated_at": "2025-06-16T23:35:44.911Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_amazon_eeo7qr8ut",
+      "company_id": "company_amazon",
+      "category": "conflict_resolution",
+      "question_text": "Describe a time you disagreed with a manager or a popular decision. How did you voice your concerns, and what happened next? Did you commit to the final decision?",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "LP:Have Backbone; Disagree and Commit",
+        "Integrity"
+      ],
+      "created_at": "2025-06-16T23:35:44.913Z",
+      "updated_at": "2025-06-16T23:35:44.913Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_amazon_tqussa3i2",
+      "company_id": "company_amazon",
+      "category": "conflict_resolution",
+      "question_text": "Tell me about a situation where you had to build or rebuild trust with a colleague, team, or customer.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "LP:Earn Trust",
+        "Interpersonal Skills"
+      ],
+      "created_at": "2025-06-16T23:35:44.915Z",
+      "updated_at": "2025-06-16T23:35:44.915Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_amazon_qxifyzim7",
+      "company_id": "company_amazon",
+      "category": "team_building",
+      "question_text": "Describe a time when you needed to influence a peer or another team who had a differing opinion or priorities to achieve a shared goal.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "LP:Earn Trust",
+        "LP:Deliver Results",
+        "Influence"
+      ],
+      "created_at": "2025-06-16T23:35:44.916Z",
+      "updated_at": "2025-06-16T23:35:44.916Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_amazon_5wg26ydqe",
+      "company_id": "company_amazon",
+      "category": "team_building",
+      "question_text": "How do you foster a collaborative environment within your team and with cross-functional partners?",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "Hypothetical",
+        "LP:Deliver Results",
+        "LP:Hire and Develop the Best",
+        "Team Culture"
+      ],
+      "created_at": "2025-06-16T23:35:44.918Z",
+      "updated_at": "2025-06-16T23:35:44.918Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_amazon_7skhfw9wy",
+      "company_id": "company_amazon",
+      "category": "technical_decisions",
+      "question_text": "Explain a situation where you had to dive deep into data or a complex problem to understand the root cause. What was your process and what did you uncover?",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "LP:Dive Deep",
+        "Analytical Skills"
+      ],
+      "created_at": "2025-06-16T23:35:44.920Z",
+      "updated_at": "2025-06-16T23:35:44.920Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_amazon_vaptaygp4",
+      "company_id": "company_amazon",
+      "category": "technical_decisions",
+      "question_text": "Give an example of a complex problem you solved with a simple or innovative solution. How did you identify the opportunity to simplify?",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "LP:Invent and Simplify",
+        "Innovation"
+      ],
+      "created_at": "2025-06-16T23:35:44.921Z",
+      "updated_at": "2025-06-16T23:35:44.921Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_amazon_l4v22oega",
+      "company_id": "company_amazon",
+      "category": "technical_decisions",
+      "question_text": "Describe a critical decision you made based on your judgment, perhaps with incomplete data, that proved to be correct. What was your reasoning?",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "LP:Are Right, A Lot",
+        "Judgment"
+      ],
+      "created_at": "2025-06-16T23:35:44.923Z",
+      "updated_at": "2025-06-16T23:35:44.923Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_amazon_l2w12a644",
+      "company_id": "company_amazon",
+      "category": "ambiguity",
+      "question_text": "Give an example of a calculated risk you took where speed was critical. How did you make the decision and manage the risk?",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "LP:Bias for Action",
+        "Decision Making"
+      ],
+      "created_at": "2025-06-16T23:35:44.925Z",
+      "updated_at": "2025-06-16T23:35:44.925Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_amazon_ypf6i8w22",
+      "company_id": "company_amazon",
+      "category": "ambiguity",
+      "question_text": "Tell me about a time you had to quickly learn something new or adapt to a significant change in your work environment or project.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "LP:Learn and Be Curious",
+        "Adaptability"
+      ],
+      "created_at": "2025-06-16T23:35:44.926Z",
+      "updated_at": "2025-06-16T23:35:44.926Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_amazon_gm963om1s",
+      "company_id": "company_amazon",
+      "category": "communication",
+      "question_text": "Describe a time when you went above and beyond to understand and meet a customer's needs, even if it was challenging.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "LP:Customer Obsession",
+        "Client Focus"
+      ],
+      "created_at": "2025-06-16T23:35:44.928Z",
+      "updated_at": "2025-06-16T23:35:44.928Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_amazon_g3s49saqe",
+      "company_id": "company_amazon",
+      "category": "communication",
+      "question_text": "Tell me about a time you proposed a bold or unconventional idea. How did you advocate for it and what was the outcome?",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "LP:Think Big",
+        "Strategic Thinking"
+      ],
+      "created_at": "2025-06-16T23:35:44.930Z",
+      "updated_at": "2025-06-16T23:35:44.930Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_amazon_3vy36sgnu",
+      "company_id": "company_amazon",
+      "category": "communication",
+      "question_text": "How do you ensure your team maintains high standards, and what do you do if you see them slipping?",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Hypothetical",
+        "LP:Insist on the Highest Standards",
+        "Quality"
+      ],
+      "created_at": "2025-06-16T23:35:44.931Z",
+      "updated_at": "2025-06-16T23:35:44.931Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_amazon_q3n6gthxd",
+      "company_id": "company_amazon",
+      "category": "communication",
+      "question_text": "Describe a situation where you had to make a decision with limited resources or budget. How did you approach it?",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "LP:Frugality",
+        "Resource Management"
+      ],
+      "created_at": "2025-06-16T23:35:44.933Z",
+      "updated_at": "2025-06-16T23:35:44.933Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_google_kiao11wn0",
+      "company_id": "company_google",
+      "category": "leadership",
+      "question_text": "Tell me about a time you led a team through a challenging project or a period of significant change.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Project Management",
+        "Change Management"
+      ],
+      "created_at": "2025-06-16T23:35:44.935Z",
+      "updated_at": "2025-06-16T23:35:44.935Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_google_unjk2hw23",
+      "company_id": "company_google",
+      "category": "leadership",
+      "question_text": "How do you approach motivating a team, especially when dealing with low performers or team members with differing levels of experience?",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "Hypothetical",
+        "STAR-focused",
+        "People Management"
+      ],
+      "created_at": "2025-06-16T23:35:44.937Z",
+      "updated_at": "2025-06-16T23:35:44.937Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_google_pggxff5bg",
+      "company_id": "company_google",
+      "category": "leadership",
+      "question_text": "Describe a time you had to make a difficult decision regarding a team member (e.g., performance improvement plan, role change).",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "People Management"
+      ],
+      "created_at": "2025-06-16T23:35:44.939Z",
+      "updated_at": "2025-06-16T23:35:44.939Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_google_n6shsm19f",
+      "company_id": "company_google",
+      "category": "leadership",
+      "question_text": "What is your philosophy on developing engineers and fostering their career growth?",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "Hypothetical",
+        "Coaching",
+        "People Management"
+      ],
+      "created_at": "2025-06-16T23:35:44.940Z",
+      "updated_at": "2025-06-16T23:35:44.940Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_google_qmt923kk0",
+      "company_id": "company_google",
+      "category": "conflict_resolution",
+      "question_text": "Describe a conflict you had with a team member or a peer. How did you approach resolving it, and what was the outcome?",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused"
+      ],
+      "created_at": "2025-06-16T23:35:44.942Z",
+      "updated_at": "2025-06-16T23:35:44.942Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_google_vzv53xihh",
+      "company_id": "company_google",
+      "category": "conflict_resolution",
+      "question_text": "Tell me about a time you had to mediate a disagreement between two team members or stakeholders.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Mediation"
+      ],
+      "created_at": "2025-06-16T23:35:44.944Z",
+      "updated_at": "2025-06-16T23:35:44.944Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_google_gkrvyf2ag",
+      "company_id": "company_google",
+      "category": "team_building",
+      "question_text": "How have you fostered diversity and inclusion within your teams? Provide a specific example.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Googleyness",
+        "D&I"
+      ],
+      "created_at": "2025-06-16T23:35:44.945Z",
+      "updated_at": "2025-06-16T23:35:44.945Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_google_51atjy5l0",
+      "company_id": "company_google",
+      "category": "team_building",
+      "question_text": "Describe a situation where you had to collaborate with a cross-functional team with different goals or priorities. How did you align them?",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Cross-functional"
+      ],
+      "created_at": "2025-06-16T23:35:44.947Z",
+      "updated_at": "2025-06-16T23:35:44.947Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_google_writovt8l",
+      "company_id": "company_google",
+      "category": "team_building",
+      "question_text": "How do you build psychological safety within a team?",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "Hypothetical",
+        "Team Culture",
+        "Googleyness"
+      ],
+      "created_at": "2025-06-16T23:35:44.949Z",
+      "updated_at": "2025-06-16T23:35:44.949Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_google_0pne95gmo",
+      "company_id": "company_google",
+      "category": "technical_decisions",
+      "question_text": "Tell me about a complex technical challenge your team faced. What was your role in the decision-making and problem-solving process?",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Technical Leadership"
+      ],
+      "created_at": "2025-06-16T23:35:44.950Z",
+      "updated_at": "2025-06-16T23:35:44.950Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_google_gzgkwlx6y",
+      "company_id": "company_google",
+      "category": "technical_decisions",
+      "question_text": "Describe a time you had to make a significant technical trade-off. What factors did you consider, and what was the result?",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Trade-offs"
+      ],
+      "created_at": "2025-06-16T23:35:44.952Z",
+      "updated_at": "2025-06-16T23:35:44.952Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_google_7suz77ajq",
+      "company_id": "company_google",
+      "category": "ambiguity",
+      "question_text": "Give an example of a time you had to make an important decision with incomplete or ambiguous information. What was your process?",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Googleyness",
+        "Decision Making"
+      ],
+      "created_at": "2025-06-16T23:35:44.954Z",
+      "updated_at": "2025-06-16T23:35:44.954Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_google_kj3oxveed",
+      "company_id": "company_google",
+      "category": "ambiguity",
+      "question_text": "Describe how you managed a project that was failing or significantly deviating from its original plan.",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Problem Solving",
+        "Adaptability"
+      ],
+      "created_at": "2025-06-16T23:35:44.955Z",
+      "updated_at": "2025-06-16T23:35:44.955Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_google_6dr85f5u5",
+      "company_id": "company_google",
+      "category": "communication",
+      "question_text": "Tell me about a time you influenced stakeholders or senior management without formal authority to adopt your idea or approach.",
+      "difficulty": "Hard",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Googleyness",
+        "Influence"
+      ],
+      "created_at": "2025-06-16T23:35:44.957Z",
+      "updated_at": "2025-06-16T23:35:44.957Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_google_xtif4qda8",
+      "company_id": "company_google",
+      "category": "communication",
+      "question_text": "How do you ensure your team understands the 'why' behind their work and how it connects to broader company goals?",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "Hypothetical",
+        "Communication Strategy",
+        "Leadership"
+      ],
+      "created_at": "2025-06-16T23:35:44.959Z",
+      "updated_at": "2025-06-16T23:35:44.959Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "question_google_ffs6531md",
+      "company_id": "company_google",
+      "category": "communication",
+      "question_text": "Describe a situation where you had to push for a change in your team or organization that you believed was important.",
+      "difficulty": "Medium",
+      "is_generated": true,
+      "tags": [
+        "STAR-focused",
+        "Googleyness",
+        "Initiative"
+      ],
+      "created_at": "2025-06-16T23:35:44.960Z",
+      "updated_at": "2025-06-16T23:35:44.960Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "behavioral",
+      "categories": []
+    },
+    {
+      "id": "design_meta_s_news_feed_system__2ho9j3",
+      "company_id": "company_meta",
+      "category": "distributed_systems",
+      "question_text": "Design Meta's News Feed system.",
+      "difficulty": "Hard",
+      "is_generated": false,
+      "tags": [
+        "news_feed",
+        "social_media",
+        "real_time",
+        "personalization"
+      ],
+      "created_at": "2025-06-16T23:35:49.357Z",
+      "updated_at": "2025-06-16T23:35:49.357Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "system_design",
+      "categories": []
+    },
+    {
+      "id": "design_meta_messenger_or_a_similar_large_scale_cha_5hf1uw",
+      "company_id": "company_meta",
+      "category": "real_time_systems",
+      "question_text": "Design Meta Messenger or a similar large-scale chat system.",
+      "difficulty": "Hard",
+      "is_generated": false,
+      "tags": [
+        "messaging",
+        "real_time",
+        "websockets",
+        "mobile"
+      ],
+      "created_at": "2025-06-16T23:35:49.363Z",
+      "updated_at": "2025-06-16T23:35:49.363Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "system_design",
+      "categories": []
+    },
+    {
+      "id": "design_a_scalable_e_commerce_product_page_with_rea_v8xb48",
+      "company_id": "company_amazon",
+      "category": "e_commerce",
+      "question_text": "Design a scalable e-commerce product page with real-time inventory and recommendations.",
+      "difficulty": "Hard",
+      "is_generated": false,
+      "tags": [
+        "e_commerce",
+        "inventory",
+        "recommendations",
+        "real_time"
+      ],
+      "created_at": "2025-06-16T23:35:49.368Z",
+      "updated_at": "2025-06-16T23:35:49.368Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "system_design",
+      "categories": []
+    },
+    {
+      "id": "design_a_content_delivery_network_cdn__yu9nm0",
+      "company_id": "company_amazon",
+      "category": "infrastructure",
+      "question_text": "Design a Content Delivery Network (CDN).",
+      "difficulty": "Hard",
+      "is_generated": false,
+      "tags": [
+        "cdn",
+        "caching",
+        "global_distribution",
+        "performance"
+      ],
+      "created_at": "2025-06-16T23:35:49.373Z",
+      "updated_at": "2025-06-16T23:35:49.373Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "system_design",
+      "categories": []
+    },
+    {
+      "id": "design_google_maps__2y0qmc",
+      "company_id": "company_google",
+      "category": "geospatial_systems",
+      "question_text": "Design Google Maps.",
+      "difficulty": "Hard",
+      "is_generated": false,
+      "tags": [
+        "maps",
+        "geospatial",
+        "routing",
+        "real_time"
+      ],
+      "created_at": "2025-06-16T23:35:49.377Z",
+      "updated_at": "2025-06-16T23:35:49.377Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "system_design",
+      "categories": []
+    },
+    {
+      "id": "design_youtube_or_a_large_scale_video_streaming_pl_x2k7om",
+      "company_id": "company_google",
+      "category": "media_streaming",
+      "question_text": "Design YouTube or a large-scale video streaming platform.",
+      "difficulty": "Hard",
+      "is_generated": false,
+      "tags": [
+        "video_streaming",
+        "cdn",
+        "encoding",
+        "recommendations"
+      ],
+      "created_at": "2025-06-16T23:35:49.382Z",
+      "updated_at": "2025-06-16T23:35:49.382Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "system_design",
+      "categories": []
+    },
+    {
+      "id": "design_a_system_for_real_time_document_co_authorin_it58p5",
+      "company_id": "company_microsoft",
+      "category": "collaboration_systems",
+      "question_text": "Design a system for real-time document co-authoring (like Office 365).",
+      "difficulty": "Hard",
+      "is_generated": false,
+      "tags": [
+        "collaboration",
+        "real_time",
+        "conflict_resolution",
+        "office"
+      ],
+      "created_at": "2025-06-16T23:35:49.387Z",
+      "updated_at": "2025-06-16T23:35:49.387Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "system_design",
+      "categories": []
+    },
+    {
+      "id": "design_a_cloud_monitoring_service_like_azure_monit_us3vaj",
+      "company_id": "company_microsoft",
+      "category": "monitoring_systems",
+      "question_text": "Design a cloud monitoring service (like Azure Monitor).",
+      "difficulty": "Medium",
+      "is_generated": false,
+      "tags": [
+        "monitoring",
+        "observability",
+        "alerting",
+        "cloud"
+      ],
+      "created_at": "2025-06-16T23:35:49.392Z",
+      "updated_at": "2025-06-16T23:35:49.392Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "system_design",
+      "categories": []
+    },
+    {
+      "id": "design_a_system_to_serve_a_large_language_model_e__coehxv",
+      "company_id": "company_openai",
+      "category": "ai_systems",
+      "question_text": "Design a system to serve a large language model (e.g., GPT-4) to millions of users with low latency.",
+      "difficulty": "Hard",
+      "is_generated": false,
+      "tags": [
+        "llm",
+        "ai_inference",
+        "gpu_optimization",
+        "latency"
+      ],
+      "created_at": "2025-06-16T23:35:49.396Z",
+      "updated_at": "2025-06-16T23:35:49.396Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "system_design",
+      "categories": []
+    },
+    {
+      "id": "design_a_distributed_training_pipeline_for_large_a_ylnf3f",
+      "company_id": "company_openai",
+      "category": "ai_systems",
+      "question_text": "Design a distributed training pipeline for large AI models.",
+      "difficulty": "Hard",
+      "is_generated": false,
+      "tags": [
+        "distributed_training",
+        "model_parallelism",
+        "data_parallelism",
+        "gpu_clusters"
+      ],
+      "created_at": "2025-06-16T23:35:49.401Z",
+      "updated_at": "2025-06-16T23:35:49.401Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "system_design",
+      "categories": []
+    },
+    {
+      "id": "design_netflix_s_content_recommendation_system__jfnodf",
+      "company_id": "company_netflix",
+      "category": "machine_learning",
+      "question_text": "Design Netflix's content recommendation system.",
+      "difficulty": "Hard",
+      "is_generated": false,
+      "tags": [
+        "recommendations",
+        "personalization",
+        "content_discovery",
+        "machine_learning"
+      ],
+      "created_at": "2025-06-16T23:35:49.411Z",
+      "updated_at": "2025-06-16T23:35:49.411Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "system_design",
+      "categories": []
+    },
+    {
+      "id": "design_a_global_video_streaming_platform_with_adap_y8aac0",
+      "company_id": "company_netflix",
+      "category": "media_streaming",
+      "question_text": "Design a global video streaming platform with adaptive bitrate.",
+      "difficulty": "Hard",
+      "is_generated": false,
+      "tags": [
+        "video_streaming",
+        "adaptive_bitrate",
+        "global_cdn",
+        "quality_optimization"
+      ],
+      "created_at": "2025-06-16T23:35:49.415Z",
+      "updated_at": "2025-06-16T23:35:49.415Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "system_design",
+      "categories": []
+    },
+    {
+      "id": "design_uber_s_real_time_ride_matching_system__indfyp",
+      "company_id": "company_uber",
+      "category": "real_time_systems",
+      "question_text": "Design Uber's real-time ride matching system.",
+      "difficulty": "Hard",
+      "is_generated": false,
+      "tags": [
+        "ride_matching",
+        "real_time",
+        "geospatial",
+        "optimization"
+      ],
+      "created_at": "2025-06-16T23:35:49.420Z",
+      "updated_at": "2025-06-16T23:35:49.420Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "system_design",
+      "categories": []
+    },
+    {
+      "id": "design_airbnb_s_search_and_ranking_system__zcso6x",
+      "company_id": "company_airbnb",
+      "category": "search_systems",
+      "question_text": "Design Airbnb's search and ranking system.",
+      "difficulty": "Hard",
+      "is_generated": false,
+      "tags": [
+        "search",
+        "ranking",
+        "personalization",
+        "marketplace"
+      ],
+      "created_at": "2025-06-16T23:35:49.424Z",
+      "updated_at": "2025-06-16T23:35:49.424Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "system_design",
+      "categories": []
+    },
+    {
+      "id": "design_tiktok_s_for_you_page_algorithm__8rt7oj",
+      "company_id": "company_tiktok",
+      "category": "machine_learning",
+      "question_text": "Design TikTok's For You Page algorithm.",
+      "difficulty": "Hard",
+      "is_generated": false,
+      "tags": [
+        "recommendation_algorithm",
+        "short_video",
+        "engagement",
+        "personalization"
+      ],
+      "created_at": "2025-06-16T23:35:49.429Z",
+      "updated_at": "2025-06-16T23:35:49.429Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "system_design",
+      "categories": []
+    },
+    {
+      "id": "design_linkedin_s_professional_network_feed_algori_m2e193",
+      "company_id": "company_linkedin",
+      "category": "social_networks",
+      "question_text": "Design LinkedIn's professional network feed algorithm.",
+      "difficulty": "Hard",
+      "is_generated": false,
+      "tags": [
+        "professional_network",
+        "feed_algorithm",
+        "content_ranking",
+        "networking"
+      ],
+      "created_at": "2025-06-16T23:35:49.433Z",
+      "updated_at": "2025-06-16T23:35:49.433Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "system_design",
+      "categories": []
+    },
+    {
+      "id": "design_a_cloud_native_data_warehouse_with_automati_a5yqbo",
+      "company_id": "company_snowflake",
+      "category": "data_systems",
+      "question_text": "Design a cloud-native data warehouse with automatic scaling.",
+      "difficulty": "Hard",
+      "is_generated": false,
+      "tags": [
+        "data_warehouse",
+        "cloud_native",
+        "auto_scaling",
+        "analytics"
+      ],
+      "created_at": "2025-06-16T23:35:49.438Z",
+      "updated_at": "2025-06-16T23:35:49.438Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "system_design",
+      "categories": []
+    },
+    {
+      "id": "design_a_system_for_large_scale_data_labeling_and__azlddd",
+      "company_id": "company_scaleai",
+      "category": "data_systems",
+      "question_text": "Design a system for large-scale data labeling and annotation.",
+      "difficulty": "Hard",
+      "is_generated": false,
+      "tags": [
+        "data_labeling",
+        "annotation",
+        "quality_control",
+        "machine_learning"
+      ],
+      "created_at": "2025-06-16T23:35:49.443Z",
+      "updated_at": "2025-06-16T23:35:49.443Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "system_design",
+      "categories": []
+    },
+    {
+      "id": "design_reddit_s_content_ranking_and_moderation_sys_3dkdae",
+      "company_id": "company_reddit",
+      "category": "content_systems",
+      "question_text": "Design Reddit's content ranking and moderation system.",
+      "difficulty": "Hard",
+      "is_generated": false,
+      "tags": [
+        "content_ranking",
+        "moderation",
+        "community",
+        "voting_systems"
+      ],
+      "created_at": "2025-06-16T23:35:49.447Z",
+      "updated_at": "2025-06-16T23:35:49.447Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "system_design",
+      "categories": []
+    },
+    {
+      "id": "design_a_scalable_system_architecture_for_a_fast_g_n89uav",
+      "company_id": "company_startups",
+      "category": "startup_systems",
+      "question_text": "Design a scalable system architecture for a fast-growing startup.",
+      "difficulty": "Medium",
+      "is_generated": false,
+      "tags": [
+        "startup_architecture",
+        "scalability",
+        "cost_optimization",
+        "rapid_growth"
+      ],
+      "created_at": "2025-06-16T23:35:49.452Z",
+      "updated_at": "2025-06-16T23:35:49.452Z",
+      "is_critical": true,
+      "usage_count": 0,
+      "question_type": "system_design",
+      "categories": []
+    },
+    {
+      "id": "design_a_minimum_viable_product_mvp_architecture_t_in0eoj",
+      "company_id": "company_startups",
+      "category": "startup_systems",
+      "question_text": "Design a minimum viable product (MVP) architecture that can scale.",
+      "difficulty": "Medium",
+      "is_generated": false,
+      "tags": [
+        "mvp",
+        "scalable_architecture",
+        "lean_development",
+        "product_market_fit"
+      ],
+      "created_at": "2025-06-16T23:35:49.457Z",
+      "updated_at": "2025-06-16T23:35:49.457Z",
+      "is_critical": false,
+      "usage_count": 0,
+      "question_type": "system_design",
+      "categories": []
+    },
+    {
+      "id": "design_a_system_for_safe_ai_model_deployment_with__6efjxh",
+      "company_id": "company_anthropic",
+      "category": "ai_systems",
+      "question_text": "Design a system for safe AI model deployment with constitutional AI principles.",
+      "difficulty": "Hard",
+      "is_generated": false,
+      "tags": [
+        "ai_safety",
+        "constitutional_ai",
+        "model_deployment",
+        "safety_monitoring"
+      ],
+      "created_at": "2025-06-16T23:35:49.406Z",
+      "updated_at": "2025-06-16T23:35:49.406Z",
+      "is_critical": true,
+      "usage_count": 1,
+      "question_type": "system_design",
+      "categories": []
+    }
+  ],
+  "stories": [
+    {
+      "id": "337a788e-927f-4deb-9043-81d32758bef3",
+      "user_id": "252061c4-dd0b-4002-94f2-9d3b05bee660",
+      "title": "Test Story Title",
+      "situation": "Test situation description",
+      "task": "Test task description",
+      "action": "Test action description",
+      "result": "Test result description",
+      "reflection": null,
+      "tags": [],
+      "categories": [],
+      "created_at": "2025-06-16T23:31:27.761Z",
+      "updated_at": "2025-06-16T23:31:27.761Z"
+    },
+    {
+      "id": "45040853-efe5-47f3-ac5b-05a4a4674667",
+      "user_id": "252061c4-dd0b-4002-94f2-9d3b05bee660",
+      "title": "Test Story Title",
+      "situation": "Test situation description",
+      "task": "Test task description",
+      "action": "Test action description",
+      "result": "Test result description",
+      "reflection": null,
+      "tags": [],
+      "categories": [],
+      "created_at": "2025-06-16T23:34:24.573Z",
+      "updated_at": "2025-06-16T23:34:24.573Z"
+    },
+    {
+      "id": "story_3lp2a7wrc",
+      "user_id": "user_mayssam",
+      "title": "Team Member Development Success",
+      "situation": "Developer with deep knowledge of critical component but narrow scope, creating single point of failure and boredom",
+      "task": "Broaden responsibilities, enhance engagement, reduce knowledge silos",
+      "action": "Identified interests during career planning sessions. Gradually expanded role to include oversight of multiple components. Facilitated mentorship opportunities and strategic planning involvement.",
+      "result": "Became more engaged and motivated. Reduced single point of failure risk. Promoted to lead role, inspiring others.",
+      "reflection": "Importance of proactively addressing boredom in high-performers",
+      "tags": [
+        "people-management",
+        "coaching",
+        "career-development"
+      ],
+      "categories": [
+        "leadership",
+        "team_building"
+      ],
+      "created_at": "2025-06-16T23:35:44.962Z",
+      "updated_at": "2025-06-16T23:35:44.962Z"
+    },
+    {
+      "id": "story_jligv8hhv",
+      "user_id": "user_mayssam",
+      "title": "Skill Gap Resolution - Communication",
+      "situation": "Talented engineer who was shy, hesitant to share ideas, faced language barriers in male-dominated team",
+      "task": "Build confidence in expressing ideas and ensure voice was heard",
+      "action": "One-on-one coaching sessions highlighting communication as growth area. Intentionally invited her to share thoughts in meetings. Assigned collaborative projects with increasing complexity. Arranged communication workshops and peer feedback.",
+      "result": "Became more comfortable and confident sharing ideas. Improved communication skills boosted career development. Created more diverse and inclusive environment.",
+      "reflection": "Value of fostering inclusive culture and supporting individual growth",
+      "tags": [
+        "diversity-inclusion",
+        "coaching",
+        "communication"
+      ],
+      "categories": [
+        "leadership",
+        "team_building"
+      ],
+      "created_at": "2025-06-16T23:35:44.964Z",
+      "updated_at": "2025-06-16T23:35:44.964Z"
+    },
+    {
+      "id": "story_s3xh8ebgb",
+      "user_id": "user_mayssam",
+      "title": "Major Project Direction Change",
+      "situation": "Cloud migration project changed from Google Cloud to Azure, timeline shortened from 2.5 years to 4 quarters",
+      "task": "Realign data platform and data infra teams to meet accelerated timeline",
+      "action": "Worked with principal engineer and senior staff to reassess risks and adjust strategy. Introduced phased approach with data replication and bridges. Collaborated with program managers to keep stakeholders aligned. Framed challenges as engineering problems to empower team solutions.",
+      "result": "Successfully met accelerated timeline. Minimized disruption to business operations. Team adapted quickly with proactive risk management.",
+      "reflection": "Importance of flexibility, clear communication, and problem-solving mindset",
+      "tags": [
+        "change-management",
+        "cloud-migration",
+        "stakeholder-alignment"
+      ],
+      "categories": [
+        "ambiguity",
+        "communication",
+        "technical_decisions"
+      ],
+      "created_at": "2025-06-16T23:35:44.966Z",
+      "updated_at": "2025-06-16T23:35:44.966Z"
+    },
+    {
+      "id": "story_1571vck4f",
+      "user_id": "user_mayssam",
+      "title": "Cross-Org Conflict Resolution (Cost Savings)",
+      "situation": "High-priority cost-saving initiative across ML Platform and Data Platform teams",
+      "task": "Identify and implement cost-saving measures while ensuring optimal performance",
+      "action": "Conducted thorough analysis of data storage and access patterns. Implemented tiered storage solutions and eliminated redundant layers. Collaborated with ML engineers to map workflows and streamline transformations. Used RAPID framework for decision-making with clean escalation.",
+      "result": "Achieved over 60% cost savings while maintaining/improving performance. Enhanced efficiency of data access for ML use cases. Strengthened partnership between Data and ML teams.",
+      "reflection": "Value of cross-team collaboration and strategic cost management",
+      "tags": [
+        "cost-optimization",
+        "cross-functional",
+        "data-platform"
+      ],
+      "categories": [
+        "conflict_resolution",
+        "technical_decisions"
+      ],
+      "created_at": "2025-06-16T23:35:44.967Z",
+      "updated_at": "2025-06-16T23:35:44.967Z"
+    },
+    {
+      "id": "story_cfsyabjk8",
+      "user_id": "user_mayssam",
+      "title": "Technical Conflict Resolution",
+      "situation": "Two senior engineers disagreed on data platform architecture (data lake vs lakehouse)",
+      "task": "Resolve conflict and establish collaborative path forward",
+      "action": "Created comprehensive decision matrix evaluating both architectures. Involved multiple engineers for diverse perspectives. Implemented framework for technical disagreements with clear escalation. Used empathy-based approach requiring each side to present other's argument.",
+      "result": "Adopted hybrid approach balancing both perspectives. Improved team harmony and set precedent for future decisions. Enhanced governance and adaptability.",
+      "reflection": "Value of structured frameworks and empathy in conflict resolution",
+      "tags": [
+        "technical-architecture",
+        "conflict-resolution",
+        "decision-framework"
+      ],
+      "categories": [
+        "conflict_resolution",
+        "technical_decisions"
+      ],
+      "created_at": "2025-06-16T23:35:44.969Z",
+      "updated_at": "2025-06-16T23:35:44.969Z"
+    },
+    {
+      "id": "2af3dc53-c45e-4462-8218-6d0956a15080",
+      "user_id": "252061c4-dd0b-4002-94f2-9d3b05bee660",
+      "title": "Test Story Title",
+      "situation": "Test situation description",
+      "task": "Test task description",
+      "action": "Test action description",
+      "result": "Test result description",
+      "reflection": null,
+      "tags": [],
+      "categories": [],
+      "created_at": "2025-06-16T23:43:25.487Z",
+      "updated_at": "2025-06-16T23:43:25.487Z"
+    },
+    {
+      "id": "e44dfc22-b1da-4df7-98e0-518ee558f748",
+      "user_id": "252061c4-dd0b-4002-94f2-9d3b05bee660",
+      "title": "Test Story Title",
+      "situation": "Test situation description",
+      "task": "Test task description",
+      "action": "Test action description",
+      "result": "Test result description",
+      "reflection": null,
+      "tags": [],
+      "categories": [],
+      "created_at": "2025-06-16T23:45:14.247Z",
+      "updated_at": "2025-06-16T23:45:14.247Z"
+    },
+    {
+      "id": "f0544d38-70f9-4430-9301-1fb5b0fd96a5",
+      "user_id": "252061c4-dd0b-4002-94f2-9d3b05bee660",
+      "title": "Test Story Title",
+      "situation": "Test situation description",
+      "task": "Test task description",
+      "action": "Test action description",
+      "result": "Test result description",
+      "reflection": null,
+      "tags": [],
+      "categories": [],
+      "created_at": "2025-06-16T23:46:20.767Z",
+      "updated_at": "2025-06-16T23:46:20.767Z"
+    },
+    {
+      "id": "88395f00-55f9-4f2c-ac58-a0e37c0a43e9",
+      "user_id": "252061c4-dd0b-4002-94f2-9d3b05bee660",
+      "title": "stitle",
+      "situation": "ssituation",
+      "task": "stask",
+      "action": "saction",
+      "result": "sresult",
+      "reflection": "sreflection",
+      "tags": [
+        "stag"
+      ],
+      "categories": [
+        "scategory"
+      ],
+      "created_at": "2025-06-16T23:50:29.437Z",
+      "updated_at": "2025-06-16T23:50:29.437Z"
+    }
+  ],
+  "answers": [
+    {
+      "id": "c582bb79-fb79-4424-887a-6a3dc006ec9e",
+      "user_id": "252061c4-dd0b-4002-94f2-9d3b05bee660",
+      "question_id": "design_a_system_for_safe_ai_model_deployment_with__6efjxh",
+      "answer_text": "testanswer",
+      "story_references": [],
+      "notes": "testnote",
+      "created_at": "2025-06-16T23:50:52.768Z",
+      "updated_at": "2025-06-16T23:50:52.768Z"
+    }
+  ],
+  "progress": [
+    {
+      "id": "2167e85a-3ed8-4a6d-87a1-7cb34d079bcd",
+      "user_id": "252061c4-dd0b-4002-94f2-9d3b05bee660",
+      "question_id": "design_a_system_for_safe_ai_model_deployment_with__6efjxh",
+      "status": "answered",
+      "last_reviewed": "2025-06-16T23:50:52.771Z",
+      "created_at": "2025-06-16T23:50:52.771Z",
+      "updated_at": "2025-06-16T23:50:52.771Z"
+    }
+  ],
+  "question_views": [
+    {
+      "id": "db4ac748-4a93-4fbe-abe8-edc6ebd48680",
+      "user_id": "252061c4-dd0b-4002-94f2-9d3b05bee660",
+      "question_id": "design_a_system_for_safe_ai_model_deployment_with__6efjxh",
+      "viewed_at": "2025-06-16T23:50:52.854Z"
+    }
+  ],
+  "interview_notes": [],
+  "system_design_questions": [
+    {
+      "id": "design_meta_s_news_feed_system__2ho9j3_system_design",
+      "question_id": "design_meta_s_news_feed_system__2ho9j3",
+      "architecture_focus": [
+        "distributed_systems",
+        "real_time_processing",
+        "recommendation_systems",
+        "caching"
+      ],
+      "complexity_level": "senior",
+      "leadership_aspects": [
+        "technical_decision_making",
+        "cross_functional_collaboration",
+        "stakeholder_management"
+      ],
+      "frameworks": [
+        "microservices",
+        "event_driven_architecture",
+        "caching_strategies"
+      ],
+      "evaluation_criteria": [
+        "scalability",
+        "real_time_performance",
+        "personalization_quality",
+        "system_reliability"
+      ],
+      "resources": [],
+      "estimated_time_minutes": 45,
+      "follow_up_questions": [
+        "How would you handle celebrity posts that get millions of interactions?",
+        "How would you implement real-time updates for the feed?",
+        "How would you personalize the feed for different user segments?",
+        "How would you handle content moderation at scale?"
+      ],
+      "common_mistakes": [
+        "Not considering the scale of Meta's user base",
+        "Ignoring real-time requirements",
+        "Not addressing personalization complexity",
+        "Overlooking content moderation challenges"
+      ],
+      "key_tradeoffs": [
+        "Real-time updates vs. system performance",
+        "Personalization accuracy vs. computational cost",
+        "Content freshness vs. relevance",
+        "Global consistency vs. availability"
+      ],
+      "created_at": "2025-06-16T23:35:49.360Z",
+      "updated_at": "2025-06-16T23:35:49.360Z",
+      "alternative_solutions": [],
+      "back_of_envelope_calculations": null,
+      "clarifying_questions": [],
+      "core_solution": null,
+      "functional_requirements": [],
+      "key_technical_criteria": [],
+      "non_functional_requirements": [],
+      "problem_statement": null,
+      "question_title": null,
+      "references": [],
+      "scalability_considerations": [],
+      "technology_stack": null,
+      "tradeoffs": null
+    },
+    {
+      "id": "design_meta_messenger_or_a_similar_large_scale_cha_5hf1uw_system_design",
+      "question_id": "design_meta_messenger_or_a_similar_large_scale_cha_5hf1uw",
+      "architecture_focus": [
+        "real_time_communication",
+        "mobile_optimization",
+        "message_delivery",
+        "presence_system"
+      ],
+      "complexity_level": "senior",
+      "leadership_aspects": [
+        "technical_decision_making",
+        "mobile_team_coordination",
+        "infrastructure_planning"
+      ],
+      "frameworks": [
+        "websockets",
+        "message_queues",
+        "eventual_consistency"
+      ],
+      "evaluation_criteria": [
+        "message_delivery_reliability",
+        "real_time_performance",
+        "mobile_battery_optimization",
+        "scalability"
+      ],
+      "resources": [],
+      "estimated_time_minutes": 45,
+      "follow_up_questions": [
+        "How would you ensure message delivery in poor network conditions?",
+        "How would you implement end-to-end encryption?",
+        "How would you handle group chats with thousands of participants?",
+        "How would you optimize for mobile battery life?"
+      ],
+      "common_mistakes": [
+        "Not considering mobile-specific constraints",
+        "Ignoring message delivery guarantees",
+        "Not planning for offline scenarios",
+        "Overlooking presence system complexity"
+      ],
+      "key_tradeoffs": [
+        "Message delivery speed vs. reliability",
+        "Real-time features vs. battery life",
+        "End-to-end encryption vs. feature richness",
+        "Consistency vs. availability in poor networks"
+      ],
+      "created_at": "2025-06-16T23:35:49.366Z",
+      "updated_at": "2025-06-16T23:35:49.366Z",
+      "alternative_solutions": [],
+      "back_of_envelope_calculations": null,
+      "clarifying_questions": [],
+      "core_solution": null,
+      "functional_requirements": [],
+      "key_technical_criteria": [],
+      "non_functional_requirements": [],
+      "problem_statement": null,
+      "question_title": null,
+      "references": [],
+      "scalability_considerations": [],
+      "technology_stack": null,
+      "tradeoffs": null
+    },
+    {
+      "id": "design_a_scalable_e_commerce_product_page_with_rea_v8xb48_system_design",
+      "question_id": "design_a_scalable_e_commerce_product_page_with_rea_v8xb48",
+      "architecture_focus": [
+        "inventory_management",
+        "recommendation_systems",
+        "caching",
+        "real_time_updates"
+      ],
+      "complexity_level": "senior",
+      "leadership_aspects": [
+        "product_team_collaboration",
+        "business_metrics_optimization",
+        "customer_experience"
+      ],
+      "frameworks": [
+        "microservices",
+        "caching_strategies",
+        "event_driven_architecture"
+      ],
+      "evaluation_criteria": [
+        "page_load_performance",
+        "inventory_accuracy",
+        "recommendation_relevance",
+        "conversion_optimization"
+      ],
+      "resources": [],
+      "estimated_time_minutes": 45,
+      "follow_up_questions": [
+        "How would you handle flash sales with limited inventory?",
+        "How would you personalize recommendations for new users?",
+        "How would you ensure inventory consistency across regions?",
+        "How would you optimize for mobile commerce?"
+      ],
+      "common_mistakes": [
+        "Not considering inventory race conditions",
+        "Ignoring recommendation cold start problem",
+        "Not optimizing for mobile performance",
+        "Overlooking international considerations"
+      ],
+      "key_tradeoffs": [
+        "Inventory accuracy vs. system performance",
+        "Personalization vs. page load speed",
+        "Real-time updates vs. caching efficiency",
+        "Feature richness vs. simplicity"
+      ],
+      "created_at": "2025-06-16T23:35:49.370Z",
+      "updated_at": "2025-06-16T23:35:49.370Z",
+      "alternative_solutions": [],
+      "back_of_envelope_calculations": null,
+      "clarifying_questions": [],
+      "core_solution": null,
+      "functional_requirements": [],
+      "key_technical_criteria": [],
+      "non_functional_requirements": [],
+      "problem_statement": null,
+      "question_title": null,
+      "references": [],
+      "scalability_considerations": [],
+      "technology_stack": null,
+      "tradeoffs": null
+    },
+    {
+      "id": "design_a_content_delivery_network_cdn__yu9nm0_system_design",
+      "question_id": "design_a_content_delivery_network_cdn__yu9nm0",
+      "architecture_focus": [
+        "global_distribution",
+        "caching_strategies",
+        "edge_computing",
+        "content_optimization"
+      ],
+      "complexity_level": "senior",
+      "leadership_aspects": [
+        "infrastructure_planning",
+        "cost_optimization",
+        "global_team_coordination"
+      ],
+      "frameworks": [
+        "caching_strategies",
+        "load_balancing",
+        "geographic_distribution"
+      ],
+      "evaluation_criteria": [
+        "content_delivery_speed",
+        "global_availability",
+        "cost_efficiency",
+        "cache_hit_ratio"
+      ],
+      "resources": [],
+      "estimated_time_minutes": 45,
+      "follow_up_questions": [
+        "How would you handle cache invalidation across global edge nodes?",
+        "How would you optimize for different content types?",
+        "How would you implement intelligent routing?",
+        "How would you handle DDoS attacks?"
+      ],
+      "common_mistakes": [
+        "Not considering cache invalidation complexity",
+        "Ignoring geographic latency variations",
+        "Not planning for traffic spikes",
+        "Overlooking security considerations"
+      ],
+      "key_tradeoffs": [
+        "Cache duration vs. content freshness",
+        "Edge node density vs. cost",
+        "Performance vs. security",
+        "Automation vs. control"
+      ],
+      "created_at": "2025-06-16T23:35:49.375Z",
+      "updated_at": "2025-06-16T23:35:49.375Z",
+      "alternative_solutions": [],
+      "back_of_envelope_calculations": null,
+      "clarifying_questions": [],
+      "core_solution": null,
+      "functional_requirements": [],
+      "key_technical_criteria": [],
+      "non_functional_requirements": [],
+      "problem_statement": null,
+      "question_title": null,
+      "references": [],
+      "scalability_considerations": [],
+      "technology_stack": null,
+      "tradeoffs": null
+    },
+    {
+      "id": "design_google_maps__2y0qmc_system_design",
+      "question_id": "design_google_maps__2y0qmc",
+      "architecture_focus": [
+        "geospatial_indexing",
+        "routing_algorithms",
+        "real_time_traffic",
+        "mobile_optimization"
+      ],
+      "complexity_level": "senior",
+      "leadership_aspects": [
+        "cross_functional_coordination",
+        "data_partnerships",
+        "privacy_considerations"
+      ],
+      "frameworks": [
+        "geospatial_databases",
+        "graph_algorithms",
+        "real_time_processing"
+      ],
+      "evaluation_criteria": [
+        "routing_accuracy",
+        "real_time_performance",
+        "data_freshness",
+        "mobile_experience"
+      ],
+      "resources": [],
+      "estimated_time_minutes": 45,
+      "follow_up_questions": [
+        "How would you handle real-time traffic updates?",
+        "How would you optimize routing for different transportation modes?",
+        "How would you store and query geospatial data efficiently?",
+        "How would you handle offline map functionality?"
+      ],
+      "common_mistakes": [
+        "Not considering geospatial indexing complexity",
+        "Ignoring real-time traffic integration",
+        "Not optimizing for mobile constraints",
+        "Overlooking privacy implications"
+      ],
+      "key_tradeoffs": [
+        "Map detail vs. storage/bandwidth",
+        "Real-time accuracy vs. computational cost",
+        "Feature richness vs. performance",
+        "Privacy vs. personalization"
+      ],
+      "created_at": "2025-06-16T23:35:49.380Z",
+      "updated_at": "2025-06-16T23:35:49.380Z",
+      "alternative_solutions": [],
+      "back_of_envelope_calculations": null,
+      "clarifying_questions": [],
+      "core_solution": null,
+      "functional_requirements": [],
+      "key_technical_criteria": [],
+      "non_functional_requirements": [],
+      "problem_statement": null,
+      "question_title": null,
+      "references": [],
+      "scalability_considerations": [],
+      "technology_stack": null,
+      "tradeoffs": null
+    },
+    {
+      "id": "design_youtube_or_a_large_scale_video_streaming_pl_x2k7om_system_design",
+      "question_id": "design_youtube_or_a_large_scale_video_streaming_pl_x2k7om",
+      "architecture_focus": [
+        "video_processing",
+        "content_delivery",
+        "recommendation_systems",
+        "live_streaming"
+      ],
+      "complexity_level": "senior",
+      "leadership_aspects": [
+        "content_creator_ecosystem",
+        "monetization_strategy",
+        "global_infrastructure"
+      ],
+      "frameworks": [
+        "video_encoding",
+        "cdn_optimization",
+        "recommendation_engines"
+      ],
+      "evaluation_criteria": [
+        "video_quality",
+        "streaming_performance",
+        "content_discovery",
+        "creator_satisfaction"
+      ],
+      "resources": [],
+      "estimated_time_minutes": 45,
+      "follow_up_questions": [
+        "How would you handle live streaming at scale?",
+        "How would you optimize video encoding for different devices?",
+        "How would you implement content recommendation?",
+        "How would you handle copyright detection?"
+      ],
+      "common_mistakes": [
+        "Not considering video encoding complexity",
+        "Ignoring global content delivery challenges",
+        "Not planning for live streaming requirements",
+        "Overlooking content moderation needs"
+      ],
+      "key_tradeoffs": [
+        "Video quality vs. bandwidth/storage",
+        "Real-time processing vs. cost",
+        "Content discovery vs. creator fairness",
+        "Global availability vs. content restrictions"
+      ],
+      "created_at": "2025-06-16T23:35:49.385Z",
+      "updated_at": "2025-06-16T23:35:49.385Z",
+      "alternative_solutions": [],
+      "back_of_envelope_calculations": null,
+      "clarifying_questions": [],
+      "core_solution": null,
+      "functional_requirements": [],
+      "key_technical_criteria": [],
+      "non_functional_requirements": [],
+      "problem_statement": null,
+      "question_title": null,
+      "references": [],
+      "scalability_considerations": [],
+      "technology_stack": null,
+      "tradeoffs": null
+    },
+    {
+      "id": "design_a_system_for_real_time_document_co_authorin_it58p5_system_design",
+      "question_id": "design_a_system_for_real_time_document_co_authorin_it58p5",
+      "architecture_focus": [
+        "operational_transformation",
+        "conflict_resolution",
+        "real_time_sync",
+        "version_control"
+      ],
+      "complexity_level": "senior",
+      "leadership_aspects": [
+        "user_experience_optimization",
+        "enterprise_requirements",
+        "security_compliance"
+      ],
+      "frameworks": [
+        "operational_transformation",
+        "conflict_resolution",
+        "real_time_communication"
+      ],
+      "evaluation_criteria": [
+        "collaboration_smoothness",
+        "conflict_resolution_accuracy",
+        "real_time_performance",
+        "data_consistency"
+      ],
+      "resources": [],
+      "estimated_time_minutes": 45,
+      "follow_up_questions": [
+        "How would you handle conflicting edits from multiple users?",
+        "How would you implement undo/redo in a collaborative environment?",
+        "How would you ensure document consistency?",
+        "How would you handle offline editing?"
+      ],
+      "common_mistakes": [
+        "Not understanding operational transformation",
+        "Ignoring conflict resolution complexity",
+        "Not considering offline scenarios",
+        "Overlooking version history requirements"
+      ],
+      "key_tradeoffs": [
+        "Real-time collaboration vs. consistency",
+        "Feature richness vs. performance",
+        "Conflict resolution accuracy vs. speed",
+        "Offline capability vs. synchronization complexity"
+      ],
+      "created_at": "2025-06-16T23:35:49.390Z",
+      "updated_at": "2025-06-16T23:35:49.390Z",
+      "alternative_solutions": [],
+      "back_of_envelope_calculations": null,
+      "clarifying_questions": [],
+      "core_solution": null,
+      "functional_requirements": [],
+      "key_technical_criteria": [],
+      "non_functional_requirements": [],
+      "problem_statement": null,
+      "question_title": null,
+      "references": [],
+      "scalability_considerations": [],
+      "technology_stack": null,
+      "tradeoffs": null
+    },
+    {
+      "id": "design_a_cloud_monitoring_service_like_azure_monit_us3vaj_system_design",
+      "question_id": "design_a_cloud_monitoring_service_like_azure_monit_us3vaj",
+      "architecture_focus": [
+        "metrics_collection",
+        "alerting_systems",
+        "data_visualization",
+        "anomaly_detection"
+      ],
+      "complexity_level": "mid",
+      "leadership_aspects": [
+        "devops_culture",
+        "incident_response",
+        "cost_optimization"
+      ],
+      "frameworks": [
+        "time_series_databases",
+        "alerting_systems",
+        "data_aggregation"
+      ],
+      "evaluation_criteria": [
+        "monitoring_coverage",
+        "alert_accuracy",
+        "query_performance",
+        "cost_efficiency"
+      ],
+      "resources": [],
+      "estimated_time_minutes": 40,
+      "follow_up_questions": [
+        "How would you handle high-frequency metrics ingestion?",
+        "How would you implement intelligent alerting?",
+        "How would you optimize storage for time-series data?",
+        "How would you handle multi-tenant isolation?"
+      ],
+      "common_mistakes": [
+        "Not considering metrics volume scaling",
+        "Ignoring alert fatigue problems",
+        "Not optimizing time-series storage",
+        "Overlooking multi-tenancy requirements"
+      ],
+      "key_tradeoffs": [
+        "Monitoring granularity vs. storage cost",
+        "Alert sensitivity vs. noise",
+        "Real-time processing vs. resource usage",
+        "Feature completeness vs. simplicity"
+      ],
+      "created_at": "2025-06-16T23:35:49.394Z",
+      "updated_at": "2025-06-16T23:35:49.394Z",
+      "alternative_solutions": [],
+      "back_of_envelope_calculations": null,
+      "clarifying_questions": [],
+      "core_solution": null,
+      "functional_requirements": [],
+      "key_technical_criteria": [],
+      "non_functional_requirements": [],
+      "problem_statement": null,
+      "question_title": null,
+      "references": [],
+      "scalability_considerations": [],
+      "technology_stack": null,
+      "tradeoffs": null
+    },
+    {
+      "id": "design_a_system_to_serve_a_large_language_model_e__coehxv_system_design",
+      "question_id": "design_a_system_to_serve_a_large_language_model_e__coehxv",
+      "architecture_focus": [
+        "model_serving",
+        "gpu_optimization",
+        "request_batching",
+        "caching_strategies"
+      ],
+      "complexity_level": "senior",
+      "leadership_aspects": [
+        "ai_infrastructure",
+        "cost_optimization",
+        "safety_considerations"
+      ],
+      "frameworks": [
+        "model_serving",
+        "gpu_optimization",
+        "request_batching"
+      ],
+      "evaluation_criteria": [
+        "inference_latency",
+        "throughput",
+        "cost_efficiency",
+        "model_quality"
+      ],
+      "resources": [],
+      "estimated_time_minutes": 45,
+      "follow_up_questions": [
+        "How would you optimize GPU utilization for inference?",
+        "How would you handle request batching for efficiency?",
+        "How would you implement model caching strategies?",
+        "How would you ensure AI safety and content filtering?"
+      ],
+      "common_mistakes": [
+        "Not considering GPU memory constraints",
+        "Ignoring request batching opportunities",
+        "Not planning for model updates",
+        "Overlooking safety and filtering requirements"
+      ],
+      "key_tradeoffs": [
+        "Latency vs. throughput optimization",
+        "Model quality vs. inference speed",
+        "Cost vs. performance",
+        "Safety filtering vs. response time"
+      ],
+      "created_at": "2025-06-16T23:35:49.399Z",
+      "updated_at": "2025-06-16T23:35:49.399Z",
+      "alternative_solutions": [],
+      "back_of_envelope_calculations": null,
+      "clarifying_questions": [],
+      "core_solution": null,
+      "functional_requirements": [],
+      "key_technical_criteria": [],
+      "non_functional_requirements": [],
+      "problem_statement": null,
+      "question_title": null,
+      "references": [],
+      "scalability_considerations": [],
+      "technology_stack": null,
+      "tradeoffs": null
+    },
+    {
+      "id": "design_a_distributed_training_pipeline_for_large_a_ylnf3f_system_design",
+      "question_id": "design_a_distributed_training_pipeline_for_large_a_ylnf3f",
+      "architecture_focus": [
+        "distributed_training",
+        "model_parallelism",
+        "gradient_synchronization",
+        "fault_tolerance"
+      ],
+      "complexity_level": "senior",
+      "leadership_aspects": [
+        "research_infrastructure",
+        "experiment_management",
+        "resource_allocation"
+      ],
+      "frameworks": [
+        "distributed_training",
+        "model_parallelism",
+        "fault_tolerance"
+      ],
+      "evaluation_criteria": [
+        "training_efficiency",
+        "fault_tolerance",
+        "resource_utilization",
+        "experiment_reproducibility"
+      ],
+      "resources": [],
+      "estimated_time_minutes": 45,
+      "follow_up_questions": [
+        "How would you handle node failures during training?",
+        "How would you implement gradient synchronization?",
+        "How would you optimize data loading for training?",
+        "How would you manage experiment tracking and versioning?"
+      ],
+      "common_mistakes": [
+        "Not considering fault tolerance in long training runs",
+        "Ignoring data loading bottlenecks",
+        "Not planning for gradient synchronization complexity",
+        "Overlooking experiment reproducibility"
+      ],
+      "key_tradeoffs": [
+        "Training speed vs. fault tolerance",
+        "Model parallelism vs. data parallelism",
+        "Resource utilization vs. cost",
+        "Experiment flexibility vs. infrastructure complexity"
+      ],
+      "created_at": "2025-06-16T23:35:49.404Z",
+      "updated_at": "2025-06-16T23:35:49.404Z",
+      "alternative_solutions": [],
+      "back_of_envelope_calculations": null,
+      "clarifying_questions": [],
+      "core_solution": null,
+      "functional_requirements": [],
+      "key_technical_criteria": [],
+      "non_functional_requirements": [],
+      "problem_statement": null,
+      "question_title": null,
+      "references": [],
+      "scalability_considerations": [],
+      "technology_stack": null,
+      "tradeoffs": null
+    },
+    {
+      "id": "design_a_system_for_safe_ai_model_deployment_with__6efjxh_system_design",
+      "question_id": "design_a_system_for_safe_ai_model_deployment_with__6efjxh",
+      "architecture_focus": [
+        "ai_safety_systems",
+        "constitutional_ai",
+        "safety_monitoring",
+        "model_alignment"
+      ],
+      "complexity_level": "senior",
+      "leadership_aspects": [
+        "ai_safety_culture",
+        "ethical_considerations",
+        "safety_first_mindset"
+      ],
+      "frameworks": [
+        "constitutional_ai",
+        "safety_monitoring",
+        "model_alignment"
+      ],
+      "evaluation_criteria": [
+        "safety_compliance",
+        "model_helpfulness",
+        "harm_prevention",
+        "alignment_quality"
+      ],
+      "resources": [],
+      "estimated_time_minutes": 45,
+      "follow_up_questions": [
+        "How would you implement constitutional AI training?",
+        "How would you monitor for harmful outputs in real-time?",
+        "How would you handle edge cases in AI safety?",
+        "How would you ensure model alignment with human values?"
+      ],
+      "common_mistakes": [
+        "Not prioritizing safety over performance",
+        "Ignoring constitutional AI principles",
+        "Not implementing comprehensive safety monitoring",
+        "Overlooking alignment verification"
+      ],
+      "key_tradeoffs": [
+        "Safety vs. model capability",
+        "Constitutional constraints vs. helpfulness",
+        "Real-time monitoring vs. latency",
+        "Safety verification vs. deployment speed"
+      ],
+      "created_at": "2025-06-16T23:35:49.408Z",
+      "updated_at": "2025-06-16T23:35:49.408Z",
+      "alternative_solutions": [],
+      "back_of_envelope_calculations": null,
+      "clarifying_questions": [],
+      "core_solution": null,
+      "functional_requirements": [],
+      "key_technical_criteria": [],
+      "non_functional_requirements": [],
+      "problem_statement": null,
+      "question_title": null,
+      "references": [],
+      "scalability_considerations": [],
+      "technology_stack": null,
+      "tradeoffs": null
+    },
+    {
+      "id": "design_netflix_s_content_recommendation_system__jfnodf_system_design",
+      "question_id": "design_netflix_s_content_recommendation_system__jfnodf",
+      "architecture_focus": [
+        "recommendation_systems",
+        "personalization",
+        "content_ranking",
+        "a_b_testing"
+      ],
+      "complexity_level": "senior",
+      "leadership_aspects": [
+        "content_strategy",
+        "user_engagement",
+        "data_science_collaboration"
+      ],
+      "frameworks": [
+        "collaborative_filtering",
+        "content_based_filtering",
+        "deep_learning"
+      ],
+      "evaluation_criteria": [
+        "engagement_metrics",
+        "content_discovery",
+        "user_satisfaction",
+        "business_impact"
+      ],
+      "resources": [],
+      "estimated_time_minutes": 45,
+      "follow_up_questions": [
+        "How would you handle the cold start problem for new content?",
+        "How would you incorporate viewing context (time, device)?",
+        "How would you balance popular vs. niche content?",
+        "How would you measure recommendation quality?"
+      ],
+      "common_mistakes": [
+        "Not considering content lifecycle",
+        "Ignoring viewing context factors",
+        "Not balancing exploration vs. exploitation",
+        "Overlooking business objectives"
+      ],
+      "key_tradeoffs": [
+        "Personalization vs. content diversity",
+        "Popular content vs. long-tail discovery",
+        "Real-time updates vs. computational cost",
+        "User satisfaction vs. business metrics"
+      ],
+      "created_at": "2025-06-16T23:35:49.413Z",
+      "updated_at": "2025-06-16T23:35:49.413Z",
+      "alternative_solutions": [],
+      "back_of_envelope_calculations": null,
+      "clarifying_questions": [],
+      "core_solution": null,
+      "functional_requirements": [],
+      "key_technical_criteria": [],
+      "non_functional_requirements": [],
+      "problem_statement": null,
+      "question_title": null,
+      "references": [],
+      "scalability_considerations": [],
+      "technology_stack": null,
+      "tradeoffs": null
+    },
+    {
+      "id": "design_a_global_video_streaming_platform_with_adap_y8aac0_system_design",
+      "question_id": "design_a_global_video_streaming_platform_with_adap_y8aac0",
+      "architecture_focus": [
+        "adaptive_streaming",
+        "global_cdn",
+        "video_encoding",
+        "quality_optimization"
+      ],
+      "complexity_level": "senior",
+      "leadership_aspects": [
+        "global_infrastructure",
+        "user_experience",
+        "cost_optimization"
+      ],
+      "frameworks": [
+        "adaptive_bitrate",
+        "cdn_optimization",
+        "video_encoding"
+      ],
+      "evaluation_criteria": [
+        "streaming_quality",
+        "global_performance",
+        "cost_efficiency",
+        "user_experience"
+      ],
+      "resources": [],
+      "estimated_time_minutes": 45,
+      "follow_up_questions": [
+        "How would you implement adaptive bitrate streaming?",
+        "How would you optimize for different network conditions?",
+        "How would you handle global content distribution?",
+        "How would you minimize buffering and startup time?"
+      ],
+      "common_mistakes": [
+        "Not considering network variability",
+        "Ignoring device-specific optimizations",
+        "Not planning for global latency",
+        "Overlooking cost implications"
+      ],
+      "key_tradeoffs": [
+        "Video quality vs. bandwidth usage",
+        "Startup time vs. quality",
+        "Global consistency vs. local optimization",
+        "Cost vs. performance"
+      ],
+      "created_at": "2025-06-16T23:35:49.418Z",
+      "updated_at": "2025-06-16T23:35:49.418Z",
+      "alternative_solutions": [],
+      "back_of_envelope_calculations": null,
+      "clarifying_questions": [],
+      "core_solution": null,
+      "functional_requirements": [],
+      "key_technical_criteria": [],
+      "non_functional_requirements": [],
+      "problem_statement": null,
+      "question_title": null,
+      "references": [],
+      "scalability_considerations": [],
+      "technology_stack": null,
+      "tradeoffs": null
+    },
+    {
+      "id": "design_uber_s_real_time_ride_matching_system__indfyp_system_design",
+      "question_id": "design_uber_s_real_time_ride_matching_system__indfyp",
+      "architecture_focus": [
+        "real_time_matching",
+        "geospatial_systems",
+        "optimization_algorithms",
+        "mobile_systems"
+      ],
+      "complexity_level": "senior",
+      "leadership_aspects": [
+        "marketplace_dynamics",
+        "user_experience",
+        "operational_efficiency"
+      ],
+      "frameworks": [
+        "geospatial_indexing",
+        "real_time_processing",
+        "optimization_algorithms"
+      ],
+      "evaluation_criteria": [
+        "matching_efficiency",
+        "wait_times",
+        "system_scalability",
+        "user_satisfaction"
+      ],
+      "resources": [],
+      "estimated_time_minutes": 45,
+      "follow_up_questions": [
+        "How would you handle surge pricing algorithms?",
+        "How would you optimize for driver utilization?",
+        "How would you handle real-time location updates?",
+        "How would you ensure fair matching algorithms?"
+      ],
+      "common_mistakes": [
+        "Not considering real-time constraints",
+        "Ignoring geospatial complexity",
+        "Not optimizing for marketplace balance",
+        "Overlooking mobile network limitations"
+      ],
+      "key_tradeoffs": [
+        "Matching speed vs. optimization quality",
+        "Driver utilization vs. passenger wait time",
+        "Real-time updates vs. battery life",
+        "Fairness vs. efficiency"
+      ],
+      "created_at": "2025-06-16T23:35:49.422Z",
+      "updated_at": "2025-06-16T23:35:49.422Z",
+      "alternative_solutions": [],
+      "back_of_envelope_calculations": null,
+      "clarifying_questions": [],
+      "core_solution": null,
+      "functional_requirements": [],
+      "key_technical_criteria": [],
+      "non_functional_requirements": [],
+      "problem_statement": null,
+      "question_title": null,
+      "references": [],
+      "scalability_considerations": [],
+      "technology_stack": null,
+      "tradeoffs": null
+    },
+    {
+      "id": "design_airbnb_s_search_and_ranking_system__zcso6x_system_design",
+      "question_id": "design_airbnb_s_search_and_ranking_system__zcso6x",
+      "architecture_focus": [
+        "search_systems",
+        "ranking_algorithms",
+        "personalization",
+        "marketplace_dynamics"
+      ],
+      "complexity_level": "senior",
+      "leadership_aspects": [
+        "marketplace_balance",
+        "user_experience",
+        "business_optimization"
+      ],
+      "frameworks": [
+        "search_engines",
+        "ranking_algorithms",
+        "personalization_systems"
+      ],
+      "evaluation_criteria": [
+        "search_relevance",
+        "booking_conversion",
+        "user_satisfaction",
+        "host_fairness"
+      ],
+      "resources": [],
+      "estimated_time_minutes": 45,
+      "follow_up_questions": [
+        "How would you personalize search results?",
+        "How would you handle location-based search?",
+        "How would you balance guest preferences with host availability?",
+        "How would you implement dynamic pricing suggestions?"
+      ],
+      "common_mistakes": [
+        "Not considering marketplace dynamics",
+        "Ignoring location complexity",
+        "Not balancing multiple stakeholders",
+        "Overlooking seasonal patterns"
+      ],
+      "key_tradeoffs": [
+        "Personalization vs. discovery",
+        "Guest satisfaction vs. host fairness",
+        "Search accuracy vs. response time",
+        "Business metrics vs. user experience"
+      ],
+      "created_at": "2025-06-16T23:35:49.427Z",
+      "updated_at": "2025-06-16T23:35:49.427Z",
+      "alternative_solutions": [],
+      "back_of_envelope_calculations": null,
+      "clarifying_questions": [],
+      "core_solution": null,
+      "functional_requirements": [],
+      "key_technical_criteria": [],
+      "non_functional_requirements": [],
+      "problem_statement": null,
+      "question_title": null,
+      "references": [],
+      "scalability_considerations": [],
+      "technology_stack": null,
+      "tradeoffs": null
+    },
+    {
+      "id": "design_tiktok_s_for_you_page_algorithm__8rt7oj_system_design",
+      "question_id": "design_tiktok_s_for_you_page_algorithm__8rt7oj",
+      "architecture_focus": [
+        "recommendation_systems",
+        "real_time_personalization",
+        "engagement_optimization",
+        "content_understanding"
+      ],
+      "complexity_level": "senior",
+      "leadership_aspects": [
+        "content_creator_ecosystem",
+        "user_engagement",
+        "algorithmic_fairness"
+      ],
+      "frameworks": [
+        "deep_learning",
+        "real_time_processing",
+        "content_analysis"
+      ],
+      "evaluation_criteria": [
+        "user_engagement",
+        "content_diversity",
+        "creator_satisfaction",
+        "platform_growth"
+      ],
+      "resources": [],
+      "estimated_time_minutes": 45,
+      "follow_up_questions": [
+        "How would you handle new user cold start?",
+        "How would you ensure content diversity?",
+        "How would you incorporate real-time engagement signals?",
+        "How would you prevent filter bubbles?"
+      ],
+      "common_mistakes": [
+        "Not considering content lifecycle",
+        "Ignoring creator fairness",
+        "Not handling engagement manipulation",
+        "Overlooking content safety"
+      ],
+      "key_tradeoffs": [
+        "Engagement vs. content diversity",
+        "Personalization vs. discovery",
+        "Real-time updates vs. computational cost",
+        "Creator reach vs. user preferences"
+      ],
+      "created_at": "2025-06-16T23:35:49.431Z",
+      "updated_at": "2025-06-16T23:35:49.431Z",
+      "alternative_solutions": [],
+      "back_of_envelope_calculations": null,
+      "clarifying_questions": [],
+      "core_solution": null,
+      "functional_requirements": [],
+      "key_technical_criteria": [],
+      "non_functional_requirements": [],
+      "problem_statement": null,
+      "question_title": null,
+      "references": [],
+      "scalability_considerations": [],
+      "technology_stack": null,
+      "tradeoffs": null
+    },
+    {
+      "id": "design_linkedin_s_professional_network_feed_algori_m2e193_system_design",
+      "question_id": "design_linkedin_s_professional_network_feed_algori_m2e193",
+      "architecture_focus": [
+        "social_graph_analysis",
+        "content_ranking",
+        "professional_relevance",
+        "network_effects"
+      ],
+      "complexity_level": "senior",
+      "leadership_aspects": [
+        "professional_community",
+        "content_quality",
+        "network_growth"
+      ],
+      "frameworks": [
+        "graph_algorithms",
+        "content_ranking",
+        "social_signals"
+      ],
+      "evaluation_criteria": [
+        "professional_relevance",
+        "engagement_quality",
+        "network_growth",
+        "content_value"
+      ],
+      "resources": [],
+      "estimated_time_minutes": 45,
+      "follow_up_questions": [
+        "How would you rank professional content vs. personal updates?",
+        "How would you leverage professional graph signals?",
+        "How would you handle content from different industries?",
+        "How would you promote meaningful professional interactions?"
+      ],
+      "common_mistakes": [
+        "Not considering professional context",
+        "Ignoring network relationship strength",
+        "Not balancing content types",
+        "Overlooking professional relevance"
+      ],
+      "key_tradeoffs": [
+        "Professional relevance vs. engagement",
+        "Network growth vs. content quality",
+        "Industry focus vs. diversity",
+        "Personal vs. professional content"
+      ],
+      "created_at": "2025-06-16T23:35:49.436Z",
+      "updated_at": "2025-06-16T23:35:49.436Z",
+      "alternative_solutions": [],
+      "back_of_envelope_calculations": null,
+      "clarifying_questions": [],
+      "core_solution": null,
+      "functional_requirements": [],
+      "key_technical_criteria": [],
+      "non_functional_requirements": [],
+      "problem_statement": null,
+      "question_title": null,
+      "references": [],
+      "scalability_considerations": [],
+      "technology_stack": null,
+      "tradeoffs": null
+    },
+    {
+      "id": "design_a_cloud_native_data_warehouse_with_automati_a5yqbo_system_design",
+      "question_id": "design_a_cloud_native_data_warehouse_with_automati_a5yqbo",
+      "architecture_focus": [
+        "cloud_architecture",
+        "auto_scaling",
+        "data_storage",
+        "query_optimization"
+      ],
+      "complexity_level": "senior",
+      "leadership_aspects": [
+        "data_strategy",
+        "cost_optimization",
+        "performance_engineering"
+      ],
+      "frameworks": [
+        "cloud_architecture",
+        "distributed_storage",
+        "query_engines"
+      ],
+      "evaluation_criteria": [
+        "query_performance",
+        "cost_efficiency",
+        "scalability",
+        "data_freshness"
+      ],
+      "resources": [],
+      "estimated_time_minutes": 45,
+      "follow_up_questions": [
+        "How would you implement automatic scaling for compute resources?",
+        "How would you optimize for different query patterns?",
+        "How would you handle data partitioning and clustering?",
+        "How would you ensure data consistency across regions?"
+      ],
+      "common_mistakes": [
+        "Not considering cost implications of scaling",
+        "Ignoring query optimization opportunities",
+        "Not planning for data governance",
+        "Overlooking multi-tenancy requirements"
+      ],
+      "key_tradeoffs": [
+        "Performance vs. cost",
+        "Automatic scaling vs. predictability",
+        "Data freshness vs. consistency",
+        "Flexibility vs. optimization"
+      ],
+      "created_at": "2025-06-16T23:35:49.440Z",
+      "updated_at": "2025-06-16T23:35:49.440Z",
+      "alternative_solutions": [],
+      "back_of_envelope_calculations": null,
+      "clarifying_questions": [],
+      "core_solution": null,
+      "functional_requirements": [],
+      "key_technical_criteria": [],
+      "non_functional_requirements": [],
+      "problem_statement": null,
+      "question_title": null,
+      "references": [],
+      "scalability_considerations": [],
+      "technology_stack": null,
+      "tradeoffs": null
+    },
+    {
+      "id": "design_a_system_for_large_scale_data_labeling_and__azlddd_system_design",
+      "question_id": "design_a_system_for_large_scale_data_labeling_and__azlddd",
+      "architecture_focus": [
+        "data_pipeline",
+        "quality_control",
+        "human_in_the_loop",
+        "workflow_management"
+      ],
+      "complexity_level": "senior",
+      "leadership_aspects": [
+        "data_quality",
+        "human_workforce_management",
+        "ml_pipeline_integration"
+      ],
+      "frameworks": [
+        "workflow_systems",
+        "quality_control",
+        "human_computer_interaction"
+      ],
+      "evaluation_criteria": [
+        "annotation_quality",
+        "throughput",
+        "cost_efficiency",
+        "turnaround_time"
+      ],
+      "resources": [],
+      "estimated_time_minutes": 45,
+      "follow_up_questions": [
+        "How would you ensure annotation quality and consistency?",
+        "How would you handle different types of data (text, image, video)?",
+        "How would you implement quality control mechanisms?",
+        "How would you scale human annotation workforce?"
+      ],
+      "common_mistakes": [
+        "Not considering annotation quality variance",
+        "Ignoring human workflow optimization",
+        "Not planning for different data types",
+        "Overlooking quality control complexity"
+      ],
+      "key_tradeoffs": [
+        "Quality vs. speed",
+        "Human annotation vs. automated labeling",
+        "Cost vs. accuracy",
+        "Scalability vs. quality control"
+      ],
+      "created_at": "2025-06-16T23:35:49.445Z",
+      "updated_at": "2025-06-16T23:35:49.445Z",
+      "alternative_solutions": [],
+      "back_of_envelope_calculations": null,
+      "clarifying_questions": [],
+      "core_solution": null,
+      "functional_requirements": [],
+      "key_technical_criteria": [],
+      "non_functional_requirements": [],
+      "problem_statement": null,
+      "question_title": null,
+      "references": [],
+      "scalability_considerations": [],
+      "technology_stack": null,
+      "tradeoffs": null
+    },
+    {
+      "id": "design_reddit_s_content_ranking_and_moderation_sys_3dkdae_system_design",
+      "question_id": "design_reddit_s_content_ranking_and_moderation_sys_3dkdae",
+      "architecture_focus": [
+        "voting_systems",
+        "content_ranking",
+        "community_moderation",
+        "spam_detection"
+      ],
+      "complexity_level": "senior",
+      "leadership_aspects": [
+        "community_management",
+        "content_policy",
+        "platform_governance"
+      ],
+      "frameworks": [
+        "ranking_algorithms",
+        "moderation_systems",
+        "community_governance"
+      ],
+      "evaluation_criteria": [
+        "content_quality",
+        "community_health",
+        "engagement",
+        "moderation_effectiveness"
+      ],
+      "resources": [],
+      "estimated_time_minutes": 45,
+      "follow_up_questions": [
+        "How would you handle vote manipulation and spam?",
+        "How would you implement community-specific moderation?",
+        "How would you balance free speech with content policy?",
+        "How would you scale moderation across thousands of communities?"
+      ],
+      "common_mistakes": [
+        "Not considering community dynamics",
+        "Ignoring vote manipulation",
+        "Not scaling moderation effectively",
+        "Overlooking content policy complexity"
+      ],
+      "key_tradeoffs": [
+        "Free speech vs. content moderation",
+        "Community autonomy vs. platform standards",
+        "Automated vs. human moderation",
+        "Engagement vs. quality"
+      ],
+      "created_at": "2025-06-16T23:35:49.450Z",
+      "updated_at": "2025-06-16T23:35:49.450Z",
+      "alternative_solutions": [],
+      "back_of_envelope_calculations": null,
+      "clarifying_questions": [],
+      "core_solution": null,
+      "functional_requirements": [],
+      "key_technical_criteria": [],
+      "non_functional_requirements": [],
+      "problem_statement": null,
+      "question_title": null,
+      "references": [],
+      "scalability_considerations": [],
+      "technology_stack": null,
+      "tradeoffs": null
+    },
+    {
+      "id": "design_a_scalable_system_architecture_for_a_fast_g_n89uav_system_design",
+      "question_id": "design_a_scalable_system_architecture_for_a_fast_g_n89uav",
+      "architecture_focus": [
+        "cost_effective_scaling",
+        "rapid_iteration",
+        "technical_debt_management",
+        "team_productivity"
+      ],
+      "complexity_level": "mid",
+      "leadership_aspects": [
+        "resource_constraints",
+        "rapid_scaling",
+        "technical_decision_making"
+      ],
+      "frameworks": [
+        "lean_architecture",
+        "cloud_first",
+        "iterative_development"
+      ],
+      "evaluation_criteria": [
+        "cost_efficiency",
+        "development_velocity",
+        "scalability_potential",
+        "technical_debt"
+      ],
+      "resources": [],
+      "estimated_time_minutes": 40,
+      "follow_up_questions": [
+        "How would you balance technical debt vs. feature velocity?",
+        "How would you plan for uncertain scaling requirements?",
+        "How would you optimize for limited engineering resources?",
+        "How would you ensure system reliability with small team?"
+      ],
+      "common_mistakes": [
+        "Over-engineering for uncertain scale",
+        "Not considering cost constraints",
+        "Ignoring technical debt accumulation",
+        "Not planning for team growth"
+      ],
+      "key_tradeoffs": [
+        "Perfect architecture vs. time to market",
+        "Cost vs. scalability",
+        "Feature velocity vs. technical debt",
+        "Simplicity vs. future flexibility"
+      ],
+      "created_at": "2025-06-16T23:35:49.454Z",
+      "updated_at": "2025-06-16T23:35:49.454Z",
+      "alternative_solutions": [],
+      "back_of_envelope_calculations": null,
+      "clarifying_questions": [],
+      "core_solution": null,
+      "functional_requirements": [],
+      "key_technical_criteria": [],
+      "non_functional_requirements": [],
+      "problem_statement": null,
+      "question_title": null,
+      "references": [],
+      "scalability_considerations": [],
+      "technology_stack": null,
+      "tradeoffs": null
+    },
+    {
+      "id": "design_a_minimum_viable_product_mvp_architecture_t_in0eoj_system_design",
+      "question_id": "design_a_minimum_viable_product_mvp_architecture_t_in0eoj",
+      "architecture_focus": [
+        "mvp_architecture",
+        "scalability_planning",
+        "lean_development",
+        "iteration_speed"
+      ],
+      "complexity_level": "mid",
+      "leadership_aspects": [
+        "product_strategy",
+        "engineering_efficiency",
+        "market_validation"
+      ],
+      "frameworks": [
+        "lean_startup",
+        "agile_development",
+        "cloud_native"
+      ],
+      "evaluation_criteria": [
+        "time_to_market",
+        "development_cost",
+        "scalability_potential",
+        "iteration_speed"
+      ],
+      "resources": [],
+      "estimated_time_minutes": 35,
+      "follow_up_questions": [
+        "How would you validate technical assumptions quickly?",
+        "How would you plan for pivot scenarios?",
+        "How would you balance MVP simplicity with future needs?",
+        "How would you measure technical success metrics?"
+      ],
+      "common_mistakes": [
+        "Building too much for MVP",
+        "Not considering future scaling",
+        "Ignoring user feedback loops",
+        "Over-optimizing prematurely"
+      ],
+      "key_tradeoffs": [
+        "MVP simplicity vs. future scalability",
+        "Speed vs. quality",
+        "Feature completeness vs. time to market",
+        "Technical perfection vs. user validation"
+      ],
+      "created_at": "2025-06-16T23:35:49.459Z",
+      "updated_at": "2025-06-16T23:35:49.459Z",
+      "alternative_solutions": [],
+      "back_of_envelope_calculations": null,
+      "clarifying_questions": [],
+      "core_solution": null,
+      "functional_requirements": [],
+      "key_technical_criteria": [],
+      "non_functional_requirements": [],
+      "problem_statement": null,
+      "question_title": null,
+      "references": [],
+      "scalability_considerations": [],
+      "technology_stack": null,
+      "tradeoffs": null
+    }
+  ],
+  "system_design_answers": [],
+  "system_design_frameworks": [
+    {
+      "id": "cap_theorem",
+      "name": "CAP Theorem",
+      "description": "Fundamental principle stating that distributed systems can only guarantee two of three properties: Consistency, Availability, and Partition tolerance.",
+      "category": "data_consistency",
+      "key_principles": [
+        "Consistency: All nodes see the same data simultaneously",
+        "Availability: System remains operational during failures",
+        "Partition tolerance: System continues despite network failures",
+        "You can only guarantee two out of three properties"
+      ],
+      "use_cases": [
+        "Designing distributed databases",
+        "Choosing between SQL and NoSQL systems",
+        "Making tradeoffs in microservices architecture",
+        "Designing fault-tolerant systems"
+      ],
+      "tradeoffs": [
+        "CP systems sacrifice availability for consistency",
+        "AP systems sacrifice consistency for availability",
+        "CA systems cannot handle network partitions",
+        "Real-world systems often choose eventual consistency"
+      ],
+      "examples": [
+        "Banking systems prioritize CP (consistency + partition tolerance)",
+        "Social media feeds often choose AP (availability + partition tolerance)",
+        "Traditional RDBMS in single datacenter are CA systems"
+      ],
+      "resources": [
+        "https://en.wikipedia.org/wiki/CAP_theorem",
+        "https://www.ibm.com/cloud/learn/cap-theorem"
+      ],
+      "difficulty": "Medium",
+      "created_at": "2025-06-16T23:35:49.342Z",
+      "updated_at": "2025-06-16T23:35:49.341Z"
+    },
+    {
+      "id": "acid_properties",
+      "name": "ACID Properties",
+      "description": "Set of properties that guarantee database transactions are processed reliably in traditional relational databases.",
+      "category": "data_consistency",
+      "key_principles": [
+        "Atomicity: Transactions are all-or-nothing",
+        "Consistency: Database remains in valid state",
+        "Isolation: Concurrent transactions don't interfere",
+        "Durability: Committed transactions persist"
+      ],
+      "use_cases": [
+        "Financial transaction systems",
+        "E-commerce order processing",
+        "Inventory management systems",
+        "Any system requiring strong consistency"
+      ],
+      "tradeoffs": [
+        "Strong consistency vs. performance",
+        "ACID compliance vs. scalability",
+        "Reliability vs. speed",
+        "Complex implementation vs. data integrity"
+      ],
+      "examples": [
+        "Bank account transfers",
+        "E-commerce checkout process",
+        "Booking systems (hotels, flights)",
+        "Medical record systems"
+      ],
+      "resources": [
+        "https://en.wikipedia.org/wiki/ACID",
+        "https://www.databricks.com/glossary/acid-transactions"
+      ],
+      "difficulty": "Easy",
+      "created_at": "2025-06-16T23:35:49.345Z",
+      "updated_at": "2025-06-16T23:35:49.344Z"
+    },
+    {
+      "id": "base_principle",
+      "name": "BASE Principle",
+      "description": "Alternative to ACID for distributed systems, emphasizing availability and eventual consistency over immediate consistency.",
+      "category": "data_consistency",
+      "key_principles": [
+        "Basically Available: System remains available",
+        "Soft state: Data may change over time",
+        "Eventual consistency: System becomes consistent eventually",
+        "Prioritizes availability over immediate consistency"
+      ],
+      "use_cases": [
+        "Large-scale distributed systems",
+        "Social media platforms",
+        "Content delivery networks",
+        "Real-time analytics systems"
+      ],
+      "tradeoffs": [
+        "Availability vs. immediate consistency",
+        "Scalability vs. data accuracy",
+        "Performance vs. complexity",
+        "User experience vs. data precision"
+      ],
+      "examples": [
+        "Facebook news feed",
+        "Twitter timeline",
+        "Amazon product recommendations",
+        "Netflix viewing history"
+      ],
+      "resources": [
+        "https://en.wikipedia.org/wiki/Eventual_consistency",
+        "https://www.allthingsdistributed.com/2008/12/eventually_consistent.html"
+      ],
+      "difficulty": "Medium",
+      "created_at": "2025-06-16T23:35:49.347Z",
+      "updated_at": "2025-06-16T23:35:49.346Z"
+    },
+    {
+      "id": "microservices_architecture",
+      "name": "Microservices Architecture",
+      "description": "Architectural pattern that structures an application as a collection of loosely coupled, independently deployable services.",
+      "category": "architecture_patterns",
+      "key_principles": [
+        "Single responsibility per service",
+        "Decentralized governance and data management",
+        "Failure isolation and resilience",
+        "Technology diversity and team autonomy"
+      ],
+      "use_cases": [
+        "Large-scale web applications",
+        "Organizations with multiple teams",
+        "Systems requiring different scaling patterns",
+        "Applications with diverse technology needs"
+      ],
+      "tradeoffs": [
+        "Complexity vs. flexibility",
+        "Network latency vs. service isolation",
+        "Operational overhead vs. team autonomy",
+        "Data consistency vs. service independence"
+      ],
+      "examples": [
+        "Netflix streaming platform",
+        "Amazon e-commerce platform",
+        "Uber ride-sharing system",
+        "Spotify music streaming"
+      ],
+      "resources": [
+        "https://microservices.io/",
+        "https://martinfowler.com/articles/microservices.html"
+      ],
+      "difficulty": "Hard",
+      "created_at": "2025-06-16T23:35:49.349Z",
+      "updated_at": "2025-06-16T23:35:49.348Z"
+    },
+    {
+      "id": "load_balancing_strategies",
+      "name": "Load Balancing Strategies",
+      "description": "Techniques for distributing incoming requests across multiple servers to ensure optimal resource utilization and availability.",
+      "category": "scalability",
+      "key_principles": [
+        "Distribute load evenly across servers",
+        "Health checking and failover",
+        "Session affinity considerations",
+        "Geographic and latency-based routing"
+      ],
+      "use_cases": [
+        "High-traffic web applications",
+        "API gateways",
+        "Database connection pooling",
+        "Content delivery networks"
+      ],
+      "tradeoffs": [
+        "Round-robin vs. weighted distribution",
+        "Session stickiness vs. load distribution",
+        "Hardware vs. software load balancers",
+        "Cost vs. performance and reliability"
+      ],
+      "examples": [
+        "AWS Application Load Balancer",
+        "NGINX load balancing",
+        "Google Cloud Load Balancing",
+        "Cloudflare load balancing"
+      ],
+      "resources": [
+        "https://aws.amazon.com/what-is/load-balancing/",
+        "https://nginx.org/en/docs/http/load_balancing.html"
+      ],
+      "difficulty": "Medium",
+      "created_at": "2025-06-16T23:35:49.351Z",
+      "updated_at": "2025-06-16T23:35:49.350Z"
+    },
+    {
+      "id": "caching_strategies",
+      "name": "Caching Strategies",
+      "description": "Techniques for storing frequently accessed data in fast storage to improve system performance and reduce latency.",
+      "category": "performance",
+      "key_principles": [
+        "Cache frequently accessed data",
+        "Consider cache invalidation strategies",
+        "Choose appropriate cache levels",
+        "Handle cache misses gracefully"
+      ],
+      "use_cases": [
+        "Web application performance optimization",
+        "Database query optimization",
+        "API response caching",
+        "Static content delivery"
+      ],
+      "tradeoffs": [
+        "Memory usage vs. performance gain",
+        "Cache consistency vs. performance",
+        "Cache complexity vs. simplicity",
+        "Cost vs. speed improvement"
+      ],
+      "examples": [
+        "Redis for session storage",
+        "CDN for static assets",
+        "Database query result caching",
+        "Application-level caching"
+      ],
+      "resources": [
+        "https://aws.amazon.com/caching/",
+        "https://redis.io/docs/manual/patterns/"
+      ],
+      "difficulty": "Medium",
+      "created_at": "2025-06-16T23:35:49.354Z",
+      "updated_at": "2025-06-16T23:35:49.353Z"
+    }
+  ]
+}
