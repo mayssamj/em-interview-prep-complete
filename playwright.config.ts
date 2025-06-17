@@ -14,7 +14,7 @@ export default defineConfig({
   ],
   timeout: 60000, // 60 second timeout per test
   use: {
-    baseURL: process.env.PREVIEW_URL || "http://localhost:3000",
+    baseURL: process.env.PREVIEW_URL || "https://125d7b9e76-3000.preview.abacusai.app",
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',

@@ -49,3 +49,33 @@ export function safeJsonToStringArray(value: any): string[] {
     return [];
   }
 }
+
+export function safeEmailExtract(value: any): string | undefined {
+  try {
+    if (value === null || value === undefined) return undefined;
+    
+    // If it's already a string that looks like an email, return it
+    if (typeof value === 'string') {
+      if (value.includes('@')) return value;
+      
+      // Try to parse as JSON
+      try {
+        const parsed = JSON.parse(value);
+        if (typeof parsed === 'object' && parsed !== null) {
+          return parsed.email || parsed.emailAddress || undefined;
+        }
+      } catch {
+        return undefined;
+      }
+    }
+    
+    // If it's an object, look for email fields
+    if (typeof value === 'object' && value !== null) {
+      return value.email || value.emailAddress || undefined;
+    }
+    
+    return undefined;
+  } catch {
+    return undefined;
+  }
+}
