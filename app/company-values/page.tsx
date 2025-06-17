@@ -1,50 +1,49 @@
 
-import { prisma } from '@/lib/db';
-import { Header } from '@/components/layout/header';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Badge } from '@/components/ui/badge';
-import { Building2, Target, CheckCircle, AlertTriangle } from 'lucide-react';
+import { Suspense } from 'react';
 import { CompanyValuesClient } from '@/components/company-values/company-values-client';
+import { prisma } from '@/lib/prisma';
+import { safeJsonToStringArray } from '@/lib/type-utils';
 
-// Mock user for testing
-const mockUser = {
-  id: "cmbx5b4vc0000u41ugdwm5uxh",
-  username: "admin",
-  isAdmin: true
-};
+async function getCompanies() {
+  try {
+    const companies = await prisma.companies.findMany({
+      orderBy: { name: 'asc' }
+    });
+    
+    return companies.map(c => ({
+      ...c,
+      values: safeJsonToStringArray(c.values),
+      evaluation_criteria: safeJsonToStringArray(c.evaluation_criteria),
+      success_tips: safeJsonToStringArray(c.success_tips),
+      red_flags: safeJsonToStringArray(c.red_flags)
+    }));
+  } catch (error) {
+    console.error('Error fetching companies:', error);
+    return [];
+  }
+}
 
 export default async function CompanyValuesPage() {
-  // Get all companies with their values and criteria
-  const companies = await prisma.companies.findMany({
-    orderBy: { name: 'asc' }
-  });
+  const companies = await getCompanies();
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header user={mockUser} />
-      
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
       <main className="container mx-auto px-4 py-8 max-w-7xl">
         <div className="space-y-8">
-          {/* Header Section */}
+          {/* Header */}
           <div className="text-center space-y-4">
-            <div className="flex items-center justify-center gap-3">
-              <Building2 className="h-8 w-8 text-primary" />
-              <h1 className="text-4xl font-bold tracking-tight">Company Values</h1>
-            </div>
+            <h1 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Company Values & Culture
+            </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Understand the core values and evaluation criteria for top tech companies
             </p>
           </div>
 
           {/* Company Values Content */}
-          <CompanyValuesClient companies={companies.map(c => ({
-            ...c,
-            values: Array.isArray(c.values) ? c.values : [],
-            evaluation_criteria: Array.isArray(c.evaluation_criteria) ? c.evaluation_criteria : [],
-            success_tips: Array.isArray(c.success_tips) ? c.success_tips : [],
-            red_flags: Array.isArray(c.red_flags) ? c.red_flags : []
-          }))} />
+          <Suspense fallback={<div>Loading companies...</div>}>
+            <CompanyValuesClient companies={companies} />
+          </Suspense>
         </div>
       </main>
     </div>

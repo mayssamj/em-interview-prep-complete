@@ -1,34 +1,39 @@
 
-import { getSession } from '@/lib/auth';
-import { redirect } from 'next/navigation';
-import { prisma } from '@/lib/db';
-import { Header } from '@/components/layout/header';
+import { Suspense } from 'react';
 import { StoriesManager } from '@/components/stories/stories-manager';
+import { prisma } from '@/lib/prisma';
+import { safeJsonToStringArray } from '@/lib/type-utils';
 
-export const dynamic = 'force-dynamic';
+async function getUserStories(userId: string) {
+  try {
+    const stories = await prisma.user_stories.findMany({
+      where: { user_id: userId },
+      orderBy: { created_at: 'desc' }
+    });
+
+    return stories.map(s => ({
+      ...s,
+      tags: safeJsonToStringArray(s.tags),
+      categories: safeJsonToStringArray(s.categories),
+      createdAt: s.created_at
+    }));
+  } catch (error) {
+    console.error('Error fetching user stories:', error);
+    return [];
+  }
+}
 
 export default async function StoriesPage() {
-  const user = await getSession();
-  
-  if (!user) {
-    redirect('/login');
-  }
-
-  // Get user's stories
-  const stories = await prisma.stories.findMany({
-    where: { user_id: user.id },
-    orderBy: { created_at: 'desc' }
-  });
+  // Mock user for now - in real app, get from session
+  const user = { id: 'user-1', username: 'demo' };
+  const stories = await getUserStories(user.id);
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header user={user} />
-      
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
       <main className="container mx-auto px-4 py-8 max-w-7xl">
-        <StoriesManager stories={stories.map(s => ({
-          ...s,
-          createdAt: s.created_at
-        }))} userId={user.id} />
+        <Suspense fallback={<div>Loading stories...</div>}>
+          <StoriesManager stories={stories} userId={user.id} />
+        </Suspense>
       </main>
     </div>
   );

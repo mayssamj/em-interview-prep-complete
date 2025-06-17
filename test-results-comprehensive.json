@@ -1,86 +1,2037 @@
 {
-  "passed": 0,
-  "failed": 16,
-  "tests": [
-    {
-      "name": "Server Health Check",
-      "status": "FAILED",
-      "error": "fetch is not a function"
+  "config": {
+    "configFile": "/home/ubuntu/em-interview-prep/playwright.config.ts",
+    "rootDir": "/home/ubuntu/em-interview-prep/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results-comprehensive.json"
+        }
+      ],
+      [
+        "list",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
     },
-    {
-      "name": "User Registration",
-      "status": "FAILED",
-      "error": "fetch is not a function"
-    },
-    {
-      "name": "Admin Login",
-      "status": "FAILED",
-      "error": "fetch is not a function"
-    },
-    {
-      "name": "Admin Stats API",
-      "status": "FAILED",
-      "error": "fetch is not a function"
-    },
-    {
-      "name": "Admin Users API",
-      "status": "FAILED",
-      "error": "fetch is not a function"
-    },
-    {
-      "name": "Companies API",
-      "status": "FAILED",
-      "error": "fetch is not a function"
-    },
-    {
-      "name": "Questions API",
-      "status": "FAILED",
-      "error": "fetch is not a function"
-    },
-    {
-      "name": "System Design Questions API",
-      "status": "FAILED",
-      "error": "fetch is not a function"
-    },
-    {
-      "name": "System Design Frameworks API",
-      "status": "FAILED",
-      "error": "fetch is not a function"
-    },
-    {
-      "name": "Stories API - Create",
-      "status": "FAILED",
-      "error": "fetch is not a function"
-    },
-    {
-      "name": "Page Load: /dashboard",
-      "status": "FAILED",
-      "error": "fetch is not a function"
-    },
-    {
-      "name": "Page Load: /question-bank",
-      "status": "FAILED",
-      "error": "fetch is not a function"
-    },
-    {
-      "name": "Page Load: /system-design-questions",
-      "status": "FAILED",
-      "error": "fetch is not a function"
-    },
-    {
-      "name": "Page Load: /story-templates",
-      "status": "FAILED",
-      "error": "fetch is not a function"
-    },
-    {
-      "name": "Page Load: /admin",
-      "status": "FAILED",
-      "error": "fetch is not a function"
-    },
-    {
-      "name": "Authentication Flow - Logout and Re-login",
-      "status": "FAILED",
-      "error": "fetch is not a function"
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/home/ubuntu/em-interview-prep/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/ubuntu/em-interview-prep/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.53.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev",
+      "port": 3000,
+      "reuseExistingServer": true,
+      "timeout": 120000
     }
-  ]
+  },
+  "suites": [
+    {
+      "title": "api.spec.ts",
+      "file": "api.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "API Endpoints",
+          "file": "api.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should return system design questions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-381df24969806dcc6aba",
+              "file": "api.spec.ts",
+              "line": 5,
+              "column": 7
+            },
+            {
+              "title": "should return system design frameworks",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-ee6c57a9cadc9c27a5d3",
+              "file": "api.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "should return companies",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-e9ce1938c1053082016a",
+              "file": "api.spec.ts",
+              "line": 22,
+              "column": 7
+            },
+            {
+              "title": "should return questions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-179a884903afa3170d61",
+              "file": "api.spec.ts",
+              "line": 32,
+              "column": 7
+            },
+            {
+              "title": "should handle login API",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-dce5d8feef0034c00323",
+              "file": "api.spec.ts",
+              "line": 41,
+              "column": 7
+            },
+            {
+              "title": "should handle invalid login",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-4758f1b383bf917b4656",
+              "file": "api.spec.ts",
+              "line": 56,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "auth.spec.ts",
+      "file": "auth.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Authentication Flow",
+          "file": "auth.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should login successfully with admin credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d748ac400d08b85935ef-77aa7cf8b459de64e5a7",
+              "file": "auth.spec.ts",
+              "line": 5,
+              "column": 7
+            },
+            {
+              "title": "should show error for invalid credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d748ac400d08b85935ef-05954164880eaca3a0f9",
+              "file": "auth.spec.ts",
+              "line": 24,
+              "column": 7
+            },
+            {
+              "title": "should logout successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d748ac400d08b85935ef-c0ce6ccc7b7e02794edb",
+              "file": "auth.spec.ts",
+              "line": 38,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "authentication-admin-tests.spec.ts",
+      "file": "authentication-admin-tests.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Authentication and Admin Tests",
+          "file": "authentication-admin-tests.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should test complete authentication flow",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "077b2f3c7ad9b6281cef-4f2eb1fddf84c530e4de",
+              "file": "authentication-admin-tests.spec.ts",
+              "line": 7,
+              "column": 7
+            },
+            {
+              "title": "should test admin dashboard access",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "077b2f3c7ad9b6281cef-5e247145c2c594797b38",
+              "file": "authentication-admin-tests.spec.ts",
+              "line": 39,
+              "column": 7
+            },
+            {
+              "title": "should test admin functionality",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "077b2f3c7ad9b6281cef-4038aec0e958cbf44a4e",
+              "file": "authentication-admin-tests.spec.ts",
+              "line": 58,
+              "column": 7
+            },
+            {
+              "title": "should test logout functionality",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "077b2f3c7ad9b6281cef-8f93547566f4f65d55cf",
+              "file": "authentication-admin-tests.spec.ts",
+              "line": 92,
+              "column": 7
+            },
+            {
+              "title": "should test regular user access restrictions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "077b2f3c7ad9b6281cef-de97afc1eb06ea0fec5a",
+              "file": "authentication-admin-tests.spec.ts",
+              "line": 112,
+              "column": 7
+            },
+            {
+              "title": "should test session persistence",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "077b2f3c7ad9b6281cef-5ee0690cc1936bf2123a",
+              "file": "authentication-admin-tests.spec.ts",
+              "line": 122,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "company-values.spec.ts",
+      "file": "company-values.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Company Values",
+          "file": "company-values.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should load company values page successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fdcda7340fbac6227d3d-f07809fa8a7e1f941dc4",
+              "file": "company-values.spec.ts",
+              "line": 14,
+              "column": 7
+            },
+            {
+              "title": "should filter companies",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fdcda7340fbac6227d3d-c7a7b4c83786ff96c234",
+              "file": "company-values.spec.ts",
+              "line": 24,
+              "column": 7
+            },
+            {
+              "title": "should display company details",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fdcda7340fbac6227d3d-ea78bc68df86f9359526",
+              "file": "company-values.spec.ts",
+              "line": 41,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "comprehensive-e2e-enhanced.spec.ts",
+      "file": "comprehensive-e2e-enhanced.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "EM Interview Prep - Comprehensive E2E Tests",
+          "file": "comprehensive-e2e-enhanced.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [],
+          "suites": [
+            {
+              "title": "Authentication Flow",
+              "file": "comprehensive-e2e-enhanced.spec.ts",
+              "line": 12,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should complete full registration and login flow",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "08f8242fa841860025e8-709f731c0ff06d59551a",
+                  "file": "comprehensive-e2e-enhanced.spec.ts",
+                  "line": 13,
+                  "column": 9
+                },
+                {
+                  "title": "should handle admin login and access admin dashboard",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "08f8242fa841860025e8-cfb663c074b5b3ca4816",
+                  "file": "comprehensive-e2e-enhanced.spec.ts",
+                  "line": 54,
+                  "column": 9
+                },
+                {
+                  "title": "should prevent non-admin access to admin dashboard",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "08f8242fa841860025e8-455893d1696600ffeae3",
+                  "file": "comprehensive-e2e-enhanced.spec.ts",
+                  "line": 72,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Main Application Features",
+              "file": "comprehensive-e2e-enhanced.spec.ts",
+              "line": 89,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should navigate through all main pages",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "08f8242fa841860025e8-3ffd743ba502268de751",
+                  "file": "comprehensive-e2e-enhanced.spec.ts",
+                  "line": 97,
+                  "column": 9
+                },
+                {
+                  "title": "should test question bank functionality",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "08f8242fa841860025e8-f70c0bd8ed63641355e3",
+                  "file": "comprehensive-e2e-enhanced.spec.ts",
+                  "line": 123,
+                  "column": 9
+                },
+                {
+                  "title": "should test system design questions",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "08f8242fa841860025e8-d07dd840570d0a1c6b7b",
+                  "file": "comprehensive-e2e-enhanced.spec.ts",
+                  "line": 145,
+                  "column": 9
+                },
+                {
+                  "title": "should test story creation flow",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "08f8242fa841860025e8-431352b186c29c1125ca",
+                  "file": "comprehensive-e2e-enhanced.spec.ts",
+                  "line": 162,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Admin Dashboard Features",
+              "file": "comprehensive-e2e-enhanced.spec.ts",
+              "line": 193,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should display admin statistics",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "08f8242fa841860025e8-d2561e098a9cff1fc696",
+                  "file": "comprehensive-e2e-enhanced.spec.ts",
+                  "line": 203,
+                  "column": 9
+                },
+                {
+                  "title": "should test user management functionality",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "08f8242fa841860025e8-8fa240288c35ca521ac1",
+                  "file": "comprehensive-e2e-enhanced.spec.ts",
+                  "line": 215,
+                  "column": 9
+                },
+                {
+                  "title": "should test activity monitoring",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "08f8242fa841860025e8-2c8bc1ce764d74389392",
+                  "file": "comprehensive-e2e-enhanced.spec.ts",
+                  "line": 234,
+                  "column": 9
+                },
+                {
+                  "title": "should test system management",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "08f8242fa841860025e8-169fc98b772aa087a9c5",
+                  "file": "comprehensive-e2e-enhanced.spec.ts",
+                  "line": 248,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Error Handling and Edge Cases",
+              "file": "comprehensive-e2e-enhanced.spec.ts",
+              "line": 262,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should handle invalid login credentials",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "08f8242fa841860025e8-c3639e2452c43a1878c9",
+                  "file": "comprehensive-e2e-enhanced.spec.ts",
+                  "line": 263,
+                  "column": 9
+                },
+                {
+                  "title": "should handle registration validation",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "08f8242fa841860025e8-1b08ba937307b9e07dce",
+                  "file": "comprehensive-e2e-enhanced.spec.ts",
+                  "line": 274,
+                  "column": 9
+                },
+                {
+                  "title": "should handle network errors gracefully",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "08f8242fa841860025e8-f7f2701c1c3506db9322",
+                  "file": "comprehensive-e2e-enhanced.spec.ts",
+                  "line": 290,
+                  "column": 9
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "comprehensive-e2e.spec.ts",
+      "file": "comprehensive-e2e.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "EM Interview Prep - Comprehensive E2E Tests",
+          "file": "comprehensive-e2e.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should load login page successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ceae8d42728a3fcdf4bb-a9330aa8c3a0f61fa161",
+              "file": "comprehensive-e2e.spec.ts",
+              "line": 6,
+              "column": 7
+            },
+            {
+              "title": "should login successfully with admin credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ceae8d42728a3fcdf4bb-d785ab405c5282456b71",
+              "file": "comprehensive-e2e.spec.ts",
+              "line": 15,
+              "column": 7
+            },
+            {
+              "title": "should navigate to all main pages without errors",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ceae8d42728a3fcdf4bb-4a98ce650db9a93e5a69",
+              "file": "comprehensive-e2e.spec.ts",
+              "line": 32,
+              "column": 7
+            },
+            {
+              "title": "should test header navigation links",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ceae8d42728a3fcdf4bb-2089e90efc7de045a1c0",
+              "file": "comprehensive-e2e.spec.ts",
+              "line": 74,
+              "column": 7
+            },
+            {
+              "title": "should test demo login buttons",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ceae8d42728a3fcdf4bb-a0618debb086c665bb04",
+              "file": "comprehensive-e2e.spec.ts",
+              "line": 106,
+              "column": 7
+            },
+            {
+              "title": "should handle invalid login credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ceae8d42728a3fcdf4bb-de750332b2017f48778c",
+              "file": "comprehensive-e2e.spec.ts",
+              "line": 127,
+              "column": 7
+            },
+            {
+              "title": "should test API endpoints availability",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ceae8d42728a3fcdf4bb-4589198e986fc90a53d7",
+              "file": "comprehensive-e2e.spec.ts",
+              "line": 147,
+              "column": 7
+            },
+            {
+              "title": "should verify page titles and basic content",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ceae8d42728a3fcdf4bb-d342251aec79293969b9",
+              "file": "comprehensive-e2e.spec.ts",
+              "line": 164,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "comprehensive-routing-fix.spec.ts",
+      "file": "comprehensive-routing-fix.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Critical Routing Fixes",
+          "file": "comprehensive-routing-fix.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should navigate to all header links without 404 errors",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a77e97b7864442b2529e-47cab705809e1eff8f87",
+              "file": "comprehensive-routing-fix.spec.ts",
+              "line": 17,
+              "column": 7
+            },
+            {
+              "title": "should handle my-stories route correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a77e97b7864442b2529e-216197c64ecc0018ee5c",
+              "file": "comprehensive-routing-fix.spec.ts",
+              "line": 53,
+              "column": 7
+            },
+            {
+              "title": "should test all story-related routes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a77e97b7864442b2529e-159218f3fdef049c2bb0",
+              "file": "comprehensive-routing-fix.spec.ts",
+              "line": 66,
+              "column": 7
+            },
+            {
+              "title": "should verify header navigation links work",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a77e97b7864442b2529e-906696cc77f102723017",
+              "file": "comprehensive-routing-fix.spec.ts",
+              "line": 84,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "final-routing-verification.spec.ts",
+      "file": "final-routing-verification.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Final Routing Verification",
+          "file": "final-routing-verification.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should verify all routes are accessible and working",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "500d57833723465881b3-c03820c5ad4f768622a0",
+              "file": "final-routing-verification.spec.ts",
+              "line": 7,
+              "column": 7
+            },
+            {
+              "title": "should verify demo login functionality",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "500d57833723465881b3-864cafeb70937eff87bd",
+              "file": "final-routing-verification.spec.ts",
+              "line": 103,
+              "column": 7
+            },
+            {
+              "title": "should verify navigation header works",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "500d57833723465881b3-c7bafd20c5f8c44b624c",
+              "file": "final-routing-verification.spec.ts",
+              "line": 119,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "form-submission-tests.spec.ts",
+      "file": "form-submission-tests.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Form Submission Tests",
+          "file": "form-submission-tests.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should test login form submission",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "603dfc6b2392bc7aa951-11ce5972a3bde7a5accc",
+              "file": "form-submission-tests.spec.ts",
+              "line": 7,
+              "column": 7
+            },
+            {
+              "title": "should test demo login buttons",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "603dfc6b2392bc7aa951-8be0e0ef53c99fca07cf",
+              "file": "form-submission-tests.spec.ts",
+              "line": 20,
+              "column": 7
+            },
+            {
+              "title": "should test story creation form",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "603dfc6b2392bc7aa951-a6a4ea8fa53722be0951",
+              "file": "form-submission-tests.spec.ts",
+              "line": 43,
+              "column": 7
+            },
+            {
+              "title": "should test search functionality",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "603dfc6b2392bc7aa951-6b010f26fcb62e747e95",
+              "file": "form-submission-tests.spec.ts",
+              "line": 101,
+              "column": 7
+            },
+            {
+              "title": "should test company filter functionality",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "603dfc6b2392bc7aa951-32264e92b1e103533114",
+              "file": "form-submission-tests.spec.ts",
+              "line": 126,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "login-flow.spec.ts",
+      "file": "login-flow.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login Flow",
+          "file": "login-flow.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should successfully login with demo credentials and redirect to dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "970e73a7df9c19f55b5b-ac935d31e34eb8d75e37",
+              "file": "login-flow.spec.ts",
+              "line": 5,
+              "column": 7
+            },
+            {
+              "title": "should successfully login with manual demo credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "970e73a7df9c19f55b5b-6ca089af0420e0430ad3",
+              "file": "login-flow.spec.ts",
+              "line": 66,
+              "column": 7
+            },
+            {
+              "title": "should handle invalid credentials correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "970e73a7df9c19f55b5b-a58628fe7a9bdfb903ca",
+              "file": "login-flow.spec.ts",
+              "line": 84,
+              "column": 7
+            },
+            {
+              "title": "should redirect to intended page after login",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "970e73a7df9c19f55b5b-80c048f5639dfc837441",
+              "file": "login-flow.spec.ts",
+              "line": 102,
+              "column": 7
+            },
+            {
+              "title": "should test admin login and access",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "970e73a7df9c19f55b5b-820d1d5ee2f9ea617323",
+              "file": "login-flow.spec.ts",
+              "line": 116,
+              "column": 7
+            },
+            {
+              "title": "should prevent non-admin users from accessing admin routes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "970e73a7df9c19f55b5b-3bfd1c4f7df53991359c",
+              "file": "login-flow.spec.ts",
+              "line": 134,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "navigation.spec.ts",
+      "file": "navigation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Navigation",
+          "file": "navigation.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should navigate to all main pages without errors",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5d2868f7d23420c27cca-b06a8ff113680be736c0",
+              "file": "navigation.spec.ts",
+              "line": 14,
+              "column": 7
+            },
+            {
+              "title": "should navigate using header links",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5d2868f7d23420c27cca-78036dab855ff450daa2",
+              "file": "navigation.spec.ts",
+              "line": 44,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "question-bank.spec.ts",
+      "file": "question-bank.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Question Bank",
+          "file": "question-bank.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should load question bank page successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1a35cb09c015019edef2-f7dc7e467c0f8293c431",
+              "file": "question-bank.spec.ts",
+              "line": 14,
+              "column": 7
+            },
+            {
+              "title": "should filter questions by company",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1a35cb09c015019edef2-acf83185a4dd96685b55",
+              "file": "question-bank.spec.ts",
+              "line": 27,
+              "column": 7
+            },
+            {
+              "title": "should search questions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1a35cb09c015019edef2-35296fd6ee5ab802832c",
+              "file": "question-bank.spec.ts",
+              "line": 48,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "quick-routing-verification.spec.ts",
+      "file": "quick-routing-verification.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Quick Routing Verification",
+          "file": "quick-routing-verification.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should verify all navigation routes work without 404",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ffe9f272dff26810bef-39796ea5d4ad4420e103",
+              "file": "quick-routing-verification.spec.ts",
+              "line": 7,
+              "column": 7
+            },
+            {
+              "title": "should verify my-stories redirect works",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ffe9f272dff26810bef-4c382fd1362f22320c63",
+              "file": "quick-routing-verification.spec.ts",
+              "line": 68,
+              "column": 7
+            },
+            {
+              "title": "should verify demo login buttons work",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ffe9f272dff26810bef-e29c4257321aae4eecb2",
+              "file": "quick-routing-verification.spec.ts",
+              "line": 90,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "robust-routing-test.spec.ts",
+      "file": "robust-routing-test.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Robust Routing Test",
+          "file": "robust-routing-test.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should verify all critical routes work correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5d6174d967122060cfb1-a1c275bbf86bbaba95fd",
+              "file": "robust-routing-test.spec.ts",
+              "line": 7,
+              "column": 7
+            },
+            {
+              "title": "should verify demo login works",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5d6174d967122060cfb1-476f33abca56013a8a93",
+              "file": "robust-routing-test.spec.ts",
+              "line": 95,
+              "column": 7
+            },
+            {
+              "title": "should verify header navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5d6174d967122060cfb1-a3f92f5940336e103ba1",
+              "file": "robust-routing-test.spec.ts",
+              "line": 113,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "story-templates.spec.ts",
+      "file": "story-templates.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Story Templates",
+          "file": "story-templates.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should load story templates page successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "9c799c3d1799eea0a7b0-4095a30aa6baec686c23",
+              "file": "story-templates.spec.ts",
+              "line": 14,
+              "column": 7
+            },
+            {
+              "title": "should open new story dialog",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "9c799c3d1799eea0a7b0-de408179b768505f4499",
+              "file": "story-templates.spec.ts",
+              "line": 29,
+              "column": 7
+            },
+            {
+              "title": "should use a story template",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "9c799c3d1799eea0a7b0-cf9677fe66764972b99b",
+              "file": "story-templates.spec.ts",
+              "line": 40,
+              "column": 7
+            },
+            {
+              "title": "should create a new story",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "9c799c3d1799eea0a7b0-f3f5239d1d8044308ffb",
+              "file": "story-templates.spec.ts",
+              "line": 51,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "system-design.spec.ts",
+      "file": "system-design.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "System Design Questions",
+          "file": "system-design.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should load system design questions page successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d8160f1742561d8929d6-40b120643931f692d269",
+              "file": "system-design.spec.ts",
+              "line": 14,
+              "column": 7
+            },
+            {
+              "title": "should load system design strategy page successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d8160f1742561d8929d6-8e4d6c801176ac282333",
+              "file": "system-design.spec.ts",
+              "line": 24,
+              "column": 7
+            },
+            {
+              "title": "should filter system design questions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d8160f1742561d8929d6-45087de2357cc7cb65c8",
+              "file": "system-design.spec.ts",
+              "line": 34,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "user-workflow-tests.spec.ts",
+      "file": "user-workflow-tests.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "User Workflow Tests",
+          "file": "user-workflow-tests.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should complete question bank workflow",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e3b0e4ab51b6a031bded-161e07ca8983d8a91601",
+              "file": "user-workflow-tests.spec.ts",
+              "line": 16,
+              "column": 7
+            },
+            {
+              "title": "should complete system design workflow",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e3b0e4ab51b6a031bded-20f2127f55548bff4e73",
+              "file": "user-workflow-tests.spec.ts",
+              "line": 51,
+              "column": 7
+            },
+            {
+              "title": "should complete story management workflow",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e3b0e4ab51b6a031bded-af3c7bb078c210054e27",
+              "file": "user-workflow-tests.spec.ts",
+              "line": 88,
+              "column": 7
+            },
+            {
+              "title": "should complete company values workflow",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e3b0e4ab51b6a031bded-10000b3a57ffc6a6a32c",
+              "file": "user-workflow-tests.spec.ts",
+              "line": 126,
+              "column": 7
+            },
+            {
+              "title": "should complete progress tracking workflow",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e3b0e4ab51b6a031bded-6e41c7747b77b0374322",
+              "file": "user-workflow-tests.spec.ts",
+              "line": 163,
+              "column": 7
+            },
+            {
+              "title": "should test complete user journey",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e3b0e4ab51b6a031bded-b7893e790a63f03cba62",
+              "file": "user-workflow-tests.spec.ts",
+              "line": 196,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-06-17T03:14:31.630Z",
+    "duration": 72.81000000000017,
+    "expected": 0,
+    "skipped": 82,
+    "unexpected": 0,
+    "flaky": 0
+  }
 }

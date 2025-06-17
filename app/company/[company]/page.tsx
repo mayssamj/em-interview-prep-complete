@@ -1,15 +1,8 @@
 
-import { prisma } from '@/lib/db';
-import { Header } from '@/components/layout/header';
-import { CompanyTabs } from '@/components/company/company-tabs';
 import { notFound } from 'next/navigation';
-
-// Mock user for testing
-const mockUser = {
-  id: "cmbx5b4vc0000u41ugdwm5uxh",
-  username: "admin",
-  isAdmin: true
-};
+import { CompanyDetailClient } from '@/components/company/company-detail-client';
+import { prisma } from '@/lib/prisma';
+import { safeJsonToStringArray } from '@/lib/type-utils';
 
 interface CompanyPageProps {
   params: {
@@ -17,106 +10,89 @@ interface CompanyPageProps {
   };
 }
 
-export default async function CompanyPage({ params }: CompanyPageProps) {
-
-  const { company: companySlug } = params;
-  
-  // Validate company
-  const validCompanies = [
-    'meta', 'amazon', 'google', 'microsoft', 'openai', 'anthropic', 
-    'netflix', 'uber', 'tiktok', 'startups', 'snowflake', 'scale-ai', 
-    'linkedin', 'airbnb', 'reddit'
-  ];
-  if (!validCompanies.includes(companySlug)) {
-    notFound();
-  }
-
-  // Get company data
-  const companyNameMap: Record<string, string> = {
-    'meta': 'Meta',
-    'amazon': 'Amazon',
-    'google': 'Google',
-    'microsoft': 'Microsoft',
-    'openai': 'OpenAI',
-    'anthropic': 'Anthropic',
-    'netflix': 'Netflix',
-    'uber': 'Uber',
-    'tiktok': 'TikTok',
-    'startups': 'Startups & Scale-ups',
-    'snowflake': 'Snowflake',
-    'scale-ai': 'Scale AI',
-    'linkedin': 'LinkedIn',
-    'airbnb': 'Airbnb',
-    'reddit': 'Reddit'
-  };
-  
-  const companyName = companyNameMap[companySlug] || companySlug.charAt(0).toUpperCase() + companySlug.slice(1);
-  const company = await prisma.companies.findUnique({
-    where: { name: companyName },
-    include: {
-      questions: {
-        orderBy: [
-          { category: 'asc' },
-          { difficulty: 'asc' }
-        ]
+async function getCompanyData(companyName: string) {
+  try {
+    const company = await prisma.companies.findFirst({
+      where: {
+        name: {
+          equals: companyName,
+          mode: 'insensitive'
+        }
+      },
+      include: {
+        questions: {
+          orderBy: { created_at: 'desc' }
+        }
       }
-    }
-  });
+    });
 
+    if (!company) {
+      return null;
+    }
+
+    return {
+      ...company,
+      evaluation_criteria: safeJsonToStringArray(company.evaluation_criteria),
+      success_tips: safeJsonToStringArray(company.success_tips),
+      red_flags: safeJsonToStringArray(company.red_flags),
+      questions: company.questions.map(q => ({
+        ...q,
+        tags: safeJsonToStringArray(q.tags)
+      }))
+    };
+  } catch (error) {
+    console.error('Error fetching company data:', error);
+    return null;
+  }
+}
+
+async function getUserStories(userId: string) {
+  try {
+    const stories = await prisma.user_stories.findMany({
+      where: { user_id: userId },
+      orderBy: { created_at: 'desc' }
+    });
+
+    return stories.map(s => ({
+      ...s,
+      tags: safeJsonToStringArray(s.tags),
+      categories: safeJsonToStringArray(s.categories),
+      createdAt: s.created_at
+    }));
+  } catch (error) {
+    console.error('Error fetching user stories:', error);
+    return [];
+  }
+}
+
+export default async function CompanyPage({ params }: CompanyPageProps) {
+  const companyName = decodeURIComponent(params.company);
+  const company = await getCompanyData(companyName);
+  
   if (!company) {
     notFound();
   }
 
-  // Get user's stories and answers for this company
-  const userStories = await prisma.stories.findMany({
-    where: { user_id: mockUser.id },
-    orderBy: { created_at: 'desc' }
-  });
-
-  const userAnswers = await prisma.answers.findMany({
-    where: { 
-      user_id: mockUser.id,
-      questions: {
-        company_id: company.id
-      }
-    },
-    include: {
-      questions: true
-    }
-  });
+  // Mock user for now - in real app, get from session
+  const mockUser = { id: 'user-1', username: 'demo' };
+  const userStories = await getUserStories(mockUser.id);
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header user={mockUser} />
-      
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
       <main className="container mx-auto px-4 py-8 max-w-7xl">
         <div className="space-y-8">
-          {/* Company Header */}
+          {/* Header */}
           <div className="text-center space-y-4">
-            <div className="flex items-center justify-center gap-3">
-              <div className={`w-4 h-4 rounded-full ${
-                companySlug === 'meta' ? 'bg-blue-500' :
-                companySlug === 'amazon' ? 'bg-orange-500' :
-                companySlug === 'google' ? 'bg-green-500' :
-                companySlug === 'microsoft' ? 'bg-cyan-500' :
-                companySlug === 'openai' ? 'bg-purple-500' :
-                companySlug === 'netflix' ? 'bg-red-500' :
-                companySlug === 'uber' ? 'bg-gray-800' :
-                companySlug === 'airbnb' ? 'bg-pink-500' :
-                companySlug === 'startups' ? 'bg-emerald-500' :
-                'bg-indigo-500'
-              }`} />
-              <h1 className="text-4xl font-bold tracking-tight">
-                {company.name} Interview Preparation
-              </h1>
-            </div>
+            <h1 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              {company.name} Interview Preparation
+            </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive preparation materials, questions, and strategies for {company.name} Engineering Manager interviews
+              Comprehensive preparation guide for {company.name} engineering manager interviews
             </p>
           </div>
 
-          {/* Company Tabs */}
-          <CompanyTabs 
+          {/* Company Detail Content */}
+          <CompanyDetailClient 
             company={{
               ...company,
               evaluationCriteria: company.evaluation_criteria,
@@ -136,19 +112,6 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
               ...s,
               createdAt: s.created_at
             }))}
-            userAnswers={userAnswers.map(a => ({
-              id: a.id,
-              answerText: a.answer_text,
-              notes: a.notes || '',
-              createdAt: a.created_at,
-              question: {
-                id: a.questions.id,
-                questionText: a.questions.question_text,
-                category: a.questions.category,
-                difficulty: a.questions.difficulty
-              }
-            }))}
-            userId={mockUser.id}
           />
         </div>
       </main>

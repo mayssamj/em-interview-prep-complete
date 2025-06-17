@@ -282,7 +282,7 @@ export function LoginForm({ onSuccess }: LoginFormProps) {
                 variant="outline"
                 size="sm"
                 className="w-full"
-                onClick={() => handleDemoLogin('demo', 'demodemo')}
+                onClick={() => handleDemoLogin('demo', 'demo123')}
                 disabled={isLoading}
               >
                 Demo User Login
@@ -291,7 +291,7 @@ export function LoginForm({ onSuccess }: LoginFormProps) {
                 variant="outline"
                 size="sm"
                 className="w-full"
-                onClick={() => handleDemoLogin('admin', 'adminadmin')}
+                onClick={() => handleDemoLogin('admin', 'admin123')}
                 disabled={isLoading}
               >
                 Admin Demo Login

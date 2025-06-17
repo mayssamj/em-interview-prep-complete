@@ -1,93 +1,77 @@
 
-import { getServerSession } from '@/lib/auth';
-import { redirect } from 'next/navigation';
-import { prisma } from '@/lib/db';
-import { Header } from '@/components/layout/header';
-import { TrendingUp } from 'lucide-react';
+import { Suspense } from 'react';
 import { ProgressTrackerClient } from '@/components/progress-tracker/progress-tracker-client';
+import { prisma } from '@/lib/prisma';
+import { safeJsonToStringArray } from '@/lib/type-utils';
 
-export const dynamic = 'force-dynamic';
+async function getUserStories(userId: string) {
+  try {
+    const stories = await prisma.user_stories.findMany({
+      where: { user_id: userId },
+      orderBy: { created_at: 'desc' }
+    });
+
+    return stories.map(s => ({
+      ...s,
+      tags: safeJsonToStringArray(s.tags),
+      categories: safeJsonToStringArray(s.categories),
+      createdAt: s.created_at
+    }));
+  } catch (error) {
+    console.error('Error fetching user stories:', error);
+    return [];
+  }
+}
+
+async function getQuestionStats(userId: string) {
+  try {
+    const totalQuestions = await prisma.behavioral_questions.count();
+    const answeredQuestions = await prisma.user_question_responses.count({
+      where: { user_id: userId }
+    });
+
+    return {
+      total: totalQuestions,
+      answered: answeredQuestions,
+      remaining: totalQuestions - answeredQuestions
+    };
+  } catch (error) {
+    console.error('Error fetching question stats:', error);
+    return { total: 0, answered: 0, remaining: 0 };
+  }
+}
 
 export default async function ProgressTrackerPage() {
-  const user = await getServerSession();
+  // Mock user for now - in real app, get from session
+  const mockUser = { id: 'user-1', username: 'demo' };
   
-  if (!user) {
-    redirect('/login');
-  }
-
-  // Get comprehensive user progress data
-  const [userStories, userAnswers, companies, questions] = await Promise.all([
-    prisma.stories.findMany({
-      where: { user_id: user.id },
-      orderBy: { created_at: 'desc' }
-    }),
-    prisma.answers.findMany({
-      where: { user_id: user.id },
-      include: {
-        questions: {
-          include: {
-            companies: true
-          }
-        }
-      },
-      orderBy: { created_at: 'desc' }
-    }),
-    prisma.companies.findMany({
-      include: {
-        questions: true
-      }
-    }),
-    prisma.questions.findMany({
-      include: {
-        companies: true
-      }
-    })
+  const [userStories, questionStats] = await Promise.all([
+    getUserStories(mockUser.id),
+    getQuestionStats(mockUser.id)
   ]);
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header user={user} />
-      
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
       <main className="container mx-auto px-4 py-8 max-w-7xl">
         <div className="space-y-8">
-          {/* Header Section */}
+          {/* Header */}
           <div className="text-center space-y-4">
-            <div className="flex items-center justify-center gap-3">
-              <TrendingUp className="h-8 w-8 text-primary" />
-              <h1 className="text-4xl font-bold tracking-tight">Progress Tracker</h1>
-            </div>
+            <h1 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Progress Tracker
+            </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Track your interview preparation progress across companies and question categories
+              Track your interview preparation progress and identify areas for improvement
             </p>
           </div>
 
           {/* Progress Tracker Content */}
-          <ProgressTrackerClient 
-            userStories={userStories.map(s => ({
-              ...s,
-              createdAt: s.created_at
-            }))}
-            userAnswers={userAnswers.map(a => ({
-              ...a,
-              createdAt: a.created_at,
-              question: {
-                id: a.questions.id,
-                questionText: a.questions.question_text,
-                category: a.questions.category,
-                difficulty: a.questions.difficulty,
-                company: a.questions.companies ? {
-                  id: a.questions.companies.id,
-                  name: a.questions.companies.name
-                } : null
-              }
-            }))}
-            companies={companies}
-            questions={questions.map(q => ({
-              ...q,
-              company: q.companies
-            }))}
-            userId={user.id}
-          />
+          <Suspense fallback={<div>Loading progress data...</div>}>
+            <ProgressTrackerClient 
+              userStories={userStories}
+              questionStats={questionStats}
+              userId={mockUser.id}
+            />
+          </Suspense>
         </div>
       </main>
     </div>

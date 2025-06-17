@@ -1,33 +1,51 @@
 
-// Temporary type utilities to fix build issues
+// Type utility functions for converting Prisma JsonValue to expected types
 
-export function safeJsonCast<T>(value: any, fallback: T): T {
-  try {
-    if (value === null || value === undefined) return fallback;
-    if (typeof value === 'object') return value as T;
-    if (typeof value === 'string') {
-      try {
-        return JSON.parse(value) as T;
-      } catch {
-        return fallback;
-      }
-    }
-    return fallback;
-  } catch {
-    return fallback;
+export function jsonToStringArray(value: any): string[] {
+  if (Array.isArray(value)) {
+    return value.filter(item => typeof item === 'string');
   }
-}
-
-export function safeStringArrayCast(value: any): string[] {
-  if (Array.isArray(value)) return value.filter(v => typeof v === 'string');
-  if (typeof value === 'string') return [value];
+  if (typeof value === 'string') {
+    try {
+      const parsed = JSON.parse(value);
+      return Array.isArray(parsed) ? parsed.filter(item => typeof item === 'string') : [];
+    } catch {
+      return [];
+    }
+  }
   return [];
 }
 
-export function safeEmailExtract(preferences: any): string | undefined {
-  if (!preferences) return undefined;
-  if (typeof preferences === 'object' && preferences.email) {
-    return typeof preferences.email === 'string' ? preferences.email : undefined;
+export function ensureStringArray(value: any): string[] {
+  if (Array.isArray(value)) {
+    return value.map(item => String(item));
   }
-  return undefined;
+  if (typeof value === 'string') {
+    try {
+      const parsed = JSON.parse(value);
+      return Array.isArray(parsed) ? parsed.map(item => String(item)) : [value];
+    } catch {
+      return [value];
+    }
+  }
+  return [];
+}
+
+export function safeJsonToStringArray(value: any): string[] {
+  try {
+    if (value === null || value === undefined) return [];
+    if (Array.isArray(value)) return value.map(String);
+    if (typeof value === 'string') {
+      try {
+        const parsed = JSON.parse(value);
+        return Array.isArray(parsed) ? parsed.map(String) : [value];
+      } catch {
+        // If JSON parsing fails, treat as a single string value
+        return [value];
+      }
+    }
+    return [];
+  } catch {
+    return [];
+  }
 }
