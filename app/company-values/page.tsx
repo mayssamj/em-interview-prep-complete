@@ -38,7 +38,13 @@ export default async function CompanyValuesPage() {
           </div>
 
           {/* Company Values Content */}
-          <CompanyValuesClient companies={companies} />
+          <CompanyValuesClient companies={companies.map(c => ({
+            ...c,
+            values: Array.isArray(c.values) ? c.values : [],
+            evaluation_criteria: Array.isArray(c.evaluation_criteria) ? c.evaluation_criteria : [],
+            success_tips: Array.isArray(c.success_tips) ? c.success_tips : [],
+            red_flags: Array.isArray(c.red_flags) ? c.red_flags : []
+          }))} />
         </div>
       </main>
     </div>

@@ -45,7 +45,7 @@ export async function GET(request: NextRequest) {
         id: user.id,
         username: user.username,
         isAdmin: user.is_admin,
-        email: user.preferences?.email || null,
+        email: user.preferences && typeof user.preferences === 'object' && (user.preferences as any).email || null,
         createdAt: user.created_at,
         updatedAt: user.updated_at,
       })),

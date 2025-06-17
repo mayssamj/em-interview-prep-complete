@@ -68,6 +68,42 @@ global.fetch = jest.fn();
 process.env.JWT_SECRET = 'test-secret-key';
 process.env.NODE_ENV = 'test';
 
+// Mock Web APIs for Next.js server components
+global.Request = class Request {
+  constructor(input, init) {
+    this.url = input;
+    this.method = init?.method || 'GET';
+    this.headers = new Map(Object.entries(init?.headers || {}));
+  }
+};
+
+global.Response = class Response {
+  constructor(body, init) {
+    this.body = body;
+    this.status = init?.status || 200;
+    this.headers = new Map(Object.entries(init?.headers || {}));
+  }
+};
+
+global.Headers = class Headers extends Map {
+  constructor(init) {
+    super();
+    if (init) {
+      Object.entries(init).forEach(([key, value]) => {
+        this.set(key, value);
+      });
+    }
+  }
+  
+  get(name) {
+    return super.get(name.toLowerCase());
+  }
+  
+  set(name, value) {
+    return super.set(name.toLowerCase(), value);
+  }
+};
+
 // Mock toast hook
 jest.mock('@/hooks/use-toast', () => ({
   useToast: () => ({
@@ -89,21 +125,21 @@ jest.mock('framer-motion', () => ({
 
 // Mock lucide-react icons
 jest.mock('lucide-react', () => ({
-  Users: () => <div data-testid="users-icon" />,
-  BookOpen: () => <div data-testid="bookopen-icon" />,
-  Building: () => <div data-testid="building-icon" />,
-  MessageSquare: () => <div data-testid="messagesquare-icon" />,
-  Shield: () => <div data-testid="shield-icon" />,
-  LogIn: () => <div data-testid="login-icon" />,
-  UserPlus: () => <div data-testid="userplus-icon" />,
-  Mail: () => <div data-testid="mail-icon" />,
-  User: () => <div data-testid="user-icon" />,
-  Lock: () => <div data-testid="lock-icon" />,
-  Search: () => <div data-testid="search-icon" />,
-  UserCheck: () => <div data-testid="usercheck-icon" />,
-  UserX: () => <div data-testid="userx-icon" />,
-  Activity: () => <div data-testid="activity-icon" />,
-  TrendingUp: () => <div data-testid="trendingup-icon" />,
+  Users: () => 'Users',
+  BookOpen: () => 'BookOpen',
+  Building: () => 'Building',
+  MessageSquare: () => 'MessageSquare',
+  Shield: () => 'Shield',
+  LogIn: () => 'LogIn',
+  UserPlus: () => 'UserPlus',
+  Mail: () => 'Mail',
+  User: () => 'User',
+  Lock: () => 'Lock',
+  Search: () => 'Search',
+  UserCheck: () => 'UserCheck',
+  UserX: () => 'UserX',
+  Activity: () => 'Activity',
+  TrendingUp: () => 'TrendingUp',
 }));
 
 // Suppress console errors during tests

@@ -6,40 +6,56 @@ import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 import { prisma } from '@/lib/db'
 import { v4 as uuidv4 } from 'uuid'
+import { 
+  authSchemas, 
+  sanitizeInput, 
+  logSecurityEvent, 
+  secureCookieOptions,
+  validatePasswordStrength 
+} from '@/lib/security'
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key'
 
 export async function POST(request: NextRequest) {
   try {
-    const { username, email, password } = await request.json()
+    const body = await request.json()
 
-    if (!username || !password) {
+    // Validate input using Zod schema
+    const validation = authSchemas.register.safeParse(body);
+    if (!validation.success) {
+      logSecurityEvent('INVALID_REGISTER_INPUT', validation.error.errors, request);
       return NextResponse.json(
-        { error: 'Username and password are required' },
+        { error: 'Invalid input', details: validation.error.errors },
         { status: 400 }
       )
     }
 
-    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      return NextResponse.json(
-        { error: 'Invalid email format' },
-        { status: 400 }
-      )
-    }
+    const { username, email, password } = validation.data;
 
-    if (password.length < 6) {
+    // Sanitize inputs
+    const sanitizedUsername = sanitizeInput(username);
+    const sanitizedEmail = email ? sanitizeInput(email) : undefined;
+
+    // Validate password strength
+    const passwordValidation = validatePasswordStrength(password);
+    if (!passwordValidation.isValid) {
+      logSecurityEvent('WEAK_PASSWORD_ATTEMPT', { 
+        username: sanitizedUsername,
+        errors: passwordValidation.errors 
+      }, request);
       return NextResponse.json(
-        { error: 'Password must be at least 6 characters long' },
+        { error: 'Password does not meet security requirements', details: passwordValidation.errors },
         { status: 400 }
       )
     }
 
     // Check if user already exists
     const existingUser = await prisma.users.findUnique({
-      where: { username }
+      where: { username: sanitizedUsername }
     })
 
     if (existingUser) {
+      logSecurityEvent('REGISTRATION_FAILED_USER_EXISTS', { username: sanitizedUsername }, request);
       return NextResponse.json(
         { error: 'Username already exists' },
         { status: 409 }
@@ -51,13 +67,20 @@ export async function POST(request: NextRequest) {
     const user = await prisma.users.create({
       data: {
         id: uuidv4(),
-        username,
+        username: sanitizedUsername,
         password_hash: hashedPassword,
-        preferences: email ? { email } : null,
+        preferences: sanitizedEmail ? { email: sanitizedEmail } : null,
         created_at: new Date(),
         updated_at: new Date()
       }
     })
+
+    // Log successful registration
+    logSecurityEvent('REGISTRATION_SUCCESS', { 
+      username: sanitizedUsername, 
+      userId: user.id,
+      hasEmail: !!sanitizedEmail 
+    }, request);
 
     const token = jwt.sign(
       { 
@@ -78,12 +101,7 @@ export async function POST(request: NextRequest) {
       }
     })
 
-    response.cookies.set('token', token, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'strict',
-      maxAge: 86400 // 24 hours
-    })
+    response.cookies.set('token', token, secureCookieOptions)
 
     return response
   } catch (error) {

@@ -119,8 +119,8 @@ export function LoginForm({ onSuccess }: LoginFormProps) {
         onSuccess();
       } else {
         const redirectUrl = searchParams.get('redirect') || '/dashboard';
-        router.push(redirectUrl);
-        router.refresh();
+        // Use router.replace for better test compatibility
+        router.replace(redirectUrl);
       }
     } catch (error) {
       toast({
@@ -160,8 +160,8 @@ export function LoginForm({ onSuccess }: LoginFormProps) {
         onSuccess();
       } else {
         const redirectUrl = searchParams.get('redirect') || '/dashboard';
-        router.push(redirectUrl);
-        router.refresh();
+        // Use router.replace for better test compatibility
+        router.replace(redirectUrl);
       }
     } catch (error) {
       toast({

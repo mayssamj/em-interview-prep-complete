@@ -1,9 +1,120 @@
 // Database types and interfaces
 
+// Utility functions for type casting
+export function castToStringArray(value: any): string[] {
+  if (Array.isArray(value)) return value;
+  if (typeof value === 'string') return [value];
+  return [];
+}
+
+export function castToUserPreferences(value: any): UserPreferences | undefined {
+  if (typeof value === 'object' && value !== null) return value as UserPreferences;
+  return undefined;
+}
+
+export function castToCompanyValues(value: any): string[] {
+  if (Array.isArray(value)) return value;
+  if (typeof value === 'object' && value?.core_values) return value.core_values;
+  return [];
+}
+
+// Database conversion helpers
+export function convertRawCompany(raw: CompanyRaw): Company {
+  return {
+    id: raw.id,
+    name: raw.name,
+    values: castToStringArray(raw.values),
+    evaluation_criteria: castToStringArray(raw.evaluation_criteria),
+    interview_format: raw.interview_format,
+    success_tips: castToStringArray(raw.success_tips),
+    red_flags: castToStringArray(raw.red_flags),
+    created_at: raw.created_at,
+    updated_at: raw.updated_at,
+  };
+}
+
+export function convertRawQuestion(raw: any): Question {
+  return {
+    id: raw.id,
+    company_id: raw.company_id,
+    category: raw.category,
+    question_text: raw.question_text,
+    difficulty: raw.difficulty,
+    tags: castToStringArray(raw.tags),
+    is_critical: raw.is_critical,
+    usage_count: raw.usage_count,
+    question_type: raw.question_type,
+    categories: castToStringArray(raw.categories),
+    created_at: raw.created_at,
+    updated_at: raw.updated_at,
+  };
+}
+
+export function convertRawStory(raw: any): Story {
+  return {
+    id: raw.id,
+    user_id: raw.user_id,
+    title: raw.title,
+    situation: raw.situation,
+    task: raw.task,
+    action: raw.action,
+    result: raw.result,
+    reflection: raw.reflection,
+    tags: castToStringArray(raw.tags),
+    categories: castToStringArray(raw.categories),
+    created_at: raw.created_at,
+    updated_at: raw.updated_at,
+  };
+}
+
+// JSON field type definitions
+export interface UserPreferences {
+  email?: string;
+  theme?: 'light' | 'dark' | 'system';
+  notifications?: {
+    email: boolean;
+    push: boolean;
+    reminders: boolean;
+  };
+  study_goals?: {
+    daily_questions: number;
+    target_companies: string[];
+    focus_areas: string[];
+  };
+}
+
+export interface CompanyValues {
+  core_values: string[];
+  leadership_principles?: string[];
+  cultural_attributes?: string[];
+}
+
+export interface EvaluationCriteria {
+  technical_skills: string[];
+  behavioral_competencies: string[];
+  leadership_qualities?: string[];
+  cultural_fit_indicators: string[];
+}
+
+export interface SuccessTips {
+  preparation_strategies: string[];
+  interview_day_tips: string[];
+  follow_up_actions: string[];
+}
+
+export interface RedFlags {
+  behavioral_warning_signs: string[];
+  technical_concerns: string[];
+  cultural_misalignment: string[];
+}
+
 export interface User {
   id: string;
   username: string;
   isAdmin: boolean;
+  preferences?: UserPreferences;
+  created_at: Date;
+  updated_at: Date;
 }
 
 export interface Question {
@@ -29,6 +140,19 @@ export interface Company {
   interview_format: string;
   success_tips: string[];
   red_flags: string[];
+  created_at: Date;
+  updated_at: Date;
+}
+
+// Raw database company interface
+export interface CompanyRaw {
+  id: string;
+  name: string;
+  values: any;
+  evaluation_criteria: any;
+  interview_format: string;
+  success_tips: any;
+  red_flags: any;
   created_at: Date;
   updated_at: Date;
 }
@@ -126,19 +250,7 @@ export interface DetailedComponents {
   };
 }
 
-export interface UserPreferences {
-  theme?: 'light' | 'dark' | 'system';
-  notifications?: {
-    email: boolean;
-    push: boolean;
-    reminders: boolean;
-  };
-  study_goals?: {
-    daily_questions: number;
-    target_companies: string[];
-    focus_areas: string[];
-  };
-}
+
 
 export interface BackOfEnvelopeCalculations {
   assumptions: {

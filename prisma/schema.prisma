@@ -22,6 +22,8 @@ model answers {
   stories          stories[] @relation("StoryReferences")
 
   @@unique([user_id, question_id])
+  @@index([user_id, created_at])
+  @@index([question_id, created_at])
 }
 
 model companies {
@@ -64,6 +66,8 @@ model progress {
   users         users     @relation(fields: [user_id], references: [id], onDelete: Cascade)
 
   @@unique([user_id, question_id])
+  @@index([user_id, status])
+  @@index([user_id, last_reviewed])
 }
 
 model question_views {
@@ -73,6 +77,9 @@ model question_views {
   viewed_at   DateTime  @default(now())
   questions   questions @relation(fields: [question_id], references: [id], onDelete: Cascade)
   users       users     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([user_id, viewed_at])
+  @@index([question_id, viewed_at])
 }
 
 model questions {
@@ -95,6 +102,11 @@ model questions {
   companies               companies?               @relation(fields: [company_id], references: [id], onDelete: Cascade)
   system_design_answers   system_design_answers[]
   system_design_questions system_design_questions?
+
+  @@index([category, difficulty])
+  @@index([question_type, is_critical])
+  @@index([company_id, category])
+  @@index([usage_count])
 }
 
 model stories {

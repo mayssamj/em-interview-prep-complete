@@ -4,19 +4,28 @@ export const dynamic = 'force-dynamic';
 import { NextRequest, NextResponse } from 'next/server'
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
+import { authSchemas, sanitizeInput, logSecurityEvent, secureCookieOptions } from '@/lib/security'
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key'
 
 export async function POST(request: NextRequest) {
   try {
-    const { username, password } = await request.json()
+    const body = await request.json()
 
-    if (!username || !password) {
+    // Validate input using Zod schema
+    const validation = authSchemas.login.safeParse(body);
+    if (!validation.success) {
+      logSecurityEvent('INVALID_LOGIN_INPUT', validation.error.errors, request);
       return NextResponse.json(
-        { error: 'Username and password are required' },
+        { error: 'Invalid input', details: validation.error.errors },
         { status: 400 }
       )
     }
+
+    const { username, password } = validation.data;
+
+    // Sanitize inputs
+    const sanitizedUsername = sanitizeInput(username);
 
     // Initialize Prisma client with error handling
     let prisma;
@@ -38,7 +47,7 @@ export async function POST(request: NextRequest) {
       const users = await prisma.$queryRaw`
         SELECT id, username, password_hash, is_admin 
         FROM users 
-        WHERE username = ${username}
+        WHERE username = ${sanitizedUsername}
         LIMIT 1
       `;
       
@@ -46,6 +55,7 @@ export async function POST(request: NextRequest) {
       console.log('User query result:', user ? 'User found' : 'User not found');
     } catch (dbError) {
       console.error('Database query error:', dbError);
+      logSecurityEvent('DATABASE_ERROR', { error: dbError.message }, request);
       await prisma.$disconnect();
       return NextResponse.json(
         { error: 'Database query failed' },
@@ -54,6 +64,7 @@ export async function POST(request: NextRequest) {
     }
 
     if (!user) {
+      logSecurityEvent('LOGIN_FAILED_USER_NOT_FOUND', { username: sanitizedUsername }, request);
       await prisma.$disconnect();
       return NextResponse.json(
         { error: 'Invalid credentials' },
@@ -64,6 +75,10 @@ export async function POST(request: NextRequest) {
     const isValidPassword = await bcrypt.compare(password, user.password_hash)
 
     if (!isValidPassword) {
+      logSecurityEvent('LOGIN_FAILED_INVALID_PASSWORD', { 
+        username: sanitizedUsername, 
+        userId: user.id 
+      }, request);
       await prisma.$disconnect();
       return NextResponse.json(
         { error: 'Invalid credentials' },
@@ -81,6 +96,13 @@ export async function POST(request: NextRequest) {
       { expiresIn: '24h' }
     )
 
+    // Log successful login
+    logSecurityEvent('LOGIN_SUCCESS', { 
+      username: sanitizedUsername, 
+      userId: user.id,
+      isAdmin: user.is_admin 
+    }, request);
+
     const response = NextResponse.json({
       message: 'Login successful',
       user: {
@@ -90,12 +112,7 @@ export async function POST(request: NextRequest) {
       }
     })
 
-    response.cookies.set('token', token, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'strict',
-      maxAge: 86400 // 24 hours
-    })
+    response.cookies.set('token', token, secureCookieOptions)
 
     await prisma.$disconnect();
     return response

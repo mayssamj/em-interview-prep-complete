@@ -1,7 +1,9 @@
 
 import { NextRequest } from 'next/server';
+import { cookies } from 'next/headers';
 import jwt from 'jsonwebtoken';
 import { prisma } from './db';
+import { safeEmailExtract } from './type-utils';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key';
 
@@ -12,9 +14,17 @@ export interface User {
   email?: string;
 }
 
-export async function getSession(request: NextRequest): Promise<User | null> {
+export async function getSession(request?: NextRequest): Promise<User | null> {
   try {
-    const token = request.cookies.get('token')?.value;
+    let token: string | undefined;
+    
+    if (request) {
+      token = request.cookies.get('token')?.value;
+    } else {
+      // Server-side usage
+      const cookieStore = cookies();
+      token = cookieStore.get('token')?.value;
+    }
     
     if (!token) {
       return null;
@@ -41,7 +51,7 @@ export async function getSession(request: NextRequest): Promise<User | null> {
       id: user.id,
       username: user.username,
       isAdmin: user.is_admin,
-      email: user.preferences?.email || undefined,
+      email: safeEmailExtract(user.preferences),
     };
   } catch (error) {
     console.error('Session verification error:', error);
@@ -79,4 +89,9 @@ export function createToken(user: { id: string; username: string; isAdmin: boole
     JWT_SECRET,
     { expiresIn: '24h' }
   );
+}
+
+// Server-side session function for pages
+export async function getServerSession(): Promise<User | null> {
+  return getSession();
 }
