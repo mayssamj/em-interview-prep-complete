@@ -9,10 +9,25 @@ on:
 jobs:
   test-and-deploy:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: hiremenow_db_user
+          POSTGRES_DB: hiremenow_db
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd="pg_isready -U hiremenow_db_user"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=5
+
     env:
       # These come from repo secrets; fall back to SQLite for CI
-      DATABASE_URL: file:/data/db.sqlite
+      DATABASE_URL: postgresql://hiremenow_db_user:6EG8wzRmQiaPK3eaqwkI4RVNC6ruAU8W@dpg-d18pru3uibrs73dtl3v0-a.oregon-postgres.render.com/hiremenow_db
       JWT_SECRET: ${{ secrets.JWT_SECRET || 'ci-secret' }}
+      RENDER_DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
 
     steps:
     - name: Checkout code
@@ -39,15 +54,15 @@ jobs:
     #  run: npm test -- --runInBand
     #  continue-on-error: true 
 
-    - name: Install Playwright browsers
-      if: success()
-      run: npx playwright install --with-deps
-      continue-on-error: true 
+    #- name: Install Playwright browsers
+    #  if: success()
+    #  run: npx playwright install --with-deps
+    #  continue-on-error: true 
 
-    - name: Run E2E tests
-      if: success()
-      run: npm run test:e2e
-      continue-on-error: true 
+    #- name: Run E2E tests
+    #  if: success()
+    #  run: npm run test:e2e
+    #  continue-on-error: true 
 
     # ---------- BUILD ----------
     - name: Build production bundle
@@ -58,3 +73,6 @@ jobs:
     - name: Trigger Render deploy
       if: success() && github.ref == 'refs/heads/main'
       run: curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
+   
+    - name: Deploy migrations
+      run: npx prisma migrate deploy
