@@ -1,0 +1,209 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-arm64-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model answers {
+  id               String    @id
+  user_id          String
+  question_id      String
+  answer_text      String    @db.Text
+  story_references Json      @default("[]")
+  notes            String?   @db.Text
+  created_at       DateTime  @default(now())
+  updated_at       DateTime
+  questions        questions @relation(fields: [question_id], references: [id], onDelete: Cascade)
+  users            users     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  stories          stories[] @relation("StoryReferences")
+
+  @@unique([user_id, question_id])
+  @@index([user_id, created_at])
+  @@index([question_id, created_at])
+}
+
+model companies {
+  id                  String      @id
+  name                String      @unique
+  values              Json        @default("[]")
+  evaluation_criteria Json        @default("[]")
+  interview_format    String      @db.Text
+  success_tips        Json        @default("[]")
+  red_flags           Json        @default("[]")
+  created_at          DateTime    @default(now())
+  updated_at          DateTime
+  questions           questions[]
+}
+
+model interview_notes {
+  id                 String   @id
+  user_id            String
+  company            String
+  interviewer_name   String?
+  interviewer_role   String?
+  questions_asked    Json     @default("[]")
+  takeaways          String?
+  follow_up_thoughts String?
+  interview_date     DateTime
+  created_at         DateTime @default(now())
+  updated_at         DateTime
+  users              users    @relation(fields: [user_id], references: [id], onDelete: Cascade)
+}
+
+model progress {
+  id            String    @id
+  user_id       String
+  question_id   String
+  status        String
+  last_reviewed DateTime?
+  created_at    DateTime  @default(now())
+  updated_at    DateTime
+  questions     questions @relation(fields: [question_id], references: [id], onDelete: Cascade)
+  users         users     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@unique([user_id, question_id])
+  @@index([user_id, status])
+  @@index([user_id, last_reviewed])
+}
+
+model question_views {
+  id          String    @id
+  user_id     String
+  question_id String
+  viewed_at   DateTime  @default(now())
+  questions   questions @relation(fields: [question_id], references: [id], onDelete: Cascade)
+  users       users     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([user_id, viewed_at])
+  @@index([question_id, viewed_at])
+}
+
+model questions {
+  id                      String                   @id
+  company_id              String?
+  category                String
+  question_text           String                   @db.Text
+  difficulty              String
+  is_generated            Boolean                  @default(true)
+  tags                    Json                     @default("[]")
+  created_at              DateTime                 @default(now())
+  updated_at              DateTime
+  is_critical             Boolean                  @default(false)
+  usage_count             Int                      @default(0)
+  question_type           String                   @default("behavioral")
+  categories              Json                     @default("[]")
+  answers                 answers[]
+  progress                progress[]
+  question_views          question_views[]
+  companies               companies?               @relation(fields: [company_id], references: [id], onDelete: Cascade)
+  system_design_answers   system_design_answers[]
+  system_design_questions system_design_questions?
+
+  @@index([category, difficulty])
+  @@index([question_type, is_critical])
+  @@index([company_id, category])
+  @@index([usage_count])
+}
+
+model stories {
+  id         String    @id
+  user_id    String
+  title      String
+  situation  String    @db.Text
+  task       String    @db.Text
+  action     String    @db.Text
+  result     String    @db.Text
+  reflection String?   @db.Text
+  tags       Json      @default("[]")
+  categories Json      @default("[]")
+  created_at DateTime  @default(now())
+  updated_at DateTime
+  users      users     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  answers    answers[] @relation("StoryReferences")
+}
+
+model system_design_answers {
+  id                    String    @id
+  user_id               String
+  question_id           String
+  high_level_design     String    @db.Text
+  detailed_components   Json?
+  scalability_approach  String?   @db.Text
+  data_storage_strategy String?   @db.Text
+  tradeoffs_discussed   Json      @default("[]")
+  frameworks_used       Json      @default("[]")
+  estimated_scale       String?
+  notes                 String?   @db.Text
+  created_at            DateTime  @default(now())
+  updated_at            DateTime
+  questions             questions @relation(fields: [question_id], references: [id], onDelete: Cascade)
+  users                 users     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@unique([user_id, question_id])
+}
+
+model system_design_frameworks {
+  id             String   @id
+  name           String   @unique
+  description    String   @db.Text
+  category       String
+  key_principles Json     @default("[]")
+  use_cases      Json     @default("[]")
+  tradeoffs      Json     @default("[]")
+  examples       Json     @default("[]")
+  resources      Json     @default("[]")
+  difficulty     String
+  created_at     DateTime @default(now())
+  updated_at     DateTime
+}
+
+model system_design_questions {
+  id                            String    @id
+  question_id                   String    @unique
+  architecture_focus            Json      @default("[]")
+  complexity_level              String
+  leadership_aspects            Json      @default("[]")
+  frameworks                    Json      @default("[]")
+  evaluation_criteria           Json      @default("[]")
+  resources                     Json      @default("[]")
+  estimated_time_minutes        Int?
+  follow_up_questions           Json      @default("[]")
+  common_mistakes               Json      @default("[]")
+  key_tradeoffs                 Json      @default("[]")
+  created_at                    DateTime  @default(now())
+  updated_at                    DateTime
+  alternative_solutions         Json      @default("[]")
+  back_of_envelope_calculations Json?
+  clarifying_questions          Json      @default("[]")
+  core_solution                 Json?
+  functional_requirements       Json      @default("[]")
+  key_technical_criteria        Json      @default("[]")
+  non_functional_requirements   Json      @default("[]")
+  problem_statement             String?
+  question_title                String?
+  references                    Json      @default("[]")
+  scalability_considerations    Json      @default("[]")
+  technology_stack              Json?
+  tradeoffs                     Json?
+  questions                     questions @relation(fields: [question_id], references: [id], onDelete: Cascade)
+}
+
+model users {
+  id                    String                  @id
+  username              String                  @unique
+  password_hash         String
+  is_admin              Boolean                 @default(false)
+  preferences           Json?
+  created_at            DateTime                @default(now())
+  updated_at            DateTime
+  answers               answers[]
+  interview_notes       interview_notes[]
+  progress              progress[]
+  question_views        question_views[]
+  stories               stories[]
+  system_design_answers system_design_answers[]
+}
