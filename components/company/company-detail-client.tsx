@@ -11,7 +11,7 @@ interface CompanyDetailClientProps {
   userStories: UserStory[];
 }
 
-const CompanyDetailClient: React.FC<CompanyDetailClientProps> = () => {
+const CompanyDetailClient: React.FC<CompanyDetailClientProps> = ({ company, userStories }) => {
   // Placeholder component until real implementation is added
   return null;
 };
