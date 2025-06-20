@@ -17,8 +17,7 @@
     "db:seed": "node prisma/seed.ts",
     "db:switch": "node scripts/switch-db.js",
     "db:gen": "npm run db:switch && prisma generate",
-    "db:migrate": "npm run db:switch && prisma migrate deploy",
-,
+    "db:migrate": "npm run db:switch && prisma migrate deploy"
   },
   "dependencies": {
     "@auth/prisma-adapter": "2.9.0",
