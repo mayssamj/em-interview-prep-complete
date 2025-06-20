@@ -1,18 +1,36 @@
-import React from 'react';
+// Add this at the top if you have a UserStory type elsewhere
+// import { UserStory } from '@/types/user-story';
 
-interface CompanyDetailClientProps {
-  // Add any props you expect; leaving empty for now
-    company: {
+// Or define it here for now:
+type UserStory = {
+  id: string;
+  // Add other fields as needed
+  createdAt: string;
+  // ...
+};
+
+export interface CompanyDetailClientProps {
+  company: {
     name: string;
     evaluationCriteria: string[];
     interviewFormat: string;
-    // ...other fields
+    successTips: string[];
+    redFlags: string[];
+    questions: {
+      id: string;
+      category: string;
+      questionText: string;
+      difficulty: string;
+      tags: string[];
+      isCritical: boolean;
+    }[];
+    // Add any other fields expected from company
   };
   userStories: UserStory[];
 }
 
 const CompanyDetailClient: React.FC<CompanyDetailClientProps> = ({ company, userStories }) => {
-  // Placeholder component until real implementation is added
+  // Implementation
   return null;
 };
 
