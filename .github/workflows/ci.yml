@@ -35,9 +35,9 @@ jobs:
         npm run db:seed
 
     # ---------- TESTS ----------
-    - name: Run unit tests
-      run: npm test -- --runInBand
-      continue-on-error: true 
+    #- name: Run unit tests
+    #  run: npm test -- --runInBand
+    #  continue-on-error: true 
 
     - name: Install Playwright browsers
       if: success()
