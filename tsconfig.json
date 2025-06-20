@@ -24,14 +24,9 @@
       }
     ],
     "paths": {
-      "@/*": [
-        "./*"
-      ,
-      "@components/*": [
-        "components/*"
-      ]
-      
-    }
+
+          "@/*": ["./*"],
+    "@components/*": ["components/*"]
   },
   "include": [
     "next-env.d.ts",
