@@ -1,6 +1,7 @@
 
 import { notFound } from 'next/navigation';
-import { CompanyDetailClient } from '@/components/company/company-detail-client';
+import CompanyDetailClient from '@/components/company/company-detail-client';
+#import { CompanyDetailClient } from '@/components/company/company-detail-client';
 import { prisma } from '@/lib/prisma';
 import { safeJsonToStringArray } from '@/lib/type-utils';
 
