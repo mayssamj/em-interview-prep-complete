@@ -92,28 +92,27 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
           </div>
 
           {/* Company Detail Content */}
-          <CompanyDetailClient 
-            company={{
-              ...company,
-              evaluationCriteria: company.evaluation_criteria,
-              interviewFormat: company.interview_format,
-              successTips: company.success_tips,
-              redFlags: company.red_flags,
-              questions: company.questions.map(q => ({
-                id: q.id,
-                category: q.category,
-                questionText: q.question_text,
-                difficulty: q.difficulty,
-                tags: q.tags,
-                isCritical: q.is_critical
-              }))
-            }}
-            userStories={userStories.map(s => ({
-              ...s,
-              createdAt: s.created_at
-            }))}
-          />
-        </div>
+<CompanyDetailClient
+  company={{
+    name: company.name,
+    evaluationCriteria: company.evaluation_criteria,
+    interviewFormat: company.interview_format,
+    successTips: company.success_tips,
+    redFlags: company.red_flags,
+    questions: company.questions.map(q => ({
+      id: q.id,
+      category: q.category,
+      questionText: q.question_text,
+      difficulty: q.difficulty,
+      tags: q.tags,
+      isCritical: q.is_critical
+    }))
+  }}
+  userStories={userStories.map(s => ({
+    ...s,
+    createdAt: s.created_at
+  }))}
+/>        </div>
       </main>
     </div>
   );
