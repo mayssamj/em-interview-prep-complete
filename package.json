@@ -103,6 +103,8 @@
     "jest-environment-jsdom": "^30.0.0",
     "postcss": "8.4.30",
     "prisma": "6.7.0",
-    "typescript": "5.2.2"
+    "typescri,
+    "abel-plugin-module-resolver": "^5.0.0"pt": "5.2.2"
   }
 }
+
