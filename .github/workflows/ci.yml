@@ -1,78 +1,28 @@
-name: CI & CD
+name: Build and Deploy
 
 on:
   push:
-    branches: [main]      # triggers on every push to main
-  pull_request:
-    branches: [main]      # optional: run tests for PRs
+    branches: [main]
 
 jobs:
-  test-and-deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    services:
-      postgres:
-        image: postgres:16
-        env:
-          POSTGRES_USER: hiremenow_db_user
-          POSTGRES_DB: hiremenow_db
-        ports:
-          - 5432:5432
-        options: >-
-          --health-cmd="pg_isready -U hiremenow_db_user"
-          --health-interval=10s
-          --health-timeout=5s
-          --health-retries=5
-
-    env:
-      # These come from repo secrets; fall back to SQLite for CI
-      DATABASE_URL: postgresql://hiremenow_db_user:6EG8wzRmQiaPK3eaqwkI4RVNC6ruAU8W@dpg-d18pru3uibrs73dtl3v0-a.oregon-postgres.render.com/hiremenow_db
-      JWT_SECRET: ${{ secrets.JWT_SECRET || 'ci-secret' }}
-      RENDER_DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Set up Node
-      uses: actions/setup-node@v4
-      with:
-        node-version: 18
-        cache: 'npm'
+      # Optional compile step (remove if you don't need it)
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
 
-    # ---------- PREPARE DATABASE (SQLite) ----------
-    - name: Install dependencies
-      run: npm ci
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
 
-    - name: Prepare Prisma & seed DB
-      run: |
-        npx prisma generate
-        npx prisma db push
-        npm run db:seed
+      - name: Build (compile only)
+        run: npm run build
 
-    # ---------- TESTS ----------
-    #- name: Run unit tests
-    #  run: npm test -- --runInBand
-    #  continue-on-error: true 
-
-    #- name: Install Playwright browsers
-    #  if: success()
-    #  run: npx playwright install --with-deps
-    #  continue-on-error: true 
-
-    #- name: Run E2E tests
-    #  if: success()
-    #  run: npm run test:e2e
-    #  continue-on-error: true 
-
-    # ---------- BUILD ----------
-    - name: Build production bundle
-      if: success()
-      run: npm run build
-
-    # ---------- DEPLOY ----------
-    - name: Trigger Render deploy
-      if: success() && github.ref == 'refs/heads/main'
-      run: curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
-   
-    - name: Deploy migrations
-      run: npx prisma migrate deploy
+      - name: Trigger Render Deploy
+        env:
+          RENDER_DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
+        run: curl "$RENDER_DEPLOY_HOOK"
